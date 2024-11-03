@@ -14,7 +14,9 @@ label cobbler:
 
     "The local peaches aren't quite in season yet, so these are just some of the early bloomers that my friend at the orchard set aside for me."
 
-    "The cobblers aren't bad. They're not as sweet as I had hoped they'd be, but that makes sense since peach season starts next month. I should have accounted for the difference and adjusted my recipe, but this is good practice for the real thing!"
+    "The cobblers aren't bad. They're not as sweet as I had hoped they'd be, but that makes sense since peach season starts next month."
+    
+    "I should have accounted for the difference and adjusted my recipe, but this is good practice for the real thing!"
 
     "I divide the cobblers into plastic food storage bins to give to the neighbors. Some of my older friends are the opposite of sweet-tooths and will probably love this."
 
@@ -40,14 +42,19 @@ label farmersmarket:
 
 label Lamp_Talk:
     a "\"That lamp...\"" 
+
     "I trail off, lost in the memory for a moment. My throat feels tight, my chest heavy."
+
     e "\"I'm sorry about that, I really am.\""
+
     "Erin picks at a ragged cuticle, her eyes downcast."
+
     a "\"Oh, I'm not bringing it up for you to keep apologizing. No... I just felt like you should know why it was important to me. Important enough to make that pact, you know?\""
 
     "Erin looks at me directly, saying nothing. Just waiting, attentive and patient. Fully present with an intensity you don't see often."
 
     "I clear my throat a little and continue,"
+
     a "\"It was my mom's. She made it when I was young enough that I could only see it from afar, to minimize the risk of me breaking it.\""
 
     # IF WENT LAMP
@@ -64,13 +71,17 @@ label Lamp_Cont:
 
     "I smile a little at her concern and pat her hand, drawing it down from my shoulder and clasping it between us. Her soft hand is warm and a little bit tacky from the humid summer air."
 
-    a "\"One of her lovers was mortally wounded in an accident and had to return to The Other Side to recover, and she was so depressed about it. Dad encouraged her to go back to The Other Side to be with her lover, and when she eventually went, he went with her.\""
+    a "\"One of her lovers was mortally wounded in an accident and had to return to The Other Side to recover, and she was so depressed about it.\""
+    
+    a "\"Dad encouraged her to go back to The Other Side to be with her lover, and when she eventually went, he went with her.\""
 
     e "\"Is that like... dying? Going to The Other Side?\""
 
     "I shake my head."
 
-    a "\"No, it's more like... going to a faraway place that's hard to travel to, and harder to return from. They could come back, but time moves differently there. Sometimes it goes faster, sometimes much slower. So they could show back up here at any time, really. Or it could be decades. There isn't a good way to know.\""
+    a "\"No, it's more like... going to a faraway place that's hard to travel to, and harder to return from. They could come back, but time moves differently there.\""
+    
+    a "\"Sometimes it goes faster, sometimes much slower. So they could show back up here at any time, really. Or it could be decades. There isn't a good way to know.\""
 
     "Erin tilts her head to the side, contemplating the new information."
 
@@ -80,7 +91,9 @@ label Lamp_Cont:
 
     a "\"I do. I can't wait to see them again, but I'm nowhere near ready to go to The Other Side myself. I'm enjoying this mortal life.\""
 
-    "I realize I'm still holding her hand and loosen my grip as if to pull away, but she keeps holding on and gives my hand a little squeeze. So, we're both aware of it. But neither of us is saying anything about it. And it's... nice. I suppose it isn't doing any harm."
+    "I realize I'm still holding her hand and loosen my grip as if to pull away, but she keeps holding on and gives my hand a little squeeze."
+    
+    "So, we're both aware of it. But neither of us is saying anything about it. And it's... nice. I suppose it isn't doing any harm."
 
     "I leave my hand in hers. We walk in silence, hand in hand, cicadas buzzing in the trees along the sidewalk."
 
@@ -142,7 +155,7 @@ label home_stranger:
     jump home_push
 
 label younger_women:
-    a "\" What if I said I'm not into younger women?\""
+    a "\"What if I said I'm not into younger women?\""
 
     e "\"Then I'll just never tell you my age!\""
 

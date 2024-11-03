@@ -9,7 +9,9 @@ label bookstore:
 
     "I need to do something about it this summer, or the bookstore might have to close."
 
-    "My ear twitches at the sound of bells jingling, the shop door swinging open slowly. I fidget with the fan some more and say, /“Welcome in, feel free to browse,/” and that's when I finally look up. My breath catches."
+    "My ear twitches at the sound of bells jingling, the shop door swinging open slowly. I fidget with the fan some more and say, \“Welcome in, feel free to browse,\” and that's when I finally look up."
+    
+    "My breath catches."
 
     "She's beautiful. XX DESCRIPTION OF ERIN"
 
@@ -19,7 +21,9 @@ label bookstore:
 
     "The fall is epic."
 
-    "I watch it as if it's all happening in slow motion. Her tote bag soars, colored gel pens tumbling out and bouncing across the floor in a myriad rainbow. A bundle of loose pages slides out the bag and splays across the floor, some pages really making an effort to escape."
+    "I watch it as if it's all happening in slow motion. Her tote bag soars, colored gel pens tumbling out and bouncing across the floor in a myriad rainbow."
+    
+    "A bundle of loose pages slides out the bag and splays across the floor, some pages really making an effort to escape."
 
     "Her body slams into the book rack near the entrance, and she pivots, angling the shelf away from the front counter. Away from me."
 
@@ -62,7 +66,9 @@ label bookstore_Girl:
 
 
 label bookstore_Lamp:
-    "Surveying the shattered lamp yields nothing I didn't already suspect. The glass lampshade was a mosaic of stained glass pieces welded together. Four panels had joined at their long edges to create a shade reminiscent of a boxy, blue, crystalline moth."
+    "Surveying the shattered lamp yields nothing I didn't already suspect. The glass lampshade was a mosaic of stained glass pieces welded together."
+    
+    "Four panels had joined at their long edges to create a shade reminiscent of a boxy, blue, crystalline moth."
 
     "Now, the intricate panels are shattered, the floor a dazzling array of blue edges. The electrical fixture is bent at an odd angle."
 
@@ -70,7 +76,9 @@ label bookstore_Lamp:
 
     "The fallen shelves. The shattered lamp. My distraught expression."
 
-    "I almost expect her to run away. She's young, maybe a college student? And she's human! I open my mouth to say something, to tell her off or ask if she's okay, but I can't find the words as I watch her stand up, dust herself off, and limp over to inspect the shattered lamp."
+    "I almost expect her to run away. She's young, maybe a college student? And she's human! I open my mouth to say something, to tell her off or ask if she's okay, but..."
+    
+    "I can't find the words as I watch her stand up, dust herself off, and limp over to inspect the shattered lamp."
 
     e "\"Oh shit, I'm so sorry about that. I didn't see the box... Here, I'll clean this up.\""
 

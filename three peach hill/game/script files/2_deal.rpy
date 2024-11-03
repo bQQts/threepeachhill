@@ -61,7 +61,9 @@ label deal_cont:
 
     a "\"Put the pieces in this. I'm going to go look something up.\""
 
-    "As Erin collects the pieces, I go get the address book from the front counter and start flipping through it. \"Book\" is a term used loosely in this context. It's a huge leather binder that's been stuffed full of additional sheaves of paper, parchment, newspaper ad clippings, and even some pressed leaves inscribed with nearly illegible writings."
+    "As Erin collects the pieces, I go get the address book from the front counter and start flipping through it. \"Book\" is a term used loosely in this context."
+    
+    "It's a huge leather binder that's been stuffed full of additional sheaves of paper, parchment, newspaper ad clippings, and even some pressed leaves inscribed with nearly illegible writings."
 
     "These are notes, contacts, fliers, and advertisements from all manner of local, both human and spirit. My parents added their notes when they took over the shop, and I've added a few of my own over the years."
 
@@ -99,11 +101,15 @@ label deal_cont:
 
     "I interrupt before her imagination takes her farther into a spiral."
 
-    a "\"No, no, nothing like that. Just regular money. Most spirits in the modern era use human currency to keep things simple, though it's possible to find the odd esoteric spirit who wants weird ingredients, favors, or labor as their exchange rate. But whatever the cost, nothing is ever free.\""
+    a "\"No, no, nothing like that. Just regular money. Most spirits in the modern era use human currency to keep things simple,\""
+    
+    a "\"though it's possible to find the odd esoteric spirit who wants weird ingredients, favors, or labor as their exchange rate. But whatever the cost, nothing is ever free.\""
 
     e "\"So you want me to go with you to the spirit world?"
 
-    a "\"It's not really the Other Side, which is what you're referring to. It's more of a liminal space between the two worlds. It's easy to travel between worlds through the market as long as you actually make an exchange while there. If you don't... the Lost Market keeps you until you do.\""
+    a "\"It's not really the Other Side, which is what you're referring to. It's more of a liminal space between the two worlds.\""
+    
+    a "\"It's easy to travel between worlds through the market as long as you actually make an exchange while there. If you don't... the Lost Market keeps you until you do.\""
 
     "I see the worried look on her face."
 
@@ -151,7 +157,9 @@ label deal_cont:
 
     "I laugh, not to mock her but because the surprise on humans' faces never really gets old."
 
-    a "\"It's not a trick or anything, that's just the pact being made! Think of it as a little magical insurance that automatically happens when spirits make agreements. Basically, if you decide to bail, there will be a karmic consequence. This isn't a big pact, so even if you do decide to bail it won't be too drastic. But I still suggest you try to keep your word.\""
+    a "\"It's not a trick or anything, that's just the pact being made! Think of it as a little magical insurance that automatically happens when spirits make agreements.\""
+    
+    a "\"Basically, if you decide to bail, there will be a karmic consequence. This isn't a big pact, so even if you do decide to bail it won't be too drastic. But I still suggest you try to keep your word.\""
 
     "She nods and makes a note in her phone."
 
@@ -167,7 +175,9 @@ label deal_cont:
 
     e "\"You're beautiful, you know that? Bye!\""
 
-    "My heart flutters and I hesitate, not sure if she means that in an I-love-women way or a complimenting-without-connotations way. She notices the heat warning my cheeks, and before I can say anything in response, she ducks out of the store, giggling."
+    "My heart flutters and I hesitate, not sure if she means that in an I-love-women way or a complimenting-without-connotations way."
+    
+    "She notices the heat warning my cheeks, and before I can say anything in response, she ducks out of the store, giggling."
 
     a "\"Wh... what...!\""
 
