@@ -6,6 +6,8 @@
 define e = Character("Erin")
 define a = Character("Aya")
 
+default lamp_freeze_outcome = False
+
 
 # The game starts here.
 

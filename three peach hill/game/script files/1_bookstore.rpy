@@ -87,14 +87,14 @@ label bookstore_Lamp:
     # CHOICE
     menu:
         "Grab her hand":
-            jump lamp_Grab
+            jump lamp_grab
 
         "Freeze in surprise":
-            jump lamp_Freeze
+            jump lamp_freeze
 
 
 
-    label lamp_Grab:
+    label lamp_grab:
         "My hand darts out and grabs hold of the girl's wrist."
 
         a "\"Don't! Don't, you could hurt yourself.\""
@@ -104,7 +104,10 @@ label bookstore_Lamp:
         jump Deal
 
 
-    label lamp_Freeze:
+    label lamp_freeze:
+
+        $ lamp_freeze_outcome = True
+
         "It takes my brain a moment to catch up to what's happening, and by the time I realize what she's doing, it's too late."
 
         "The girl quickly starts to put pieces in a pile and hisses in pain when one odd-angled piece slices a shallow line across her finger."
