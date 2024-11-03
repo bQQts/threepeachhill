@@ -27,17 +27,17 @@ label 1bookstore:
 
     "The girl survived the fall. The lamp did not."
 
-        menu:
-            "Go to the girl":
-                jump 1Girl
+menu:
+    "Go to the girl":
+        jump bookstore_Girl
 
-            "Go to the lamp":
-                jump 1Lamp
-
-
+    "Go to the lamp":
+        jump bookstore_Lamp
 
 
-label 1Girl:
+
+
+label bookstore_Girl:
     "I rush over to her, taking hold of her arm and helping her upright."
 
     a "\"Are you okay?!\""
@@ -58,10 +58,10 @@ label 1Girl:
 
     e "\"No, but... The lamp.\""
 
-        jump 2Deal
+    jump Deal
 
 
-label 1Lamp:
+label bookstore_Lamp:
     "Surveying the shattered lamp yields nothing I didn't already suspect. The glass lampshade was a mosaic of stained glass pieces welded together. Four panels had joined at their long edges to create a shade reminiscent of a boxy, blue, crystalline moth."
 
     "Now, the intricate panels are shattered, the floor a dazzling array of blue edges. The electrical fixture is bent at an odd angle."
@@ -77,36 +77,36 @@ label 1Lamp:
     "She reaches down to pick up a large piece of glass."
 
     # CHOICE
-        menu:
-            "Grab her hand":
-                jump 1Grab
+    menu:
+        "Grab her hand":
+            jump lamp_Grab
 
-            "Freeze in surprise":
-                jump 1Freeze
-
-
-
-    label 1Grab:
-    "My hand darts out and grabs hold of the girl's wrist."
-
-    a "\"Don't! Don't, you could hurt yourself.\""
-
-    "She freezes, then turns to look me in the eye."
-
-        jump 2Deal
+        "Freeze in surprise":
+            jump lamp_Freeze
 
 
-label 1Freeze:
-    "It takes my brain a moment to catch up to what's happening, and by the time I realize what she's doing, it's too late."
 
-    "The girl quickly starts to put pieces in a pile and hisses in pain when one odd-angled piece slices a shallow line across her finger."
+    label lamp_Grab:
+        "My hand darts out and grabs hold of the girl's wrist."
 
-    a "\"Stop,\""
+        a "\"Don't! Don't, you could hurt yourself.\""
 
-    "I say quietly. But she doesn't. So I say it again louder this time."
+        "She freezes, then turns to look me in the eye."
 
-    a "\"Stop!\""
+        jump Deal
 
-    "Finally, she stops fiddling with the broken shards. She clutches her bleeding finger and looks up at me."
 
-        jump 2Deal
+    label lamp_Freeze:
+        "It takes my brain a moment to catch up to what's happening, and by the time I realize what she's doing, it's too late."
+
+        "The girl quickly starts to put pieces in a pile and hisses in pain when one odd-angled piece slices a shallow line across her finger."
+
+        a "\"Stop,\""
+
+        "I say quietly. But she doesn't. So I say it again louder this time."
+
+        a "\"Stop!\""
+
+        "Finally, she stops fiddling with the broken shards. She clutches her bleeding finger and looks up at me."
+
+        jump Deal

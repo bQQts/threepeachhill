@@ -1,5 +1,5 @@
 # 2. The Deal - Erin makes a pact with a spirit, and is surprisingly cool with it
-label 2Deal:
+label Deal:
 
     e "\"I broke it, so I should fix it.\""
 
@@ -54,9 +54,9 @@ label 2Deal:
 
     a "\"Okay. Let's get that glass cleaned up before any more visitors come in.\""
 
-        jump 2cont
+        jump deal_cont
 
-label 2cont:
+label deal_cont:
     "I grab a bucket from the back and hand it to Erin."
 
     a "\"Put the pieces in this. I'm going to go look something up.\""
@@ -171,4 +171,4 @@ label 2cont:
 
     a "\"Wh... what...!\""
 
-        jump 3pursuit
+        jump pursuit

@@ -15,152 +15,60 @@ File "game/script.rpy", line 34: Line is indented, but the preceding say stateme
     ^
 
 File "game/script files/1_bookstore.rpy", line 1: expected 'label_name_declare' not found.
-    label 1bookstore
+    label 1bookstore:
          ^
-
-File "game/script files/1_bookstore.rpy", line 30: expected statement.
-    CHOICE
-          ^
-
-File "game/script files/1_bookstore.rpy", line 32: expected 'label_name' not found.
-    jump 1Girl
-        ^
-
-File "game/script files/1_bookstore.rpy", line 35: expected 'label_name' not found.
-    jump 1Lamp
-        ^
 
 File "game/script files/1_bookstore.rpy", line 40: expected 'label_name_declare' not found.
-    label 1Girl
+    label 1Girl:
          ^
-
-File "game/script files/1_bookstore.rpy", line 43: end of line expected.
-    a "/"Are you okay?!/""
-         ^
-
-File "game/script files/1_bookstore.rpy", line 61: expected 'label_name' not found.
-    jump 2Deal
-        ^
 
 File "game/script files/1_bookstore.rpy", line 64: expected 'label_name_declare' not found.
-    label 1Lamp
+    label 1Lamp:
          ^
 
-File "game/script files/1_bookstore.rpy", line 79: expected statement.
-    CHOICE
-          ^
-
-File "game/script files/1_bookstore.rpy", line 81: expected 'label_name' not found.
-    jump 1Grab
-        ^
-
-File "game/script files/1_bookstore.rpy", line 84: expected 'label_name' not found.
-    jump 1Freeze
-        ^
-
-File "game/script files/1_bookstore.rpy", line 88: expected 'label_name_declare' not found.
-    label 1Grab
+File "game/script files/1_bookstore.rpy", line 99: expected 'label_name_declare' not found.
+    label 1Freeze:
          ^
-
-File "game/script files/1_bookstore.rpy", line 95: expected 'label_name' not found.
-    jump 2Deal
-        ^
-
-File "game/script files/1_bookstore.rpy", line 98: expected 'label_name_declare' not found.
-    label 1Freeze
-         ^
-
-File "game/script files/1_bookstore.rpy", line 111: expected 'label_name' not found.
-    jump 2Deal
-        ^
 
 File "game/script files/2_deal.rpy", line 2: expected 'label_name_declare' not found.
-    label 2Deal
+    label 2Deal:
          ^
-
-File "game/script files/2_deal.rpy", line 57: expected 'label_name' not found.
-    jump 2cont
-        ^
 
 File "game/script files/2_deal.rpy", line 59: expected 'label_name_declare' not found.
-    label 2cont
+    label 2cont:
          ^
-
-File "game/script files/2_deal.rpy", line 174: expected 'label_name' not found.
-    jump 3pursuit
-        ^
 
 File "game/script files/3_pursuit.rpy", line 1: expected 'label_name_declare' not found.
-    label 3pursuit
+    label 3pursuit:
          ^
 
-File "game/script files/3_pursuit.rpy", line 11: expected ':' not found.
-    label cobbler
-                 ^
-
-File "game/script files/3_pursuit.rpy", line 25: end of line expected.
+File "game/script files/3_pursuit.rpy", line 25: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
     jump farmers market
-                 ^
-
-File "game/script files/3_pursuit.rpy", line 27: expected ':' not found.
-    label cornerstore
-                     ^
+    ^
 
 File "game/script files/3_pursuit.rpy", line 31: end of line expected.
     jump farmers market
                  ^
 
 File "game/script files/3_pursuit.rpy", line 33: expected ':' not found.
-    label farmers market
+    label farmers market:
                   ^
 
-File "game/script files/3_pursuit.rpy", line 39: expected ':' not found.
-    label Lamp Talk
-               ^
+File "game/script files/3_pursuit.rpy", line 54: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump Lamp_Cont
+    ^
 
-File "game/script files/3_pursuit.rpy", line 51: reached end of line when expecting ':'.
-    IF WENT LAMP
-                ^
+File "game/script files/3_pursuit.rpy", line 85: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump going_home_from_market
+    ^
 
-File "game/script files/3_pursuit.rpy", line 54: end of line expected.
-    jump Lamp Cont
-              ^
+File "game/script files/3_pursuit.rpy", line 140: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump home_push
+    ^
 
-File "game/script files/3_pursuit.rpy", line 56: expected ':' not found.
-    label Lamp Cont
-               ^
-
-File "game/script files/3_pursuit.rpy", line 88: expected ':' not found.
-    label going home from market
-                ^
-
-File "game/script files/3_pursuit.rpy", line 126: end of line expected.
-    jump home stranger
-              ^
-
-File "game/script files/3_pursuit.rpy", line 129: end of line expected.
-    jump younger women
-                 ^
-
-File "game/script files/3_pursuit.rpy", line 132: expected ':' not found.
-    label home stranger
-               ^
-
-File "game/script files/3_pursuit.rpy", line 141: end of line expected.
+File "game/script files/3_pursuit.rpy", line 150: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
     jump home push
-              ^
-
-File "game/script files/3_pursuit.rpy", line 143: expected ':' not found.
-    label younger women
-                  ^
-
-File "game/script files/3_pursuit.rpy", line 151: end of line expected.
-    jump home push
-              ^
-
-File "game/script files/3_pursuit.rpy", line 154: expected ':' not found.
-    label home push
-               ^
+    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Nov  2 20:09:47 2024
+Sat Nov  2 20:23:40 2024

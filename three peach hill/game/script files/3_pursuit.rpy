@@ -1,4 +1,4 @@
-label 3pursuit:
+label pursuit:
 "The rest of the week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, the weekend comes calling."
 
 menu:
@@ -22,18 +22,20 @@ label cobbler:
     # A regular day
     # Thinking about what Erin is up to
     # Some interesting choice
-        jump farmers market
+        jump farmersmarket
 
 label cornerstore:
-# Another week goes by
-# Run into Erin at the cornerstore
-# Erin's working to make some extra cash while she's in town, she's staying at an Airbnb for now
-    jump farmers market
+    "TBD"
+    # Another week goes by
+    # Run into Erin at the cornerstore
+    # Erin's working to make some extra cash while she's in town, she's staying at an Airbnb for now
+    jump farmersmarket
 
-label farmers market:
-# Erin is working for the florist doing odd jobs
-# Aya buys some flowers and Erin talks to the florist and gets permission to call it a day, so she joins Aya and carries her bag for her
-# They get vegetables, fresh bread, and Aya picks out something cute for Erin
+label farmersmarket:
+    "TBD"
+    # Erin is working for the florist doing odd jobs
+    # Aya buys some flowers and Erin talks to the florist and gets permission to call it a day, so she joins Aya and carries her bag for her
+    # They get vegetables, fresh bread, and Aya picks out something cute for Erin
     jump Lamp_Talk
 
 label Lamp_Talk:
@@ -51,7 +53,7 @@ label Lamp_Talk:
     # IF WENT LAMP
     a "\"I'm sorry I didn't check to see if you were okay first, that was shitty of me. It's just... it was another piece of her gone, just like that.\""
 
-        jump Lamp_Cont
+    jump Lamp_Cont
 
 label Lamp_Cont:
     "Erin gently rests her free hand on my shoulder."
@@ -82,7 +84,7 @@ label Lamp_Cont:
 
     "I leave my hand in hers. We walk in silence, hand in hand, cicadas buzzing in the trees along the sidewalk."
 
-        jump going_home_from_market
+    jump going_home_from_market
 
 
 label going_home_from_market:
@@ -121,33 +123,33 @@ label going_home_from_market:
 
     "I nearly drop a cabbage. She says it so frankly, with no hesitation."
 
-    menu:
-        "We're basically strangers.":
-            jump home_stranger
+menu:
+    "We're basically strangers.":
+        jump home_stranger
 
-        "How do you know I'm into you?":
-            jump younger_women
+    "How do you know I'm into you?":
+        jump younger_women
 
 
-    label home_stranger:
-        a "\"You hardly know me.\""
+label home_stranger:
+    a "\"You hardly know me.\""
 
-        e "\"It doesn't have to stay that way, you know. I want to learn more.\""
+    e "\"It doesn't have to stay that way, you know. I want to learn more.\""
 
-        a "\"Hmm.\""
+    a "\"Hmm.\""
 
-        "I run out of things to mess with so I clasp my hands to keep from fidgeting."
-            jump home_push
+    "I run out of things to mess with so I clasp my hands to keep from fidgeting."
+        jump home_push
 
-    label younger_women:
-        a "\" What if I said I'm not into younger women?\""
+label younger_women:
+    a "\" What if I said I'm not into younger women?\""
 
-        e "\"Then I'll just never tell you my age!\""
+    e "\"Then I'll just never tell you my age!\""
 
-        a "\"Silly.\""
+    a "\"Silly.\""
 
-        e "\"I'm serious! We obviously have chemistry.\""
-            jump home push
+    e "\"I'm serious! We obviously have chemistry.\""
+        jump home_push
 
 
 label home_push:
