@@ -1,37 +1,37 @@
-2024-11-03 14:30:25 UTC
+2024-11-03 17:16:01 UTC
 Windows-10-10.0.22631
 Ren'Py 8.2.0.24012702
 
-Early init took 0.09s
-Loading error handling took 0.03s
-Loading script took 0.20s
+Early init took 0.10s
+Loading error handling took 0.04s
+Loading script took 0.28s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.05s
+Running init code took 0.06s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\mcboots42\\AppData\\Roaming/RenPy/backups\\three peach hill':
-Dump and make backups took 0.08s
+Dump and make backups took 0.09s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.05s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.33s
+Creating interface object took 0.34s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
+Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
+Save bytecode. took 0.04s
 Running _start took 0.00s
-Interface start took 0.07s
+Interface start took 0.09s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3840, 2160)
@@ -45,23 +45,3 @@ Screen sizes: virtual=(2560, 1440) physical=(3840, 2054) drawable=(3840, 2054)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(2560, 1440) physical=(3840, 2054) drawable=(3840, 2054)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script files/2_deal.rpy", line 36, in script
-    if lamp_Freeze:
-  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1842, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script files/2_deal.rpy", line 36, in <module>
-    if lamp_Freeze:
-NameError: name 'lamp_Freeze' is not defined
-
-While running game code:
-  File "game/script files/2_deal.rpy", line 36, in script
-    if lamp_Freeze:
-  File "game/script files/2_deal.rpy", line 36, in <module>
-    if lamp_Freeze:
-NameError: name 'lamp_Freeze' is not defined
