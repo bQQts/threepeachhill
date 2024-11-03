@@ -209,4 +209,4 @@ label home_push:
 
     "I'm not going to fall for someone who's just passing through town. She's sticking around to pay back the debt she owes, no other reason."
 
-    jump ending
+    jump orchard
