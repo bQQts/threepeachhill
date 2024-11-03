@@ -22,7 +22,7 @@ label cobbler:
     # A regular day
     # Thinking about what Erin is up to
     # Some interesting choice
-        jump farmersmarket
+    jump farmersmarket
 
 label cornerstore:
     "TBD"
@@ -139,7 +139,7 @@ label home_stranger:
     a "\"Hmm.\""
 
     "I run out of things to mess with so I clasp my hands to keep from fidgeting."
-        jump home_push
+    jump home_push
 
 label younger_women:
     a "\" What if I said I'm not into younger women?\""
@@ -149,7 +149,7 @@ label younger_women:
     a "\"Silly.\""
 
     e "\"I'm serious! We obviously have chemistry.\""
-        jump home_push
+    jump home_push
 
 
 label home_push:
@@ -195,3 +195,5 @@ label home_push:
     "The words ring true even as I determine to steel myself."
 
     "I'm not going to fall for someone who's just passing through town. She's sticking around to pay back the debt she owes, no other reason."
+
+    jump ending

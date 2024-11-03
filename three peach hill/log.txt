@@ -1,10 +1,10 @@
-2024-11-03 00:23:40 UTC
+2024-11-03 00:32:13 UTC
 Windows-10-10.0.22631
 Ren'Py 8.2.0.24012702
 
-Early init took 0.08s
+Early init took 0.09s
 Loading error handling took 0.03s
-Loading script took 0.19s
+Loading script took 0.20s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 
@@ -24,61 +24,29 @@ File "game/script files/1_bookstore.rpy", line 1: expected 'label_name_declare' 
     label 1bookstore:
          ^
 
-File "game/script files/1_bookstore.rpy", line 40: expected 'label_name_declare' not found.
-    label 1Girl:
-         ^
+File "game/script files/2_deal.rpy", line 57: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump deal_cont
+    ^
 
-File "game/script files/1_bookstore.rpy", line 64: expected 'label_name_declare' not found.
-    label 1Lamp:
-         ^
-
-File "game/script files/1_bookstore.rpy", line 99: expected 'label_name_declare' not found.
-    label 1Freeze:
-         ^
-
-File "game/script files/2_deal.rpy", line 2: expected 'label_name_declare' not found.
-    label 2Deal:
-         ^
-
-File "game/script files/2_deal.rpy", line 59: expected 'label_name_declare' not found.
-    label 2cont:
-         ^
-
-File "game/script files/3_pursuit.rpy", line 1: expected 'label_name_declare' not found.
-    label 3pursuit:
-         ^
+File "game/script files/2_deal.rpy", line 174: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump pursuit
+    ^
 
 File "game/script files/3_pursuit.rpy", line 25: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump farmers market
+    jump farmersmarket
     ^
 
-File "game/script files/3_pursuit.rpy", line 31: end of line expected.
-    jump farmers market
-                 ^
-
-File "game/script files/3_pursuit.rpy", line 33: expected ':' not found.
-    label farmers market:
-                  ^
-
-File "game/script files/3_pursuit.rpy", line 54: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump Lamp_Cont
-    ^
-
-File "game/script files/3_pursuit.rpy", line 85: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump going_home_from_market
-    ^
-
-File "game/script files/3_pursuit.rpy", line 140: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+File "game/script files/3_pursuit.rpy", line 142: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
     jump home_push
     ^
 
-File "game/script files/3_pursuit.rpy", line 150: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump home push
+File "game/script files/3_pursuit.rpy", line 152: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump home_push
     ^
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Interface start took 0.46s
+Interface start took 0.47s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3840, 2160)
@@ -89,4 +57,6 @@ Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 560.94'
 Display Info: None
 Screen sizes: virtual=(2560, 1440) physical=(3658, 2058) drawable=(3658, 2058)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(2560, 1440) physical=(3840, 2054) drawable=(3840, 2054)
 Maximum texture size: 4096x4096

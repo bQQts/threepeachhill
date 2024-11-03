@@ -54,7 +54,7 @@ label Deal:
 
     a "\"Okay. Let's get that glass cleaned up before any more visitors come in.\""
 
-        jump deal_cont
+    jump deal_cont
 
 label deal_cont:
     "I grab a bucket from the back and hand it to Erin."
@@ -171,4 +171,4 @@ label deal_cont:
 
     a "\"Wh... what...!\""
 
-        jump pursuit
+    jump pursuit

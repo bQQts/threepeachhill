@@ -25,10 +25,10 @@ label start:
 
     # These display lines of dialogue.
 
-    jump 1bookstore
+    jump bookstore
 
-label ending
-"The End"
+label ending:
+    "The End"
     # This ends the game.
 
     return
