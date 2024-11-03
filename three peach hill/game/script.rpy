@@ -25,7 +25,7 @@ label start:
 
     # These display lines of dialogue.
 
-jump 1bookstore
+    jump 1bookstore
 
 label ending
 "The End"

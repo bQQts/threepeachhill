@@ -1,12 +1,6 @@
-2024-11-03 00:09:47 UTC
-Windows-10-10.0.22631
-Ren'Py 8.2.0.24012702
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
 
-Early init took 0.11s
-Loading error handling took 0.10s
-Loading script took 0.20s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
 
 File "game/script.rpy", line 28: expected 'label_name' not found.
     jump 1bookstore
@@ -167,18 +161,6 @@ File "game/script files/3_pursuit.rpy", line 151: end of line expected.
 File "game/script files/3_pursuit.rpy", line 154: expected ':' not found.
     label home push
                ^
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.46s
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 560.94'
-Display Info: None
-Screen sizes: virtual=(2560, 1440) physical=(3658, 2058) drawable=(3658, 2058)
-Maximum texture size: 4096x4096
+Ren'Py Version: Ren'Py 8.2.0.24012702
+Sat Nov  2 20:09:47 2024
