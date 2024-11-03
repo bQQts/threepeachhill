@@ -2,41 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 28: expected 'label_name' not found.
-    jump 1bookstore
-        ^
-
-File "game/script.rpy", line 30: expected ':' not found.
-    label ending
-                ^
-
-File "game/script.rpy", line 34: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    return
-    ^
-
-File "game/script files/1_bookstore.rpy", line 1: expected 'label_name_declare' not found.
-    label 1bookstore:
-         ^
-
-File "game/script files/2_deal.rpy", line 57: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump deal_cont
-    ^
-
-File "game/script files/2_deal.rpy", line 174: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump pursuit
-    ^
-
-File "game/script files/3_pursuit.rpy", line 25: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump farmersmarket
-    ^
-
-File "game/script files/3_pursuit.rpy", line 142: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump home_push
-    ^
-
-File "game/script files/3_pursuit.rpy", line 152: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump home_push
+File "game/script files/2_deal.rpy", line 36: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if lamp_Freeze:
     ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Nov  2 20:32:13 2024
+Sun Nov  3 09:29:38 2024
