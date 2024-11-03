@@ -33,28 +33,33 @@ label Deal:
 
     e "\"Really...?\""
 
-    # IF 1Freeze:
-    a "\"Oh, first we should clean up that cut before it gets any worse.\""
+        if lamp_Freeze:
 
-    e "\"Thank you, I'm sorry for the trouble.\""
+            a "\"Oh, first we should clean up that cut before it gets any worse.\""
 
-    "I turn off the neon OPEN sign at the front door, grabbing a dry erase marker to scribble out a note that says \"Back at 12:45\", which I stick to the front door."
+            e "\"Thank you, I'm sorry for the trouble.\""
 
-    "We quickly wash our hands at the bathroom sink and return to the front counter. I reach under it and pull out a first aid kit, removing iodine, gauze, tweezers, and a small bandage."
+            "I turn off the neon OPEN sign at the front door, grabbing a dry erase marker to scribble out a note that says \"Back at 12:45\", which I stick to the front door."
 
-    "She winces as I press the iodine-soaked gauze into the wound but does not pull away. It only takes a minute to finish treating and bandaging the cut."
+            "We quickly wash our hands at the bathroom sink and return to the front counter. I reach under it and pull out a first aid kit, removing iodine, gauze, tweezers, and a small bandage."
 
-    a "\"This shouldn't leave a scar, just be sure to keep it clean and dry.\""
+            "She winces as I press the iodine-soaked gauze into the wound but does not pull away. It only takes a minute to finish treating and bandaging the cut."
 
-    e "\"Thank you... Aya.\""
+            a "\"This shouldn't leave a scar, just be sure to keep it clean and dry.\""
 
-    "For some reason, I really like the sound of my name from her lips."
+            e "\"Thank you... Aya.\""
 
-    "What am I thinking? I shake my head to clear the thought from my mind, and clear my throat softly."
+            "For some reason, I really like the sound of my name from her lips."
 
-    a "\"Okay. Let's get that glass cleaned up before any more visitors come in.\""
+            "What am I thinking? I shake my head to clear the thought from my mind, and clear my throat softly."
 
-    jump deal_cont
+            a "\"Okay. Let's get that glass cleaned up before any more visitors come in.\""
+
+            jump deal_cont
+
+        else:
+            
+            jump deal_cont
 
 label deal_cont:
     "I grab a bucket from the back and hand it to Erin."
