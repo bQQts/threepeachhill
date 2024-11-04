@@ -6,6 +6,10 @@
 define e = Character("Erin")
 define a = Character("Aya")
 
+define config.default_music_volume = 0.5
+define config.default_sfx_volume = 0.5
+define config.default_voice_volume = 0.75
+
 default kind_points = 0
 default lamp_freeze_outcome = False
 default lamp_check = False
