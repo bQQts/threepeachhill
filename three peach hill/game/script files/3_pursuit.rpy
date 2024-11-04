@@ -1,7 +1,6 @@
 label pursuit:
-    stop black fadeout 1.0
     scene bg with dissolve
-    
+
     "The rest of the week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, the weekend comes calling."
 
 menu:
