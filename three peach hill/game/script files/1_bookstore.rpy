@@ -33,7 +33,8 @@ label bookstore:
 
 menu:
     "Go to the girl":
-        jump bookstore_Girl
+            $ kind_points += 1
+            jump bookstore_Girl
 
     "Go to the lamp":
         jump bookstore_Lamp
@@ -42,6 +43,8 @@ menu:
 
 
 label bookstore_Girl:
+
+
     "I rush over to her, taking hold of her arm and helping her upright."
 
     a "\"Are you okay?!\""
@@ -66,6 +69,8 @@ label bookstore_Girl:
 
 
 label bookstore_Lamp:
+    $ lamp_check = True
+
     "Surveying the shattered lamp yields nothing I didn't already suspect. The glass lampshade was a mosaic of stained glass pieces welded together."
     
     "Four panels had joined at their long edges to create a shade reminiscent of a boxy, blue, crystalline moth."
@@ -87,6 +92,7 @@ label bookstore_Lamp:
     # CHOICE
     menu:
         "Grab her hand":
+            $ kind_points += 1
             jump lamp_grab
 
         "Freeze in surprise":
@@ -95,6 +101,7 @@ label bookstore_Lamp:
 
 
     label lamp_grab:
+
         "My hand darts out and grabs hold of the girl's wrist."
 
         a "\"Don't! Don't, you could hurt yourself.\""

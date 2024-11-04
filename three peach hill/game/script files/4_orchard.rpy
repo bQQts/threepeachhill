@@ -51,8 +51,7 @@ menu:
     "Shut this down":
         jump shut_this_down
 
-    # if Kind =\>3, also
-    "Let her down gently":
+    "Let her down gently" if kind_points >= 3:
         jump let_her_down_gently
 
 label shut_this_down:

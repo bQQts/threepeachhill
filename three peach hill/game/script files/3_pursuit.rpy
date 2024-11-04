@@ -1,5 +1,8 @@
 label pursuit:
-"The rest of the week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, the weekend comes calling."
+    stop black fadeout 1.0
+    scene bg with dissolve
+    
+    "The rest of the week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, the weekend comes calling."
 
 menu:
     "I make cobbler for the neighbors":
@@ -38,9 +41,9 @@ label farmersmarket:
     # Erin is working for the florist doing odd jobs
     # Aya buys some flowers and Erin talks to the florist and gets permission to call it a day, so she joins Aya and carries her bag for her
     # They get vegetables, fresh bread, and Aya picks out something cute for Erin
-    jump Lamp_Talk
+    jump lamp_talk
 
-label Lamp_Talk:
+label lamp_talk:
     a "\"That lamp...\"" 
 
     "I trail off, lost in the memory for a moment. My throat feels tight, my chest heavy."
@@ -57,12 +60,17 @@ label Lamp_Talk:
 
     a "\"It was my mom's. She made it when I was young enough that I could only see it from afar, to minimize the risk of me breaking it.\""
 
-    # IF WENT LAMP
+    if lamp_check = True:
+        jump lamp_talk_apology
+    else:
+        jump lamp_cont
+
+label lamp_talk_apology:
     a "\"I'm sorry I didn't check to see if you were okay first, that was shitty of me. It's just... it was another piece of her gone, just like that.\""
 
-    jump Lamp_Cont
+    jump lamp_cont
 
-label Lamp_Cont:
+label lamp_cont:
     "Erin gently rests her free hand on my shoulder."
 
     e "\"What happened to her? Sorry, I guess that's not really a polite question. You just sound so wistful, but not really sad?\""

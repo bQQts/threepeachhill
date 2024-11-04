@@ -6,7 +6,9 @@
 define e = Character("Erin")
 define a = Character("Aya")
 
+default kind_points = 0
 default lamp_freeze_outcome = False
+default lamp_check = False
 
 
 # The game starts here.

@@ -191,4 +191,5 @@ label deal_cont:
 
     a "\"Wh... what...!\""
 
+    scene black with irisin
     jump pursuit
