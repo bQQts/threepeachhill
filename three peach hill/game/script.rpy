@@ -11,7 +11,8 @@ define a = Character("Aya")
 default kind_points = 0
 default lamp_freeze_outcome = False
 default lamp_check = False
-
+default cobblerfirst = False
+default cornerstorefirst = False
 
 # The game starts here.
 
