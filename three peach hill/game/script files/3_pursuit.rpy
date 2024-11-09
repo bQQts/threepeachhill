@@ -4,29 +4,367 @@ label pursuit:
     "The rest of the week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, the weekend comes calling."
 
 menu:
-    "I make cobbler for the neighbors":
-        jump cobbler
+    "Which should I do first?"
 
-    "I make a trip to the cornerstore to pick up drinks and groceries":
+    "Make peach cobbler":
+        $ cobblerfirst = True
+        jump cobbler
+        
+    "Go to the cornerstore":
+        $ cornerstorefirst = True
         jump cornerstore
 
 label cobbler:
 
     "Fortunately, the peaches had sustained no damage at all during The Incident, and I'm able to whip up a couple of test cobblers."
 
-    "The local peaches aren't quite in season yet, so these are just some of the early bloomers that my friend at the orchard set aside for me."
+    "The local peaches aren't quite in season yet, so these are just some of the early bloomers that Joy at the orchard set aside for me."
 
-    "The cobblers aren't bad. They're not as sweet as I had hoped they'd be, but that makes sense since peach season starts next month."
-    
-    "I should have accounted for the difference and adjusted my recipe, but this is good practice for the real thing!"
+    "The cobblers aren't bad. They're not as sweet as I had hoped they'd be, but that makes sense since peach season starts next month. I should have accounted for the difference and adjusted my recipe, but this is good practice for the real thing!"
 
-    "I divide the cobblers into plastic food storage bins to give to the neighbors. Some of my older friends are the opposite of sweet-tooths and will probably love this."
+    "I divide the cobblers into plastic food storage bins and pack a small picnic basket with the bins I don't put in the fridge. Some of my older friends will probably love this."
 
-    # Couple of neighbor interactions, maybe this is a choice where you can pick who to go to?
-    # A regular day
-    # Thinking about what Erin is up to
-    # Some interesting choice
-    jump farmersmarket
+    menu:
+        "Who should I visit today?"
+        "Joy, the orchardist":
+            jump orchardist
+
+        "The cat spirit":
+            jump lydia_chat
+
+label orchardist:
+    "Joy and I have been friends for almost my whole life. She's been running the orchard for as long as I can remember, and is probably in her 60s now."
+
+    "We run into each other now and then, and we're friends on social media. She's a much more active poster than I am, and the extra marketing has been helpful for her orchard. People come from all over to pick peaches."
+
+    "It's nearly time for peach picking to open up, but not quite yet!"
+
+    "Since she spends all her time managing the business, she doesn't tend to do a lot of baking. I try to bring her things once in a while to check in."
+
+    "I take my bike to her office, which is a small two-story building at the very foot of the orchard's hills. Wind chimes hang from the stoop, and the sign on the door says OPEN. When I swing the door open and step inside, I'm greeted by a couple of my neighbors sipping coffee in the lobby."
+
+    "Timothy" "\"Well hey there! You lookin' for Joy, by any chance?\""
+
+    a "\"Hey! Sure am.\""
+
+    "Timothy" "\"She's out in the trees today.\""
+
+    a "\"Oh! No problem, I'll just drop this off upstairs.\""
+
+    "The gentlemen wave in acknowledgement, and I take the stairs to the second floor, where the actual offices and the break room await my cobbler-laden picnic basket."
+
+    "I borrow a sticky note from Joy's desk and jot down a note mentioning the cobbler, then put the cobbler in the break room fridge."
+
+    "It's cozy, very lived-in for an administrative building. Joy's turned the downstairs into a social space with couches, bar counters, and plenty of plants so visitors and farmers alike have a place to relax out of the sun."
+
+    "Upstairs, however, has the must and dust of decades of unchanging use. It's where the real business happens."
+
+    "I'm fixing my hair in an old mirror in the break room when I hear Joy approach."
+
+    "Joy" "\"Aya! The boys told me someone was here for me, it's good to see you.\""
+
+    a "\"It's good to see you too! I left you a note, there's peach cobbler in the fridge for you. Not too sweet.\""
+
+    "Joy" "\"That's awful kind of you, thanks for thinking of me. I'll be sure to bring it home with me tonight.\""
+
+    a "\"Putting in a full work day?\""
+
+    "Joy" "\"The work never stops! And we're getting ready for picking season. How's the bookstore?\""
+
+    a "\"Not so good, at least not lately. Having a hard time getting customers.\""
+
+    "Joy" "\"Sorry to hear that, have you thought about doing more social media marketing?\""
+
+    a "\"Joy, you sound like such a youngster when you say stuff like that. But you know I'm not tech-savvy like that. And I don't know how that would work for a bookstore...\""
+
+    "Joy" "\"Ah, sorry, didn't mean to go straight into solutions-mode. Let me know if there's anything I can do to help, okay? And take care of yourself, honey. You focus too much on work.\""
+
+    "She takes my hand and pats it comfortingly."
+
+    a "\"I'll take care of myself. You eat that cobbler, okay? And give me notes!\""
+
+    scene black with irisin
+
+    scene bg with dissolve 0.2
+
+    "I should call her."
+
+    "I stare at the broken lightbulb in the dustbin."
+
+    "I dial the number I had saved to my contacts after Erin left the shop that day."
+
+    "It rings once... twice..."
+
+    e "\"*click* Hello?\""
+
+    "She answered!!"
+
+    "What do I say?! I didn't think this through!"
+
+menu:
+    "Hey, this is Aya":
+        jump cobbler_call_aya
+
+    "Uhhhhh":
+        jump cobbler_call_uhh
+
+    "(Say nothing)":
+        jump cobbler_call_nothing
+
+label cobbler_call_aya:
+    e "\"The bookstore fox!\""
+
+    a "\"Fox {i}spirit{/i}, thank you.\""
+
+    e "\"I'm so glad you called so I have your number, I saw this cat today and wanted so badly to send you a picture of it!\""
+
+    a "\"Oh, sure! I'd like that.\""
+
+    e "\"One sec,\""
+
+    "A faint rustle emits from the phone as Erin finds the photo and sends it to me."
+
+    "*ding*"
+
+    "It\'s adorable. A little grey cat, barely more than a kitten, is napping in a milk carton lit by a perfect sunbeam."
+
+    a "\"This is so cute! Where did you take this?\""
+
+    e "\"Trade secret, I\'m afraid!\""
+
+    a "\"For what trade?\""
+
+    e "\"It\'s a secret I\'ll trade for a kiss!\""
+
+    a "\"A kiss, huh? How will I do that if I don\'t know where you are?\""
+
+    "Erin giggles, the sound partly clipped by the phone\'s mic."
+
+    e "\"I suppose you have a point. Darn.\""
+
+    e "\"Wait, was there a reason you called me?\""
+
+
+    menu:
+        "I wanted to know if you stayed in town...":
+            jump cobbler_erin_stayed
+
+        "I didn\'t really have a reason":
+            jump cobbler_erin_no_reason
+
+
+label cobbler_erin_stayed:
+
+    a "\"...or if you had gone back to the city.\""
+
+    e "\"Oh, you think I\'m a city kid, huh?\""
+
+    a "\"Aren\'t you?\""
+
+    e "\"I hate it there! I\'m still out here. I\'m sure we\'ll run into each other soon. You'll just have to figure out where I'm spending my time.\""
+
+    e "\"Anyway, I gotta go! I\'ll text you later, bye!\""
+
+    "*click*"
+
+    "Okay, that was {i}definitely{/i} flirting, right?"
+
+    scene black with irisin
+    jump cobbler_end
+
+
+label cobbler_erin_no_reason:
+
+    e "\"Oh, okay! Well I\'m glad to hear from you anyway!\""
+
+    e "\"Would you... like to get coffee sometime?\""
+
+    a "\"I\'m more of a tea drinker.\""
+
+    "She sounds a little deflated when she responds."
+
+    e "\"Right, of course, that\'s alright. Well... I gotta get going, I\'ll text you later! Bye!\""
+
+    "Wait... wait. Wait. Was she asking me out? WAIT."
+
+    scene black with irisin
+    jump cobbler_end
+
+
+
+
+
+label cobbler_call_uhh:
+
+    a "\"I...\""
+
+    e "\"Who is this?\""
+
+    "I clear my throat."
+
+    a "\"This is Aya.\""
+
+    jump cobbler_call_aya
+
+
+
+label cobbler_call_nothing:
+
+    e "\"Another spam caller??? Stop calling me!\""
+
+    "Well, that didn't go the way I thought it would. Not sure what I was expecting..."
+
+    scene black with dissolve 0.2
+    jump cobbler_end
+
+
+
+label lydia_chat:
+    "Lydia is a cat spirit who tends a large garden near the post office. She has a little cottage that's perfect for just her, and she likes living alone."
+
+    "In fact, she thrives by spending her time humming to budding flowers and sprouting vegetables, taking naps in her sun chair, and just being outside in general. But not in a sporty way, she's just kind of an outside cat."
+
+    "I try to catch up with her regularly, but I'm a bit more of an indoorsy spirit. Still, it's good to have other spirits as friends nearby, especially at a time like this."
+
+    "She might have a spell to fix broken lamps, which would save me a lot of time and effort."
+
+    "I swing open the garden gate and look for her."
+
+    "I find her weeding a garden box of catnip, looking blissed as all hell. She has a small, curvaceous figure and wears a painter's jumpsuit with thick yellow gardening gloves."
+
+    "Her thick, calico colored hair is pulled back into a low ponytail, and a broad straw sunhat shades her head and shoulders. Holes are cut into the hat to leave room for her ears. Her spotted tail is adorned with a blue ribbon and a little gold bell that jingles lighty as her tail swings back and forth."
+
+    "Lydia always looks like she's no older than 40, but I know she's much, much older. Spirits age slowly."
+
+    a "\"I hope I'm not interrupting!\""
+
+    "My tone is warm, and as I speak I sway my picnic basket in front of me."
+
+    lyd "\"What have you brought me this time? I hope it isn't more pickles. You know how I hate pickles.\""
+
+    a "\"Well, I know that now. I didn't know at the time! It was supposed to be a surprise.\""
+
+    lyd "\"Surprise? More like jumpscare. Come on in, let's see what you have.\""
+
+    "She peels off her gloves and tucks the heels of them into the back pocket of her jumpsuit."
+
+    "Inside the cottage, Lydia puts on a kettle of tea and pulls out two handcrafted glazed mugs. We scoop the cobbler into a ceramic pot and put it into the oven to heat."
+
+    "I don't say anything. Lydia likes to take her time and bristles if she's rushed."
+
+    "The teapot whistles. She pours tea: spearmint for her and Earl Grey for me. The cobbler is hot and ready after another twenty minutes of quiet contemplation."
+
+    "As we begin to eat, she finally asks me the reason for my visit."
+
+    a "\"I simply wanted to share this with you. I thought you'd enjoy it.\""
+
+    "She gives me a look from below lowered lashes."
+
+    lyd "\"And that's all?\""
+
+    a "\"Well... there is something, actually.\""
+
+    "I explain that I'm looking for a spell that fixes a broken lamp, and tell her about Erin and the pact she made with me."
+
+    lyd "\"Ah, a human girl... tell me more about her.\""
+
+label tell_lydia_about_erin:
+
+menu:
+    "She was clumsy" if picked_clumsy = False:
+        $ picked_clumsy = True
+        jump shes_clumsy
+
+    "She was bold":
+        jump shes_bold
+
+    "She was cute":
+        jump shes_cute
+
+    "(Change the subject)":
+        jump lydia_change_subject
+
+label shes_clumsy:
+
+    lyd "\"Well, obviously.\""
+
+    lyd "\"Is that all?\""
+
+    jump tell_lydia_about_erin
+
+
+label shes_bold:
+
+    a "\"I liked her. The way she was so resolved to pay me back was charming. And she was so bold when she left.\""
+
+    lyd "\"How so?\""
+
+    a "\"She called me beautiful. Out of the blue!\""
+
+    lyd "\"Aya, that's adorable!\""
+
+    a "\"It was probably just a compliment and not actual flirting, right?\""
+
+    lyd "\"But what if it WAS flirting? And you liked her. So you should give her a chance and see where it goes.\""
+
+    a "\"I don't want to assume that and get hurt, you know? It's been hard since mom and dad left. You know I haven't dated anyone since then. Plus, she's younger than me\""
+
+    lyd "\"I get where you're coming from, but you need to live a little. Have a little summer romance. It'll be fine, it'll be fun! And don't talk to me about age, you're both youngsters. You don't know how annoying age gap problems can be when you get to be 300 instead of 30.\""
+
+# if not cornerstorefirst
+    a "\"Right, sorry. Well, I haven't seen her again since then. She could have bailed and gone back home.\""
+
+    lyd "\"You two made a pact, though. If she's so {i}bold{/i}, she'll show up.\""
+
+    "Lydia primly sips her tea. I know she's probably right, but I just don't know..."
+
+    "I guess I'll just have to see what happens if I run into her."
+
+    jump cobbler_end
+
+
+label shes_cute:
+
+    a "\"Really cute. Clumsy and cute.\""
+
+    lyd "\"Oh my, does little Aya have a crush?\""
+
+    a "\"I don't really have time for a crush...\""
+
+    "Lydia snorts."
+
+    lyd "\"All you have is time. You're just moldering away among those books. You're a cute girl, Aya, and you'd be extra cute with a cutie by your side.\""
+
+    a "\"Lyd!! I barely know her!\""
+
+    lyd "\"Just saying!\""
+
+    "I grumble something into my teacup and she pretends to not hear me, ears swiveled away."
+
+    jump cobbler_end
+
+
+label lydia_change_subject:
+
+    "I don't really want to talk about Erin..."
+
+    a "\"She's just some girl, I don't have much to say about her.\""
+
+    "Which is more or less true. I don't like the way Lydia looks at me, though. She's got this \"knowing old woman\" expression that looks out of place on her unlined face."
+
+    jump cobbler_end
+
+
+
+label cobbler_end:
+
+    if cobblerfirst:
+        jump cornerstore
+
+    else:
+        if cornerstorefirst:
+            jump farmers_market
+
 
 label cornerstore:
     "TBD"

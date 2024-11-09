@@ -13,6 +13,7 @@ default lamp_freeze_outcome = False
 default lamp_check = False
 default cobblerfirst = False
 default cornerstorefirst = False
+default picked_clumsy = False
 
 # The game starts here.
 
