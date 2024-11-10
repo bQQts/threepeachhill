@@ -1,4 +1,6 @@
 label bookstore:
+    # July 10
+    
     "It's been a slow summer. Slower than usual. The buzzing of cicadas and unyielding humidity drown our little town in syrupy hot summer."
 
     "They seem to say, \"You have all the time in the world.\" A clock hanging by the cluttered storefront counter slowly tic tic tics in agreement."

@@ -1,7 +1,9 @@
 label pursuit:
     scene bg with dissolve
 
-    "The rest of the week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, the weekend comes calling."
+    # July 20
+
+    "The next week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, a totally open weekend comes calling."
 
 menu:
     "Which should I do first?"
@@ -26,6 +28,7 @@ label cobbler:
 
     menu:
         "Who should I visit today?"
+
         "Joy, the orchardist":
             jump orchardist
 
@@ -61,23 +64,23 @@ label orchardist:
 
     "I'm fixing my hair in an old mirror in the break room when I hear Joy approach."
 
-    "Joy" "\"Aya! The boys told me someone was here for me, it's good to see you.\""
+    joy "\"Aya! The boys told me someone was here for me, it's good to see you.\""
 
     a "\"It's good to see you too! I left you a note, there's peach cobbler in the fridge for you. Not too sweet.\""
 
-    "Joy" "\"That's awful kind of you, thanks for thinking of me. I'll be sure to bring it home with me tonight.\""
+    joy "\"That's awful kind of you, thanks for thinking of me. I'll be sure to bring it home with me tonight.\""
 
     a "\"Putting in a full work day?\""
 
-    "Joy" "\"The work never stops! And we're getting ready for picking season. How's the bookstore?\""
+    joy "\"The work never stops! And we're getting ready for picking season. How's the bookstore?\""
 
     a "\"Not so good, at least not lately. Having a hard time getting customers.\""
 
-    "Joy" "\"Sorry to hear that, have you thought about doing more social media marketing?\""
+    joy "\"Sorry to hear that, have you thought about doing more social media marketing?\""
 
     a "\"Joy, you sound like such a youngster when you say stuff like that. But you know I'm not tech-savvy like that. And I don't know how that would work for a bookstore...\""
 
-    "Joy" "\"Ah, sorry, didn't mean to go straight into solutions-mode. Let me know if there's anything I can do to help, okay? And take care of yourself, honey. You focus too much on work.\""
+    joy "\"Ah, sorry, didn't mean to go straight into solutions-mode. Let me know if there's anything I can do to help, okay? And take care of yourself, honey. You focus too much on work.\""
 
     "She takes my hand and pats it comfortingly."
 
@@ -86,6 +89,8 @@ label orchardist:
     scene black with irisin
 
     scene bg with dissolve 0.2
+
+    # title where it's "back at the bookstore"
 
     "I should call her."
 
@@ -112,6 +117,7 @@ menu:
         jump cobbler_call_nothing
 
 label cobbler_call_aya:
+    $ milk_carton = True
     e "\"The bookstore fox!\""
 
     a "\"Fox {i}spirit{/i}, thank you.\""
@@ -357,24 +363,233 @@ label lydia_change_subject:
 
 
 label cobbler_end:
-
     if cobblerfirst:
+        "It's been a big day. I'll go to the cornerstore tomorrow."
         jump cornerstore
 
     else:
         if cornerstorefirst:
+            "What a weekend. It was good, but I'm so tired... at least the bookstore will be quiet this week!"
+            scene black with dissolve 2.0
             jump farmers_market
 
 
 label cornerstore:
-    "TBD"
-    # Another week goes by
-    # Run into Erin at the cornerstore
-    # Erin's working to make some extra cash while she's in town, she's staying at an Airbnb for now
-    jump farmersmarket
+    "The cornerstore is on the far side of town but it's a nice day, so I leave my bike behind and equip myself with a couple of sturdy tote bags."
+    
+    "It's been a couple weeks since I've gone, so I'll probably grab a bunch of snacks and drinks to supplement the usual groceries."
 
-label farmersmarket:
-    "TBD"
+    "Some tiny birds peck at seeds and tiny crumbs scattered on the sidewalk, and the little fellows hop out of the way when I walk past."
+
+    if milk_carton = True:
+        "Outside the cornerstore I see a stack of familiar blue milk cartons."
+        a "\"No way.\""
+        "I guess this is where she's been... closer than I thought!"
+
+    "I nod at a couple people in the cornerstore. I don't know them by name, but I broadly recognize them as locals."
+
+    e "\"Aya? Is that you?\""
+
+    "She's here. Like a breath of fresh air."
+
+    a "\"Oh! Erin!\""
+
+    "I take in her apron and the box of candies she's holding tucked under one arm."
+
+    a "\"So this is where you've been?\""
+
+    e "\"Mostly! Doing jobs here and there. I'm renting a room from the owner.\""
+
+    a "\"Cindy, right? She's very sweet. I'm glad you found a place to stay, but why aren't you back home?\""
+
+    e "\"I wasn't ready to go back yet. Besides... I still gotta help you find that spell, right?\""
+
+    "Right... in a month!"
+
+    a "\"Ah, well... it's good to see you. I hope you've been well?\""
+
+    "She steps past me and starts to unpack the box, restocking the shelf."
+
+    "She stepped close enough that the scent of citrus and apples wafted from her hair. It's a very bright and happy scent, and it suits her."
+
+    e "\"I have! So, you doing some shopping today? Or did you just come here to find me?\""
+
+    a "\"I didn't know where to find you, really. Just here to pick some things up that I missed at the grocer.\""
+
+    e "\"Nice! What are you doing after? I'm here 'til 7, but not busy after. We could hang out!\""
+
+    "This seems like a hint. I'm not doing anything, but I want to keep to myself this weekend and recharge..."
+
+    menu:
+        "Having some downtime to myself tonight.":
+            jump cornerstore_downtime
+        
+        "(Lie.) Magic stuff. Spirit things.":
+            jump cornerstore_lie
+
+
+label cornerstore_downtime:
+    a "\"So I'll be busy, sorry.\""
+
+    "She tucks a loose strand of hair behind her ear and smiles up at me from where she squats next to a shelf."
+
+    e "\"That's alright! Another time, then.\""
+
+    jump cornerstore_cont
+
+label cornerstore_lie:
+
+    "Erin nods sagely and smiles guilelessly up at me from where she squats next to a shelf."
+
+    e "\"That sounds important, I don't want to intrude on that.\""
+
+    "I feel a little bad for the lie. She really took that at face value."
+    
+    jump cornerstore_cont
+
+label cornerstore_cont:
+
+    e "\"Well, I don't want to keep you from your shopping! You know where to find me now, so don't be a stranger, okay?\""
+
+    e "\"I could come visit your bookstore after work!\""
+
+    a "\"No! I mean, we'll be closed, sorry.\""
+
+    "She nods and makes a wry smirk, but focuses on shelving the candies."
+
+    a "\"Catch you later, Erin.\""
+
+    "The rest of my shopping goes by quickly, though I do steal a few glances of Erin busying herself around the shop. She was certainly quite clumsy at my shop, but it looks like she's doing good work here."
+
+    jump cornerstore_end
+
+
+label cornerstore_end:
+
+    if cornerstorefirst:
+        "It's been a big day. I'll make cobbler tomorrow."
+        jump cobbler
+
+    else:
+        if cobblerfirst:
+            "What a weekend. It was good, but I'm so tired... at least the bookstore will be quiet this week!"
+            scene black with dissolve 2.0
+            jump farmers_market
+
+
+label farmers_market:
+    # July 27
+    # Introductory scene 
+    # Screen that says a week passes
+    # Farmers Market title screen
+    
+    "The smell of food wafts across the town on a light breeze that carries away the remnants of summer's humidity."
+
+    "As I walk down the street toward the town's central plaza, I hear the hum of small generators and the bustling of people a couple blocks away."
+
+    "The farmers market is in full swing for harvest season."
+
+    "There are vendors selling early peaches from Joy's orchard, while others sell the last of the season's blackberries. The usual veggie stands have a bounty of fresh treasures."
+    
+    "A honey merchant has paired up with a woodworker who's selling wooden wands and bread bowls to go with the honey."
+
+    "There are rows of unique, handcrafted wares from merchants in the surrounding regions who've come to this town to peddle their wares at this farmers market."
+
+    "There's even a fox spirit selling lucky talismans. They're real magic, though the workings are quite small; it's better not to swing the balance of things too far in any direction."
+
+    "The first event of the season is always a big one."
+
+    "I pick up some veggies, a cup of cold lemonade, and buy a loaf of bread from a baker who drove 3 hours to be here."
+
+    "After a good lap around the produce side of the market, my bags are getting heavy. I head to a flower stand I've bought from in the past in search of marigold and sunflowers."
+
+    "I hear her voice before I see her."
+
+    e "\"Coming right up! Let me get those bagged for you.\""
+
+    "A customer hands Erin a bouquet of daisies and she turns around to place it in a water-sealed paper bag."
+
+    "She's smiling when she returns the bouquet to the customer, then sees me and waves."
+
+    e "\"Aya! Are you here to get flowers??\""
+
+    a "\"Yeah, but I'm still deciding what to get.\""
+
+    e "\"I helped unload everything, I could probably give you some ideas! What would you think about this little bouquet of lavender and larkspur?\""
+
+    menu:
+        "Should I get my usual marigold and sunflowers, or go for the lavender and larkspur like Erin suggests?"
+
+        "Marigold and sunflowers":
+            jump farmers_market_marigold
+
+        "Lavender and larkspur":
+            jump farmers_market_lavender
+
+    label farmers_market_marigold:
+
+        a "\"Thanks, but I think I'll get my usual. A bouquet each of marigold and sunflowers, please.\""
+
+        e "\"Oooh how pretty! I love that, I'll bag those for you.\""
+
+        jump farmers_market_cont
+
+    label farmers_market_lavender:
+
+        a "\"That's a good suggestion, I'll take the lavender and larkspur.\""
+
+        "She beams at me and nearly bounces to fetch a bouquet of purple and blue sprigs."
+
+        e "\"Here, this is my favorite one from this morning! Do you like it??\""
+
+        a "\"I love it.\""
+
+        jump farmers_market_cont
+
+label farmers_market_cont:
+
+    "Erin bags the flowers and waves over the flower merchant so I can pay for them."
+
+    "Gary" "Oh, hello there Aya!"
+
+    e "\"You know Aya?\""
+
+    "Gary" "Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she tends to come by almost every weekend during the market season!"
+
+    e "\"Oh!\""
+
+    "I chuckle at her blush."
+
+    "Gary" "You know, Erin, if you'd like to call it a day here I'm sure Aya would be happy to show you around the rest of the market."
+
+    "He winks at me on the sly."
+
+    a "\"Oh, Gary, if you need the extra help I really don't want to pull her away, I was just stopping by to get flowers—\""
+
+    "Gary" "Nonsense, we'll be just fine. She was a huge help unloading everything this morning, we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market."
+
+    e "\"Really?! Thank you! This is great!!\""
+
+    "She unties her apron and lays it over the back of a folding chair behind the sales table, slings her book bag over her shoulder, then comes around to join me."
+
+    e "\"Will you show me around the market? I bet you know where all the good stuff is!\""
+
+    a "\"I suppose...\""
+
+    "Gary comes back with an envelope for Erin."
+
+    "Gary" "You two take care, now!"
+
+    a "\"Thank you, Gary. Likewise!\""
+
+    "I tuck the flowers into the larger of my tote bags and heft them so the straps rest more comfortably on my shoulders."
+
+    "Erin notices the motion and offers a hand."
+
+    e "\"Let me carry your bags, okay? You must be tired from carrying them around all day.\""
+
+    "I start to protest, but she insists, and I end up giving her the two smaller totes while I hang on to the largest one with the flowers."
+
     # Erin is working for the florist doing odd jobs
     # Aya buys some flowers and Erin talks to the florist and gets permission to call it a day, so she joins Aya and carries her bag for her
     # They get vegetables, fresh bread, and Aya picks out something cute for Erin

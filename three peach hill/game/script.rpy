@@ -5,7 +5,8 @@
 
 define e = Character("Erin")
 define a = Character("Aya")
-
+define lyd = Character("Lydia")
+define joy = Character("Joy")
 
 
 default kind_points = 0
@@ -14,6 +15,7 @@ default lamp_check = False
 default cobblerfirst = False
 default cornerstorefirst = False
 default picked_clumsy = False
+default milk_carton = False
 
 # The game starts here.
 
