@@ -24,11 +24,11 @@ label the_call:
 
     e "\"There are other ways. I could postpone it, or do it online. Anyway, the point is that I'm not really ready to go back to the city. I don't want to go.\""
 
-    a "\"But what about your parents?\""
+    a "\"What about your parents?\""
 
     e "\"What about them? I appreciate that they want to look out for me, but I'm doing just fine. I'm not doing anything wrong by trying to be happy.\""
 
-    a "\"That's pretty compelling.\""
+    a "\"You know what? That's pretty compelling.\""
 
     e "\"Right?\""
 
@@ -36,8 +36,10 @@ label the_call:
 
     a "\"I'm glad you found somewhere you want to be. Belonging somewhere is something everyone needs, humans and spirits alike.\""
 
-    "She beams at me."
+    "She smiles shyly at me."
 
     "That's when I get a call myself. One that dooms me in a way I was totally unprepared for."
+
+    scene black with irisin
 
     jump the_plan
