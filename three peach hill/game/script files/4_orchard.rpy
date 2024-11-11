@@ -1,5 +1,5 @@
 label orchard:
-    # scene orchard with dissolve 2.0
+    # scene orchard with dissolve
 
     # August 3
 
