@@ -106,14 +106,115 @@ label lost_market_inside:
 
     "The amber glow grows, and I step out of the alley into a street full of spirits of all shape and size."
 
-    "As naturally as breathing, I shift fully into my spirit form. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
+    "As naturally as breathing, I shift fully into my spirit form: an enormous XX COLOR three-tailed fox with small red horns. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
 
     "Tall, shapeless giants and tiny floating imps float alongside animal spirits like myself."
 
     "I don't waste any time."
 
-    "I run, weaving through the silent crowd, following the faint, unmistakable scent of human and the citrus and apple scent of Erin's shampoo."
+    "I run, weaving through the silent crowd, following the faint, unmistakable glowing tether of the pact we made. I pick up the citrus and apple scent of Erin's shampoo."
 
-    "I have to find her."
+    "I have to go faster!"
 
+    "I run and I run, and finally I know I'm drawing near when the tether glows brighter. A small crowd has formed a circle around her."
+
+    "She's standing boldly before a towering male oni. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
+
+    "I leap, snapping at the ribbon. It shatters into sparkling shards of light between my sharp teeth."
+
+    "Oni" "\"You dare to intefere? This human wished to make a pact with me, fox. I was simply going to lead her out of here.\""
+
+    a "\"In exchange for what?\""
+
+    "Oni" "\"A trifling matter. She was to bring me across to the mortal realm with her.\""
+
+    a "\"I'm afraid that is not going to be possible. This human is spoken for. She already has a pact with me.\""
+
+    "Oni" "\"If that is so, why did she need a guide out?\""
+
+    a "\"I was merely busy for a moment, but am here now.\""
+
+    "Erin looks at me, astonished at my form."
+
+    e "\"Aya? You can... talk like that?\""
+
+    a "\"Of course. I'm still me.\""
+
+    "I address the oni."
+
+    a "\"We must depart. Kindly find someone else to bargain with.\""
+
+    "The oni glares at me and crosses his arms."
+
+    a "\"Erin, climb upon my back. I'll take us out of here.\""
+
+    e "\"Are you sure? Shouldn't we find that spell?\""
+
+    a "\"Not tonight.\""
+
+    "She reluctantly grabs hold of my fur and hauls herself onto my back, hugging my neck tightly."
+
+    "I fly like the wind and take us back to the alley. The streets shift around us, but I know exactly where to go."
+
+    a "\"Close your eyes.\""
+
+    "We race across the border between the spirit and mortal worlds. It's easier to leave with both of us present."
+
+    "The air around us blurs and I shift back, now holding Erin in my arms."
+
+    a "\"You can open your eyes now, Erin.\""
+
+    "She does."
+
+    e "\"Uh, you don't have to keep carrying me.\""
+
+    a "\"Ah, sorry.\""
+
+    "I set her on her feet and help straighten out her clothes. I check her for the telltale ribbons of other pacts but see none."
+
+    a "\"Are you alright? You didn't make any other bargains while there, right?\""
+
+    e "\"No, no. That was close, though. I had been there for hours, and had been hounded by all sorts of spirits wanting... different things.\""
+
+    e "\"That last one was kinder than the others, though, so it seemed like my best option for getting back home.\""
+
+    a "\"He may have been kinder, but that doesn't mean he didn't have ill-intent. If you had brought him over, he would have eaten you.\""
+
+    "Erin blanches."
+
+    e "\"O-oh.\""
+
+    a "\"How did you get there, anyway?\""
+
+    e "\"Well, I was following that little grey cat and it went down this alley. It disappeared, and I was curious about the lights, so... I kept walking. I had never seen that before.\""
+
+    a "\"Oh, Erin.\""
+
+    "I pull her into my arms and hold her tightly."
+
+    a "\"I'm so glad I found you in time. That was so reckless!\""
+
+    e "\"I didn't know what would happen!\""
+
+    "I smooth her hair and heave a sigh of relief."
+
+    a "\"I know. It's okay. Just... don't go into any weird alleys like that without me, okay? Don't make me worry like that!\""
+
+    e "\"I won't. But do you think that cat is okay?\""
+
+    a "\"I'm positive it is. Cats have a way of slinking across the boundary with more ease than practically any other creature. If it crossed over, it can simply stroll right back.\""
+
+    a "\"And since it's just a cat, nothing is going to bother it.\""
+
+    e "\"Thank goodness!\""
+
+    "We stay embraced for a few long breaths as our heartbeats slow, then I release her."
+
+    a "\"I'll walk you home.\""
+
+    e "\"Sure, I'd like that.\""
+
+    scene black with dissolve 2.0
     
+    jump date
+
