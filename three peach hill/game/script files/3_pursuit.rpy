@@ -277,7 +277,7 @@ label lydia_chat:
 label tell_lydia_about_erin:
 
 menu:
-    "She was clumsy" if picked_clumsy = False:
+    "She was clumsy" if picked_clumsy == False:
         $ picked_clumsy = True
         jump shes_clumsy
 
@@ -381,7 +381,7 @@ label cornerstore:
 
     "Some tiny birds peck at seeds and tiny crumbs scattered on the sidewalk, and the little fellows hop out of the way when I walk past."
 
-    if milk_carton = True:
+    if milk_carton == True:
         "Outside the cornerstore I see a stack of familiar blue milk cartons."
         a "\"No way.\""
         "I guess this is where she's been... closer than I thought!"
@@ -554,19 +554,19 @@ label farmers_market_cont:
 
     e "\"You know Aya?\""
 
-    "Gary" "Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she tends to come by almost every weekend during the market season!"
+    "Gary" "\"Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she tends to come by almost every weekend during the market season!\""
 
     e "\"Oh!\""
 
     "I chuckle at her blush."
 
-    "Gary" "You know, Erin, if you'd like to call it a day here I'm sure Aya would be happy to show you around the rest of the market."
+    "Gary" "\"You know, Erin, if you'd like to call it a day here I'm sure Aya would be happy to show you around the rest of the market.\""
 
     "He winks at me on the sly."
 
     a "\"Oh, Gary, if you need the extra help I really don't want to pull her away, I was just stopping by to get flowers—\""
 
-    "Gary" "Nonsense, we'll be just fine. She was a huge help unloading everything this morning, we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market."
+    "Gary" "\"Nonsense, we'll be just fine. She was a huge help unloading everything this morning, we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market.\""
 
     e "\"Really?! Thank you! This is great!!\""
 
@@ -578,7 +578,7 @@ label farmers_market_cont:
 
     "Gary comes back with an envelope for Erin."
 
-    "Gary" "You two take care, now!"
+    "Gary" "\"You two take care, now!\""
 
     a "\"Thank you, Gary. Likewise!\""
 
@@ -639,7 +639,7 @@ label lamp_talk:
 
     a "\"It was my mom's. She made it when I was young enough that I could only see it from afar, to minimize the risk of me breaking it.\""
 
-    if lamp_check = True:
+    if lamp_check == True:
         jump lamp_talk_apology
     else:
         jump lamp_cont
@@ -711,7 +711,7 @@ label going_home_from_market:
 
     e "\"I meant what I said that day, you know.\""
 
-    a "\"Which day? \""
+    a "\"Which day?\""
 
     e "\"When I said you're beautiful.\""
 

@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script files/3_pursuit.rpy", line 384, in script
+    if milk_carton = True:
+SyntaxError: invalid syntax (game/script files/3_pursuit.rpy, line 384)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script files/3_pursuit.rpy", line 384, in script
+    if milk_carton = True:
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/script files/3_pursuit.rpy, line 384)
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.2.0.24012702
+three peach hill 1.0
+Mon Nov 11 13:03:59 2024

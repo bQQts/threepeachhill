@@ -59,7 +59,7 @@ label orchard:
 
     e "\"Was I being too much?\""
 
-    a "\"No! No, I..."
+    a "\"No! No, I...\""
     
     e "\"Wait... wait, were you possibly avoiding me because youuuu like me back?\""
 
