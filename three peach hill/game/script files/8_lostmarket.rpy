@@ -214,7 +214,7 @@ label lost_market_inside:
 
     e "\"Sure, I'd like that.\""
 
-    scene black with dissolve 2.0
-    
+    scene black with dissolve
+
     jump date
 

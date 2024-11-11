@@ -88,7 +88,7 @@ label orchardist:
 
     scene black with irisin
 
-    scene bg with dissolve 0.2
+    scene bg with dissolve
 
     # title where it's "back at the bookstore"
 
@@ -220,7 +220,7 @@ label cobbler_call_nothing:
 
     "Well, that didn't go the way I thought it would. Not sure what I was expecting..."
 
-    scene black with dissolve 0.2
+    scene black with dissolve
     jump cobbler_end
 
 
@@ -370,7 +370,7 @@ label cobbler_end:
     else:
         if cornerstorefirst:
             "What a weekend. It was good, but I'm so tired... at least the bookstore will be quiet this week!"
-            scene black with dissolve 2.0
+            scene black with dissolve
             jump farmers_market
 
 
@@ -473,7 +473,7 @@ label cornerstore_end:
     else:
         if cobblerfirst:
             "What a weekend. It was good, but I'm so tired... at least the bookstore will be quiet this week!"
-            scene black with dissolve 2.0
+            scene black with dissolve
             jump farmers_market
 
 

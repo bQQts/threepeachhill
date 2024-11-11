@@ -38,7 +38,7 @@ label the_plan:
 
     "We spend the rest of the afternoon drawing up a plan."
 
-    scene black with dissolve 2.0
+    scene black with dissolve
 
 label plan_execution:
 
