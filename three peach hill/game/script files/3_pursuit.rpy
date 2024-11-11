@@ -590,9 +590,36 @@ label farmers_market_cont:
 
     "I start to protest, but she insists, and I end up giving her the two smaller totes while I hang on to the largest one with the flowers."
 
-    # Erin is working for the florist doing odd jobs
-    # Aya buys some flowers and Erin talks to the florist and gets permission to call it a day, so she joins Aya and carries her bag for her
-    # They get vegetables, fresh bread, and Aya picks out something cute for Erin
+    "We walk through the market, trying food samples and looking at crafts and jewelry."
+
+    "After a while, Erin takes a detour to the restrooms and leaves the bags with me. I decide to look around a bit, and one booth catches my eye."
+
+    "It's a table with hair pins of all different styles. I find a brass pin with a cast sunflower at the end of it, and it's perfect for me."
+    
+    "I almost finish my shopping there, but then I see that one pin is part wood and part resin-cast. The resin looks like it has frozen big rainbow bubbles in time."
+
+    "I hesitate for a moment, then buy both pins."
+
+    "I head back to the spot where Erin left, and I'm waiting there when she returns."
+
+    "I shove the bubble hair pin towards her."
+
+    e "\"What's this?\""
+
+    a "\"It's a hair pin. For you.\""
+
+    "Please don't make a big deal out of it."
+
+    "Her eyes shine and she holds it to her chest."
+
+    e "\"You didn't have to do that!\""
+
+    a "\"It's just a hair pin, don't mention it.\""
+
+    e "\"Well, thank you! It's so cute!!!\""
+
+    "She tucks it away safely in her book bag and we continue walking around the market."
+
     jump lamp_talk
 
 label lamp_talk:
@@ -662,7 +689,7 @@ label lamp_cont:
 
 label going_home_from_market:
 
-    "Erin walks me home, carrying my bags from the market."
+    "Erin walks me home, still carrying my bags from the market."
 
     a "\"Thank you, today was really nice!\""
 
