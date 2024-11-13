@@ -7,13 +7,13 @@ label date:
     
     "\"See you in a bit!\""
    
-    "I asked her to meet with me so I could check on her, and because I've come to a decision."
+    "I asked her to meet me at the nearby cafe so I could check on her, and because I've come to a decision."
 
 
 
 
 
-
+scene black with dissolve
 
 
     a "\"I've given it a lot of thought, and... I don't want to go to the Lost Market tomorrow.\""
@@ -101,8 +101,14 @@ label date:
 
         e "\"Oooooh! Well, I haven't decided what to do yet. But for now... whaddya say, wanna go out?\""
 
-        a "\"Pfft. I would love to.\""
+        a "\"Pfft. Yes, I'd like that.\""
 
         e "\"Okay!! Take me on a date! I mean, I'd like to go on a date. With you. If you want!\""
 
-        
+        "I gently trace her cheek with my fingertips and give her a reassuring smile."
+
+a "\"You don't have to be so nervous. You were so gung-ho about this before—were you all bark and no bite?\""
+
+e "\"I'm not nervous! I just have, uh, a lot of nervous energy!\""
+
+"We leave the cafe hand in hand. I listen patiently as she tries to convince me that there's a difference between nervous energy and being nervous."
