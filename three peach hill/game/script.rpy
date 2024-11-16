@@ -31,7 +31,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show Aya Neutral left
 
     # These display lines of dialogue.
 

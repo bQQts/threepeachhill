@@ -52,63 +52,63 @@ scene black with dissolve
 
  
 
-    label confession:
-        "Erin's jaw drops. Then she punches the air with her free hand."
+label confession:
+    "Erin's jaw drops. Then she punches the air with her free hand."
 
-        e "\"YES! I KNEW IT!!!\""
+    e "\"YES! I KNEW IT!!!\""
 
-        "Several other patrons turn their heads to see what her outburst is about."
+    "Several other patrons turn their heads to see what her outburst is about."
 
-        e "\"You like me!!!\""
+    e "\"You like me!!!\""
 
-        a "\"Yes, I like you.\""
+    a "\"Yes, I like you.\""
 
-        e "\"And I like you too!\""
+    e "\"And I like you too!\""
 
-        "My cheeks are DEFINITELY pink, but I try to play it cool."
+    "My cheeks are DEFINITELY pink, but I try to play it cool."
 
-        a "\"Sounds like we should do something about it, then.\""
+    a "\"Sounds like we should do something about it, then.\""
 
-        e "\"Yeah??\""
+    e "\"Yeah??\""
 
-        "If Erin were a puppy, her tail would be wagging her out of her chair right now."
+    "If Erin were a puppy, her tail would be wagging her out of her chair right now."
 
-        a "\"Let's start with this.\""
+    a "\"Let's start with this.\""
 
-        "With a wave of my left hand, I summon the contract we signed. It's as simple as plucking the page from the air."
+    "With a wave of my left hand, I summon the contract we signed. It's as simple as plucking the page from the air."
 
-        "I take the contract in one hand, still holding Erin's hand with the other, and when I speak my words ring clear as a bell."
-        
-        a "\"I release you from the pact.\""
+    "I take the contract in one hand, still holding Erin's hand with the other, and when I speak my words ring clear as a bell."
+    
+    a "\"I release you from the pact.\""
 
-        "With those simple words, the page crumbles into dust."
+    "With those simple words, the page crumbles into dust."
 
-        "I can feel the faint snap of the contractual bond between us breaking."
+    "I can feel the faint snap of the contractual bond between us breaking."
 
-        a "\"Now you don't owe me anything. The debt is forgiven, both figuratively and literally.\""
+    a "\"Now you don't owe me anything. The debt is forgiven, both figuratively and literally.\""
 
-        e "\"That means a lot to me, but... does this mean you're giving up on fixing it?\""
+    e "\"That means a lot to me, but... does this mean you're giving up on fixing it?\""
 
-        a "\"I'll have more opportunities to fix it in the future. Spirits are long-lived, I have plenty of time.\""
+    a "\"I'll have more opportunities to fix it in the future. Spirits are long-lived, I have plenty of time.\""
 
-        a "\"So... even if you're only here for a little while, I want to spend time with you.\""
+    a "\"So... even if you're only here for a little while, I want to spend time with you.\""
 
-        e "\"That's morbid, I'm not {i}dying{/i} anytime soon!\""
+    e "\"That's morbid, I'm not {i}dying{/i} anytime soon!\""
 
-        "I blink."
+    "I blink."
 
-        a "\"I, uh, guess it did sound that way, huh? I just meant, you're probably going back to school soon...\""
+    a "\"I, uh, guess it did sound that way, huh? I just meant, you're probably going back to school soon...\""
 
-        e "\"Oooooh! Well, I haven't decided what to do yet. But for now... whaddya say, wanna go out?\""
+    e "\"Oooooh! Well, I haven't decided what to do yet. But for now... whaddya say, wanna go out?\""
 
-        a "\"Pfft. Yes, I'd like that.\""
+    a "\"Pfft. Yes, I'd like that.\""
 
-        e "\"Okay!! Take me on a date! I mean, I'd like to go on a date. With you. If you want!\""
+    e "\"Okay!! Take me on a date! I mean, I'd like to go on a date. With you. If you want!\""
 
-        "I gently trace her cheek with my fingertips and give her a reassuring smile."
+    "I gently trace her cheek with my fingertips and give her a reassuring smile."
 
-a "\"You don't have to be so nervous. You were so gung-ho about this before—were you all bark and no bite?\""
+    a "\"You don't have to be so nervous. You were so gung-ho about this before—were you all bark and no bite?\""
 
-e "\"I'm not nervous! I just have, uh, a lot of nervous energy!\""
+    e "\"I'm not nervous! I just have, uh, a lot of nervous energy!\""
 
-"We leave the cafe hand in hand. I listen patiently as she tries to convince me that there's a difference between nervous energy and being nervous."
+    "We leave the cafe hand in hand. I listen patiently as she tries to convince me that there's a difference between nervous energy and being nervous."
