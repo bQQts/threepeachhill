@@ -9,12 +9,7 @@ label date:
    
     "I asked her to meet me at the nearby cafe so I could check on her, and because I've come to a decision."
 
-
-
-
-
-scene black with dissolve
-
+    scene black with dissolve
 
     a "\"I've given it a lot of thought, and... I don't want to go to the Lost Market tomorrow.\""
 

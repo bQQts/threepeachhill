@@ -2,29 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script files/3_pursuit.rpy", line 91: end of line expected.
-    scene bg with dissolve 0.2
-                           ^
-
-File "game/script files/3_pursuit.rpy", line 223: end of line expected.
-    scene black with dissolve 0.2
-                              ^
-
-File "game/script files/3_pursuit.rpy", line 373: end of line expected.
-    scene black with dissolve 2.0
-                              ^
-
-File "game/script files/3_pursuit.rpy", line 476: end of line expected.
-    scene black with dissolve 2.0
-                              ^
-
-File "game/script files/7_plan.rpy", line 41: end of line expected.
-    scene black with dissolve 2.0
-                              ^
-
-File "game/script files/8_lostmarket.rpy", line 217: end of line expected.
-    scene black with dissolve 2.0
-                              ^
+File "game/script files/9_date.rpy", line 19: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    a "\"I've given it a lot of thought, and... I don't want to go to the Lost Market tomorrow.\""
+    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Mon Nov 11 13:00:22 2024
+Sat Nov 16 15:14:41 2024
