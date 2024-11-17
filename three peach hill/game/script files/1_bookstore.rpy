@@ -10,12 +10,25 @@ label bookstore:
     "Business has been slow. Too slow."
 
     "I need to do something about it this summer, or the bookstore might have to close."
-
-    "My ear twitches at the sound of bells jingling, the shop door swinging open slowly. I fidget with the fan some more and say, \“Welcome in, feel free to browse,\” and that's when I finally look up."
     
-    "My breath catches."
 
-    "She's beautiful. XX DESCRIPTION OF ERIN"
+    
+    "My ear twitches at the sound of bells jingling, the shop door swinging open slowly. I fidget with the fan some more and say,"
+
+    a "\"Welcome in, feel free to browse.\""
+
+
+    "I look up and my breath catches."
+
+    show bg orchard:
+        subpixel True
+        
+    show erin happy at center:
+        subpixel True
+        zoom 0.5
+
+    
+    "She's adorable. No, beautiful. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. She's got"
 
     "She locks eyes with me, her lips parting in an \"oh\" of surprise, and immediately trips over the box of peaches that my neighbor so kindly left by the door for me. Which I forgot about."
 

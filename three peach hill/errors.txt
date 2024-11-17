@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script files/9_date.rpy", line 19: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    a "\"I've given it a lot of thought, and... I don't want to go to the Lost Market tomorrow.\""
-    ^
+File "game/script.rpy", line 59: end of line expected.
+    show bg bookstore with zoom 10
+                                ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Nov 16 15:14:41 2024
+Sat Nov 16 19:57:21 2024
