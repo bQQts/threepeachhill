@@ -28,7 +28,7 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#cc6600'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#707070'
+define gui.idle_color = '#ffffff'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
@@ -39,7 +39,7 @@ define gui.hover_color = '#cc6600'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#555555'
+define gui.selected_color = '#ffffff'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#7070707f'
@@ -83,7 +83,7 @@ define gui.notify_text_size = 50
 ## The size of the game's title.
 define gui.title_text_size = 100
 
-define gui.name_text_outlines = [(absolute(2), '#faf6f5', absolute(2), absolute(2))]
+define gui.name_text_outlines = [(absolute(2), '#74301e', absolute(2), absolute(2))]
 
 
 ## Main and Game Menus #########################################################

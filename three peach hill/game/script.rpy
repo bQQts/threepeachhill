@@ -3,8 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define a = Character("Aya", image="aya")
-define e = Character("Erin", image="erin")
+define a = Character("Aya", image="aya", who_color= "#faf6f5")
+define e = Character("Erin", image="erin", who_color= "#faf6f5")
 
 define lyd = Character("Lydia")
 define joy = Character("Joy")

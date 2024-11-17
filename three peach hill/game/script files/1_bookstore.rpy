@@ -27,7 +27,7 @@ label bookstore:
         zoom 0.3
         yoffset -350
 
-    
+
     "She's adorable. No, beautiful. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. I have just a moment to take it all in before time freezes."
 
     show erin shocked
@@ -51,6 +51,8 @@ label bookstore:
     "The girl survived the fall. The lamp did not."
 
 menu:
+    "Quick! What should I do?!"
+
     "Go to the girl":
             $ kind_points += 1
             jump bookstore_Girl
@@ -96,8 +98,12 @@ label bookstore_Lamp:
 
     "Now, the intricate panels are shattered, the floor a dazzling array of blue edges. The electrical fixture is bent at an odd angle."
 
-    "The perpetrator of the crime groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and groans, this time in dismay, as she sees the destruction her fumble wrought upon the store."
-
+    show erin gloom at right:
+        zoom 0.7 yalign 0.15
+    
+    a sad "The perpetrator of the crime groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and groans, this time in dismay, as she sees the destruction her fumble wrought upon the store."
+    
+    
     "The fallen shelves. The shattered lamp. My distraught expression."
 
     "I almost expect her to run away. She's young, maybe a college student? And she's human! I open my mouth to say something, to tell her off or ask if she's okay, but..."
