@@ -20,19 +20,22 @@ label bookstore:
 
     "I look up and my breath catches."
 
-    show bg orchard:
-        subpixel True
-        
+
     show erin happy at center:
         subpixel True
-        zoom 0.5
+        zoom 0.3
+        yoffset -350
 
     
-    "She's adorable. No, beautiful. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. She's got"
+    "She's adorable. No, beautiful. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. I have just a moment to take it all in before time freezes."
+
+    show erin shocked
 
     "She locks eyes with me, her lips parting in an \"oh\" of surprise, and immediately trips over the box of peaches that my neighbor so kindly left by the door for me. Which I forgot about."
 
     "I knew I should have moved it while it was on my mind. Damn."
+
+    hide erin
 
     "The fall is epic."
 

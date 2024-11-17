@@ -3,8 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define a = Character("Aya", image="aya")
 define e = Character("Erin", image="erin")
-define a = Character("Aya", image="aya neutral")
+
 define lyd = Character("Lydia")
 define joy = Character("Joy")
 
@@ -17,22 +18,22 @@ default cornerstorefirst = False
 default picked_clumsy = False
 default milk_carton = False
 
-image aya neutral = "Aya Neutral.png"
-image aya excited = "Aya Excited.png"
-image aya gloom = "Aya Gloom.png"
-image aya happy = "Aya Happy.png"
-image aya = "Aya Neutral.png"
-image aya sad = "Aya Sad.png"
-image aya shocked = "Aya Shocked.png"
-image aya tsun = "Aya TsunTsun.png"
-image erin blush = "Erin Blush.png"
-image erin excited = "Erin Excited.png"
-image erin gloom = "Erin Gloom.png"
-image erin happy = "Erin Happy.png"
-image erin neutral = "Erin Neutral.png"
-image erin rizz = "Erin Rizzler.png"
-image erin sad = "Erin Sad.png"
-image erin shocked = "Erin Shocked.png"
+image define aya excited = "side aya excited.png"
+image define aya gloom = "side aya gloom.png"
+image define aya happy = "side aya happy.png"
+image aya = "aya neutral.png"
+image define aya neutral = "side aya neutral.png"
+image define aya sad = "side aya sad.png"
+image define aya shocked = "side aya shocked.png"
+image aya tsun = "aya tsuntsun.png"
+image erin blush = "erin blush.png"
+image erin excited = "erin excited.png"
+image erin gloom = "erin gloom.png"
+image erin happy = "erin happy.png"
+image erin neutral = "erin neutral.png"
+image erin rizz = "erin rizzler.png"
+image erin sad = "erin sad.png"
+image erin shocked = "erin shocked.png"
 image bg bathroom = "bathroom.png"
 image bg bedroom = "bedroom.png"
 image bg bookstore = "bookstore.png"
@@ -40,7 +41,6 @@ image bg gate = "gate.png"
 image bg kitchen = "kitchen.png"
 image bg orchard = "orchard.png"
 image bg rain = "rain.png"
-image side aya neutral = "side_aya_neutral.png"
 image black = "#000"
 
 # The game starts here.
