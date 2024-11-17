@@ -50,38 +50,40 @@ define gui.muted_color = '#e0a366'
 define gui.hover_muted_color = '#eac199'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#404040'
+define gui.text_color = '#292525'
 define gui.interface_text_color = '#404040'
 
 
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "fonts/AutumnInSeptember-G3ZoD.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "fonts/Wildy-Sans.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "fonts/AutumnInSeptember-G3ZoD.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 44
+define gui.text_size = 56
 
 ## The size of character names.
-define gui.name_text_size = 60
+define gui.name_text_size = 80
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 44
+define gui.interface_text_size = 56
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 48
+define gui.label_text_size = 66
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 32
+define gui.notify_text_size = 50
 
 ## The size of the game's title.
 define gui.title_text_size = 100
+
+define gui.name_text_outlines = [(absolute(2), '#faf6f5', absolute(2), absolute(2))]
 
 
 ## Main and Game Menus #########################################################
@@ -106,8 +108,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 480
-define gui.name_ypos = 0
+define gui.name_xpos = 900
+define gui.name_ypos = -0.4
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -115,12 +117,12 @@ define gui.name_xalign = 0.025
 
 ## The width, height, and borders of the box containing the character's name, or
 ## None to automatically size it.
-define gui.namebox_width = None
+define gui.namebox_width = 680
 define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top, right,
 ## bottom order.
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(0, -5, 5, 5)
 
 ## If True, the background of the namebox will be tiled, if False, the
 ## background of the namebox will be scaled.

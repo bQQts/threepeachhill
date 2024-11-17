@@ -18,22 +18,25 @@ default cornerstorefirst = False
 default picked_clumsy = False
 default milk_carton = False
 
-image define aya excited = "side aya excited.png"
-image define aya gloom = "side aya gloom.png"
-image define aya happy = "side aya happy.png"
-image aya = "aya neutral.png"
-image define aya neutral = "side aya neutral.png"
-image define aya sad = "side aya sad.png"
-image define aya shocked = "side aya shocked.png"
-image aya tsun = "aya tsuntsun.png"
-image erin blush = "erin blush.png"
-image erin excited = "erin excited.png"
-image erin gloom = "erin gloom.png"
-image erin happy = "erin happy.png"
-image erin neutral = "erin neutral.png"
-image erin rizz = "erin rizzler.png"
-image erin sad = "erin sad.png"
-image erin shocked = "erin shocked.png"
+image aya = "side aya neutral.png"
+#image define aya excited = "side aya excited.png"
+#image define aya gloom = "side aya gloom.png"
+#image define aya happy = "side aya happy.png"
+#image define aya neutral = "side aya neutral.png"
+#image define aya sad = "side aya sad.png"
+#image define aya shocked = "side aya shocked.png"
+#image define aya tsun = "side aya tsuntsun.png"
+
+image erin = "erin neutral.png"
+#image erin neutral = "erin neutral.png"
+#image erin blush = "erin blush.png"
+#image erin excited = "erin excited.png"
+#image erin gloom = "erin gloom.png"
+#image erin happy = "erin happy.png"
+#image erin rizz = "erin rizzler.png"
+#image erin sad = "erin sad.png"
+#image erin shocked = "erin shocked.png"
+
 image bg bathroom = "bathroom.png"
 image bg bedroom = "bedroom.png"
 image bg bookstore = "bookstore.png"
@@ -41,9 +44,10 @@ image bg gate = "gate.png"
 image bg kitchen = "kitchen.png"
 image bg orchard = "orchard.png"
 image bg rain = "rain.png"
+
 image black = "#000"
 
-# The game starts here.
+
 
 label start:
 

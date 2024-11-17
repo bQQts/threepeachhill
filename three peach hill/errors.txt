@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 46: expected '=' not found.
-    image define aya neutral
-                            ^
+File "game/script files/1_bookstore.rpy", line 20: expected 'comma or end of line' not found.
+    set zorder 1
+        ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Nov 16 20:14:41 2024
+Sat Nov 16 20:33:39 2024

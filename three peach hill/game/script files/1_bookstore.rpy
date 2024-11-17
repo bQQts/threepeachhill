@@ -15,7 +15,8 @@ label bookstore:
     
     "My ear twitches at the sound of bells jingling, the shop door swinging open slowly. I fidget with the fan some more and say,"
 
-    a "\"Welcome in, feel free to browse.\""
+
+    a neutral "\"Welcome in, feel free to browse.\""
 
 
     "I look up and my breath catches."
@@ -65,23 +66,23 @@ label bookstore_Girl:
 
     "I rush over to her, taking hold of her arm and helping her upright."
 
-    a "\"Are you okay?!\""
+    a shocked "\"Are you okay?!\""
 
     "She groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and groans again, this time in dismay, as she sees the destruction her fumble wrought upon the store."
 
     "The fallen shelves. The shattered lamp. My concerned expression."
 
-    e "\"I'm so sorry, I didn't see the box, I hope nothing...\""
+    e gloom "\"I'm so sorry, I didn't see the box, I hope nothing...\""
 
     "Her gaze slides to the broken lamp and she gulps."
 
     e "\"...well, I hope nothing else got too damaged. I'm really sorry.\""
 
-    a "Don't worry about that right now, are you injured?"
+    a neutral "Don't worry about that right now, are you injured?"
 
     "She shakes her head and lets me help her up. Up close, she's XX APPEARANCE."
 
-    e "\"No, but... The lamp.\""
+    e sad "\"No, but... The lamp.\""
 
     jump Deal
 
@@ -103,7 +104,7 @@ label bookstore_Lamp:
     
     "I can't find the words as I watch her stand up, dust herself off, and limp over to inspect the shattered lamp."
 
-    e "\"Oh shit, I'm so sorry about that. I didn't see the box... Here, I'll clean this up.\""
+    e shocked "\"Oh shit, I'm so sorry about that. I didn't see the box... Here, I'll clean this up.\""
 
     "She reaches down to pick up a large piece of glass."
 
@@ -122,7 +123,7 @@ label bookstore_Lamp:
 
         "My hand darts out and grabs hold of the girl's wrist."
 
-        a "\"Don't! Don't, you could hurt yourself.\""
+        a shocked "\"Don't! Don't, you could hurt yourself.\""
 
         "She freezes, then turns to look me in the eye."
 
@@ -137,11 +138,11 @@ label bookstore_Lamp:
 
         "The girl quickly starts to put pieces in a pile and hisses in pain when one odd-angled piece slices a shallow line across her finger."
 
-        a "\"Stop,\""
+        a neutral "\"Stop,\""
 
         "I say quietly. But she doesn't. So I say it again louder this time."
 
-        a "\"Stop!\""
+        a tsuntsun "\"Stop!\""
 
         "Finally, she stops fiddling with the broken shards. She clutches her bleeding finger and looks up at me."
 
