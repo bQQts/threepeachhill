@@ -37,15 +37,35 @@ image erin = "erin neutral.png"
 #image erin sad = "erin sad.png"
 #image erin shocked = "erin shocked.png"
 
-image bg bathroom = "bg/bathroom day.png"
-image bg bedroom = "bg/bedroom day.png"
-image bg bookstore = "bg/bookstore day.png"
-image bg gate = "bg/gate day.png"
-image bg kitchen = "bg/kitchen day.png"
-image bg orchard = "bg/orchard day.png"
-image bg rain = "bg/rain day.png"
+image bg bathroom = "bathroom.png"
+image bg bedroom = "bedroom.png"
+image bg bookstore = "bookstore.png"
+image bg cornerstore = "cornerstore.png"
+image bg gate = "gate.png"
+image bg kitchen = "kitchen.png"
+image bg lydias = "lydias.png"
+image bg market = "market.png"
+image bg nightmarket = "nightmarket.png"
+image bg orchard = "orchard.png"
+image bg rain = "rain.png"
+
+image bg bathroom night = "bathroom night.png"
+image bg bedroom night = "bedroom night.png"
+image bg bookstore night = "bookstore night.png"
+image bg cornerstore night = "cornerstore night.png"
+image bg gate night = "gate night.png"
+image bg kitchen night = "kitchen night.png"
+image bg lydias night = "lydias night.png"
+image bg market night = "market night.png"
+image bg nightmarket night = "nightmarket night.png"
+image bg orchard night = "orchard night.png"
+image bg rain night = "rain night.png"
+
+image bg nightmarket red = "nightmarket red.png"
+
 
 image black = "#000"
+image white = "#fff"
 
 
 

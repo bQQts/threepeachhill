@@ -1,22 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens.rpy", line 1623, in script
-    define config.mouse ['default'] = [('gui/arrow.png',0,0)]
-TypeError: 'NoneType' object does not support item assignment
+  File "game/script files/1_bookstore.rpy", line 6, in script
+    show bg bookstore night
+Exception: Image 'bg bookstore' does not accept attributes 'night'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/screens.rpy", line 1623, in script
-    define config.mouse ['default'] = [('gui/arrow.png',0,0)]
-  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 2219, in execute
-    self.set()
-  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 2257, in set
-    base[key] = new
-TypeError: 'NoneType' object does not support item assignment
+  File "game/script files/1_bookstore.rpy", line 6, in script
+    show bg bookstore night
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1113, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1076, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\exports.py", line 739, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\display\displayable.py", line 246, in _duplicate
+    args.extraneous()
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'bg bookstore' does not accept attributes 'night'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.0.24012702
 Three Peach Hill 1.0
-Wed Nov 20 23:04:52 2024
+Wed Nov 20 23:32:27 2024

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 61: show statement expects a non-empty block.
-    show bg bookstore with dissolve:
-                                    ^
+File "game/script files/3_pursuit.rpy", line 335: expected statement.
+    else
+        ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Wed Nov 20 22:49:52 2024
+Wed Nov 20 23:49:43 2024
