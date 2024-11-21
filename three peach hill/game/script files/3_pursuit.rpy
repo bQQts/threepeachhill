@@ -46,8 +46,8 @@ label orchardist:
 
     "I take my bike to her office, which is a small two-story building at the very foot of the orchard's hills. Wind chimes hang from the stoop, and the sign on the door says OPEN. When I swing the door open and step inside, I'm greeted by a couple of my neighbors sipping coffee in the lobby."
     
-    scene black
-    show bg orchard
+    scene black with dissolve
+    show bg orchard with dissolve
 
     "Timothy" "\"Well hey there! You lookin' for Joy, by any chance?\""
 
