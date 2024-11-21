@@ -1612,3 +1612,15 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 1200
+
+
+## Custom stuff M added :)
+
+# Custom mouse pointer
+#define config.mouse = {'default' : [('gui/arrow.png',0,0)]}
+#define config.mouse = {'button' : [('gui/arrow_button.png',0,0)]}
+#define config.mouse = {'pressed_button' : [('gui/arrow_button_pressed.png',0,0)]}
+define config.mouse = { }
+define config.mouse ['default'] = [('gui/arrow.png',0,0)]
+define config.mouse ['button'] = [('gui/arrow_button.png',0,0)]
+define config.mouse ['pressed_button'] = [('gui/arrow_button_pressed.png',0,0)]

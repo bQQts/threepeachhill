@@ -37,13 +37,13 @@ image erin = "erin neutral.png"
 #image erin sad = "erin sad.png"
 #image erin shocked = "erin shocked.png"
 
-image bg bathroom = "bathroom.png"
-image bg bedroom = "bedroom.png"
-image bg bookstore = "bookstore.png"
-image bg gate = "gate.png"
-image bg kitchen = "kitchen.png"
-image bg orchard = "orchard.png"
-image bg rain = "rain.png"
+image bg bathroom = "bg/bathroom day.png"
+image bg bedroom = "bg/bedroom day.png"
+image bg bookstore = "bg/bookstore day.png"
+image bg gate = "bg/gate day.png"
+image bg kitchen = "bg/kitchen day.png"
+image bg orchard = "bg/orchard day.png"
+image bg rain = "bg/rain day.png"
 
 image black = "#000"
 
@@ -52,11 +52,14 @@ image black = "#000"
 label start:
 
 label startbutitsalabel:
+    stop music fadeout 3.0
+    with dissolve
 
-    scene bg
+    scene black
+    pause 1.0
+    play music "music/bookstore lofi.flac" fadein 2.0
+    show bg bookstore with dissolve
 
-    show bg bookstore:
-        zoom 1.75 yoffset -250
 
 
     jump bookstore

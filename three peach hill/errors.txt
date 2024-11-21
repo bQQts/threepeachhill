@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 343: style property x is not known.
-    x
-     ^
+File "game/script.rpy", line 61: show statement expects a non-empty block.
+    show bg bookstore with dissolve:
+                                    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Nov 16 22:48:02 2024
+Wed Nov 20 22:49:52 2024

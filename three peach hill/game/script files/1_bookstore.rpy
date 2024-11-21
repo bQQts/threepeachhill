@@ -11,8 +11,6 @@ label bookstore:
 
     "I need to do something about it this summer, or the bookstore might have to close."
     
-
-    
     "My ear twitches at the sound of bells jingling, the shop door swinging open slowly. I fidget with the fan some more and say,"
 
 
@@ -109,6 +107,8 @@ label bookstore_Lamp:
     "I almost expect her to run away. She's young, maybe a college student? And she's human! I open my mouth to say something, to tell her off or ask if she's okay, but..."
     
     "I can't find the words as I watch her stand up, dust herself off, and limp over to inspect the shattered lamp."
+
+    hide erin with dissolve
 
     e shocked "\"Oh shit, I'm so sorry about that. I didn't see the box... Here, I'll clean this up.\""
 

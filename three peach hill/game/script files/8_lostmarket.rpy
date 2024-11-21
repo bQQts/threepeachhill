@@ -60,7 +60,7 @@ label lost_market_find_out:
 
     "There's a knock at the door, and I run to open it."
 
-    a "\"Erin? Oh, Lydia! What are you doing here?\""
+    a shocked "\"Erin? Oh, Lydia! What are you doing here?\""
 
     "It's not who I was hoping it would be, and judging by Lydia's expression, I'm not about to be happy that she's here either."
 
@@ -92,6 +92,12 @@ label lost_market_find_out:
 
 label lost_market_inside:
 
+    scene bg rain
+    show aya at center:
+        zoom 0.4 yoffset -350
+    stop music fadeout 3.0
+    play music "music/Journey To Ascend.mp3" fadein 2.0
+
     "I run faster than I ever have before. My legs and lungs burn, and I gasp for air, but I push through it and finally make it to the entrance."
 
     "The entrance to the Lost Market always looks like a really, really, REALLY long, dark alleyway with floating lights at the far end of it."
@@ -108,6 +114,11 @@ label lost_market_inside:
 
     "As naturally as breathing, I shift fully into my spirit form: an enormous XX COLOR three-tailed fox with small red horns. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
 
+    hide aya with dissolve
+
+    show aya fox at center with dissolve:
+        zoom 0.4 yoffset -250
+
     "Tall, shapeless giants and tiny floating imps float alongside animal spirits like myself."
 
     "I don't waste any time."
@@ -119,12 +130,18 @@ label lost_market_inside:
     "I run and I run, and finally I know I'm drawing near when the tether glows brighter. A small crowd has formed a circle around her."
 
     "She's standing boldly before a towering male oni. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
+    
+    show erin neutral at right:
+        zoom 0.3 yoffset -350
+
 
     "I leap, snapping at the ribbon. It shatters into sparkling shards of light between my sharp teeth."
 
     "Oni" "\"You dare to intefere? This human wished to make a pact with me, fox. I was simply going to lead her out of here.\""
+    
+    hide aya fox with dissolve
 
-    a "\"In exchange for what?\""
+    a fox "\"In exchange for what?\""
 
     "Oni" "\"A trifling matter. She was to bring me across to the mortal realm with her.\""
 
@@ -136,7 +153,9 @@ label lost_market_inside:
 
     "Erin looks at me, astonished at my form."
 
-    e "\"Aya? You can... talk like that?\""
+    hide erin with dissolve
+
+    e shocked "\"Wait... Aya?! You can... talk like that?\""
 
     a "\"Of course. I'm still me.\""
 
@@ -148,7 +167,7 @@ label lost_market_inside:
 
     a "\"Erin, climb upon my back. I'll take us out of here.\""
 
-    e "\"Are you sure? Shouldn't we find that spell?\""
+    e sad "\"Are you sure? Shouldn't we find that spell?\""
 
     a "\"Not tonight.\""
 
@@ -160,21 +179,22 @@ label lost_market_inside:
 
     "We race across the border between the spirit and mortal worlds. It's easier to leave with both of us present."
 
+
     "The air around us blurs and I shift back, now holding Erin in my arms."
 
-    a "\"You can open your eyes now, Erin.\""
+    a blush "\"You can open your eyes now, Erin.\""
 
     "She does."
 
-    e "\"Uh, you don't have to keep carrying me.\""
+    e blush "\"Uh, you don't have to keep carrying me.\""
 
     a "\"Ah, sorry.\""
 
     "I set her on her feet and help straighten out her clothes. I check her for the telltale ribbons of other pacts but see none."
 
-    a "\"Are you alright? You didn't make any other bargains while there, right?\""
+    a sad "\"Are you alright? You didn't make any other bargains while there, right?\""
 
-    e "\"No, no. That was close, though. I had been there for hours, and had been hounded by all sorts of spirits wanting... different things.\""
+    e neutral "\"No, no. That was close, though. I had been there for hours, and had been hounded by all sorts of spirits wanting... different things.\""
 
     e "\"That last one was kinder than the others, though, so it seemed like my best option for getting back home.\""
 
