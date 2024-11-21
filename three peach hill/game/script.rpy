@@ -63,6 +63,8 @@ image bg rain night = "rain night.png"
 
 image bg nightmarket red = "nightmarket red.png"
 
+image cg piggyback = "cg_piggyback.png"
+
 
 image black = "#000"
 image white = "#fff"

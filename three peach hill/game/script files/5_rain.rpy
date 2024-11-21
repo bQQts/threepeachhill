@@ -1,161 +1,175 @@
 label the_rain:
 # 5. The Rain - Caught in the rain… and there was only one bed? Perchance?
 
-"I finish picking the peaches by myself. By the time I'm done, the remaining daylight is nearly smothered by thick clouds. I hadn't noticed how dense they had gotten, but a brief glance is enough to confirm that they look heavy and full, as if ready to spill at any moment."
+    "I finish picking the peaches by myself. By the time I'm done, the remaining daylight is nearly smothered by thick clouds. I hadn't noticed how dense they had gotten, but a brief glance is enough to confirm that they look heavy and full, as if ready to spill at any moment."
 
-"I'm rolling my small cart quickly through the orchard when I feel the first droplets splash my brow, my hair, my hand. It's a long way back to my bike, and then I'll still have to cycle home from there. I don't even have a jacket."
+    "I'm rolling my small cart quickly through the orchard when I feel the first droplets splash my brow, my hair, my hand. It's a long way back to my bike, and then I'll still have to cycle home from there. I don't even have a jacket."
 
-a "\"This is going to suck.\""
+    a "\"This is going to suck.\""
 
-"The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches"
+    "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches"
 
-"I slip in a particularly muddy patch and fall. I sit in the mud, contemplating my life. My ankle is definitely sprained. I have no idea how I'm going to get these peaches back. I'm drenched, and I just snapped at a girl I really quite like for really no good reason."
+    "I slip in a particularly muddy patch and fall. I sit in the mud, contemplating my life. My ankle is definitely sprained. I have no idea how I'm going to get these peaches back. I'm drenched, and I just snapped at a girl I really quite like for really no good reason."
 
-"I close my eyes and tilt my head back, letting the raindrops splash across my face. I take a few deep breaths."
+    "I close my eyes and tilt my head back, letting the raindrops splash across my face. I take a few deep breaths."
 
-"The rain stops drip-dropping on my face, but I can still hear it around me. I open my eyes."
+    "The rain stops drip-dropping on my face, but I can still hear it around me. I open my eyes."
 
-"It's Erin. She's holding an umbrella over me, looking breathless and disheveled."
+    "It's Erin. She's holding an umbrella over me, looking breathless and disheveled."
 
-e "\"I ran to get an umbrella as soon as I saw how bad the sky was getting. Looks like I didn't make it to you in time though, sorry, Aya. Why are you sitting in the mud? You're soaked through!\""
+    e "\"I ran to get an umbrella as soon as I saw how bad the sky was getting. Looks like I didn't make it to you in time though, sorry, Aya. Why are you sitting in the mud? You're soaked through!\""
 
-a "\"Erin...\""
+    a "\"Erin...\""
 
-"The shorter woman hands me the umbrella and helps me to my feet."
+    "The shorter woman hands me the umbrella and helps me to my feet."
 
-e "\"Can you walk?\""
+    e "\"Can you walk?\""
 
-a "\"Yes,\""
+    a "\"Yes,\""
 
-"I put weight onto my foot and wince."
+    "I put weight onto my foot and wince."
 
-a "\"Well, no. My ankle...\""
+    a "\"Well, no. My ankle...\""
 
-"Erin turns around and crouches, gesturing for me to climb up on her back."
+    "Erin turns around and crouches, gesturing for me to climb up on her back."
 
-e "\"Get on, I'll carry you.\""
+    e "\"Get on, I'll carry you.\""
 
-a "\"But I'm taller than you! I'll crush you!\""
+    a "\"But I'm taller than you! I'll crush you!\""
 
-e "\"I'm like an ant, I can carry you no problem!\""
+    e excited "\"I'm like an ant, I can carry you no problem!\""
 
-a "\"Erin, I'll just lean on you and we'll go slow.\""
+    a "\"Erin, I'll just lean on you and we'll go slow.\""
 
-e "\"Really, I insist! I'm wearing work boots, I won't slip in the mud. Let me carry you.\""
+    e "\"Really, I insist! I'm wearing work boots, I won't slip in the mud. Let me carry you.\""
 
-a "\"What about the peaches?\""
+    a "\"What about the peaches?\""
 
-e "\"There will be more peaches. I'm more worried about you right now. Now, climb on.\""
+    e neutral "\"There will be more peaches. I'm more worried about you right now. Now, climb on.\""
 
-"I climb on, still holding the umbrella in one hand. She hikes me up, grasping below my thighs and leaning forward. My wet hair sticks to her neck. I try not to think about it."
+    "I climb on, still holding the umbrella in one hand. She hikes me up, grasping below my thighs and leaning forward. My wet hair sticks to her neck. I try not to think about it."
 
-"It takes a while, but we do make it down the big hill. Erin is stronger than she looks, and though she's breathing hard by the time we get back to the entrance of the orchard she hasn't once lost her grip or stumbled."
+    window hide dissolve
+    pause 1.0
+    scene black
+    show cg piggyback with dissolve
 
-e "\"Just hang on tight, I'll get you home.\""
+    pause 120.0
 
-"I let the umbrella rest over our backs, which probably makes us look like an overly large beetle, and let the sway of her steps and the sound of her breathing lull me into a half-slumber."
+    window show dissolve
+    "It takes a while, but we do make it down the big hill. Erin is stronger than she looks, and though she's breathing hard by the time we get back to the entrance of the orchard she hasn't once lost her grip or stumbled."
 
-# scene transition
 
-e "\"What's your door code? Aya?\""
+    e happy "\"Just hang on tight, I'll get you home.\""
 
-"She's hunched over at the side door of the bookshop that leads up to my house."
+    "I let the umbrella rest over our backs, which probably makes us look like an overly large beetle, and let the sway of her steps and the sound of her breathing lull me into a half-slumber."
 
-e "\"Hey, Aya? You okay?\""
+    scene black with dissolve
+    pause 3.0
+    show bg gate night with dissolve
 
-"There's concern in her voice and I try to answer, but it comes out as a mumble. I eventually stumble through the words."
+    e "\"What's your door code? Aya?\""
 
-a "\"11... 0... 2.\""
+    "She's hunched over at the side door of the bookshop that leads up to my house."
 
-"I hear the beep of her punching in the code, and the click of the bolt sliding open."
+    e "\"Hey, Aya? You okay?\""
 
-"She pries the umbrella from my arms and leaves it just inside the front door to dry on the doormat. Most of the mud washed off us from the rain, but we're still drenched."
+    "There's concern in her voice and I try to answer, but it comes out as a mumble. I eventually stumble through the words."
 
-"She deposits me gently on the entryway bench and peels our dripping shoes and socks off."
+    a gloom "\"11... 0... 2.\""
 
-e "\"We need to get you clean and dry, let's get upstairs, okay?\""
+    "I hear the beep of her punching in the code, and the click of the bolt sliding open."
 
-"We climb the stairs, leaving little puddles behind us."
+    "She pries the umbrella from my arms and leaves it just inside the front door to dry on the doormat. Most of the mud washed off us from the rain, but we're still drenched."
 
-"My house is still quite warm from the summer day, but dry—dehumidifiers and a little bit of magic always ensure that the house stays dry and relatively cool, to preserve the condition of the books on the first floor."
+    hide bg gate night with dissolve
+    show bg bathroom night with dissolve 
 
-"Erin looks around for the bathroom, finds it, and leads me over to it."
+    "She deposits me gently on the entryway bench and peels our dripping shoes and socks off."
 
-e "\"Get out of those clothes and into a nice hot shower, okay? I'd help you, but...\""
+    e shocked "\"We need to get you clean and dry, let's get upstairs, okay?\""
 
-"There's a faint blush growing brighter on her cheeks that snaps me out of my miserable fugue."
+    "We climb the stairs, leaving little puddles behind us."
 
-a "\"No! No, it's okay, I got it.\""
+    "My house is still quite warm from the summer day, but dry—dehumidifiers and a little bit of magic always ensure that the house stays dry and relatively cool, to preserve the condition of the books on the first floor."
 
-"I step in and shut the door behind me. A moment later, I peek out and offer Erin a towel."
+    "Erin looks around for the bathroom, finds it, and leads me over to it."
 
-a "\"So you can dry off while you wait for your turn.\""
+    e "\"Get out of those clothes and into a nice hot shower, okay? I'd help you, but...\""
 
-e "\"I can just go home, it's alright.\""
+    "There's a faint blush growing brighter on her cheeks that snaps me out of my miserable fugue."
 
-a "\"It's pouring out there! You'll catch a cold. Dry off for now, I'll find you a change of clothes once I'm out of the shower.\""
+    a "\"No! No, it's okay, I got it.\""
 
-"Soapy water cleanses my body and the heat clears my mind. I feel the tightness leave stiff muscles. I pat myself dry and wrap a towel tightly around myself, leaving my wet and muddy clothes in one of the two bathroom sinks. Then I crack open the bathroom door to see Erin sitting on the rug with the towel draped over her now-bare shoulders."
+    "I step in and shut the door behind me. A moment later, I peek out and offer Erin a towel."
 
-"Bare? Shoulders? I glance to a nearby kitchen chair, where her soaking wet shirt is hanging. A dish towel on the floor catches the water dripping off of the discarded clothing. I clear my throat and she turns her head to look at me."
+    a "\"So you can dry off while you wait for your turn.\""
 
-a "\"Bathroom's open, your turn, I'll get you some clothes, DON'T LOOK AT ME!\""
+    e "\"I can just go home, it's alright.\""
 
-"I hobble across the hall to my bedroom and swing the door shut before digging out a t-shirt and sweatpants for myself, and another tee and pair of drawstring shorts that should probably fit Erin."
+    a "\"It's pouring out there! You'll catch a cold. Dry off for now, I'll find you a change of clothes once I'm out of the shower.\""
 
-"When I'm dressed, I take the extra clothes and knock on the bathroom door."
+    "Soapy water cleanses my body and the heat clears my mind. I feel the tightness leave stiff muscles. I pat myself dry and wrap a towel tightly around myself, leaving my wet and muddy clothes in one of the two bathroom sinks. Then I crack open the bathroom door to see Erin sitting on the rug with the towel draped over her now-bare shoulders."
 
-e "\"Almost done!\""
+    "Bare? Shoulders? I glance to a nearby kitchen chair, where her soaking wet shirt is hanging. A dish towel on the floor catches the water dripping off of the discarded clothing. I clear my throat and she turns her head to look at me."
 
-a "\"Take your time, I'm just setting some clothes for you by the door.\""
+    a "\"Bathroom's open, your turn, I'll get you some clothes, DON'T LOOK AT ME!\""
 
-"When Erin comes out, I have an instant kettle heating water for tea and an ice pack on my ankle, which I've propped up on a second kitchen chair."
+    "I hobble across the hall to my bedroom and swing the door shut before digging out a t-shirt and sweatpants for myself, and another tee and pair of drawstring shorts that should probably fit Erin."
 
-e "\"Thank you, the clothes fit well!\""
+    "When I'm dressed, I take the extra clothes and knock on the bathroom door."
 
-"My clothes are, in fact, too big on her. The effect is absolutely adorable. She has a hand towel draped over top of her head, and the shirt is long enough that it almost covers the cotton shorts."
+    e "\"Almost done!\""
 
-a "\"It's no trouble. I'll start some laundry, just check your pockets before I put it in the machine.\""
+    a "\"Take your time, I'm just setting some clothes for you by the door.\""
 
-e "\"I appreciate that, but you should just sit there and rest your ankle. I'll start it for you, just tell me if there's anything special about the machine, okay?\""
+    "When Erin comes out, I have an instant kettle heating water for tea and an ice pack on my ankle, which I've propped up on a second kitchen chair."
 
-a "\"You carried me all the way here. The least I can do is wash your wet clothes.\""
+    e "\"Thank you, the clothes fit well!\""
 
-"Despite my protests, she opens a couple of doors until she finds the little room with the washer and dryer."
+    "My clothes are, in fact, too big on her. The effect is absolutely adorable. She has a hand towel draped over top of her head, and the shirt is long enough that it almost covers the cotton shorts."
 
-e "\"You need to rest! I'll tie you down if I need to! Wait here.\""
+    a "\"It's no trouble. I'll start some laundry, just check your pockets before I put it in the machine.\""
 
+    e "\"I appreciate that, but you should just sit there and rest your ankle. I'll start it for you, just tell me if there's anything special about the machine, okay?\""
 
-# CHOICE
-menu:
-    "When she said that, why was that kinda... you know...":
-        jump kinda_hot
+    a "\"You carried me all the way here. The least I can do is wash your wet clothes.\""
 
-    "But this is MY house!":
-        jump my_house_laundry
+    "Despite my protests, she opens a couple of doors until she finds the little room with the washer and dryer."
 
-label kinda_hot:
-    a "\"Why was that kinda hot?\""
+    e "\"You need to rest! I'll tie you down if I need to! Wait here.\""
 
-    "Erin peeks her head out from the laundry room."
 
-    e "\"Did you say something?\""
+    # CHOICE
+    menu:
+        "When she said that, why was that kinda... you know...":
+            jump kinda_hot
 
-    a "\"Nope! Carry on!!\""
+        "But this is MY house!":
+            jump my_house_laundry
 
-    "I'm going to file this info away for later."
+    label kinda_hot:
+        a "\"Why was that kinda hot?\""
 
-    "I shake my head furiously and slap my cheeks gently. ANYWAYS."
+        "Erin peeks her head out from the laundry room."
 
-    jump one_bed
+        e "\"Did you say something?\""
 
-label my_house_laundry:
+        a "\"Nope! Carry on!!\""
 
-    "The audacity to boss me around in my own home!"
+        "I'm going to file this info away for later."
 
-    "What am I going to do with this girl?"
+        "I shake my head furiously and slap my cheeks gently. ANYWAYS."
 
-    jump one_bed
+        jump one_bed
+
+    label my_house_laundry:
+
+        "The audacity to boss me around in my own home!"
+
+        "What am I going to do with this girl?"
+
+        jump one_bed
 
 label one_bed:
 

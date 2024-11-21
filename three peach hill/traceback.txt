@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script files/1_bookstore.rpy", line 6, in script
-    show bg bookstore night
-Exception: Image 'bg bookstore' does not accept attributes 'night'.
+  File "game/script files/5_rain.rpy", line 55, in script
+    show cg piggyback fullscreen with dissolve
+Exception: Image 'cg piggyback' does not accept attributes 'fullscreen'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script files/1_bookstore.rpy", line 6, in script
-    show bg bookstore night
+  File "game/script files/5_rain.rpy", line 55, in script
+    show cg piggyback fullscreen with dissolve
   File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1113, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1076, in show_imspec
@@ -22,9 +22,9 @@ Full traceback:
     args.extraneous()
   File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\display\displayable.py", line 109, in extraneous
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'bg bookstore' does not accept attributes 'night'.
+Exception: Image 'cg piggyback' does not accept attributes 'fullscreen'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.0.24012702
 Three Peach Hill 1.0
-Wed Nov 20 23:32:27 2024
+Thu Nov 21 00:28:11 2024
