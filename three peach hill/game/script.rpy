@@ -87,7 +87,14 @@ label startbutitsalabel:
     jump bookstore
 
 label ending:
-    "The End"
+    scene black with dissolve
+    music fadeout 5.0
+
+    "To Be Continued..."
+
+    screen hide with dissolve
+
+    jump credits
     # This ends the game.
 
     return
