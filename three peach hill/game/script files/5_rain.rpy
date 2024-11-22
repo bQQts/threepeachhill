@@ -1,5 +1,6 @@
 label the_rain:
 # 5. The Rain - Caught in the rain… and there was only one bed? Perchance?
+    scene black
 
     "I finish picking the peaches by myself. By the time I'm done, the remaining daylight is nearly smothered by thick clouds. I hadn't noticed how dense they had gotten, but a brief glance is enough to confirm that they look heavy and full, as if ready to spill at any moment."
 
@@ -9,21 +10,31 @@ label the_rain:
 
     "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches"
 
+    hide screen with dissolve
+    show bg rain with dissolve
+    pause 1.5
+    show screen with dissolve
+
     "I slip in a particularly muddy patch and fall. I sit in the mud, contemplating my life. My ankle is definitely sprained. I have no idea how I'm going to get these peaches back. I'm drenched, and I just snapped at a girl I really quite like for really no good reason."
 
     "I close my eyes and tilt my head back, letting the raindrops splash across my face. I take a few deep breaths."
 
     "The rain stops drip-dropping on my face, but I can still hear it around me. I open my eyes."
 
+# show erin shocked at center with dissolve
+
     "It's Erin. She's holding an umbrella over me, looking breathless and disheveled."
+
+# hide erin with dissolve
+
 
     e "\"I ran to get an umbrella as soon as I saw how bad the sky was getting. Looks like I didn't make it to you in time though, sorry, Aya. Why are you sitting in the mud? You're soaked through!\""
 
-    a "\"Erin...\""
+    a sad "\"Erin...\""
 
     "The shorter woman hands me the umbrella and helps me to my feet."
 
-    e "\"Can you walk?\""
+    e neutral "\"Can you walk?\""
 
     a "\"Yes,\""
 
