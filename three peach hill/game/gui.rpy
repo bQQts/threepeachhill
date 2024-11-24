@@ -216,8 +216,12 @@ define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_yalign = 0.35
 define gui.choice_button_text_idle_color = '#ffffff'
 define gui.choice_button_text_hover_color = "#e05b33"
-define gui.choice_button_text_insensitive_color = '#7070707f'
+define gui.choice_button_text_insensitive_color = '#ffffff'
 
+# Night mode styling.
+define gui.choice_button_night_text_idle_color = '#5984CC'
+define gui.choice_button_night_text_hover_color = "#ffffff"
+define gui.choice_button_night_text_insensitive_color = '#5984CC'
 
 ## File Slot Buttons ###########################################################
 ##

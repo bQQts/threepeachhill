@@ -4,6 +4,19 @@
 
 init offset = -1
 
+################################################################################
+## Day/Night logic
+################################################################################
+
+init python:
+    is_night = False
+    night_prefix = ""
+
+    def toggle_night():
+        global is_night, night_prefix
+        is_night = not is_night
+        night_prefix = "night_" if is_night else ""
+        renpy.restart_interaction()  # Refresh the screen
 
 ################################################################################
 ## Styles
@@ -226,6 +239,7 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    background "choice_[night_prefix][prefix_]button_gif"
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
