@@ -88,11 +88,11 @@ label startbutitsalabel:
 
 label ending:
     scene black with dissolve
-    music fadeout 5.0
+    stop music fadeout 10.0
 
     "To Be Continued..."
 
-    screen hide with dissolve
+    screen hide
 
     jump credits
     # This ends the game.

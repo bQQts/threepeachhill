@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script files/3_pursuit.rpy", line 335: expected statement.
-    else
-        ^
+File "game/script.rpy", line 95: 'with' is not a keyword argument or valid child of the screen statement.
+    screen hide with dissolve
+                    ^
 
-Ren'Py Version: Ren'Py 8.2.0.24012702
-Wed Nov 20 23:49:43 2024
+Ren'Py Version: Ren'Py 8.3.3.24111502
+Tue Nov 26 15:46:34 2024

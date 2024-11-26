@@ -10,10 +10,10 @@ label the_rain:
 
     "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches"
 
-    hide screen with dissolve
+    screen hide 
     show bg rain with dissolve
     pause 1.5
-    show screen with dissolve
+    screen show
 
     "I slip in a particularly muddy patch and fall. I sit in the mud, contemplating my life. My ankle is definitely sprained. I have no idea how I'm going to get these peaches back. I'm drenched, and I just snapped at a girl I really quite like for really no good reason."
 
