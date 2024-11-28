@@ -99,7 +99,7 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 370
+define gui.textbox_height = 530 # default: 370
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -109,7 +109,7 @@ define gui.textbox_yalign = 1.0
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
 define gui.name_xpos = 900
-define gui.name_ypos = -0.4
+define gui.name_ypos = -8 # default: -0.4
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -133,7 +133,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 780
-define gui.dialogue_ypos = 0
+define gui.dialogue_ypos = 160 # default: 0
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 1488
@@ -141,6 +141,12 @@ define gui.dialogue_width = 1488
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
 define gui.dialogue_text_xalign = 0.0
+
+
+## Night colors.
+define gui.dialogue_night_accent_color = '#377FCC'
+define gui.dialogue_night_hover_color = '#377FCC'
+define gui.dialogue_night_text_color = '#ffffff'
 
 
 ## Buttons #####################################################################
@@ -219,9 +225,9 @@ define gui.choice_button_text_hover_color = "#e05b33"
 define gui.choice_button_text_insensitive_color = '#ffffff'
 
 # Night mode styling.
-define gui.choice_button_night_text_idle_color = '#5984CC'
-define gui.choice_button_night_text_hover_color = "#ffffff"
-define gui.choice_button_night_text_insensitive_color = '#5984CC'
+define gui.choice_night_button_text_idle_color = '#5984CC'
+define gui.choice_night_button_text_hover_color = "#ffffff"
+define gui.choice_night_button_text_insensitive_color = '#5984CC'
 
 ## File Slot Buttons ###########################################################
 ##
