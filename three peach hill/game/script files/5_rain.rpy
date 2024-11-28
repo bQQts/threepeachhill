@@ -216,6 +216,10 @@ a tsuntsun "\"It's over this way!!!\""
 
 "I show her to my room and sit on the bed, bouncing a little."
 
+show bg bedroom with dissolve
+pause 2.0
+
+
 a happy "\"There are blankets on the dresser over there, use whichever ones you want.\""
 
 e happy "\"Thanks.\""

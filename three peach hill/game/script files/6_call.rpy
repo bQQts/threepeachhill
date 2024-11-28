@@ -4,33 +4,33 @@ label the_call:
 
     "When she comes inside, she seems deflated."
 
-    a "\"Who was that?\""
+    a neutral "\"Who was that?\""
 
-    e "\"My parents. They want me to come back to the city.\""
+    e neutral "\"My parents. They want me to come back to the city.\""
 
     "My stomach drops."
 
     a "\"I see. So... are you going?\""
 
-    e "\"Sigh. I haven't decided yet, to be honest. It's nice out here, and...\""
+    e gloom "\"Sigh. I haven't decided yet, to be honest. It's nice out here, and...\""
 
     "She looks sidelong at me through lowered lashes."
 
-    e "\"I've found somewhere I like being, rather than just existing somewhere I don't really care about.\""
+    e happy "\"I've found somewhere I like being, rather than just existing somewhere I don't really care about.\""
 
     "Oh. Oh."
 
     a "\"But... what about finishing college?\""
 
-    e "\"There are other ways. I could postpone it, or do it online. Anyway, the point is that I'm not really ready to go back to the city. I don't want to go.\""
+    e neutral "\"There are other ways. I could postpone it, or do it online. Anyway, the point is that I'm not really ready to go back to the city. I don't want to go.\""
 
     a "\"What about your parents?\""
 
     e "\"What about them? I appreciate that they want to look out for me, but I'm doing just fine. I'm not doing anything wrong by trying to be happy.\""
 
-    a "\"You know what? That's pretty compelling.\""
+    a happy "\"You know what? That's pretty compelling.\""
 
-    e "\"Right?\""
+    e happy "\"Right?\""
 
     "I can't help myself. I reach out and rub her shoulder."
 
