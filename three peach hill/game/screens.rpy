@@ -9,14 +9,45 @@ init offset = -1
 ################################################################################
 
 init python:
+
+    # Register style preference for dialogue and name label.
+    # The "say" screen is hardcoded, so we need to use this workaround.
+    renpy.register_style_preference("dialogue_color", "day", style.say_dialogue, "color", "#292525")
+    renpy.register_style_preference("dialogue_color", "night", style.say_dialogue, "color", "#ffffff")
+
+    renpy.register_style_preference("name_label", "day", style.say_label, "outlines", [(absolute(2), '#74301e', absolute(2), absolute(2))])
+    renpy.register_style_preference("name_label", "night", style.say_label, "outlines", [(absolute(2), '#144272', absolute(2), absolute(2))])
+
+    # Setup initial values to daylight.
     is_night = False
     night_prefix = ""
+    night_suffix = ""
 
+    # Functions that can be called in-game to change the time of day.
     def toggle_night():
-        global is_night, night_prefix
-        is_night = not is_night
-        night_prefix = "night_" if is_night else ""
-        renpy.restart_interaction()  # Refresh the screen
+        if is_night:
+            make_day()
+        else:
+            make_night()
+
+    def make_night():
+        global is_night, night_prefix, night_suffix
+        is_night = True
+        night_prefix = "night_"
+        night_suffix = "_night"
+        renpy.set_style_preference("dialogue_color", "night")
+        renpy.set_style_preference("name_label", "night")
+
+    def make_day(): 
+        global is_night, night_prefix, night_suffix
+        is_night = False
+        night_prefix = ""
+        night_suffix = ""
+        renpy.set_style_preference("dialogue_color", "day")
+        renpy.set_style_preference("name_label", "day")
+    
+    # Start the game with daylight.
+    make_day()
 
 ################################################################################
 ## Styles
@@ -109,8 +140,6 @@ style frame:
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
 screen say(who, what):
-    style_prefix "say"
-
     window:
         id "window"
 
@@ -118,7 +147,10 @@ screen say(who, what):
 
             window:
                 id "namebox"
-                style "namebox"
+                if is_night:
+                    style "namebox_night"
+                else:
+                    style "namebox"
                 text who id "who"
 
         text what id "what"
@@ -142,14 +174,15 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
+image textbox = "gui/textbox.png"
+image textbox_night = "gui/textbox_night.png"
 
 style window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
-
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Frame("textbox[night_suffix]", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -174,6 +207,9 @@ style say_dialogue:
     ypos gui.dialogue_ypos
 
     adjust_spacing False
+
+style namebox_night is namebox:
+    background Frame("gui/namebox_night.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
 
 ## Input screen ################################################################
 ##
@@ -219,31 +255,32 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 screen choice(items):
-    style_prefix "choice"
+    if is_night:
+        style_prefix "choice_night"
+    else:
+        style_prefix "choice"
 
     vbox:
         for i in items:
             textbutton i.caption action i.action
 
-
-style choice_vbox is vbox
-style choice_button is button
-style choice_button_text is button_text
-
-style choice_vbox:
+style choice_vbox is vbox:
     xalign 0.5
     ypos 540
     yanchor 0.5
-
     spacing gui.choice_spacing
-
-style choice_button is default:
+style choice_button is button:
     properties gui.button_properties("choice_button")
     background "choice_[night_prefix][prefix_]button_gif"
-
-style choice_button_text is default:
+style choice_button_text is button_text:
     properties gui.text_properties("choice_button")
 
+style choice_night_vbox is choice_vbox
+style choice_night_button is choice_button:
+    properties gui.button_properties("choice_night_button")
+    background "choice_[night_prefix][prefix_]button_gif"
+style choice_night_button_text is choice_button_text:
+    properties gui.text_properties("choice_night_button")
 
 ## Quick Menu screen ###########################################################
 ##
