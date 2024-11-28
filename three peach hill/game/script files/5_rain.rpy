@@ -6,7 +6,7 @@ label the_rain:
 
     "I'm rolling my small cart quickly through the orchard when I feel the first droplets splash my brow, my hair, my hand. It's a long way back to my bike, and then I'll still have to cycle home from there. I don't even have a jacket."
 
-    a "\"This is going to suck.\""
+    a gloom "\"This is going to suck.\""
 
     "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches"
 
@@ -28,7 +28,7 @@ label the_rain:
 # hide erin with dissolve
 
 
-    e "\"I ran to get an umbrella as soon as I saw how bad the sky was getting. Looks like I didn't make it to you in time though, sorry, Aya. Why are you sitting in the mud? You're soaked through!\""
+    e shocked "\"I ran to get an umbrella as soon as I saw how bad the sky was getting. Looks like I didn't make it to you in time though, sorry, Aya. Why are you sitting in the mud? You're soaked through!\""
 
     a sad "\"Erin...\""
 
@@ -40,21 +40,21 @@ label the_rain:
 
     "I put weight onto my foot and wince."
 
-    a "\"Well, no. My ankle...\""
+    a  gloom "\"Well, no. My ankle...\""
 
     "Erin turns around and crouches, gesturing for me to climb up on her back."
 
-    e "\"Get on, I'll carry you.\""
+    e neutral "\"Get on, I'll carry you.\""
 
-    a "\"But I'm taller than you! I'll crush you!\""
+    a neutral "\"But I'm taller than you! I'll crush you!\""
 
     e excited "\"I'm like an ant, I can carry you no problem!\""
 
-    a "\"Erin, I'll just lean on you and we'll go slow.\""
+    a gloom "\"Erin, I'll just lean on you and we'll go slow.\""
 
     e "\"Really, I insist! I'm wearing work boots, I won't slip in the mud. Let me carry you.\""
 
-    a "\"What about the peaches?\""
+    a sad "\"What about the peaches?\""
 
     e neutral "\"There will be more peaches. I'm more worried about you right now. Now, climb on.\""
 
@@ -83,7 +83,7 @@ label the_rain:
 
     "She's hunched over at the side door of the bookshop that leads up to my house."
 
-    e "\"Hey, Aya? You okay?\""
+    e neutral "\"Hey, Aya? You okay?\""
 
     "There's concern in her voice and I try to answer, but it comes out as a mumble. I eventually stumble through the words."
 
@@ -106,17 +106,17 @@ label the_rain:
 
     "Erin looks around for the bathroom, finds it, and leads me over to it."
 
-    e "\"Get out of those clothes and into a nice hot shower, okay? I'd help you, but...\""
+    e neutral "\"Get out of those clothes and into a nice hot shower, okay? I'd help you, but...\""
 
     "There's a faint blush growing brighter on her cheeks that snaps me out of my miserable fugue."
 
-    a "\"No! No, it's okay, I got it.\""
+    a blush "\"No! No, it's okay, I got it.\""
 
     "I step in and shut the door behind me. A moment later, I peek out and offer Erin a towel."
 
-    a "\"So you can dry off while you wait for your turn.\""
+    a tsuntsun "\"So you can dry off while you wait for your turn.\""
 
-    e "\"I can just go home, it's alright.\""
+    e neutral "\"I can just go home, it's alright.\""
 
     a "\"It's pouring out there! You'll catch a cold. Dry off for now, I'll find you a change of clothes once I'm out of the shower.\""
 
@@ -124,31 +124,31 @@ label the_rain:
 
     "Bare? Shoulders? I glance to a nearby kitchen chair, where her soaking wet shirt is hanging. A dish towel on the floor catches the water dripping off of the discarded clothing. I clear my throat and she turns her head to look at me."
 
-    a "\"Bathroom's open, your turn, I'll get you some clothes, DON'T LOOK AT ME!\""
+    a blush "\"Bathroom's open, your turn, I'll get you some clothes, DON'T LOOK AT ME!\""
 
     "I hobble across the hall to my bedroom and swing the door shut before digging out a t-shirt and sweatpants for myself, and another tee and pair of drawstring shorts that should probably fit Erin."
 
     "When I'm dressed, I take the extra clothes and knock on the bathroom door."
 
-    e "\"Almost done!\""
+    e happy "\"Almost done!\""
 
-    a "\"Take your time, I'm just setting some clothes for you by the door.\""
+    a happy "\"Take your time, I'm just setting some clothes for you by the door.\""
 
     "When Erin comes out, I have an instant kettle heating water for tea and an ice pack on my ankle, which I've propped up on a second kitchen chair."
 
-    e "\"Thank you, the clothes fit well!\""
+    e blush "\"Thank you, the clothes fit well!\""
 
     "My clothes are, in fact, too big on her. The effect is absolutely adorable. She has a hand towel draped over top of her head, and the shirt is long enough that it almost covers the cotton shorts."
 
-    a "\"It's no trouble. I'll start some laundry, just check your pockets before I put it in the machine.\""
+    a blush "\"It's no trouble. I'll start some laundry, just check your pockets before I put it in the machine.\""
 
-    e "\"I appreciate that, but you should just sit there and rest your ankle. I'll start it for you, just tell me if there's anything special about the machine, okay?\""
+    e neutral "\"I appreciate that, but you should just sit there and rest your ankle. I'll start it for you, just tell me if there's anything special about the machine, okay?\""
 
-    a "\"You carried me all the way here. The least I can do is wash your wet clothes.\""
+    a excited "\"You carried me all the way here. The least I can do is wash your wet clothes.\""
 
     "Despite my protests, she opens a couple of doors until she finds the little room with the washer and dryer."
 
-    e "\"You need to rest! I'll tie you down if I need to! Wait here.\""
+    e  happy "\"You need to rest! I'll tie you down if I need to! Wait here.\""
 
 
     # CHOICE
@@ -160,17 +160,17 @@ label the_rain:
             jump my_house_laundry
 
     label kinda_hot:
-        a "\"Why was that kinda hot?\""
+        a blush "\"Why was that kinda hot?\""
 
         "Erin peeks her head out from the laundry room."
 
-        e "\"Did you say something?\""
+        e neutral "\"Did you say something?\""
 
-        a "\"Nope! Carry on!!\""
+        a excited "\"Nope! Carry on!!\""
 
-        "I'm going to file this info away for later."
+        "I'm going to file this thought away for later."
 
-        "I shake my head furiously and slap my cheeks gently. ANYWAYS."
+        "I shake my head furiously and clap my palms to my cheeks. ANYWAYS."
 
         jump one_bed
 
@@ -186,23 +186,23 @@ label one_bed:
 
 "The storm has worsened. We're each on our second cup of tea and it's getting late into the night."
 
-a "\"I think you might want to stay here tonight.\""
+a neutral "\"I think you might want to stay here tonight.\""
 
 "Erin gives me a look."
 
-e "\"I thought you wouldn't want me to stay here.\""
+e neutral "\"I thought you wouldn't want me to stay here.\""
 
-a "\"Well, I'm not sending you out in that weather.\""
+a shocked "\"Well, I'm not sending you out in that weather.\""
 
-e "\"Okay, that's fair. I can sleep on the couch!\""
+e gloom "\"Okay, that's fair. I can sleep on the couch!\""
 
 a "\"No!\""
 
-e "\"N-no?\""
+e blush "\"N-no?\""
 
 "My cheeks redden."
 
-a "\"I mean, w-well, the couch really isn't all that comfortable to sleep in. And I have extra blankets. And my bed is, well, kind of massive. So there's plenty of room, we wouldn't even touch, I guarantee it.\""
+a blush "\"I mean, w-well, the couch really isn't all that comfortable to sleep in. And I have extra blankets. And my bed is, well, kind of massive. So there's plenty of room, we wouldn't even touch, I guarantee it.\""
 
 "She plays it cool."
 
@@ -210,39 +210,39 @@ e "\"Oh well I suppose that would work.\""
 
 a "\"Cool! Cool. Great!\""
 
-e "\"You know, I wouldn't mind if—\""
+e excited "\"You know, I wouldn't mind if—\""
 
-a "\"It's over this way!!!\""
+a tsuntsun "\"It's over this way!!!\""
 
 "I show her to my room and sit on the bed, bouncing a little."
 
-a "\"There are blankets on the dresser over there, use whichever ones you want.\""
+a happy "\"There are blankets on the dresser over there, use whichever ones you want.\""
 
-e "\"Thanks.\""
+e happy "\"Thanks.\""
 
 "She grabs a soft, blue cotton blanket and the fluffy winter duvet. I raise my eyebrow at that."
 
-a "\"Won't you be hot?\""
+a neutral "\"Won't you be hot?\""
 
-e "\"I sleep better with some layers on me, I won't overheat!\""
+e excited "\"I sleep better with some layers on me, I won't overheat!\""
 
 "So cute."
 
 "We build our little nests and tuck into bed. I pull the lamp cord."
 
-e "\"Aya?\""
+e happy "\"Aya?\""
 
-a "\"Mmhm?\""
+a happy "\"Mmhm?\""
 
 "She rolls onto her side, facing me. Our faces are close enough that I can feel the warmth of her breath."
 
-e "\"Thank you for this... you're really sweet, you know.\""
+e excited "\"Thank you for this... you're really sweet, you know.\""
 
-a "\"Ahh, don't make it weird.\""
+a blush "\"Ahh, don't make it weird.\""
 
 "In the dim light I can see the curve of her cheek as she smiles."
 
-e "\"I can keep my hands and thoughts to myself. Or not, if you'd like. Just let me know.\""
+e rizzler "\"I can keep my hands and thoughts to myself. Or not, if you'd like. Just let me know.\""
 
 "I would NOT like. I definitely would NOT like to brush her hair and tuck it behind her ear, and pull up her covers and pull her close. I most certainly would NOT like to see how soft her lips are..."
 
