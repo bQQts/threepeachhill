@@ -16,19 +16,19 @@ label lost_market:
 
 
 label lost_market_bookstore:
-
+    show bg bookstore with dissolve
     "The bookstore is the perfect place to meet up and talk about marketing plans."
 
     jump lost_market_cont
 
 label lost_market_office:
-
+    show bg orchard with dissolve
     "The office has lots of room to meet with people and map out plans on the big, clear tables."
 
     jump lost_market_cont
 
 label lost_market_aya_house:
-
+    show bg kitchen with dissolve
     "My house. It's comfortable, private, and we can make as much of a mess of notes and projects as we want."
 
     jump lost_market_cont
@@ -42,6 +42,9 @@ label lost_market_cont:
 
     "It's really nice."
 
+    scene black with irisin
+    pause 2.0
+
 label lost_market_find_out:
 
     # August 19, Monday
@@ -51,8 +54,11 @@ label lost_market_find_out:
     "Twenty minutes turns into an hour, then two. She's not answering her phone."
 
     "I check near the bookstore. She's not there."
+    show bg bookstore with dissolve 
 
     "I call the cornerstore and the orchard office, and am told she's not there either."
+    hide bg bookstore
+    show bg cornerstore with dissolve
 
     "I bite my lip. I'm starting to worry that something has happened."
 
@@ -66,13 +72,13 @@ label lost_market_find_out:
 
     lyd "\"You haven't found a spell to fix that lamp yet, right?\""
 
-    a "\"N-no, not yet, we're planning to go find the Lost Market in a few days. Do you want to come in?\""
+    a neutral "\"N-no, not yet, we're planning to go find the Lost Market in a few days. Do you want to come in?\""
 
     lyd "\"The Market came early, Aya.\""
 
     "I get a sinking feeling in my stomach."
 
-    a "\"No. She couldn't have...\""
+    a shocked "\"No. She couldn't have...\""
 
     lyd "\"She did. Terry the fox spirit saw her go in unaccompanied and ran to tell me.\""
 
@@ -82,7 +88,7 @@ label lost_market_find_out:
 
     "Of course this ancient cat still hasn't gotten a phone."
 
-    a "\"I need to find her, fast. Where's the entrance?\""
+    a neutral "\"I need to find her, fast. Where's the entrance?\""
 
     lyd "\"The alley between the grocer and the barber. Be safe, and be quick. I hope you find her in time.\""
 
@@ -96,7 +102,7 @@ label lost_market_inside:
     show aya at center:
         zoom 0.4 yoffset -350
     stop music fadeout 3.0
-    play music "music/Journey To Ascend.mp3" fadein 2.0
+    play music "SpiritChase.flac" fadein 4.0
 
     "I run faster than I ever have before. My legs and lungs burn, and I gasp for air, but I push through it and finally make it to the entrance."
 
@@ -235,6 +241,7 @@ label lost_market_inside:
     e "\"Sure, I'd like that.\""
 
     scene black with dissolve
+    pause 2.0
 
     jump date
 

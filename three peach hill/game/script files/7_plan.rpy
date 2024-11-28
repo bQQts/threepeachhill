@@ -1,6 +1,6 @@
 label the_plan:
-    
-    a "\"What do you mean they want us to close the bookstore?!\""
+    show bg kitchen with irisin
+    a shocked "\"What do you mean they want us to close the bookstore?!\""
 
     "Erin's eyes go wide and she looks horrified."
 
@@ -8,13 +8,13 @@ label the_plan:
 
     "I end the call and shove my phone into the pocket of my sweatpants."
 
-    e "\"Why would the store close? Doesn't your family own it?\""
+    e shocked "\"Why would the store close? Doesn't your family own it?\""
 
-    a "\"We do own it, but there was a problem with a malicious spirit about half a century ago. My parents made a deal with a more powerful entity to ward the store, but it seems like they neglected to pay it back in full.\""
+    a sad "\"We do own it, but there was a problem with a malicious spirit about half a century ago. My parents made a deal with a more powerful entity to ward the store, but it seems like they neglected to pay it back in full.\""
 
-    e "\"What's left to pay?\""
+    e neutral "\"What's left to pay?\""
 
-    a "\"About ten thousand dollars. Due before the new year.\""
+    a gloom "\"About ten thousand dollars. Due before the new year.\""
 
     e "\"That's not too bad...\""
 
@@ -22,11 +22,11 @@ label the_plan:
 
     a "\"Ten thousand in a small town is not a terribly small number, Erin.\""
 
-    e "\"Well, I could help you!\""
+    e happy "\"Well, I could help you!\""
 
-    a "\"How?\""
+    a neutral "\"How?\""
 
-    e "\"I'm studying marketing. I can come up with a plan that'll bring in more business. We could even find some donors who want to invest in the bookstore and would cover that cost.\""
+    e excited "\"I'm studying marketing. I can come up with a plan that'll bring in more business. We could even find some donors who want to invest in the bookstore and would cover that cost.\""
 
     a "\"I had no idea. Do you really think we could pull that off?\""
 
@@ -39,38 +39,39 @@ label the_plan:
     "We spend the rest of the afternoon drawing up a plan."
 
     scene black with dissolve
+    pause 2.0
 
 label plan_execution:
-
+    show bg kitchen with dissolve
     "Erin finishes jotting down notes in the composition notepad I grabbed from my desk."
 
-    e "\"And that's how we'll do it.\""
+    e happy "\"And that's how we'll do it.\""
 
-    a "\"I'm willing to give it a try. Thank you for doing this, Erin.\""
+    a neutral "\"I'm willing to give it a try. Thank you for doing this, Erin.\""
 
     e "\"It's no problem! Like I said, this is my thing.\""
 
-    e "\"Anyway... I should probably get going. Gotta get a change of clothes for my shift at the cornerstore later."
+    e neutral "\"Anyway... I should probably get going. Gotta get a change of clothes for my shift at the cornerstore later."
 
-    a "\"Yeah. Before you go, I just wanted to apologize for how I acted back... before the rain. That wasn't fair, and you were right."
+    a sad "\"Yeah. Before you go, I just wanted to apologize for how I acted back... before the rain. That wasn't fair, and you were right."
 
     "She smiles a little."
 
-    a "\"And... thank you again for bringing me home safe and sound.\""
+    a neutral "\"And... thank you again for bringing me home safe and sound.\""
 
-    e "\"Apology accepted. And, I'd do it again in a heartbeat.\""
+    e happy "\"Apology accepted. And, I'd do it again in a heartbeat.\""
 
     "It's pretty brisk outside when I walk her out."
 
-    a "\"Wait, let me get you something.\""
+    a happy "\"Wait, let me get you something.\""
 
     e "\"Sure!\""
 
     "I come back with one of my light jackets."
 
-    a "\"Um, you can borrow this. Don't catch a cold.\""
+    a tsuntsun "\"Um, you can borrow this. Don't catch a cold.\""
 
-    e "\"Oh Aya, thank you. You're sweet!\""
+    e blush "\"Oh Aya, thank you. You're sweet!\""
 
     "I wave a hand at her to brush off the praise."
 
@@ -81,5 +82,6 @@ label plan_execution:
     "It might still be a little risky, but maybe liking Erin is worth the risk."
 
     scene black with irisin
+    pause 2.0
 
     jump lost_market
