@@ -50,8 +50,8 @@ define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
-define config.default_music_volume = 0.5
-define config.default_sfx_volume = 0.5
+define config.default_music_volume = 0.8
+define config.default_sfx_volume = 0.8
 define config.default_voice_volume = 0.75
 
 ## To allow the user to play a test sound on the sound or voice channel,
@@ -65,7 +65,7 @@ define config.sample_voice = "sample-voice.ogg"
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "music/title_finished.flac"
+define config.main_menu_music = "music/Main Title.flac"
 
 
 ## Transitions #################################################################
