@@ -22,8 +22,13 @@ label bookstore:
 
     show erin happy at center, erin_size
 
+    
+    #show erin happy:  ##uncomment these two lines for the zoom in
+    #    subpixel True yanchor 0.63 zoom 0.5  ##This brings Erin closer but we'll lose some of her design to the text box
 
-    "She's adorable. No, beautiful. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. I have just a moment to take it all in before time freezes."
+
+
+    "She's adorable. Beautiful, really. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. I have just a moment to take it all in before time freezes."
 
     show erin shocked
 
@@ -59,7 +64,6 @@ menu:
 
 
 label bookstore_Girl:
-
 
     "I rush over to her, taking hold of her arm and helping her upright."
 

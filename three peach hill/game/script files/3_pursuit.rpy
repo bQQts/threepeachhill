@@ -158,6 +158,7 @@ label cobbler_call_aya:
 
     menu:
         "I wanted to know if you stayed in town...":
+            $ kind_points += 1
             jump cobbler_erin_stayed
 
         "I didn\'t really have a reason":
@@ -294,9 +295,11 @@ menu:
         jump shes_clumsy
 
     "She was bold":
+        $ kind_points += 1
         jump shes_bold
 
     "She was cute":
+        $ kind_points += 1
         jump shes_cute
 
     "(Change the subject)":
@@ -550,6 +553,7 @@ label farmers_market:
             jump farmers_market_marigold
 
         "Lavender and larkspur":
+            $ kind_points += 1
             jump farmers_market_lavender
 
     label farmers_market_marigold:
