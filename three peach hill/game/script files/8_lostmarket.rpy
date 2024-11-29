@@ -118,7 +118,7 @@ label lost_market_inside:
 
     "The amber glow grows, and I step out of the alley into a street full of spirits of all shape and size."
 
-    "As naturally as breathing, I shift fully into my spirit form: an enormous XX COLOR three-tailed fox with small red horns. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
+    "As naturally as breathing, I shift fully into my spirit form: an enormous pink three-tailed fox with small red horns. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
 
     hide aya with dissolve
 

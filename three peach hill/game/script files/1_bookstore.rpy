@@ -80,7 +80,7 @@ label bookstore_Girl:
 
     a neutral "Don't worry about that right now, are you injured?"
 
-    "She shakes her head and lets me help her up. Up close, she's XX APPEARANCE."
+    "She shakes her head and lets me help her up. Up close, she's even cuter than I realized. My heart flutters."
 
     e sad "\"No, but... The lamp.\""
 
