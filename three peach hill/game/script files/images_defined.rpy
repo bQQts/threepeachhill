@@ -36,6 +36,8 @@ image erin = "erin neutral.png"
 #image erin sad = "Erin Sad.png"
 #image erin shocked = "Erin Shocked.png"
 
+image jeff = "side jeff.png"
+image timothy = "side timothy.png"
 
 
 ## define bgs

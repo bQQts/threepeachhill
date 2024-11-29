@@ -8,6 +8,8 @@ define e = Character("Erin", image="erin", who_color= "#faf6f5")
 
 define lyd = Character("Lydia")
 define joy = Character("Joy")
+define jeff = Character("Jeff", image="jeff")
+define timothy = Character("Timothy", image="timothy")
 
 
 default kind_points = 0
@@ -50,7 +52,6 @@ label ending:
 
     screen hide
 
-    jump credits
     # This ends the game.
 
     return

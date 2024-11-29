@@ -53,11 +53,11 @@ label orchardist:
     scene black with dissolve
     show bg orchard with dissolve
 
-    "Timothy" "\"Well hey there! You lookin' for Joy, by any chance?\""
+    timothy "\"Well hey there! You lookin' for Joy, by any chance?\""
 
     a excited "\"Hey! Sure am.\""
 
-    "Timothy" "\"She's out in the trees today.\""
+    timothy "\"She's out in the trees today.\""
 
     a happy "\"Oh! No problem, I'll just drop this off upstairs.\""
 
@@ -583,23 +583,23 @@ label farmers_market_cont:
 
     "Erin bags the flowers and waves over the flower merchant so I can pay for them."
 
-    "Gary" "Oh, hello there Aya!"
+    jeff "Oh, hello there Aya!"
 
     e neutral "\"You know Aya?\""
 
-    "Gary" "\"Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she tends to come by almost every weekend during the market season!\""
+    jeff "\"Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she tends to come by almost every weekend during the market season!\""
 
     e happy "\"Oh!\""
 
     "I chuckle at her blush."
 
-    "Gary" "\"You know, Erin, if you'd like to call it a day here I'm sure Aya would be happy to show you around the rest of the market.\""
+    jeff "\"You know, Erin, if you'd like to call it a day here I'm sure Aya would be happy to show you around the rest of the market.\""
 
     "He winks at me on the sly."
 
-    a neutral "\"Oh, Gary, if you need the extra help I really don't want to pull her away, I was just stopping by to get flowers—\""
+    a neutral "\"Oh, Jeff, if you need the extra help I really don't want to pull her away, I was just stopping by to get flowers—\""
 
-    "Gary" "\"Nonsense, we'll be just fine. She was a huge help unloading everything this morning, we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market.\""
+    jeff "\"Nonsense, we'll be just fine. She was a huge help unloading everything this morning, we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market.\""
 
     e excited "\"Really?! Thank you! This is great!!\""
 
@@ -609,11 +609,11 @@ label farmers_market_cont:
 
     a tsuntsun "\"I suppose...\""
 
-    "Gary comes back with an envelope for Erin."
+    "Jeff comes back with an envelope for Erin."
 
-    "Gary" "\"You two take care, now!\""
+    jeff "\"You two take care, now!\""
 
-    a happy "\"Thank you, Gary. Likewise!\""
+    a happy "\"Thank you, old man. Likewise!\""
 
     "I tuck the flowers into the larger of my tote bags and heft them so the straps rest more comfortably on my shoulders."
 
