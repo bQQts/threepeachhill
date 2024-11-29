@@ -1,5 +1,5 @@
 label pursuit:
-    scene bg with dissolve
+    scene black with dissolve
     stop music fadeout 1.5
     play music "music/Quiet Village.flac" fadein 1.5
 
@@ -19,6 +19,8 @@ menu:
         jump cornerstore
 
 label cobbler:
+
+    show bg kitchen with dissolve
 
     "Fortunately, the peaches had sustained no damage at all during The Incident, and I'm able to whip up a couple of test cobblers."
 
@@ -92,7 +94,7 @@ label orchardist:
     a happy "\"I'll take care of myself. You eat that cobbler, okay? And give me notes!\""
 
     scene black with irisin
-
+    pause 2.0
     scene bg bookstore with dissolve
 
     # title where it's "back at the bookstore"
@@ -511,6 +513,7 @@ label farmers_market:
     # Introductory scene 
     # Screen that says a week passes
     # Farmers Market title screen
+    show bg market with dissolve
     
     "The smell of food wafts across the town on a light breeze that carries away the remnants of summer's humidity."
 
