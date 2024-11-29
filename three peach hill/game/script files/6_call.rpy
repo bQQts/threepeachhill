@@ -41,5 +41,5 @@ label the_call:
     "That's when I get a call myself. One that dooms me in a way I was totally unprepared for."
 
     scene black with irisin
-
+    pause 2.0
     jump the_plan

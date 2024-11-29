@@ -244,7 +244,7 @@ define config.thumbnail_width = 512
 define config.thumbnail_height = 288
 
 ## The number of columns and rows in the grid of save slots.
-define gui.file_slot_cols = 3
+define gui.file_slot_cols = 2
 define gui.file_slot_rows = 2
 
 

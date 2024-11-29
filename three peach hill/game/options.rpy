@@ -50,8 +50,8 @@ define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
-define config.default_music_volume = 0.5
-define config.default_sfx_volume = 0.5
+define config.default_music_volume = 0.75
+define config.default_sfx_volume = 0.75
 define config.default_voice_volume = 0.75
 
 ## To allow the user to play a test sound on the sound or voice channel,
@@ -92,7 +92,7 @@ define config.after_load_transition = None
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = None
+define config.end_game_transition = dissolve
 
 
 ## A variable to set the transition used when the game starts does not exist.
