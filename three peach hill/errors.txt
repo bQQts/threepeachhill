@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 95: 'with' is not a keyword argument or valid child of the screen statement.
-    screen hide with dissolve
-                    ^
+File "game/script files/credits.rpy", line 9: Indentation mismatch.
 
-Ren'Py Version: Ren'Py 8.3.3.24111502
-Tue Nov 26 15:46:34 2024
+Ren'Py Version: Ren'Py 8.2.0.24012702
+Fri Nov 29 13:41:33 2024

@@ -1,6 +1,9 @@
 label the_rain:
 # 5. The Rain - Caught in the rain… and there was only one bed? Perchance?
     scene black
+    show bg orchard with dissolve
+    stop music fadeout 0.5
+    play music "Rainy Day.flac" fadein 1.5
 
     "I finish picking the peaches by myself. By the time I'm done, the remaining daylight is nearly smothered by thick clouds. I hadn't noticed how dense they had gotten, but a brief glance is enough to confirm that they look heavy and full, as if ready to spill at any moment."
 
@@ -8,10 +11,10 @@ label the_rain:
 
     a gloom "\"This is going to suck.\""
 
-    "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches"
+    "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches as the early evening sets in."
 
-    screen hide 
-    show bg rain with dissolve
+
+    screen hide
     pause 1.5
     screen show
 
@@ -21,14 +24,18 @@ label the_rain:
 
     "The rain stops drip-dropping on my face, but I can still hear it around me. I open my eyes."
 
-# show erin shocked at center with dissolve
-
     "It's Erin. She's holding an umbrella over me, looking breathless and disheveled."
 
-# hide erin with dissolve
+    show bg rain with dissolve
+    show erin shocked at center:
+        subpixel True
+        zoom 0.3
+        yoffset -350
 
 
     e shocked "\"I ran to get an umbrella as soon as I saw how bad the sky was getting. Looks like I didn't make it to you in time though, sorry, Aya. Why are you sitting in the mud? You're soaked through!\""
+    
+    hide erin shocked
 
     a sad "\"Erin...\""
 
@@ -74,14 +81,18 @@ label the_rain:
     e happy "\"Just hang on tight, I'll get you home.\""
 
     "I let the umbrella rest over our backs, which probably makes us look like an overly large beetle, and let the sway of her steps and the sound of her breathing lull me into a half-slumber."
-
+    
+    screen hide
+    $ make_night()
     scene black with dissolve
+    stop music fadeout 3.0
     pause 3.0
     show bg gate night with dissolve
+    screen show
 
-    e "\"What's your door code? Aya?\""
+    e "\"What's your door code? ...Aya?\""
 
-    "She's hunched over at the side door of the bookshop that leads up to my house."
+    "She's hunched over at the side door of the bookshop that leads up to my house. I blink, rubbing my sleepy eyes with the back of a hand."
 
     e neutral "\"Hey, Aya? You okay?\""
 
@@ -91,7 +102,9 @@ label the_rain:
 
     "I hear the beep of her punching in the code, and the click of the bolt sliding open."
 
-    "She pries the umbrella from my arms and leaves it just inside the front door to dry on the doormat. Most of the mud washed off us from the rain, but we're still drenched."
+    # door sound
+
+    "She gently pries the umbrella from my arms and leaves it just inside the front door to dry on the doormat. Most of the mud washed off us from the rain, but we're still drenched."
 
     hide bg gate night with dissolve
     show bg bathroom night with dissolve 
@@ -103,8 +116,13 @@ label the_rain:
     "We climb the stairs, leaving little puddles behind us."
 
     "My house is still quite warm from the summer day, but dry—dehumidifiers and a little bit of magic always ensure that the house stays dry and relatively cool, to preserve the condition of the books on the first floor."
+    
+    play music "music/Romance LoFi.flac" fadein 3.5
+    
+    "Erin looks around for the bathroom, finds it, and leads me over to it. She flicks on the lights."
 
-    "Erin looks around for the bathroom, finds it, and leads me over to it."
+    $ make_day()
+    show bg bathroom with dissolve
 
     e neutral "\"Get out of those clothes and into a nice hot shower, okay? I'd help you, but...\""
 
@@ -120,7 +138,9 @@ label the_rain:
 
     a "\"It's pouring out there! You'll catch a cold. Dry off for now, I'll find you a change of clothes once I'm out of the shower.\""
 
-    "Soapy water cleanses my body and the heat clears my mind. I feel the tightness leave stiff muscles. I pat myself dry and wrap a towel tightly around myself, leaving my wet and muddy clothes in one of the two bathroom sinks. Then I crack open the bathroom door to see Erin sitting on the rug with the towel draped over her now-bare shoulders."
+    "Soapy water cleanses my body and the heat clears my mind. I feel the tightness leave stiff muscles. I pat myself dry and wrap a towel tightly around myself, leaving my wet and muddy clothes in one of the two bathroom sinks."
+    
+    "Then I crack open the bathroom door to see Erin sitting on the rug with the towel draped over her now-bare shoulders."
 
     "Bare? Shoulders? I glance to a nearby kitchen chair, where her soaking wet shirt is hanging. A dish towel on the floor catches the water dripping off of the discarded clothing. I clear my throat and she turns her head to look at me."
 
@@ -135,6 +155,9 @@ label the_rain:
     a happy "\"Take your time, I'm just setting some clothes for you by the door.\""
 
     "When Erin comes out, I have an instant kettle heating water for tea and an ice pack on my ankle, which I've propped up on a second kitchen chair."
+    
+    hide bg bathroom with dissolve
+    show bg kitchen with dissolve
 
     e blush "\"Thank you, the clothes fit well!\""
 

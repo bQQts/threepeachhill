@@ -87,7 +87,7 @@ label deal_cont:
 
     a neutral "\"Yeah?\""
 
-    "Erin walks over, setting the bucket of lamp pieces on the countertop. XX She brushes a few loose strands of hair from her face, tucking them behind her ears, then bends to the counter to prop her weight up on her elbows."
+    "Erin walks over, setting the bucket of lamp pieces on the countertop. She brushes a few loose strands of hair from her face, tucking them behind her ears, then bends to the counter to prop her weight up on her elbows."
 
     e gloom "\"Whatever solution you're thinking of had better be magic, because I don't know anyone who could put together all those tiny pieces in a way that fits right. It's... pretty busted.\""
 

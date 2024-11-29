@@ -99,8 +99,7 @@ label lost_market_find_out:
 label lost_market_inside:
 
     scene bg rain
-    show aya at center:
-        zoom 0.4 yoffset -350
+    show aya at center, aya_size
     stop music fadeout 3.0
     play music "SpiritChase.flac" fadein 4.0
 
@@ -118,12 +117,11 @@ label lost_market_inside:
 
     "The amber glow grows, and I step out of the alley into a street full of spirits of all shape and size."
 
-    "As naturally as breathing, I shift fully into my spirit form: an enormous XX COLOR three-tailed fox with small red horns. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
+    "As naturally as breathing, I shift fully into my spirit form: an enormous pink three-tailed fox with small red horns. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
 
     hide aya with dissolve
 
-    show aya fox at center with dissolve:
-        zoom 0.4 yoffset -250
+    show aya fox at center with dissolve
 
     "Tall, shapeless giants and tiny floating imps float alongside animal spirits like myself."
 
@@ -137,8 +135,7 @@ label lost_market_inside:
 
     "She's standing boldly before a towering male oni. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
     
-    show erin neutral at right:
-        zoom 0.3 yoffset -350
+    show erin neutral at right
 
 
     "I leap, snapping at the ribbon. It shatters into sparkling shards of light between my sharp teeth."
