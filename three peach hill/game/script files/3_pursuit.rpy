@@ -1,5 +1,7 @@
 label pursuit:
     scene bg with dissolve
+    stop music fadeout 1.5
+    play music "music/Quiet Village.flac" fadein 1.5
 
     # July 20
 
@@ -728,7 +730,9 @@ label going_home_from_market:
     "I invite her in, kicking off my shoes at the front door and stepping into a cozy pair of slippers instead. She pauses to slide out of her sneakers and carries the bags in, looking around."
 
     hide bg gate with dissolve
+    stop music fadeout 1.5
     show bg kitchen with dissolve
+    play music "Romance LoFi.flac" fadein 1.5
 
     a "\"Please, make yourself at home.\""
 
