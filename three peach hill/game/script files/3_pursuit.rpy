@@ -411,10 +411,7 @@ label cornerstore:
 
     e neutral "\"Aya? Is that you?\""
 
-    show erin happy at center with dissolve:
-        subpixel True
-        zoom 0.3
-        yoffset -350
+    show erin happy at center, erin_size with dissolve
 
     "She's here. Like a breath of fresh air."
 

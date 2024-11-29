@@ -20,10 +20,7 @@ label bookstore:
     "I look up and my breath catches."
 
 
-    show erin happy at center:
-        subpixel True
-        zoom 0.3
-        yoffset -350
+    show erin happy at center, erin_size
 
 
     "She's adorable. No, beautiful. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. I have just a moment to take it all in before time freezes."
