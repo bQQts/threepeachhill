@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script files/credits.rpy", line 9: Indentation mismatch.
+File "game/script files/1_bookstore.rpy", line 28: end of line expected.
+    show erin happy at center with dissolve, erin_size
+                                           ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Nov 29 13:41:33 2024
+Fri Nov 29 15:20:23 2024

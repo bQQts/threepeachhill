@@ -1,6 +1,11 @@
 label bookstore:
     # July 10
-    
+    stop music fadeout 3.0
+    scene black with dissolve
+    pause 1.0
+    show bg bookstore with dissolve
+    play music bookstore_sunshine fadein 2.0
+
     "It's been a slow summer. Slower than usual. The buzzing of cicadas and unyielding humidity drown our little town in syrupy hot summer."
 
     "They seem to say, \"You have all the time in the world.\" A clock hanging by the cluttered storefront counter slowly tic tic tics in agreement."
@@ -20,12 +25,11 @@ label bookstore:
     "I look up and my breath catches."
 
 
-    show erin happy at center, erin_size
+    show erin happy at center, erin_size, with dissolve
 
     
     #show erin happy:  ##uncomment these two lines for the zoom in
     #    subpixel True yanchor 0.63 zoom 0.5  ##This brings Erin closer but we'll lose some of her design to the text box
-
 
 
     "She's adorable. Beautiful, really. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. I have just a moment to take it all in before time freezes."
@@ -36,7 +40,7 @@ label bookstore:
 
     "I knew I should have moved it while it was on my mind. Damn."
 
-    hide erin
+    hide erin with dissolve
 
     "The fall is epic."
 
@@ -69,21 +73,21 @@ label bookstore_Girl:
 
     a shocked "\"Are you okay?!\""
 
-    "She groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and groans again, this time in dismay, as she sees the destruction her fumble wrought upon the store."
+    "She groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and makes a small noise of dismay as she sees the destruction her fumble wrought upon the store."
 
-    "The fallen shelves. The shattered lamp. My concerned expression."
+    "The fallen shelves. The shattered lamp. My concern."
 
-    e gloom "\"I'm so sorry, I didn't see the box, I hope nothing...\""
+    e gloom "\"I'm so sorry!!! I didn't see the box, I hope nothing...\""
 
     "Her gaze slides to the broken lamp and she gulps."
 
-    e "\"...well, I hope nothing else got too damaged. I'm really sorry.\""
+    e sad "\"...well, I hope nothing else got too damaged. I'm really sorry. Let me help clean up!\""
 
     a neutral "Don't worry about that right now, are you injured?"
 
     "She shakes her head and lets me help her up. Up close, she's even cuter than I realized. My heart flutters."
 
-    e sad "\"No, but... The lamp.\""
+    e sad "\"No, but... what about the lamp?\""
 
     jump Deal
 
@@ -100,9 +104,8 @@ label bookstore_Lamp:
     show erin gloom at right:
         zoom 0.7 yalign 0.15
     
-    a sad "The perpetrator of the crime groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and groans, this time in dismay, as she sees the destruction her fumble wrought upon the store."
-    
-    
+    "The perpetrator of the crime groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and groans, this time in dismay, as she sees the destruction her fumble wrought upon the store."
+        
     "The fallen shelves. The shattered lamp. My distraught expression."
 
     "I almost expect her to run away. She's young, maybe a college student? And she's human! I open my mouth to say something, to tell her off or ask if she's okay, but..."
@@ -143,14 +146,14 @@ label bookstore_Lamp:
 
         "It takes my brain a moment to catch up to what's happening, and by the time I realize what she's doing, it's too late."
 
-        "The girl quickly starts to put pieces in a pile and hisses in pain when one odd-angled piece slices a shallow line across her finger."
+        "The girl quickly piles the broken shards and hisses in pain when one odd-angled piece slices a shallow line across her finger."
 
-        a neutral "\"Stop,\""
+        a neutral "\"Wait, stop,\""
 
-        "I say quietly. But she doesn't. So I say it again louder this time."
+        "She doesn't stop."
 
         a tsuntsun "\"Stop!\""
 
         "Finally, she stops fiddling with the broken shards. She clutches her bleeding finger and looks up at me."
 
-        jump Deal
+        jump deal

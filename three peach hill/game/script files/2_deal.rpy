@@ -1,13 +1,13 @@
 # 2. The Deal - Erin makes a pact with a spirit, and is surprisingly cool with it
-label Deal:
+label deal:
 
     e neutral "\"I broke it, so I should fix it.\""
 
     "She says it with conviction. I let go of her and cross my arms."
 
-    a "\"And how are you going to fix it? By picking up broken glass with your bare hands?\""
+    a gloom "\"And how are you going to fix it? By picking up broken glass with your bare hands?\""
 
-    "The girl blushes."
+    e blush "She blushes."
 
     e happy "\"Let me pay you for it, then.\""
 
@@ -17,7 +17,7 @@ label Deal:
 
     "I snort and give her a number that makes her eyes bulge."
 
-    e blush "\"I-I, uh, I can't pay that now but let me write you an IOU. And, um... I can leave something as collateral... does that work...?\""
+    e shocked "\"I-I, uh, I can't pay that now but let me write you an IOU. And, um... I can leave something as collateral... does that work...?\""
 
     a happy "\"First, what's your name?\""
 
@@ -27,9 +27,9 @@ label Deal:
 
     "I step past the lamp to grab the broom and dustpan from an alcove next to the front door."
 
-    a excited "\"You could start by sweeping up all these pieces. Try not to miss any! I actually do have an idea for how we could fix it.\""
+    a excited "\"You could start by sweeping up all these pieces. Try not to miss any! I actually do have an idea for how we could fix it, but we'll need as many of the pieces as possible.\""
 
-    "Erin looks doubtful."
+    e neutral "Erin looks doubtful."
 
     e neutral "\"Really...?\""
 

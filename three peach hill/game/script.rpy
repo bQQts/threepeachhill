@@ -31,16 +31,8 @@ image white = "#fff"
 label start:
 
 label startbutitsalabel:
-    stop music fadeout 3.0
-    with dissolve
 
-    scene black
-    pause 1.0
-    #play music "music/SpiritChase.flac" fadein 1.5  ## uncomment this line and comment the next one to test out songs at beginning of game lol
-    play music "music/Bookstore Lofi.flac" fadein 2.0
-    show bg bookstore with dissolve
-
-
+    #play music ### fadein 1.5  ## uncomment this line and comment the next one to test out songs at beginning of game lol
 
     jump bookstore
 

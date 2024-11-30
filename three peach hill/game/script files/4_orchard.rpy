@@ -1,6 +1,7 @@
 label orchard:
     scene black
     show bg bookstore with dissolve
+    #play music happy_village fadein 2.0
 
     # August 3
 
@@ -42,6 +43,8 @@ label orchard:
     "The word came out crabbier than I meant it to."
 
     "But... I'm trying to avoid her! Surely she'll get the memo if I'm brusque with her. Right? So maybe crabby isn't a bad thing!"
+
+    queue music quiet_village
 
     e neutral "\"Wait!\"" 
 
@@ -91,6 +94,9 @@ menu:
         jump let_her_down_gently
 
 label shut_this_down:
+    #queue music rain_transition fadein 1.0
+    queue music rain
+    
     a "\"I don't want to waste my time.\""
 
     "...is what I said. It's partly true, I am worried. But what I mean, and what I can't tell her, is that I'm afraid she might be what I want. And I don't want it to hurt when she leaves."
@@ -118,7 +124,8 @@ label shut_this_down:
 
 
 label let_her_down_gently:
-
+    #queue music rain_transition fadein 0.5 noloop
+    queue music rain
     a blush "\"I'm not really available right now... I'm, uh, looking for something specific.\""
 
     e neutral "\"I could be what you want. Just tell me who to be and I'll be that.\""
@@ -129,7 +136,7 @@ label let_her_down_gently:
 
     e gloom "\"But you don't like who I am and I don't know why.\""
 
-    "{i}I do like you. Gods, I do. But you have school, you're bound to leave, and I don't think you'll come back out here when you're done.{/i}"
+    "(I do like you. But you have school, you're bound to leave, and I don't think you'll come back out here when you're done.)"
 
     a gloom "\"I... don't have a good answer.\""
 

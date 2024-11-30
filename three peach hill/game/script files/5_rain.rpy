@@ -2,8 +2,6 @@ label the_rain:
 # 5. The Rain - Caught in the rain… and there was only one bed? Perchance?
     scene black
     show bg orchard with dissolve
-    stop music fadeout 0.5
-    play music "Rainy Day.flac" fadein 1.5
 
     "I finish picking the peaches by myself. By the time I'm done, the remaining daylight is nearly smothered by thick clouds. I hadn't noticed how dense they had gotten, but a brief glance is enough to confirm that they look heavy and full, as if ready to spill at any moment."
 
@@ -18,7 +16,9 @@ label the_rain:
     pause 1.5
     screen show
 
-    "I slip in a particularly muddy patch and fall. I sit in the mud, contemplating my life. My ankle is definitely sprained. I have no idea how I'm going to get these peaches back. I'm drenched, and I just snapped at a girl I really quite like for really no good reason."
+    "I slip in a particularly muddy patch and fall. I sit in the mud, contemplating my life."
+    
+    "My ankle is definitely sprained. I have no idea how I'm going to get these peaches back. I'm drenched, and I was just not very nice to a girl I really quite like for really no good reason."
 
     "I close my eyes and tilt my head back, letting the raindrops splash across my face. I take a few deep breaths."
 
@@ -27,15 +27,12 @@ label the_rain:
     "It's Erin. She's holding an umbrella over me, looking breathless and disheveled."
 
     show bg rain with dissolve
-    show erin shocked at center:
-        subpixel True
-        zoom 0.3
-        yoffset -350
+    show erin shocked at center, erin_size
 
 
     e shocked "\"I ran to get an umbrella as soon as I saw how bad the sky was getting. Looks like I didn't make it to you in time though, sorry, Aya. Why are you sitting in the mud? You're soaked through!\""
     
-    hide erin shocked
+    hide erin
 
     a sad "\"Erin...\""
 
@@ -207,79 +204,84 @@ label the_rain:
 
 label one_bed:
 
-"The storm has worsened. We're each on our second cup of tea and it's getting late into the night."
+    "The storm has worsened. We're each on our second cup of tea and it's getting late into the night."
 
-a neutral "\"I think you might want to stay here tonight.\""
+    a neutral "\"I think you might want to stay here tonight.\""
 
-"Erin gives me a look."
+    "Erin gives me a look."
 
-e neutral "\"I thought you wouldn't want me to stay here.\""
+    e neutral "\"I thought you wouldn't want me to stay here.\""
 
-a shocked "\"Well, I'm not sending you out in that weather.\""
+    a shocked "\"Well, I'm not sending you out in that weather.\""
 
-e gloom "\"Okay, that's fair. I can sleep on the couch!\""
+    e gloom "\"Okay, that's fair. I can sleep on the couch!\""
 
-a "\"No!\""
+    a "\"No!\""
 
-e blush "\"N-no?\""
+    e blush "\"N-no?\""
 
-"My cheeks redden."
+    "My cheeks redden."
 
-a blush "\"I mean, w-well, the couch really isn't all that comfortable to sleep in. And I have extra blankets. And my bed is, well, kind of massive. So there's plenty of room, we wouldn't even touch, I guarantee it.\""
+    a blush "\"I mean, w-well, the couch really isn't all that comfortable to sleep in. And I have extra blankets. And my bed is, well, kind of massive. So there's plenty of room, we wouldn't even touch, I guarantee it.\""
 
-"She plays it cool."
+    "She plays it cool."
 
-e "\"Oh well I suppose that would work.\""
+    e "\"Oh well I suppose that would work.\""
 
-a "\"Cool! Cool. Great!\""
+    a "\"Cool! Cool. Great!\""
 
-e excited "\"You know, I wouldn't mind if—\""
+    e excited "\"You know, I wouldn't mind if we did touch—\""
 
-a tsuntsun "\"It's over this way!!!\""
+    a tsuntsun "\"Ack! It's over this way!!!\""
 
-"I show her to my room and sit on the bed, bouncing a little."
+    "I show her to my room and sit on the bed, bouncing a little."
 
-show bg bedroom with dissolve
-pause 2.0
+    show bg bedroom with dissolve
+    pause 2.0
 
 
-a happy "\"There are blankets on the dresser over there, use whichever ones you want.\""
+    a happy "\"Right. So! There are blankets on the dresser over there, use whichever ones you want.\""
 
-e happy "\"Thanks.\""
+    e happy "\"Thanks!\""
 
-"She grabs a soft, blue cotton blanket and the fluffy winter duvet. I raise my eyebrow at that."
+    "She grabs a soft, blue cotton blanket and the fluffy winter duvet. I raise my eyebrow at that."
 
-a neutral "\"Won't you be hot?\""
+    a neutral "\"Won't you be hot?\""
 
-e excited "\"I sleep better with some layers on me, I won't overheat!\""
+    e excited "\"I sleep better with some layers on me, I won't overheat!\""
 
-"So cute."
+    "So cute."
 
-"We build our little nests and tuck into bed. I pull the lamp cord."
+    "We build our little nests and tuck into bed. I pull the lamp cord."
 
-e happy "\"Aya?\""
+    e happy "\"Aya?\""
 
-a happy "\"Mmhm?\""
+    a happy "\"Mmhm?\""
 
-"She rolls onto her side, facing me. Our faces are close enough that I can feel the warmth of her breath."
+    "She rolls onto her side, facing me. Our faces are close enough that I can feel the warmth of her breath."
 
-e excited "\"Thank you for this... you're really sweet, you know.\""
+    e excited "\"Thank you for this... you're really sweet, you know.\""
 
-a blush "\"Ahh, don't make it weird.\""
+    a blush "\"Ahh, don't make it weird.\""
 
-"In the dim light I can see the curve of her cheek as she smiles."
+    "I pull the lamp cord."
 
-e rizzler "\"I can keep my hands and thoughts to myself. Or not, if you'd like. Just let me know.\""
+    $ make_night()
+    show bg bedroom night with dissolve
 
-"I would NOT like. I definitely would NOT like to brush her hair and tuck it behind her ear, and pull up her covers and pull her close. I most certainly would NOT like to see how soft her lips are..."
+    "In the dim light I can see the curve of her cheek as she smiles."
 
-"I roll over and pull my blanket over my head, hiding from her and from my thoughts."
+    e rizzler "\"I can keep my hands and thoughts to myself. Or not, if you'd like. Just let me know.\""
 
-"I can practically feel her smile on my back."
+    "(I would NOT like. I definitely would NOT like to brush her hair and tuck it behind her ear, and pull up her covers and pull her close. I most certainly would NOT like to see how soft her lips are...)"
 
-"Eventually, the patter of the rain on the roof lulls me until I can't keep myself awake any longer. I fall into a dreamless sleep."
+    "I roll over and pull my blanket over my head, hiding from her and from my thoughts."
 
-"This feels... right."
+    "I can practically feel her smile on my back."
+
+    "Eventually, the patter of the rain on the roof lulls me until I can't keep myself awake any longer. I fall into a dreamless sleep."
+
+    "This feels... right."
 
 # CHOICE
 menu:

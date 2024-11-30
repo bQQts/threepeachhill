@@ -625,6 +625,9 @@ label farmers_market_cont:
 
     "We walk through the market, trying food samples and looking at crafts and jewelry."
 
+    stop music fadeout 1.0
+    #play music happy_village fadein 1.0
+
     "After a while, Erin takes a detour to the restrooms and leaves the bags with me. I decide to look around a bit, and one booth catches my eye."
 
     "It's a table with hair pins of all different styles. I find a brass pin with a cast sunflower at the end of it, and it's perfect for me."
@@ -641,7 +644,7 @@ label farmers_market_cont:
 
     a blush "\"It's a hair pin. For you.\""
 
-    "Please don't make a big deal out of it."
+    "(Please don't make a big deal out of it.)"
 
     "Her eyes shine and she holds it to her chest."
 
@@ -653,24 +656,37 @@ label farmers_market_cont:
 
     "She tucks it away safely in her book bag and we continue walking around the market."
 
+    scene black with dissolve
+    pause 2.0
     jump lamp_talk
 
 label lamp_talk:
-    a sad "\"That lamp...\"" 
+    show bg market with dissolve
+    stop music fadeout 2.0
+    play music quiet_village fadein 2.0
+
+    a sad "\"So, that lamp...\"" 
 
     "I trail off, lost in the memory for a moment. My throat feels tight, my chest heavy."
 
-    e gloom "\"I'm sorry about that, I really am.\""
+    e gloom "\"I'm sorry about that. I really want to make it up to you.\""
 
     "Erin picks at a ragged cuticle, her eyes downcast."
 
-    a shocked "\"Oh, I'm not bringing it up for you to keep apologizing. No... I just felt like you should know why it was important to me. Important enough to make that pact, you know?\""
+    a shocked "\"Oh, I'm not bringing it up for you to keep apologizing!\""
+    
+    a neutral "\"No... I just felt like you should know why it was important to me. Important enough to try to go to the Lost Market, you know?\""
 
-    "Erin looks at me directly, saying nothing. Just waiting, attentive and patient. Fully present with an intensity you don't see often."
+    "Erin looks sidelong at me, saying nothing. Just waiting, patient. I have her full attention."
 
     "I clear my throat a little and continue,"
 
-    a neutral "\"It was my mom's. She made it when I was young enough that I could only see it from afar, to minimize the risk of me breaking it.\""
+    a happy "\"It was my mom's. She made it when I was really young. They kept it up on a high shelf so I wouldn't accidentally... break it.\""
+
+    a "\"I didn't really appreciate that lamp 'til I was older. It grew on me, and turning it was like a reminder that mom's still around, lighting up the darkness.\""
+
+    a "\"It's special to me.\""
+
 
     if lamp_check == True:
         jump lamp_talk_apology
@@ -678,20 +694,18 @@ label lamp_talk:
         jump lamp_cont
 
 label lamp_talk_apology:
-    a sad "\"I'm sorry I didn't check to see if you were okay first, that was shitty of me. It's just... it was another piece of her gone, just like that.\""
+    a sad "\"I'm sorry I didn't check to see if you were okay first, that was kinda shitty of me. It's just... it was another piece of her gone, just like that.\""
 
     jump lamp_cont
 
 label lamp_cont:
     "Erin gently rests her free hand on my shoulder."
 
-    e neutral "\"What happened to her? Sorry, I guess that's not really a polite question. You just sound so wistful, but not really sad?\""
-
-    "The questioning lilt at the end of her sentence made the statement into a question of its own."
+    e neutral "\"What happened to her? Sorry, that's not really a polite question. You just sound so wistful, but not really sad?\""
 
     "I smile a little at her concern and pat her hand, drawing it down from my shoulder and clasping it between us. Her soft hand is warm and a little bit tacky from the humid summer air."
 
-    a neutral "\"One of her lovers was mortally wounded in an accident and had to return to The Other Side to recover, and she was so depressed about it.\""
+    a sad "\"One of her lovers was mortally wounded in an accident and had to return to The Other Side to recover, and she was so depressed about it.\""
     
     a "\"Dad encouraged her to go back to The Other Side to be with her lover, and when she eventually went, he went with her.\""
 
@@ -713,11 +727,12 @@ label lamp_cont:
 
     "I realize I'm still holding her hand and loosen my grip as if to pull away, but she keeps holding on and gives my hand a little squeeze."
     
-    "So, we're both aware of it. But neither of us is saying anything about it. And it's... nice. I suppose it isn't doing any harm."
+    "(So, we're both aware of it. But neither of us is saying anything about it. And it's... nice. I suppose it isn't doing any harm.)"
 
     "I leave my hand in hers. We walk in silence, hand in hand, cicadas buzzing in the trees along the sidewalk."
 
     scene black with irisin
+    pause 2.0
     jump going_home_from_market
 
 
@@ -735,6 +750,7 @@ label going_home_from_market:
 
     hide bg gate with dissolve
     stop music fadeout 1.5
+    pause 1.5
     show bg kitchen with dissolve
     play music "Romance LoFi.flac" fadein 1.5
 
@@ -748,7 +764,7 @@ label going_home_from_market:
 
     a happy "\"Of course!\""
 
-    "We sit in companionable silence for a little bit, nursing our drinks."
+    "We sit in companionable silence for a little bit, sipping at our drinks."
 
     e blush "\"I meant what I said that day, you know.\""
 
@@ -760,7 +776,7 @@ label going_home_from_market:
 
     "I hurriedly busy myself with putting things away and desperately try not to blush."
 
-    e "\"I didn't say it to flatter you. I'm interested in you.\""
+    e "\"I didn't say it to flatter you. I'm interested in you. And you like me too, right?\""
 
     "I nearly drop a cabbage. She says it so frankly, with no hesitation."
 
@@ -768,7 +784,7 @@ menu:
     "We're basically strangers.":
         jump home_stranger
 
-    "How do you know I'm into you?":
+    "How would you know who I'm into?":
         jump younger_women
 
 
@@ -799,13 +815,13 @@ label home_push:
 
     a tsuntsun "\"Pushing me about this is not going to do you any favors, kid.\""
 
-    e gloom "\"I'm not a kid, don't look down on me. I'm 23.\""
+    e gloom "\"I'm not a kid, don't look down on me. I'm... I'm 23.\""
 
     e neutral "\"But... sorry. you're right.\""
 
-    a happy "\"No, you're right. You're not a kid. But you're very frank for your age.\""
+    a happy "\"No, you're right. You're not a kid. But you ARE very frank.\""
 
-    "She chuckles at that. It's REALLY cute."
+    "She giggles. It's REALLY cute."
 
     e "\"Well, I learned that if I don't use my words, people can't read my mind. So I just say what's on my mind instead of worrying about it.\""
 
@@ -815,9 +831,11 @@ label home_push:
 
     "I crush my empty can and toss it into a recycling bin, then lean against a wall, arms crossed."
 
-    a blush "\"It's getting pretty late...\""
+    e "\"So... about my question."
 
-    e happy "\"I'll go then. Will you at least give it some thought? I'm not asking for a confession or anything, just that you give me a chance.\""
+    a blush "\"Um, it's getting pretty late...\""
+
+    e happy "\"Alright, I'll go then. Will you at least give it some thought? I'm not asking for a confession or anything, just that you give me a chance.\""
 
     a "\"No promises.\""
 
@@ -838,5 +856,6 @@ label home_push:
     "I'm not going to fall for someone who's just passing through town. She's sticking around to pay back the debt she owes, no other reason."
 
     scene black with dissolve
+    stop music fadeout 2.0
     pause 3.0
     jump orchard
