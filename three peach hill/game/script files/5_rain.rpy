@@ -282,7 +282,9 @@ label one_bed:
     "Eventually, the patter of the rain on the roof lulls me until I can't keep myself awake any longer. I fall into a dreamless sleep."
 
     "This feels... right."
-
+    
+    scene black with dissolve
+    pause 3.0
 # CHOICE
 menu:
     "Wake up bright and early":
@@ -292,7 +294,31 @@ menu:
         jump rain_sleep_in
 
 label rain_wake_early:
-    "TBD"
+    $ make_day()
+    show bg bedroom with dissolve
+
+    "I wake up pleasantly warm."
+
+    "Erin is curled up at my back with the blankets piled atop her. One arm escaped the blanket nest and comfortably hugs my fluffy tail close to her body."
+
+    "Weak morning sunlight peeks through the shut curtains, casting cool rays across her bundled-up form."
+
+    "I roll over carefully. When I slip my tail gently from her arms she mumbles a bit in protest."
+
+    "She's {i}so{/i} cute."
+
+    "(I wonder what it would be like to wake up like this every morning?)"
+
+    "I can't think like that!"
+
+    a gloom "\"What the hell, Aya!\""
+
+    "I clap a hand over my mouth."
+
+    "I did NOT mean to say that out loud."
+    
+
+
 # Cute sleepy Erin is curled against Aya's back, with Aya's fluffy tail draped over her like a blanket.
 # Really cute morning moment where Aya just admires Erin and thinks about what it would be like to wake up like this every morning. Erin wakes up, and Aya pretends she has just awoken as well.
 # Aya heads to the bathroom while Erin makes the bed.
