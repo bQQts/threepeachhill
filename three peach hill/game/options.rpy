@@ -30,6 +30,31 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+CREATIVE DIRECTOR    M Ebel
+
+CHARACTER ART          Tia @ Rhondolier
+
+BACKGROUND ART      Jeanie Choi
+
+UI/UX DESIGN           Leycalate
+
+~                               Tia @ Rhondolier
+
+~                               Jeanie Choi
+
+~                               M Ebel
+
+COMPOSERS              SnugglyBun
+
+~                               Undine Soundworks
+
+SOUND DESIGN         Undine Soundworks
+
+WRITING                   M Ebel
+
+PROGRAMMING         M Ebel
+
+
 """)
 
 

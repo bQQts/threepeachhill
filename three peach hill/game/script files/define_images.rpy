@@ -69,3 +69,18 @@ image bg rain night = "rain night.png"
 image bg nightmarket red = "nightmarket red.png"
 
 image cg piggyback = "cg_piggyback.png"
+
+image main_menu_animated:
+    "gui/main_menu_anim/1.png"
+    pause 0.14
+    "gui/main_menu_anim/2.png"
+    pause 0.2
+    "gui/main_menu_anim/3.png"
+    pause 0.3
+    "gui/main_menu_anim/4.png"
+    pause 0.4
+    #"gui/main_menu_anim/5.png"
+    #pause 0.05
+    #"gui/main_menu_anim/6.png"
+    #pause 0.05
+    repeat

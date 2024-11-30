@@ -89,8 +89,8 @@ define gui.name_text_outlines = [(absolute(2), '#74301e', absolute(2), absolute(
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/menu/game_menu.png"
+define gui.main_menu_background = "main_menu_animated"
+define gui.game_menu_background = "gui/game_menu.png"
 
 
 ## Dialogue ####################################################################

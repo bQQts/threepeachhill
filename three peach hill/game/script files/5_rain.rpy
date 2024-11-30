@@ -284,6 +284,7 @@ label one_bed:
     "This feels... right."
     
     scene black with dissolve
+    stop music fadeout 2.0
     pause 3.0
 # CHOICE
 menu:
@@ -313,10 +314,12 @@ label rain_wake_early:
 
     a gloom "\"What the hell, Aya!\""
 
-    "I clap a hand over my mouth."
+    "I clap a hand over my mouth in horror."
 
     "I did NOT mean to say that out loud."
-    
+
+
+
 
 
 # Cute sleepy Erin is curled against Aya's back, with Aya's fluffy tail draped over her like a blanket.

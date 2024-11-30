@@ -351,17 +351,17 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("PLAY") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("HISTORY") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("SAVE") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("LOAD") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("OPTIONS") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -369,20 +369,20 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("MAIN MENU") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _("ABOUT") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("HELP") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("QUIT") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -569,6 +569,7 @@ style game_menu_content_frame:
 
 style game_menu_viewport:
     xsize 1840
+    ysize 900
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
@@ -619,6 +620,8 @@ screen about():
                 text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+
+
 
 
 style about_label is gui_label
