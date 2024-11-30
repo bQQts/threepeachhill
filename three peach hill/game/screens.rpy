@@ -328,7 +328,41 @@ style quick_button_text:
 
 
 ################################################################################
-## Main and Game Menu Screens
+## Main Menu Screen
+################################################################################
+
+screen menu_navigation():
+
+    hbox:
+        style_prefix "menu_navigation"
+
+        xalign gui.menu_navigation_xalign
+        yalign gui.menu_navigation_yalign
+
+        spacing gui.menu_navigation_spacing
+
+        textbutton _("PLAY") action Start()
+
+        textbutton _("LOAD") action ShowMenu("load")
+
+        textbutton _("OPTIONS") action ShowMenu("preferences")
+
+        textbutton _("CREDITS") action ShowMenu("about")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("HELP") action ShowMenu("help")
+
+style menu_navigation_button is default:
+    properties gui.button_properties("menu_navigation_button")
+
+style menu_navigation_button_text is default:
+    subpixel True
+    properties gui.text_properties("menu_navigation_button")
+
+
+################################################################################
+## Game Menu Screens
 ################################################################################
 
 ## Navigation screen ###########################################################
@@ -345,7 +379,7 @@ screen navigation():
         #xpos gui.navigation_xpos
         xalign 0.5
         #yalign 0.5
-        yalign 0.9
+        yalign 0
 
         spacing gui.navigation_spacing
 
@@ -416,7 +450,7 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    use menu_navigation
 
     if gui.show_name:
 

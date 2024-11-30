@@ -201,12 +201,6 @@ define gui.quick_button_text_size = 28
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
-## You can also add your own customizations, by adding properly-named variables.
-## For example, you can uncomment the following line to set the width of a
-## navigation button.
-
-# define gui.navigation_button_width = 250
-
 
 ## Choice Buttons ##############################################################
 ##
@@ -259,10 +253,6 @@ define gui.file_slot_rows = 2
 ## These variables control the positioning and spacing of various user interface
 ## elements.
 
-## The position of the left side of the navigation buttons, relative to the left
-## side of the screen.
-define gui.navigation_xpos = 80
-
 ## The vertical position of the skip indicator.
 define gui.skip_ypos = 20
 
@@ -271,9 +261,6 @@ define gui.notify_ypos = 90
 
 ## The spacing between menu choices.
 define gui.choice_spacing = 44
-
-## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 40
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 20
@@ -343,6 +330,37 @@ define gui.vslider_borders = Borders(8, 8, 8, 8)
 ## What to do with unscrollable scrollbars in the gui. "hide" hides them, while
 ## None shows them.
 define gui.unscrollable = "hide"
+
+
+## Menu Navigation #############################################################
+
+define menu_font_color = '#CA613F'
+
+# define gui.navigation_button_width = 250
+define gui.menu_navigation_text_size = 85
+define gui.menu_navigation_text_color = menu_font_color
+
+define gui.menu_navigation_button_text_size = 80
+
+define gui.menu_navigation_button_text_idle_color = menu_font_color
+define gui.menu_navigation_button_text_hover_color = menu_font_color
+define gui.menu_navigation_button_text_insensitive_color = menu_font_color
+define gui.menu_navigation_button_text_outlines = [(absolute(.85), menu_font_color, 0, 0)]
+
+define gui.menu_navigation_xalign = 0.5
+define gui.menu_navigation_yalign = 0.9
+
+## Buttons in the navigation section of the main and game menus.
+define gui.menu_navigation_spacing = 250
+
+
+## Game Menu Navigation ########################################################
+
+## The position of the left side of the navigation buttons, relative to the left
+## side of the screen.
+define gui.navigation_xpos = 80
+
+define gui.navigation_spacing = 40
 
 
 ## History #####################################################################
