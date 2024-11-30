@@ -170,9 +170,42 @@ label lost_market_inside:
 
     "I run and I run, and finally I know I'm drawing near when the tether glows brighter. A small crowd has formed a circle around her."
 
-    "She's standing boldly before an oni girl with impossibly sharp horns. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
+    show bg nightmarket red with dissolve
     
-    show erin neutral at right
+    window hide
+    $ make_night()
+    show aya fox:
+        subpixel True 
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+        linear 0.85 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.42)*HueMatrix(0.0) 
+        linear 5.00 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.42)*HueMatrix(0.0) 
+        linear 1.15 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+    show erin neutral at right, erin_size
+
+    with Pause(3.10)
+
+    show aya fox:
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+    window show
+
+
+
+    "She's standing boldly before an oni girl with impossibly sharp horns. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
+    window hide   
+    
+
+
+    show aya fox:
+        subpixel True 
+        matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-696.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+        linear 0.49 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-529.9050997782706, -176.03, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+        linear 0.18 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-385.32, -147.73181818181817, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+        linear 0.15 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-506.83636363636367, -124.15, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+        linear 0.22 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(12.0, -108.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+    with Pause(1.14)
+    show aya fox:
+        matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(12.0, -108.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+    window show
 
 
     "I leap, snapping at the ribbon. It shatters into sparkling shards of light between my sharp teeth."
@@ -203,7 +236,7 @@ label lost_market_inside:
 
     a "\"We must depart. Kindly find someone else to bargain with.\""
 
-    "The oni glares at me and crosses his arms."
+    "The oni glares at me and crosses her arms."
 
     a "\"Erin, climb upon my back. I'll take us out of here.\""
 
@@ -213,6 +246,8 @@ label lost_market_inside:
 
     "She reluctantly grabs hold of my fur and hauls herself onto my back, hugging my neck tightly."
 
+    show bg nightmarket night with dissolve
+
     "I fly like the wind and take us back to the alley. The streets shift around us, but I know exactly where to go."
 
     a "\"Close your eyes.\""
@@ -221,6 +256,12 @@ label lost_market_inside:
 
 
     "The air around us blurs and I shift back, now holding Erin in my arms."
+
+    stop music fadeout 3.0
+    scene black with dissolve
+    pause 2.0
+    show bg market night with dissolve
+    play music quiet_village fadein 0.5
 
     a blush "\"You can open your eyes now, Erin.\""
 
@@ -238,13 +279,15 @@ label lost_market_inside:
 
     e "\"That last one was kinder than the others, though, so it seemed like my best option for getting back home.\""
 
-    a "\"He may have been kinder, but that doesn't mean he didn't have ill-intent. If you had brought him over, he would have eaten you.\""
+    a "\"She may have seemed kinder, but that doesn't mean she didn't have ill-intent. If you had brought her over, she would have eaten you.\""
 
     "Erin blanches."
 
     e "\"O-oh.\""
 
-    a "\"How did you get there, anyway?\""
+    "I soften my expression."
+
+    a neutral "\"How did you get there, anyway?\""
 
     e "\"Well, I was following that little grey cat and it went down this alley. It disappeared, and I was curious about the lights, so... I kept walking. I had never seen that before.\""
 
@@ -252,27 +295,27 @@ label lost_market_inside:
 
     "I pull her into my arms and hold her tightly."
 
-    a "\"I'm so glad I found you in time. That was so reckless!\""
+    a shocked "\"I'm so glad I found you in time. That was so reckless!\""
 
-    e "\"I didn't know what would happen!\""
+    e gloom "\"I didn't know what would happen!\""
 
     "I smooth her hair and heave a sigh of relief."
 
-    a "\"I know. It's okay. Just... don't go into any weird alleys like that without me, okay? Don't make me worry like that!\""
+    a happy "\"I know. It's okay. Just... don't go into any weird alleys like that without me, okay? Don't make me worry like that!\""
 
-    e "\"I won't. But do you think that cat is okay?\""
+    e sad "\"I won't. But do you think that cat is okay?\""
 
     a "\"I'm positive it is. Cats have a way of slinking across the boundary with more ease than practically any other creature. If it crossed over, it can simply stroll right back.\""
 
-    a "\"And since it's just a cat, nothing is going to bother it.\""
+    a excited "\"And since it's just a cat, nothing is going to bother it.\""
 
-    e "\"Thank goodness!\""
+    e excited "\"Thank goodness!\""
 
     "We stay embraced for a few long breaths as our heartbeats slow, then I release her."
 
-    a "\"I'll walk you home.\""
+    a happy "\"I'll walk you home.\""
 
-    e "\"Sure, I'd like that.\""
+    e happy "\"Sure, I'd like that.\""
 
     scene black with dissolve
     pause 2.0
