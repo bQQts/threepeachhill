@@ -1,4 +1,7 @@
 label date:
+    scene black
+    stop music fadeout 2.0
+    $ make_day()
     show bg bathroom with dissolve
     "I check my hair in the mirror one more time and take a calming breath, then grab my keys and coat and head for the door."
 
@@ -11,7 +14,8 @@ label date:
     "I asked her to meet me at the nearby cafe so I could check on her, and because I've come to a decision."
 
     scene black with dissolve
-    show bg cornerstore with dissolve
+    play music coffee fadein 0.5
+    show bg lydias with dissolve
 
     a neutral "\"I've given it a lot of thought, and... I don't want to go to the Lost Market tomorrow.\""
 
@@ -35,16 +39,16 @@ label date:
 
     a blush "\"I don't think you do get it, actually.\""
 
-    "It isn't clicking for her. But this is as good a time as any..."
+    "(It isn't clicking for her. But this is as good a time as any...)"
 
-    "I'll need to be more direct."
+    "(I'll need to be more direct.)"
 
     menu:
         
-        "You are precious to me, Erin.":
+        "\"You are precious to me, Erin.\"":
             jump confession
 
-        "I like you.":
+        "\"I like you.\"":
             jump confession
 
  
@@ -100,15 +104,23 @@ label confession:
 
     a "\"Pfft. Yes, I'd like that.\""
 
-    e happyy "\"Okay!! Take me on a date! I mean, I'd like to go on a date. With you. If you want!\""
+    e happy "\"Okay!! Take me on a date! I mean, I'd like to go on a date. With you. If you want!\""
 
     "I gently trace her cheek with my fingertips and give her a reassuring smile."
 
-    a happy "\"You don't have to be so nervous. You were so gung-ho about this before—were you all bark and no bite?\""
+    a excited "\"So confident. But you seem nervous, too. You were so gung-ho about this before—were you all bark and no bite?\""
 
     e shocked "\"I'm not nervous! I just have, uh, a lot of nervous energy!\""
 
-    "We leave the cafe hand in hand. I listen patiently as she tries to convince me that there's a difference between nervous energy and being nervous."
+    "She ducks in to give me a quick peck on the cheek. Her lips are soft against my skin."
+
+    e rizzler "\"But I'm not too nervous for that!\""
+
+    "We leave the cafe hand in hand."
+
+    window hide
 
     scene black with irisin
-    pause 2.0
+    stop music fadeout 3.0
+    pause 5.0
+    jump credits

@@ -25,6 +25,7 @@ default milk_carton = False
 
 image black = "#000"
 image white = "#fff"
+image brown = "#1F1B1B"
 
 
 

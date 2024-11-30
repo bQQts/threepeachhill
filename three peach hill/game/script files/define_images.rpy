@@ -70,6 +70,8 @@ image bg nightmarket red = "nightmarket red.png"
 
 image cg piggyback = "cg_piggyback.png"
 
+image credits = "gui/credits.png"
+
 image main_menu_animated:
     "gui/main_menu_anim/1.png"
     pause 0.14
