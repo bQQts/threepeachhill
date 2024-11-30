@@ -33,13 +33,13 @@ label deal:
 
     e neutral "\"Really...?\""
 
-    if lamp_freeze_outcome == True:
+if lamp_freeze_outcome == True:
 
-        jump lamp_freeze_bandage
+    jump lamp_freeze_bandage
 
-    else:        
+else:        
 
-        jump deal_cont
+    jump deal_cont
 
 label lamp_freeze_bandage:
 

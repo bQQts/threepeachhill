@@ -25,7 +25,7 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#cc6600'
+define gui.accent_color = '#ff6e2f'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#aeaeae'
@@ -35,7 +35,7 @@ define gui.idle_color = '#aeaeae'
 define gui.idle_small_color = '#606060'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#cc6600'
+define gui.hover_color = '#ff6e2f'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -72,7 +72,7 @@ define gui.text_size = 56
 define gui.name_text_size = 80
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 56
+define gui.interface_text_size = 66
 
 ## The size of labels in the game's user interface.
 define gui.label_text_size = 66
@@ -179,7 +179,7 @@ define gui.button_text_insensitive_color = gui.insensitive_color
 
 ## The horizontal alignment of the button text. (0.0 is left, 0.5 is center, 1.0
 ## is right).
-define gui.button_text_xalign = 0.0
+define gui.button_text_xalign = 0.5
 
 
 ## These variables override settings for different kinds of buttons. Please see
@@ -273,7 +273,7 @@ define gui.notify_ypos = 90
 define gui.choice_spacing = 44
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 8
+define gui.navigation_spacing = 40
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 20
