@@ -18,11 +18,11 @@ label the_call:
 
     e happy "\"I've found somewhere I like being, rather than just existing somewhere I don't really care about.\""
 
-    "Oh. Oh."
+    "Oh."
 
-    a "\"But... what about finishing college?\""
+    a "\"Don't you want to finish college?\""
 
-    e neutral "\"There are other ways. I could postpone it, or do it online. Anyway, the point is that I'm not really ready to go back to the city. I don't want to go.\""
+    e neutral "\"There are other ways. I could postpone it or do it online. Anyway, the point is that I'm not really ready to go back to the city. I don't want to go.\""
 
     a "\"What about your parents?\""
 

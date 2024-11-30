@@ -1,7 +1,7 @@
 label pursuit:
     scene black with dissolve
     stop music fadeout 1.5
-    play music "music/Quiet Village.flac" fadein 1.5
+    play music quiet_village fadein 1.5
 
     # July 20
 
@@ -94,8 +94,10 @@ label orchardist:
     a happy "\"I'll take care of myself. You eat that cobbler, okay? And give me notes!\""
 
     scene black with irisin
-    pause 2.0
+    stop music fadeout 2.0
+    pause 3.0
     scene bg bookstore with dissolve
+    play music bookstore_sunshine
 
     # title where it's "back at the bookstore"
 
@@ -109,9 +111,9 @@ label orchardist:
 
     e neutral "\"*click* Hello?\""
 
-    "She answered!!"
+    "(She answered!!)"
 
-    "What do I say?! I didn't think this through!"
+    "(What do I say?! I didn't think this through!)"
 
 menu:
     "Hey, this is Aya":
@@ -183,7 +185,7 @@ label cobbler_erin_stayed:
 
     "Okay, that was {i}definitely{/i} flirting, right?"
 
-    scene black with irisin
+    scene black with dissolve
     jump cobbler_end
 
 
@@ -201,7 +203,7 @@ label cobbler_erin_no_reason:
 
     "Wait... wait. Wait. Was she asking me out? WAIT."
 
-    scene black with irisin
+    scene black with dissolve
     jump cobbler_end
 
 
@@ -340,7 +342,7 @@ label shes_bold:
         lyd "\"You two made a pact, though. If she's so {i}bold{/i}, she'll show up.\""
 
     else:
-        a neutral "\"Right, sorry. I guess I did see her at the cornerstore...\""
+        a neutral "\"That's fair. I guess I did see her at the cornerstore...\""
         
         lyd "\"See? She's staying!\""
 
@@ -388,13 +390,15 @@ label cobbler_end:
     if cobblerfirst:
         "It's been a big day. I'll go to the cornerstore tomorrow."
 
-        scene black with dissolve 
+        scene black with dissolve
+        pause 3.0  
         jump cornerstore
 
     else:
         if cornerstorefirst:
             "What a weekend. It was good, but I'm so tired... at least the bookstore will be quiet this week!"
             scene black with dissolve
+            pause 3.0
             jump farmers_market
 
 
@@ -409,8 +413,11 @@ label cornerstore:
         "Outside the cornerstore I see a stack of familiar blue milk cartons."
         a "\"No way.\""
         "I guess this is where she's been... closer than I thought!"
+        pause 2.0
 
+    stop music fadeout 1.0
     show bg cornerstore with dissolve
+    play music cornerstore
 
     "I nod at a couple people in the cornerstore. I don't know them by name, but I broadly recognize them as locals."
 
@@ -513,7 +520,11 @@ label farmers_market:
     # Introductory scene 
     # Screen that says a week passes
     # Farmers Market title screen
+    scene black with dissolve
+    stop music fadeout 2.0
+    pause 2.0
     show bg market with dissolve
+    play music quiet_village fadein .5
     
     "The smell of food wafts across the town on a light breeze that carries away the remnants of summer's humidity."
 
@@ -623,10 +634,15 @@ label farmers_market_cont:
 
     "I start to protest, but she insists, and I end up giving her the two smaller totes while I hang on to the largest one with the flowers."
 
-    "We walk through the market, trying food samples and looking at crafts and jewelry."
+    scene bg market
+    stop music fadeout 3.0
+    scene black with dissolve
+    pause 1.5
+    show bg market with dissolve
+    play music happy_village fadein 1.5 noloop
+    pause 2.0
 
-    stop music fadeout 1.0
-    #play music happy_village fadein 1.0
+    "We walk through the market, trying food samples and looking at crafts and jewelry."
 
     "After a while, Erin takes a detour to the restrooms and leaves the bags with me. I decide to look around a bit, and one booth catches my eye."
 
@@ -662,8 +678,9 @@ label farmers_market_cont:
 
 label lamp_talk:
     show bg market with dissolve
-    stop music fadeout 2.0
-    play music quiet_village fadein 2.0
+    stop music fadeout 3.0
+    pause 1.0
+    queue music quiet_village fadein 0.5
 
     a sad "\"So, that lamp...\"" 
 
@@ -749,10 +766,10 @@ label going_home_from_market:
     "I invite her in, kicking off my shoes at the front door and stepping into a cozy pair of slippers instead. She pauses to slide out of her sneakers and carries the bags in, looking around."
 
     hide bg gate with dissolve
-    stop music fadeout 1.5
+    stop music fadeout 3
     pause 1.5
     show bg kitchen with dissolve
-    play music "Romance LoFi.flac" fadein 1.5
+    play music romance fadein 1.5
 
     a "\"Please, make yourself at home.\""
 
@@ -831,7 +848,7 @@ label home_push:
 
     "I crush my empty can and toss it into a recycling bin, then lean against a wall, arms crossed."
 
-    e "\"So... about my question."
+    e "\"So... about my question.\""
 
     a blush "\"Um, it's getting pretty late...\""
 

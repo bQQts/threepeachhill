@@ -12,9 +12,8 @@ label the_rain:
     "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches as the early evening sets in."
 
 
-    screen hide
+    scene bg rain with dissolve
     pause 1.5
-    screen show
 
     "I slip in a particularly muddy patch and fall. I sit in the mud, contemplating my life."
     
@@ -24,19 +23,18 @@ label the_rain:
 
     "The rain stops drip-dropping on my face, but I can still hear it around me. I open my eyes."
 
-    "It's Erin. She's holding an umbrella over me, looking breathless and disheveled."
-
-    show bg rain with dissolve
     show erin shocked at center, erin_size
 
+    "It's Erin. She's holding an umbrella over me, looking breathless and disheveled."
+
+    hide erin with dissolve
 
     e shocked "\"I ran to get an umbrella as soon as I saw how bad the sky was getting. Looks like I didn't make it to you in time though, sorry, Aya. Why are you sitting in the mud? You're soaked through!\""
     
-    hide erin
 
     a sad "\"Erin...\""
 
-    "The shorter woman hands me the umbrella and helps me to my feet."
+    e neutral "The shorter woman hands me the umbrella and helps me to my feet."
 
     e neutral "\"Can you walk?\""
 
@@ -48,9 +46,9 @@ label the_rain:
 
     "Erin turns around and crouches, gesturing for me to climb up on her back."
 
-    e neutral "\"Get on, I'll carry you.\""
+    e happy "\"Get on, I'll carry you.\""
 
-    a neutral "\"But I'm taller than you! I'll crush you!\""
+    a sad "\"But I'm taller than you! I'll crush you!\""
 
     e excited "\"I'm like an ant, I can carry you no problem!\""
 
@@ -60,7 +58,7 @@ label the_rain:
 
     a sad "\"What about the peaches?\""
 
-    e neutral "\"There will be more peaches. I'm more worried about you right now. Now, climb on.\""
+    e happy "\"There will be more peaches. I'm more worried about you right now. Now, climb on.\""
 
     "I climb on, still holding the umbrella in one hand. She hikes me up, grasping below my thighs and leaning forward. My wet hair sticks to her neck. I try not to think about it."
 
@@ -75,7 +73,7 @@ label the_rain:
     "It takes a while, but we do make it down the big hill. Erin is stronger than she looks, and though she's breathing hard by the time we get back to the entrance of the orchard she hasn't once lost her grip or stumbled."
 
 
-    e happy "\"Just hang on tight, I'll get you home.\""
+    "Erin" "\"Just hang on tight, I'll get you home.\""
 
     "I let the umbrella rest over our backs, which probably makes us look like an overly large beetle, and let the sway of her steps and the sound of her breathing lull me into a half-slumber."
     
@@ -151,11 +149,11 @@ label the_rain:
 
     a happy "\"Take your time, I'm just setting some clothes for you by the door.\""
 
-    "When Erin comes out, I have an instant kettle heating water for tea and an ice pack on my ankle, which I've propped up on a second kitchen chair."
-    
     hide bg bathroom with dissolve
     show bg kitchen with dissolve
 
+    "When Erin comes out, I have an instant kettle heating water for tea and an ice pack on my ankle, which I've propped up on a second kitchen chair."
+    
     e blush "\"Thank you, the clothes fit well!\""
 
     "My clothes are, in fact, too big on her. The effect is absolutely adorable. She has a hand towel draped over top of her head, and the shirt is long enough that it almost covers the cotton shorts."
@@ -173,7 +171,7 @@ label the_rain:
 
     # CHOICE
     menu:
-        "When she said that, why was that kinda... you know...":
+        " Oh my. That was kinda... you know...":
             jump kinda_hot
 
         "But this is MY house!":
@@ -188,17 +186,19 @@ label the_rain:
 
         a excited "\"Nope! Carry on!!\""
 
-        "I'm going to file this thought away for later."
+        "(I'm going to file this thought away for later.)"
 
-        "I shake my head furiously and clap my palms to my cheeks. ANYWAYS."
+        "I shake my head furiously and clap my palms to my cheeks."
+        
+        "(ANYWAYS.)"
 
         jump one_bed
 
     label my_house_laundry:
 
-        "The audacity to boss me around in my own home!"
+        "(The audacity to boss me around in my own home!)"
 
-        "What am I going to do with this girl?"
+        "(What am I going to do with this girl?)"
 
         jump one_bed
 
@@ -222,7 +222,7 @@ label one_bed:
 
     "My cheeks redden."
 
-    a blush "\"I mean, w-well, the couch really isn't all that comfortable to sleep in. And I have extra blankets. And my bed is, well, kind of massive. So there's plenty of room, we wouldn't even touch, I guarantee it.\""
+    a blush "\"I mean, w-well, the couch really isn't all that comfortable to sleep on. And I have extra blankets. And my bed is, well, kind of massive. So there's plenty of room! We wouldn't even touch, I guarantee it.\""
 
     "She plays it cool."
 
@@ -230,7 +230,7 @@ label one_bed:
 
     a "\"Cool! Cool. Great!\""
 
-    e excited "\"You know, I wouldn't mind if we did touch—\""
+    e rizzler "\"You know, I wouldn't mind if we did touch—\""
 
     a tsuntsun "\"Ack! It's over this way!!!\""
 
@@ -240,19 +240,22 @@ label one_bed:
     pause 2.0
 
 
-    a happy "\"Right. So! There are blankets on the dresser over there, use whichever ones you want.\""
+    a happy "\"Right. So! There are blankets on the dresser over there. Use whichever ones you want.\""
 
     e happy "\"Thanks!\""
 
     "She grabs a soft, blue cotton blanket and the fluffy winter duvet. I raise my eyebrow at that."
 
-    a neutral "\"Won't you be hot?\""
+    a neutral "\"Won't you be hot? It's still summer...\""
 
     e excited "\"I sleep better with some layers on me, I won't overheat!\""
 
     "So cute."
 
     "We build our little nests and tuck into bed. I pull the lamp cord."
+
+    $ make_night()
+    show bg bedroom night with dissolve
 
     e happy "\"Aya?\""
 
@@ -263,11 +266,6 @@ label one_bed:
     e excited "\"Thank you for this... you're really sweet, you know.\""
 
     a blush "\"Ahh, don't make it weird.\""
-
-    "I pull the lamp cord."
-
-    $ make_night()
-    show bg bedroom night with dissolve
 
     "In the dim light I can see the curve of her cheek as she smiles."
 
@@ -297,6 +295,7 @@ menu:
 label rain_wake_early:
     $ make_day()
     show bg bedroom with dissolve
+    play music coffee fadein 0.5
 
     "I wake up pleasantly warm."
 

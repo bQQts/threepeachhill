@@ -1,7 +1,7 @@
 label orchard:
     scene black
     show bg bookstore with dissolve
-    #play music happy_village fadein 2.0
+    play music bookstore_vibing fadein 2.0
 
     # August 3
 
@@ -15,6 +15,9 @@ label orchard:
     
     hide bg bookstore with dissolve
     show bg orchard with dissolve
+
+    stop music fadeout 3.0
+    queue music quiet_village fadein 0.5
 
     "The team of farmers who tend the orchard under Head Orchardist Joy have been quite busy as many of the trees are ready for harvest."
 
@@ -43,8 +46,6 @@ label orchard:
     "The word came out crabbier than I meant it to."
 
     "But... I'm trying to avoid her! Surely she'll get the memo if I'm brusque with her. Right? So maybe crabby isn't a bad thing!"
-
-    queue music quiet_village
 
     e neutral "\"Wait!\"" 
 
@@ -84,6 +85,8 @@ label orchard:
     
     "But... I really don't want to get involved in something temporary. Whether or not I like her, I need to do this."
 
+    stop music fadeout 1.0
+
 menu:
     "I've got to put an end to this before something starts."
 
@@ -94,9 +97,9 @@ menu:
         jump let_her_down_gently
 
 label shut_this_down:
-    #queue music rain_transition fadein 1.0
+    queue music rain_transition fadein 1.0 noloop
     queue music rain
-    
+
     a "\"I don't want to waste my time.\""
 
     "...is what I said. It's partly true, I am worried. But what I mean, and what I can't tell her, is that I'm afraid she might be what I want. And I don't want it to hurt when she leaves."
@@ -124,7 +127,7 @@ label shut_this_down:
 
 
 label let_her_down_gently:
-    #queue music rain_transition fadein 0.5 noloop
+    queue music rain_transition fadein 0.5 noloop
     queue music rain
     a blush "\"I'm not really available right now... I'm, uh, looking for something specific.\""
 

@@ -84,3 +84,10 @@ image main_menu_animated:
     #"gui/main_menu_anim/6.png"
     #pause 0.05
     repeat
+
+image date_animated_ch8:
+    "gui/dateanim/ch8_1.png"
+    pause 0.1
+    "gui/dateanim/ch8_2.png"
+    pause 0.1
+    repeat

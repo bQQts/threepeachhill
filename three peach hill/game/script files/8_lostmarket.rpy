@@ -17,18 +17,21 @@ label lost_market:
 
 label lost_market_bookstore:
     show bg bookstore with dissolve
+    play music bookstore_sunshine fadein 0.5 noloop
     "The bookstore is the perfect place to meet up and talk about marketing plans."
 
     jump lost_market_cont
 
 label lost_market_office:
     show bg orchard with dissolve
+    play music happy_village fadein 0.5 noloop
     "The office has lots of room to meet with people and map out plans on the big, clear tables."
 
     jump lost_market_cont
 
 label lost_market_aya_house:
     show bg kitchen with dissolve
+    play music romance fadein 0.5
     "My house. It's comfortable, private, and we can make as much of a mess of notes and projects as we want."
 
     jump lost_market_cont
@@ -42,28 +45,35 @@ label lost_market_cont:
 
     "It's really nice."
 
-    scene black with irisin
-    pause 2.0
+    window hide
 
 label lost_market_find_out:
-
-    # August 19, Monday
+    scene black with irisin
+    stop music fadeout 3
+    pause 2.0
+    show date_animated_ch8 with dissolve    # August 19, Monday
+    pause 5.0
+    scene black with dissolve
 
     "Erin didn't show up at the usual meeting time. I wait 20 minutes."
 
+    play music rain_transition noloop
+
     "Twenty minutes turns into an hour, then two. She's not answering her phone."
-
-    "I check near the bookstore. She's not there."
     show bg bookstore with dissolve 
-
-    "I call the cornerstore and the orchard office, and am told she's not there either."
-    hide bg bookstore
+    "I check near the bookstore. She's not there."
+    hide bg bookstore with dissolve
     show bg cornerstore with dissolve
 
+    "I call the cornerstore and the orchard office, and am told she's not there either."
+    hide bg cornerstore with dissolve
+    scene black with dissolve
+
     "I bite my lip. I'm starting to worry that something has happened."
-
+    show bg kitchen with dissolve
     "At home, I put on a jacket and sneakers and pace in the front room, trying to decide where to start looking for her."
-
+    hide bg kitchen with dissolve
+    show bg gate with dissolve
     "There's a knock at the door, and I run to open it."
 
     a shocked "\"Erin? Oh, Lydia! What are you doing here?\""
@@ -94,14 +104,17 @@ label lost_market_find_out:
 
     "I run."
 
+    stop music fadeout 2.0
+
     jump lost_market_inside
 
 label lost_market_inside:
 
-    scene bg rain
-    show aya at center, aya_size
+    scene black
+    show bg rain
+    show aya at center
     stop music fadeout 3.0
-    play music "SpiritChase.flac" fadein 4.0
+    play music spirit fadein 0.5
 
     "I run faster than I ever have before. My legs and lungs burn, and I gasp for air, but I push through it and finally make it to the entrance."
 
@@ -111,17 +124,41 @@ label lost_market_inside:
 
     "And if you can't see it, it can't see you back."
 
+    scene black with dissolve
+    $ make_night()
+    show bg rain night with dissolve
+
     "I slow down and start walking down the alley. It's actually faster to walk than it is to run. It's tricky like that."
 
     "The floating lights start to illuminate faint edges of structures in the alleyway; the ground, the brick walls, loose rocks, some cardboard boxes."
 
     "The amber glow grows, and I step out of the alley into a street full of spirits of all shape and size."
+    hide bg rain night with dissolve
+    scene black
+    window hide
+    $ make_day()
+    show bg nightmarket with dissolve
+    pause 1.0
+    
+    show aya fox at center with dissolve:
+        subpixel True zoom 0.39 
+
+
+    window hide
+    show aya fox:
+        subpixel True 
+        matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(0.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+        linear 1.82 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-696.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+    with Pause(1.92)
+    show aya fox:
+        matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-696.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+    pause 2.0
+    window show
+
 
     "As naturally as breathing, I shift fully into my spirit form: an enormous pink three-tailed fox with small red horns. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
 
-    hide aya with dissolve
 
-    show aya fox at center with dissolve
 
     "Tall, shapeless giants and tiny floating imps float alongside animal spirits like myself."
 
@@ -133,7 +170,7 @@ label lost_market_inside:
 
     "I run and I run, and finally I know I'm drawing near when the tether glows brighter. A small crowd has formed a circle around her."
 
-    "She's standing boldly before a towering male oni. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
+    "She's standing boldly before an oni girl with impossibly sharp horns. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
     
     show erin neutral at right
 
@@ -148,7 +185,7 @@ label lost_market_inside:
 
     "Oni" "\"A trifling matter. She was to bring me across to the mortal realm with her.\""
 
-    a "\"I'm afraid that is not going to be possible. This human is spoken for. She already has a pact with me.\""
+    a "\"I'm afraid that is not going to be possible. This human is spoken for. She's already in a pact with me.\""
 
     "Oni" "\"If that is so, why did she need a guide out?\""
 

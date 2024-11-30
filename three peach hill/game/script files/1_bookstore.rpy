@@ -4,7 +4,7 @@ label bookstore:
     scene black with dissolve
     pause 1.0
     show bg bookstore with dissolve
-    play music bookstore_sunshine fadein 2.0
+    play music bookstore_vibing fadein 1.0
 
     "It's been a slow summer. Slower than usual. The buzzing of cicadas and unyielding humidity drown our little town in syrupy hot summer."
 
@@ -89,7 +89,7 @@ label bookstore_Girl:
 
     e sad "\"No, but... what about the lamp?\""
 
-    jump Deal
+    jump deal
 
 
 label bookstore_Lamp:
@@ -137,7 +137,7 @@ label bookstore_Lamp:
 
         "She freezes, then turns to look me in the eye."
 
-        jump Deal
+        jump deal
 
 
     label lamp_freeze:

@@ -1,4 +1,7 @@
 label the_plan:
+    scene black with dissolve
+    stop music fadeout 2.0
+    pause 2.0
     show bg kitchen with irisin
     a shocked "\"What do you mean they want us to close the bookstore?!\""
 
@@ -43,6 +46,8 @@ label the_plan:
 
 label plan_execution:
     show bg kitchen with dissolve
+    play music quiet_village
+
     "Erin finishes jotting down notes in the composition notepad I grabbed from my desk."
 
     e happy "\"And that's how we'll do it.\""
@@ -82,6 +87,7 @@ label plan_execution:
     "It might still be a little risky, but maybe liking Erin is worth the risk."
 
     scene black with irisin
+    stop music fadeout 3.0
     pause 2.0
 
     jump lost_market

@@ -33,6 +33,12 @@ label deal:
 
     e neutral "\"Really...?\""
 
+    scene black with dissolve
+    stop music fadeout 1.0
+    pause 2.0
+    show bg bookstore with dissolve
+    play music bookstore_sunshine
+
 if lamp_freeze_outcome == True:
 
     jump lamp_freeze_bandage
