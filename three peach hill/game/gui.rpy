@@ -252,7 +252,7 @@ define config.thumbnail_height = 360
 define gui.file_slot_cols = 2
 define gui.file_slot_rows = 2
 
-
+# The slot number label for an empty cell.
 define gui.slot_number_text_size = 76
 define gui.slot_number_text_color = "#D1A185"
 define gui.slot_number_text_xalign = 0
@@ -268,7 +268,7 @@ define gui.slot_number_text_selected_hover_color = "#E7C0A9"
 define gui.slot_number_text_outlines = [(absolute(1), "#D1A185", 0, 0)]
 define gui.slot_number_text_hover_outlines = [(absolute(1), "#E7C0A9", 0, 0)]
 
-
+# The slot number label for a filled cell.
 define gui.slot_filled_number_text_size = 80
 define gui.slot_filled_number_text_xoffset = 190
 define gui.slot_filled_number_text_yoffset = 408
@@ -280,6 +280,16 @@ define gui.slot_filled_number_text_selected_hover_color = "#fff"
 define gui.slot_filled_number_text_outlines = [(absolute(1), "#FFB69F", 0, 0)]
 define gui.slot_filled_number_text_hover_outlines = [(absolute(1), "#fff", 0, 0)]
 
+# The description text for an empty cell.
+define gui.slot_text_size = 36
+define gui.slot_text_xpos = 1
+define gui.slot_text_color = "#D1A185"
+define gui.slot_text_idle_color = "#D1A185"
+define gui.slot_text_hover_color = "#E7C0A9"
+define gui.slot_text_selected_idle_color = "#D1A185"
+define gui.slot_text_selected_hover_color = "#E7C0A9"
+define gui.slot_text_outlines = [(absolute(1), "#D1A185", 0, 0)]
+define gui.slot_text_hover_outlines = [(absolute(1), "#E7C0A9", 0, 0)]
 
 ## Positioning and Spacing #####################################################
 ##
@@ -411,26 +421,26 @@ define gui.navigation_button_text_yalign = 0.425
 define gui.navigation_button_xanchor = 0.5
 define gui.navigation_button_yanchor = 0.85
 
-define gui.navigation_button_text_color = '#3F6B9C'
+define gui.navigation_button_text_color = '#CBE8FF'
 define gui.navigation_button_text_selected_color = '#ffffff'
 define gui.navigation_button_text_selected_outlines = [(absolute(3), '#1C475A', 0, 0)]
 define gui.navigation_button_text_selected_hover_outlines = [(absolute(3), '#1C475A', 0, 0)]
-define gui.navigation_button_text_idle_color = '#3F6B9C'
-define gui.navigation_button_text_outlines = [(absolute(2), '#203D55', 0, 0)]
+define gui.navigation_button_text_idle_color = '#CBE8FF'
+define gui.navigation_button_text_outlines = [(absolute(1), '#CBE8FF', 0, 0)]
 define gui.navigation_button_text_hover_color = '#ffffff'
-define gui.navigation_button_text_hover_outlines = [(absolute(3), '#3F6B9C', 0, 0)]
+define gui.navigation_button_text_hover_outlines = [(absolute(3), '#5989A9', 0, 0)]
 
 
 define gui.navigation_top_button_width = 400
 define gui.navigation_top_button_height = 172
 define gui.navigation_top_button_text_yalign = 0.575
 
-define gui.navigation_top_button_text_color = '#6C2B20'
+define gui.navigation_top_button_text_color = '#FFDDCB'
 define gui.navigation_top_button_text_selected_color = '#ffffff'
-define gui.navigation_top_button_text_selected_outlines = [(absolute(3), '#6C2B20', 0, 0)]
+define gui.navigation_top_button_text_selected_outlines = [(absolute(3), '#FFDDCB', 0, 0)]
 define gui.navigation_top_button_text_selected_hover_outlines = [(absolute(3), '#6C2B20', 0, 0)]
-define gui.navigation_top_button_text_idle_color = '#6C2B20'
-define gui.navigation_top_button_text_outlines = [(absolute(2), '#671716', 0, 0)]
+define gui.navigation_top_button_text_idle_color = '#FFDDCB'
+define gui.navigation_top_button_text_outlines = [(absolute(1), '#FFDDCB', 0, 0)]
 define gui.navigation_top_button_text_hover_color = '#ffffff'
 define gui.navigation_top_button_text_hover_outlines = [(absolute(3), '#6C2B20', 0, 0)]
 
