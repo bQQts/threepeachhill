@@ -362,10 +362,44 @@ define gui.menu_navigation_button_height = 110
 
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
-define gui.navigation_xpos = 80
 
-define gui.navigation_spacing = 40
+define gui.navigation_spacing = 50
 
+define gui.navigation_button_width = 500
+define gui.navigation_button_height = 300
+
+define gui.navigation_button_text_font = gui.text_font
+define gui.navigation_button_text_size = 84
+
+define gui.navigation_button_xalign = 0.5
+define gui.navigation_button_text_xalign = 0.5
+define gui.navigation_button_text_yalign = 0.425
+
+define gui.navigation_button_xanchor = 0.5
+define gui.navigation_button_yanchor = 0.85
+
+define gui.navigation_button_text_color = '#3F6B9C'
+define gui.navigation_button_text_selected_color = '#ffffff'
+define gui.navigation_button_text_selected_outlines = [(absolute(3), '#1C475A', 0, 0)]
+define gui.navigation_button_text_selected_hover_outlines = [(absolute(3), '#1C475A', 0, 0)]
+define gui.navigation_button_text_idle_color = '#3F6B9C'
+define gui.navigation_button_text_outlines = [(absolute(2), '#203D55', 0, 0)]
+define gui.navigation_button_text_hover_color = '#ffffff'
+define gui.navigation_button_text_hover_outlines = [(absolute(3), '#3F6B9C', 0, 0)]
+
+
+define gui.navigation_top_button_width = 400
+define gui.navigation_top_button_height = 172
+define gui.navigation_top_button_text_yalign = 0.575
+
+define gui.navigation_top_button_text_color = '#6C2B20'
+define gui.navigation_top_button_text_selected_color = '#ffffff'
+define gui.navigation_top_button_text_selected_outlines = [(absolute(3), '#6C2B20', 0, 0)]
+define gui.navigation_top_button_text_selected_hover_outlines = [(absolute(3), '#6C2B20', 0, 0)]
+define gui.navigation_top_button_text_idle_color = '#6C2B20'
+define gui.navigation_top_button_text_outlines = [(absolute(2), '#671716', 0, 0)]
+define gui.navigation_top_button_text_hover_color = '#ffffff'
+define gui.navigation_top_button_text_hover_outlines = [(absolute(3), '#6C2B20', 0, 0)]
 
 ## History #####################################################################
 ##

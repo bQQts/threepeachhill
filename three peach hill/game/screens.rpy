@@ -390,30 +390,30 @@ style menu_navigation_button_text is default:
 
 screen navigation():
 
+    textbutton _("RETURN") style "navigation_top_left_button" action Return()
+
     #vbox:
     hbox:
         style_prefix "navigation"
 
-        #xpos gui.navigation_xpos
         xalign 0.5
-        #yalign 0.5
         yalign 0
 
         spacing gui.navigation_spacing
 
-        textbutton _("RETURN") style "navigation_top_left_button" action Return()
+        textbutton _("RETURN") style "navigation_top_left_button" action Return() activate_sound "sound/Haptics.flac" 
 
         textbutton _("SAVE") action ShowMenu("save") activate_sound "sound/Haptics.flac" 
         textbutton _("LOAD") action ShowMenu("load") activate_sound "sound/Haptics.flac" 
         textbutton _("OPTIONS") action ShowMenu("preferences") activate_sound "sound/Haptics.flac" 
 
-        if _in_replay:
-            textbutton _("End Replay") style "navigation_top_right_button" action EndReplay(confirm=True) activate_sound "sound/Haptics.flac" 
-        elif renpy.variant("pc"):
-            ## The quit button is banned on iOS and unnecessary on Android and Web.
-            textbutton _("QUIT") style "navigation_top_right_button" action Quit(confirm=not main_menu) activate_sound "sound/Haptics.flac" 
-        else:
-            textbutton _("MAIN MENU") style "navigation_top_right_button" action MainMenu() activate_sound "sound/Haptics.flac" 
+    if _in_replay:
+        textbutton _("END REPLAY") style "navigation_top_right_button" action EndReplay(confirm=True) activate_sound "sound/Haptics.flac" 
+    elif renpy.variant("pc"):
+        ## The quit button is banned on iOS and unnecessary on Android and Web.
+        textbutton _("EXIT GAME") style "navigation_top_right_button" action Quit(confirm=not main_menu) activate_sound "sound/Haptics.flac" 
+    else:
+        textbutton _("MAIN MENU") style "navigation_top_right_button" action MainMenu() activate_sound "sound/Haptics.flac" 
 
 
 style navigation_button is gui_button
@@ -422,17 +422,31 @@ style navigation_button_text is gui_button_text
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+    background "gui/menu/menu_top_[prefix_]button.png"
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
-    xalign 0.5
 
-style navigation_top_button is navigation_button
+style navigation_top_button is navigation_button:
+    properties gui.button_properties("navigation_top_button")
 
-style navigation_top_left_button is navigation_top_button
+style navigation_top_button_text is navigation_button_text:
+    properties gui.text_properties("navigation_top_button")
+    
+style navigation_top_left_button is navigation_top_button:
+    background "gui/menu/menu_side_top_[prefix_]button.png"
+    xanchor 0
+    xalign 0
+    xpos 0
 
-style navigation_top_right_button is navigation_top_button
+style navigation_top_right_button is navigation_top_button:
+    background Transform("gui/menu/menu_side_top_[prefix_]button.png", xzoom=-1)
+    xanchor 1.0
+    xalign 1.0
+    xpos 1.0
 
+style navigation_top_left_button_text is navigation_top_button_text
+style navigation_top_right_button_text is navigation_top_button_text
 
 ## Main Menu screen ############################################################
 ##
@@ -584,8 +598,6 @@ style game_menu_outer_frame:
     bottom_padding 60
     top_padding 240
 
-    background "gui/overlay/game_menu.png"
-
 style game_menu_navigation_frame:
     xsize 560
     yfill True
@@ -615,7 +627,7 @@ style game_menu_label_text:
     yalign 0.5
 
 style return_button:
-    xpos gui.navigation_xpos
+    xpos 0
     yalign 1.0
     yoffset -60
 
