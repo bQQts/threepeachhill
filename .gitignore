@@ -3,3 +3,5 @@
 /three peach hill/log.txt
 three peach hill/game/my_log.txt
 *.rpyc
+three peach hill/errors.txt
+three peach hill/traceback.txt
