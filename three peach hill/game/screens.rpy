@@ -676,6 +676,7 @@ screen load():
     use file_slots()
 
 screen file_slots():
+
     use game_menu():
         vbox:
             fixed:
@@ -785,15 +786,14 @@ screen file_slots():
                     if config.has_sync:
                         if CurrentScreenName() == "save":
                             textbutton _("Upload Sync")  style"page_sync_button":
-                                action UploadSync()
                                 activate_sound "sound/Haptics.flac" 
+                                action UploadSync()
                                 xalign 0.5
                         else:
                             textbutton _("Download Sync") style "page_sync_button":
-                                action DownloadSync()
                                 activate_sound "sound/Haptics.flac" 
+                                action DownloadSync()
                                 xalign 0.5
-
 
 style page_label is gui_label
 style page_label_text is gui_label_text
@@ -844,6 +844,11 @@ style slot_button:
 style slot_button_text:
     properties gui.text_properties("slot_button")
 
+style slot_filled_button is slot_button:
+    background None
+
+style slot_empty_button is slot_button:
+    background "gui/menu/slot_empty_button.png"
 
 style file_arrow_button is page_button
 
