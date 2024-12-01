@@ -344,7 +344,7 @@ style quick_button_text:
 
 
 ################################################################################
-## Main Menu Screen
+## Main Menu Navigation
 ################################################################################
 
 screen menu_navigation():
@@ -487,59 +487,62 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
-    ## This ensures that any other menu screen is replaced.
     tag menu
+    use game_menu("Test")
 
-    add gui.main_menu_background
+## BE SURE TO RESTORE THIS LATER!!! DO NOT COMMIT THIS!
+    # ## This ensures that any other menu screen is replaced.
+    # tag menu
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    # add gui.main_menu_background
 
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
-    use menu_navigation
+    # ## This empty frame darkens the main menu.
+    # frame:
+    #     style "main_menu_frame"
 
-    if gui.show_name:
+    # ## The use statement includes another screen inside this one. The actual
+    # ## contents of the main menu are in the navigation screen.
+    # use menu_navigation
 
-        vbox:
-            style "main_menu_vbox"
+    # if gui.show_name:
 
-            text "[config.name!t]":
-                style "main_menu_title"
+    #     vbox:
+    #         style "main_menu_vbox"
 
-            text "[config.version]":
-                style "main_menu_version"
+    #         text "[config.name!t]":
+    #             style "main_menu_title"
+
+    #         text "[config.version]":
+    #             style "main_menu_version"
 
 
-style main_menu_frame is empty
-style main_menu_vbox is vbox
-style main_menu_text is gui_text
-style main_menu_title is main_menu_text
-style main_menu_version is main_menu_text
+# style main_menu_frame is empty
+# style main_menu_vbox is vbox
+# style main_menu_text is gui_text
+# style main_menu_title is main_menu_text
+# style main_menu_version is main_menu_text
 
-style main_menu_frame:
-    xsize 560
-    yfill True
+# style main_menu_frame:
+#     xsize 560
+#     yfill True
 
-    #background "gui/overlay/main_menu.png"
+#     #background "gui/overlay/main_menu.png"
 
-style main_menu_vbox:
-    xalign 1.0
-    xoffset -40
-    xmaximum 1600
-    yalign 1.0
-    yoffset -40
+# style main_menu_vbox:
+#     xalign 1.0
+#     xoffset -40
+#     xmaximum 1600
+#     yalign 1.0
+#     yoffset -40
 
-style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
+# style main_menu_text:
+#     properties gui.text_properties("main_menu", accent=True)
 
-style main_menu_title:
-    properties gui.text_properties("title")
+# style main_menu_title:
+#     properties gui.text_properties("title")
 
-style main_menu_version:
-    properties gui.text_properties("version")
+# style main_menu_version:
+#     properties gui.text_properties("version")
 
 
 ## Game Menu screen ############################################################
@@ -555,10 +558,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
     style_prefix "game_menu"
 
-    if main_menu:
-        add gui.main_menu_background
-    else:
-        add gui.game_menu_background
+    add gui.game_menu_background
 
     frame:
         style "game_menu_outer_frame"
@@ -689,7 +689,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("Credits"), scroll="viewport"):
 
         style_prefix "about"
 
