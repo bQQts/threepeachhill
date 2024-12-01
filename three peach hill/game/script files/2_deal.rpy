@@ -1,7 +1,7 @@
 # 2. The Deal - Erin makes a pact with a spirit, and is surprisingly cool with it
 label deal:
 
-    e neutral "\"I broke it, so I should fix it.\""
+    e neutral "\"It was an accident, but I broke it. So I should fix it.\""
 
     "She says it with conviction. I let go of her and cross my arms."
 
@@ -15,7 +15,7 @@ label deal:
 
     e "\"Humor me, how much?\""
 
-    "I snort and give her a number that makes her eyes bulge."
+    "I snort and give her a number. Her eyes bulge."
 
     e shocked "\"I-I, uh, I can't pay that now but let me write you an IOU. And, um... I can leave something as collateral... does that work...?\""
 
@@ -25,7 +25,7 @@ label deal:
 
     a "\"You can call me Aya.\""
 
-    "I step past the lamp to grab the broom and dustpan from an alcove next to the front door."
+    "I step gingerly past the lamp to grab the broom and dustpan from an alcove next to the front door and hand her the implements."
 
     a excited "\"You could start by sweeping up all these pieces. Try not to miss any! I actually do have an idea for how we could fix it, but we'll need as many of the pieces as possible.\""
 
@@ -61,19 +61,21 @@ label lamp_freeze_bandage:
 
     a sad "\"This shouldn't leave a scar, just be sure to keep it clean and dry.\""
 
-    e blush "\"Thank you... Aya.\""
+    e blush "\"Thank you, Aya.\""
 
     "For some reason, I really like the sound of my name from her lips."
 
-    "What am I thinking? I shake my head to clear the thought from my mind, and clear my throat softly."
+    "(What am I thinking?)"
+    
+    "I shake my head to clear the thought from my mind, and clear my throat softly."
 
-    a tsuntsun "\"Okay. Let's get that glass cleaned up before any more visitors come in.\""
+    a tsuntsun "\"Okay. Let's get that glass cleaned up before any more visitors come in. I'll... move the peaches, too.\""
 
     jump deal_cont
 
 label deal_cont:
     
-    "I grab a bucket from the back and hand it to Erin."
+    "I pop into the back to find a bucket."
 
     a neutral "\"Put the pieces in this. I'm going to go look something up.\""
 
@@ -83,9 +85,11 @@ label deal_cont:
 
     "These are notes, contacts, fliers, and advertisements from all manner of local, both human and spirit. My parents added their notes when they took over the shop, and I've added a few of my own over the years."
 
-    "I'm sure there's somebody in here who could fix the lamp."
+    "(I'm sure there's somebody in here who could fix the lamp.)"
 
-    "The bookshop's lounge music is accented by the sounds of pages flipping and glass clinking as we work away."
+    "The bookshop's vibey music is accented by the sounds of pages flipping and glass pieces clinking as we work away."
+
+    pause 2.0
 
     e neutral "\"Hey, Aya?\""
 
@@ -95,7 +99,7 @@ label deal_cont:
 
     "Erin walks over, setting the bucket of lamp pieces on the countertop. She brushes a few loose strands of hair from her face, tucking them behind her ears, then bends to the counter to prop her weight up on her elbows."
 
-    e gloom "\"Whatever solution you're thinking of had better be magic, because I don't know anyone who could put together all those tiny pieces in a way that fits right. It's... pretty busted.\""
+    e gloom "\"Whatever solution you're thinking of had better be magic, because I don't know anyone who could put together all those tiny pieces in a way that fits right. It's pretty busted.\""
 
     "Her voice is hesitant and full of regret."
 
@@ -107,9 +111,11 @@ label deal_cont:
 
     e neutral "\"What's this? Is this... a contract?\""
 
-    "My mouth curls into a wry smile, and my tone is gentle when I explain."
+    "My mouth curls into a smile, and my tone is light when I explain."
 
-    a happy "\"It's just something simple. Sign it with your true name and it will mean you can accompany me to the Lost Market. We should be able to find a spell that fixes lamps there, and I don't intend to be the one who pays for it.\""
+    a neutral "\"It's just something simple. Sign it with your name and it will mean you can accompany me to the Lost Market.\""
+    
+    a happy "\"We should be able to find a spell that fixes lamps there, and I don't intend to be the one who pays for it.\""
 
     "Erin gulps."
 
@@ -119,21 +125,23 @@ label deal_cont:
 
     a excited "\"No, no, nothing like that. Just regular money. Most spirits in the modern era use human currency to keep things simple,\""
     
-    a "\"though it's possible to find the odd esoteric spirit who wants weird ingredients, favors, or labor as their exchange rate. But whatever the cost, nothing is ever free.\""
+    a "\"though it's possible to find the odd esoteric spirit who wants weird ingredients, favors, or labor as their exchange rate.\""
+    
+    a gloom "\"But whatever the cost, nothing is ever free.\""
 
     e neutral "\"So you want me to go with you to the spirit world?"
 
     a neutral "\"It's not really the Other Side, which is what you're referring to. It's more of a liminal space between the two worlds.\""
     
-    a "\"It's easy to travel between worlds through the market as long as you actually make an exchange while there. If you don't... the Lost Market keeps you until you do.\""
+    a "\"It's easy to travel between worlds through the market as long as you've made a deal before you go. If you don't... the Lost Market keeps you until you do.\""
 
     "I see the worried look on her face."
 
-    a excited "\"Which won't be a problem, since we have a mission!\""
+    a excited "\"Which won't be a problem, since we'll have a deal in place already!\""
 
     e blush "\"O-okay! Will the spell cost the... the same amount you listed earlier? Because I don't think I can pay that...\""
 
-    a "\"Gods, no. It'll cost enough, and you'll be able to cover it. Trust me on that.\""
+    a "\"Gods, no. It'll cost enough, and you'll be able to cover it. It's a magic thing.\""
 
     "She waggles a finger at me."
 
@@ -141,11 +149,11 @@ label deal_cont:
 
     "My ear twitches and I shrug."
 
-    a neutral "\"It'll be fine! Anyway, if you're that broke you should probably pay better attention to your surroundings so you don't accidentally break peoples' stuff.\""
+    a happy "\"It'll be fine! Anyway, if you're that broke you should probably pay better attention to your surroundings so you don't accidentally break peoples' stuff.\""
 
-    "I'm mostly joking. She takes it in stride."
+    "I'm mostly joking. We both know it wasn't really her fault. She takes it in stride."
 
-    "She reads the contract very carefully, and I feel a sense of approval about the care she's taking. It's always better to be sure about what you're getting into before signing anything."
+    "She reads the contract very carefully, and I feel a sense of approval about the care she's taking. Always know what you're signing up for."
 
     "She might be a bit clumsy, but she's not a fool. After a couple of minutes, she nods and sets the paper down."
 
@@ -157,7 +165,7 @@ label deal_cont:
 
     e neutral "\"That's like, next month, right?\""
 
-    a neutral "\"Yes, the evening of the 22nd. That a problem?\""
+    a neutral "\"Yes, {b}the evening of the 22nd{/b}. That a problem?\""
 
     "She pulls out her phone, presumably to check her calendar, and bites her lip. It's more distracting than I care to admit."
 
