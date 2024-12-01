@@ -1,15 +1,19 @@
 label farmers_market:
-    # July 27
-    # Introductory scene 
-    # Screen that says a week passes
+    pause 1.5
+    show date_animated_ch3B with dissolve  # July 27
+    pause 2.5
+    hide date_animated_ch3B with Dissolve(2)
+
+
+    # Screen that says a week passes ## wait I'm not sure if its a week from the 20th or a week from the 27th....... D:
     # Farmers Market title screen
+
     scene brown with dissolve
     stop music fadeout 2.0
-    pause 2.0
     show bg market with dissolve
     play music quiet_village fadein .5
     
-    "The smell of food wafts across the town on a light breeze that carries away the remnants of summer's humidity."
+    "The smell of food wafts across the town on a light breeze that carries away the lingering summer's humidity."
 
     "As I walk down the street toward the town's central plaza, I hear the hum of small generators and the bustling of people a couple blocks away."
 
@@ -19,15 +23,17 @@ label farmers_market:
     
     "A honey merchant has paired up with a woodworker who's selling wooden wands and bread bowls to go with the honey."
 
-    "There are rows of unique, handcrafted wares from merchants in the surrounding regions who've come to this town to peddle their wares at this farmers market."
+    "Rows of tents offer unique, handcrafted goods from merchants in the surrounding regions who've come to this town to peddle their wares."
 
-    "There's even a fox spirit selling lucky talismans. They're real magic, though the workings are quite small; it's better not to swing the balance of things too far in any direction."
+    "There's even a fox spirit selling lucky talismans. They're real magic, though the workings are quite small; it's better not to swing the karmic balance too far in any direction unless you really know what you're doing."
 
-    "The first event of the season is always a big one."
+    "The first farmers market of the season is always a big one."
 
-    "I pick up some veggies, a cup of cold lemonade, and buy a loaf of bread from a baker who drove 3 hours to be here."
+    "I pick up some veggies, a cup of black coffee, and buy a loaf of bread from a baker who drove 3 hours to be here. It's divine."
 
-    "After a good lap around the produce side of the market, my bags are getting heavy. I head to a flower stand I've bought from in the past in search of marigold and sunflowers."
+    "After a good lap around the produce side of the market, my bags are getting heavy. I head to a flower stand I've bought from in the past in search of my usual marigold and sunflowers."
+
+    pause 2.0
 
     "I hear her voice before I see her."
 
@@ -39,12 +45,12 @@ label farmers_market:
 
     e excited "\"Aya! Are you here to get flowers??\""
 
-    a happy "\"Yeah, but I'm still deciding what to get.\""
+    a happy "\"I sure am. I didn't expect to see you here!\""
 
-    e happy "\"I helped unload everything, I could probably give you some ideas! What would you think about this little bouquet of lavender and larkspur?\""
+    e happy "\"It's a part time gig! I helped unload everything. I could probably give you some ideas on what looked the prettiest today! What would you think about this little bouquet of lavender and larkspur?\""
 
     menu:
-        "Should I get my usual marigold and sunflowers, or go for the lavender and larkspur like Erin suggests?"
+        "Should I get my usual bouquet, or go for the lavender and larkspur like Erin suggests?"
 
         "Marigold and sunflowers":
             jump farmers_market_marigold
@@ -81,33 +87,33 @@ label farmers_market_cont:
 
     e neutral "\"You know Aya?\""
 
-    jeff "\"Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she tends to come by almost every weekend during the market season!\""
+    jeff "\"Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she comes by almost every weekend during the market season!\""
 
-    e happy "\"Oh!\""
+    e happy "\"Oh, duh! Aya, you must really like flowers!\""
 
-    "I chuckle at her blush."
+    "I chuckle. Jeff gives the two of us a knowing look."
 
     jeff "\"You know, Erin, if you'd like to call it a day here I'm sure Aya would be happy to show you around the rest of the market.\""
 
     "He winks at me on the sly."
 
-    a neutral "\"Oh, Jeff, if you need the extra help I really don't want to pull her away, I was just stopping by to get flowers—\""
+    a neutral "\"Oh no, Jeff, if you need the extra help I really don't want to pull her away. I was just stopping by to get flowers—\""
 
-    jeff "\"Nonsense, we'll be just fine. She was a huge help unloading everything this morning, we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market.\""
+    jeff "\"Nonsense, we'll be just fine. She was a huge help unloading everything this morning, but we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market.\""
 
     e excited "\"Really?! Thank you! This is great!!\""
 
     "She unties her apron and lays it over the back of a folding chair behind the sales table, slings her book bag over her shoulder, then comes around to join me."
 
-    e happy "\"Will you show me around the market? I bet you know where all the good stuff is!\""
+    e happy "\"Won't you show me around the market? I bet you know where all the good stuff is!\""
 
     a tsuntsun "\"I suppose...\""
 
-    "Jeff comes back with an envelope for Erin."
+    "Jeff comes back with an envelope for Erin and a big grin for us both."
 
     jeff "\"You two take care, now!\""
 
-    a happy "\"Thank you, old man. Likewise!\""
+    a happy "\"Thanks, old man. Likewise!\""
 
     "I tuck the flowers into the larger of my tote bags and heft them so the straps rest more comfortably on my shoulders."
 
@@ -129,17 +135,21 @@ label farmers_market_cont:
 
     "After a while, Erin takes a detour to the restrooms and leaves the bags with me. I decide to look around a bit, and one booth catches my eye."
 
-    "It's a table with hair pins of all different styles. I find a brass pin with a cast sunflower at the end of it, and it's perfect for me."
+    "It's a table with hair pins of all different styles. I find a brass pin with a cast sunflower at the end of it. It's just my style."
     
-    "I almost finish my shopping there, but then I see that one pin is part wood and part resin-cast. The resin looks like it has frozen big rainbow bubbles in time."
+    "I almost check out then, but then I see that one pin is part wood and part resin-cast. The resin looks like it has frozen big rainbow bubbles in time."
+
+    "(Erin likes to wear her hair up...)"
+
+    ##Could add a choice here to buy both or just Aya's pin
 
     "I hesitate for a moment, then buy both pins."
 
     "I head back to the spot where Erin left, and I'm waiting there when she returns."
 
-    "I shove the bubble hair pin towards her."
+    "She holds a hand out for the bags and I shove the bubble hair pin towards her."
 
-    e blush "\"What's this?\""
+    e excited "\"What's this?\""
 
     a blush "\"It's a hair pin. For you.\""
 
@@ -147,7 +157,7 @@ label farmers_market_cont:
 
     "Her eyes shine and she holds it to her chest."
 
-    e "\"You didn't have to do that!\""
+    e blush "\"You didn't have to do that!\""
 
     a tsuntsun "\"It's just a hair pin, don't mention it.\""
 
@@ -165,7 +175,7 @@ label lamp_talk:
     pause 1.0
     queue music quiet_village fadein 0.5
 
-    a sad "\"So, that lamp...\"" 
+    a sad "\"So, I wanted to talk about that lamp...\"" 
 
     "I trail off, lost in the memory for a moment. My throat feels tight, my chest heavy."
 
@@ -270,13 +280,13 @@ label going_home_from_market:
 
     a "\"Which day?\""
 
-    e happy "\"When I said you're beautiful.\""
+    e excited "\"When I said you're beautiful.\""
 
     a tsuntsun "\"O-oh! That day, right. Thank you. I'm flattered!\""
 
     "I hurriedly busy myself with putting things away and desperately try not to blush."
 
-    e "\"I didn't say it to flatter you. I'm interested in you. And you like me too, right?\""
+    e happy "\"I didn't say it to flatter you. I'm interested in you. And you like me too, right?\""
 
     "I nearly drop a cabbage. She says it so frankly, with no hesitation."
 
