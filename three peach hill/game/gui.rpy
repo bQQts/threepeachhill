@@ -281,15 +281,17 @@ define gui.slot_filled_number_text_outlines = [(absolute(1), "#FFB69F", 0, 0)]
 define gui.slot_filled_number_text_hover_outlines = [(absolute(1), "#fff", 0, 0)]
 
 # The description text for an empty cell.
-define gui.slot_text_size = 36
-define gui.slot_text_xpos = 1
+define gui.slot_text_size = 56
+define gui.slot_text_xalign = 0
+define gui.slot_text_xoffset = 72
+define gui.slot_text_yoffset = -5
 define gui.slot_text_color = "#D1A185"
-define gui.slot_text_idle_color = "#D1A185"
-define gui.slot_text_hover_color = "#E7C0A9"
-define gui.slot_text_selected_idle_color = "#D1A185"
-define gui.slot_text_selected_hover_color = "#E7C0A9"
-define gui.slot_text_outlines = [(absolute(1), "#D1A185", 0, 0)]
-define gui.slot_text_hover_outlines = [(absolute(1), "#E7C0A9", 0, 0)]
+define gui.slot_text_spacing = 16
+
+# The description text for a filled cell.
+define gui.slot_filled_text_size = 60
+define gui.slot_filled_text_yoffset = 6
+define gui.slot_filled_text_color = "#AC3F1D"
 
 ## Positioning and Spacing #####################################################
 ##
