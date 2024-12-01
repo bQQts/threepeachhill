@@ -89,12 +89,12 @@ init -100 python:
         def __call__(self):
             global page_type, page_num
 
-            if page_type == FilePageType.QUICKSAVE:
+            if page_type == FilePageType.AUTO:
                 return
-            elif page_type == FilePageType.AUTO:
-                page_type = FilePageType.QUICKSAVE
-            elif page_num == 1:
+            elif page_type == FilePageType.QUICKSAVE:
                 page_type = FilePageType.AUTO
+            elif page_num == 1:
+                page_type = FilePageType.QUICKSAVE
                 page_num = 0
             else:
                 page_num = page_num - 1
@@ -107,11 +107,11 @@ init -100 python:
 
             if page_num == 9:
                 return
-            elif page_type == FilePageType.AUTO:
+            elif page_type == FilePageType.QUICKSAVE:
                 page_type = FilePageType.NORMAL
                 page_num = 1
-            elif page_type == FilePageType.QUICKSAVE:
-                page_type = FilePageType.AUTO
+            elif page_type == FilePageType.AUTO:
+                page_type = FilePageType.QUICKSAVE
             else:
                 page_num = page_num + 1
 

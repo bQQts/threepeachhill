@@ -842,15 +842,13 @@ style file_page_navigation:
 
 style slot_button:
     properties gui.button_properties("slot_button")
+    background "gui/menu/slot_button.png"
 
 style slot_button_text:
     properties gui.text_properties("slot_button")
 
 style slot_filled_button is slot_button:
     background None
-
-style slot_empty_button is slot_button:
-    background "gui/menu/slot_empty_button.png"
 
 style slot_number_text is slot_button_text:
     properties gui.text_properties("slot_number")
