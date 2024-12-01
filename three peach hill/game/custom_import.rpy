@@ -55,3 +55,56 @@ init -100 python:
         renpy.exports.image(name, animation)
     
     create_animations_from_directory("two-frame-animation")
+
+    from enum import Enum
+
+    class FilePageType(Enum):
+        QUICKSAVE = 1
+        AUTO = 2
+        NORMAL = 3
+
+    page_type = FilePageType.NORMAL
+    true_page_num = 0
+    page_num = 0
+
+    def TrackedFilePage(page, new_page_type = FilePageType.NORMAL):
+        logging.info(f"TrackedFilePage {page}")
+        global page_type, page_num
+        page_num = page
+        page_type = new_page_type
+
+        file_page_input = page
+        if page_type == FilePageType.QUICKSAVE:
+            file_page_input = "quick"
+        elif page_type == FilePageType.AUTO:
+            file_page_input = "auto"
+            
+        FilePage(file_page_input)
+
+    def TrackedFilePagePrevious():
+        logging.info("TrackedFilePagePrevious")
+        global page_type, page_num
+        if page_type == FilePageType.QUICKSAVE:
+            return
+        elif page_type == FilePageType.AUTO:
+            page_type = FilePageType.QUICKSAVE
+        elif page_num == 1:
+            page_type = FilePageType.AUTO
+            page_num = 0
+        else:
+            page_num = page_num - 1
+        FilePagePrevious()
+
+    def TrackedFilePageNext():
+        logging.info("TrackedFilePageNext")
+        global page_type, page_num
+        if page_num == 9:
+            return
+        elif page_type == FilePageType.AUTO:
+            page_type = FilePageType.NORMAL
+            page_num = 1
+        elif page_type == FilePageType.QUICKSAVE:
+            page_type = FilePageType.AUTO
+        else:
+            page_num = page_num + 1
+        FilePageNext()
