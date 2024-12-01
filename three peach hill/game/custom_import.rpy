@@ -64,47 +64,55 @@ init -100 python:
         NORMAL = 3
 
     page_type = FilePageType.NORMAL
-    true_page_num = 0
-    page_num = 0
+    page_num = 1
 
-    def TrackedFilePage(page, new_page_type = FilePageType.NORMAL):
-        logging.info(f"TrackedFilePage {page}")
-        global page_type, page_num
-        page_num = page
-        page_type = new_page_type
+    class TrackedFilePage(FilePage):  # page, new_page_type = FilePageType.NORMAL):
+        def __init__(self, page_num, page_type = FilePageType.NORMAL):
+            self.page_num = page_num
+            self.page_type = page_type
 
-        file_page_input = page
-        if page_type == FilePageType.QUICKSAVE:
-            file_page_input = "quick"
-        elif page_type == FilePageType.AUTO:
-            file_page_input = "auto"
-            
-        FilePage(file_page_input)
+            file_page_input = page_num
+            if page_type == FilePageType.QUICKSAVE:
+                file_page_input = "quick"
+            elif page_type == FilePageType.AUTO:
+                file_page_input = "auto"
 
-    def TrackedFilePagePrevious():
-        logging.info("TrackedFilePagePrevious")
-        global page_type, page_num
-        if page_type == FilePageType.QUICKSAVE:
-            return
-        elif page_type == FilePageType.AUTO:
-            page_type = FilePageType.QUICKSAVE
-        elif page_num == 1:
-            page_type = FilePageType.AUTO
-            page_num = 0
-        else:
-            page_num = page_num - 1
-        FilePagePrevious()
+            super().__init__(file_page_input)
 
-    def TrackedFilePageNext():
-        logging.info("TrackedFilePageNext")
-        global page_type, page_num
-        if page_num == 9:
-            return
-        elif page_type == FilePageType.AUTO:
-            page_type = FilePageType.NORMAL
-            page_num = 1
-        elif page_type == FilePageType.QUICKSAVE:
-            page_type = FilePageType.AUTO
-        else:
-            page_num = page_num + 1
-        FilePageNext()
+        def __call__(self):
+            global page_type, page_num
+            page_type = self.page_type
+            page_num = self.page_num
+            super().__call__()
+
+    class TrackedFilePagePrevious(FilePagePrevious):
+        def __call__(self):
+            global page_type, page_num
+
+            if page_type == FilePageType.QUICKSAVE:
+                return
+            elif page_type == FilePageType.AUTO:
+                page_type = FilePageType.QUICKSAVE
+            elif page_num == 1:
+                page_type = FilePageType.AUTO
+                page_num = 0
+            else:
+                page_num = page_num - 1
+
+            super().__call__()
+
+    class TrackedFilePageNext(FilePageNext):
+        def __call__(self):
+            global page_type, page_num
+
+            if page_num == 9:
+                return
+            elif page_type == FilePageType.AUTO:
+                page_type = FilePageType.NORMAL
+                page_num = 1
+            elif page_type == FilePageType.QUICKSAVE:
+                page_type = FilePageType.AUTO
+            else:
+                page_num = page_num + 1
+
+            super().__call__()
