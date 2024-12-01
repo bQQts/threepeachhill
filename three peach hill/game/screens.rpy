@@ -390,6 +390,7 @@ style menu_navigation_button_text is default:
 
 screen navigation():
 
+    # Add the fancy twirly return icon here later.
     textbutton _("RETURN") style "navigation_top_left_button" action Return()
 
     #vbox:
