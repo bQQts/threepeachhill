@@ -227,10 +227,17 @@ define gui.choice_night_button_text_insensitive_color = '#5984CC'
 ## image, and text describing the contents of the save slot. A save slot uses
 ## image files in gui/button, like the other kinds of buttons.
 
+# Page buttons.
+define gui.page_button_text_font = gui.text_font
+define gui.page_button_text_size = 84
+define gui.page_button_text_color = "#FFD3B0"
+define gui.page_button_text_selected_color = "#6E523C"
+define gui.page_button_text_selected_hover_color = "#6E523C"
+define gui.page_button_text_hover_outlines = [(absolute(2), '#A8795E', 0, 0)]
+
 ## The save slot button.
-define gui.slot_button_width = 552
-define gui.slot_button_height = 412
-define gui.slot_button_borders = Borders(20, 20, 20, 20)
+define gui.slot_button_width = 1120
+define gui.slot_button_height = 520
 define gui.slot_button_text_size = 28
 define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_idle_color = gui.idle_small_color
@@ -238,8 +245,8 @@ define gui.slot_button_text_selected_idle_color = gui.selected_color
 define gui.slot_button_text_selected_hover_color = gui.hover_color
 
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 512
-define config.thumbnail_height = 288
+define config.thumbnail_width = 470
+define config.thumbnail_height = 360
 
 ## The number of columns and rows in the grid of save slots.
 define gui.file_slot_cols = 2
@@ -399,15 +406,6 @@ define gui.navigation_top_button_text_outlines = [(absolute(2), '#671716', 0, 0)
 define gui.navigation_top_button_text_hover_color = '#ffffff'
 define gui.navigation_top_button_text_hover_outlines = [(absolute(3), '#6C2B20', 0, 0)]
 
-## File Slot Menu ##############################################################
-
-define gui.page_button_text_font = gui.text_font
-define gui.page_button_text_size = 84
-define gui.page_button_text_color = "#FFD3B0"
-define gui.page_button_text_selected_color = "#6E523C"
-define gui.page_button_text_selected_hover_color = "#6E523C"
-
-define gui.page_button_text_hover_outlines = [(absolute(2), '#A8795E', 0, 0)]
 
 ## History #####################################################################
 ##
