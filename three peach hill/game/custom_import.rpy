@@ -116,3 +116,21 @@ init -100 python:
                 page_num = page_num + 1
 
             super().__call__()
+
+    class OptionsPageType(Enum):
+        SLIDERS = 1
+        BUTTONS = 2
+
+    options_page_type = OptionsPageType.SLIDERS
+
+    class OpenOptionsPageButtons(Action, DictEquality):
+        def __call__(self):
+            global options_page_type
+            options_page_type = OptionsPageType.BUTTONS
+            renpy.restart_interaction()
+
+    class OpenOptionsPageSliders(Action, DictEquality):
+        def __call__(self):
+            global options_page_type
+            options_page_type = OptionsPageType.SLIDERS
+            renpy.restart_interaction()

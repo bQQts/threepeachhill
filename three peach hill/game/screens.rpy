@@ -606,7 +606,7 @@ style game_menu_content_frame:
 
 style game_menu_scroll_frame:
     xalign 0
-    xsize 1280
+    xsize 2560
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
@@ -637,17 +637,18 @@ screen about():
     use game_menu(scroll="viewport"):
 
         style_prefix "about"
+        hbox:
+            vbox:
+                xsize 1280
+                label "Credits"
+                text _("Version [config.version!t]\n")
 
-        vbox:
-
-            label "Credits"
-            text _("Version [config.version!t]\n")
-
-            ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
-
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+                ## gui.about is usually set in options.rpy.
+                if gui.about:
+                    text "[gui.about!t]\n"
+            vbox:
+                xsize 1280
+                text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 style about_label is gui_label
@@ -877,103 +878,93 @@ style file_arrow_next_button is file_arrow_button:
     yalign 0.4
 
 
-## Preferences screen ##########################################################
+## Options screen ##########################################################
 ##
-## The preferences screen allows the player to configure the game to better suit
+## The options screen allows the player to configure the game to better suit
 ## themselves.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
-screen preferences():
+screen options():
 
     tag menu
 
-    use game_menu(scroll="viewport"):
+    use game_menu():
+        style_prefix "options"
+        if options_page_type == OptionsPageType.SLIDERS:
+            use options_sliders()
+        else:
+            use options_buttons()
+        
+    # Add the buttons to flip through to different pages.
+    if not options_page_type == OptionsPageType.SLIDERS:
+        button style "file_arrow_previous_button" action OpenOptionsPageSliders()
+    if not options_page_type == OptionsPageType.BUTTONS:
+        button style "file_arrow_next_button" action OpenOptionsPageButtons()
 
+screen options_sliders():
+    hbox:
         vbox:
+            if config.has_music:
+                label _("Music Volume")
 
-            hbox:
-                box_wrap True
+                bar value Preference("music volume")
 
-                if renpy.variant("pc") or renpy.variant("web"):
+            if config.has_sound:
 
-                    vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window"):
-                            activate_sound "sound/Haptics.flac" 
-                            action Preference("display", "window")
-                        textbutton _("Fullscreen"):
-                            activate_sound "sound/Haptics.flac" 
-                            action Preference("display", "fullscreen")
+                label _("Sound Volume")
 
-                vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text"):
-                        activate_sound "sound/Haptics.flac" 
-                        action Preference("skip", "toggle")
-                    textbutton _("After Choices"):
-                        activate_sound "sound/Haptics.flac" 
-                        action Preference("after choices", "toggle")
-                    textbutton _("Transitions"):
-                        activate_sound "sound/Haptics.flac" 
-                        action InvertSelected(Preference("transitions", "toggle"))
+                bar value Preference("sound volume")
 
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
-
-            null height (4 * gui.pref_spacing)
-
-            hbox:
-                style_prefix "slider"
-                box_wrap True
-
-                vbox:
-
-                    label _("Text Speed")
-
-                    bar value Preference("text speed")
-
-                    label _("Auto-Forward Time")
-
-                    bar value Preference("auto-forward time")
-
-                vbox:
-
-                    if config.has_music:
-                        label _("Music Volume")
-
-                        hbox:
-                            bar value Preference("music volume")
-
-                    if config.has_sound:
-
-                        label _("Sound Volume")
-
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+                # if config.sample_sound:
+                #     textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                    if config.has_voice:
-                        label _("Voice Volume")
+            if config.has_voice:
+                label _("Voice Volume")
 
-                        hbox:
-                            bar value Preference("voice volume")
+                bar value Preference("voice volume")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                # if config.sample_voice:
+                #     textbutton _("Test") action Play("voice", config.sample_voice)
 
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
+            if config.has_music or config.has_sound or config.has_voice:
+                null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+                textbutton _("Mute All"):
+                    action Preference("all mute", "toggle")
+                    style "mute_all_button"
+        vbox:
+            label _("Text Speed")
 
+            bar value Preference("text speed")
+
+            label _("Auto-Forward Time")
+
+            bar value Preference("auto-forward time")
+
+screen options_buttons():
+    hbox:
+        vbox:
+            label _("Skip")
+            textbutton _("Unseen Text") action Preference("skip", "toggle")
+            textbutton _("After Choices") action Preference("after choices", "toggle")
+            textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+        
+        if renpy.variant("pc") or renpy.variant("web"):
+            vbox:
+                label _("Display")
+                textbutton _("Window") action Preference("display", "window")
+                textbutton _("Fullscreen") action Preference("display", "fullscreen")
+
+style options_hbox is hbox:
+    yfill True
+    yalign 0.5
+    background "#0f0"
+style options_vbox is vbox:
+    xsize 1280
+    yalign 0.5
+    background "#f00"
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
