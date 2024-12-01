@@ -71,6 +71,7 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    activate_sound "sound/Haptics.flac" 
 
 style button_text is gui_text:
     properties gui.text_properties("button")
@@ -346,7 +347,6 @@ style quick_button_text:
 ################################################################################
 ## Main Menu Navigation
 ################################################################################
-
 screen menu_navigation():
 
     hbox:
@@ -357,27 +357,17 @@ screen menu_navigation():
 
         spacing gui.menu_navigation_spacing
 
-        textbutton _("      PLAY      "):
-            activate_sound "sound/Haptics.flac" 
-            action Start()
+        textbutton _("      PLAY      ") action Start() activate_sound "sound/Haptics.flac" 
 
-        textbutton _("      LOAD      "):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("load")
+        textbutton _("      LOAD      ") action ShowMenu("load") activate_sound "sound/Haptics.flac" 
 
-        textbutton _("      OPTIONS      "):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("preferences")
+        textbutton _("      OPTIONS      ") action ShowMenu("preferences") activate_sound "sound/Haptics.flac" 
 
-        textbutton _("      CREDITS      "):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("about")
+        textbutton _("      CREDITS      ") action ShowMenu("about") activate_sound "sound/Haptics.flac" 
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("      HELP      "):
-                activate_sound "sound/Haptics.flac" 
-                action ShowMenu("help")
+            textbutton _("      HELP      ") action ShowMenu("help") activate_sound "sound/Haptics.flac" 
 
 image menu_navigation_button_gif = "gui/menu/menu_navigation_button.png"
 
@@ -396,8 +386,7 @@ style menu_navigation_button_text is default:
 
 ## Navigation screen ###########################################################
 ##
-## This screen is included in the main and game menus, and provides navigation
-## to other menus, and to start the game.
+## This screen is included in the game menus, and provides navigation to other menus
 
 screen navigation():
 
@@ -412,60 +401,19 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if main_menu:
+        textbutton _("RETURN") style "navigation_top_left_button" action Return()
 
-            textbutton _("PLAY"):
-                activate_sound "sound/Haptics.flac" 
-                action Start()
-
-        else:
-
-            textbutton _("HISTORY"):
-                activate_sound "sound/Haptics.flac" 
-                action ShowMenu("history")
-
-            textbutton _("SAVE"):
-                activate_sound "sound/Haptics.flac" 
-                action ShowMenu("save")
-
-        textbutton _("LOAD"):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("load")
-
-        textbutton _("OPTIONS"):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("preferences")
+        textbutton _("SAVE") action ShowMenu("save") activate_sound "sound/Haptics.flac" 
+        textbutton _("LOAD") action ShowMenu("load") activate_sound "sound/Haptics.flac" 
+        textbutton _("OPTIONS") action ShowMenu("preferences") activate_sound "sound/Haptics.flac" 
 
         if _in_replay:
-
-            textbutton _("End Replay"):
-                activate_sound "sound/Haptics.flac" 
-                action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("MAIN MENU"):
-                activate_sound "sound/Haptics.flac" 
-                action MainMenu()
-
-        textbutton _("CREDITS"):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("HELP"):
-                activate_sound "sound/Haptics.flac" 
-                action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("QUIT"):
-                activate_sound "sound/Haptics.flac" 
-                action Quit(confirm=not main_menu)
+            textbutton _("End Replay") style "navigation_top_right_button" action EndReplay(confirm=True) activate_sound "sound/Haptics.flac" 
+        elif renpy.variant("pc"):
+            ## The quit button is banned on iOS and unnecessary on Android and Web.
+            textbutton _("QUIT") style "navigation_top_right_button" action Quit(confirm=not main_menu) activate_sound "sound/Haptics.flac" 
+        else:
+            textbutton _("MAIN MENU") style "navigation_top_right_button" action MainMenu() activate_sound "sound/Haptics.flac" 
 
 
 style navigation_button is gui_button
@@ -479,6 +427,12 @@ style navigation_button_text:
     properties gui.text_properties("navigation_button")
     xalign 0.5
 
+style navigation_top_button is navigation_button
+
+style navigation_top_left_button is navigation_top_button
+
+style navigation_top_right_button is navigation_top_button
+
 
 ## Main Menu screen ############################################################
 ##
@@ -487,62 +441,58 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
+    ## This ensures that any other menu screen is replaced.
     tag menu
-    use game_menu("Test")
 
-## BE SURE TO RESTORE THIS LATER!!! DO NOT COMMIT THIS!
-    # ## This ensures that any other menu screen is replaced.
-    # tag menu
+    add gui.main_menu_background
 
-    # add gui.main_menu_background
+    ## This empty frame darkens the main menu.
+    frame:
+        style "main_menu_frame"
 
-    # ## This empty frame darkens the main menu.
-    # frame:
-    #     style "main_menu_frame"
+    ## The use statement includes another screen inside this one. The actual
+    ## contents of the main menu are in the navigation screen.
+    use menu_navigation
 
-    # ## The use statement includes another screen inside this one. The actual
-    # ## contents of the main menu are in the navigation screen.
-    # use menu_navigation
+    if gui.show_name:
 
-    # if gui.show_name:
+        vbox:
+            style "main_menu_vbox"
 
-    #     vbox:
-    #         style "main_menu_vbox"
+            text "[config.name!t]":
+                style "main_menu_title"
 
-    #         text "[config.name!t]":
-    #             style "main_menu_title"
-
-    #         text "[config.version]":
-    #             style "main_menu_version"
+            text "[config.version]":
+                style "main_menu_version"
 
 
-# style main_menu_frame is empty
-# style main_menu_vbox is vbox
-# style main_menu_text is gui_text
-# style main_menu_title is main_menu_text
-# style main_menu_version is main_menu_text
+style main_menu_frame is empty
+style main_menu_vbox is vbox
+style main_menu_text is gui_text
+style main_menu_title is main_menu_text
+style main_menu_version is main_menu_text
 
-# style main_menu_frame:
-#     xsize 560
-#     yfill True
+style main_menu_frame:
+    xsize 560
+    yfill True
 
-#     #background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
-# style main_menu_vbox:
-#     xalign 1.0
-#     xoffset -40
-#     xmaximum 1600
-#     yalign 1.0
-#     yoffset -40
+style main_menu_vbox:
+    xalign 1.0
+    xoffset -40
+    xmaximum 1600
+    yalign 1.0
+    yoffset -40
 
-# style main_menu_text:
-#     properties gui.text_properties("main_menu", accent=True)
+style main_menu_text:
+    properties gui.text_properties("main_menu", accent=True)
 
-# style main_menu_title:
-#     properties gui.text_properties("title")
+style main_menu_title:
+    properties gui.text_properties("title")
 
-# style main_menu_version:
-#     properties gui.text_properties("version")
+style main_menu_version:
+    properties gui.text_properties("version")
 
 
 ## Game Menu screen ############################################################
@@ -610,11 +560,6 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
                     transclude
 
     use navigation
-
-    textbutton _("Return"):
-        style "return_button"
-        activate_sound "sound/Haptics.flac" 
-        action Return()
 
     label title
 
