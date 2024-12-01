@@ -802,6 +802,8 @@ style page_button_text is gui_button_text
 
 style slot_button is gui_button
 style slot_button_text is gui_button_text
+style slot_number_text is slot_button_text
+style slot_filled_number_text is slot_number_text
 style slot_time_text is slot_button_text
 style slot_name_text is slot_button_text
 
@@ -849,6 +851,7 @@ style slot_filled_button is slot_button:
 
 style slot_empty_button is slot_button:
     background "gui/menu/slot_empty_button.png"
+
 
 style file_arrow_button is page_button
 
