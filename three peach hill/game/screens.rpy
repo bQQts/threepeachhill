@@ -804,8 +804,8 @@ style slot_button is gui_button
 style slot_button_text is gui_button_text
 style slot_number_text is slot_button_text
 style slot_filled_number_text is slot_number_text
-style slot_time_text is slot_button_text
-style slot_name_text is slot_button_text
+style slot_text is slot_button_text
+style slot_filled_text is slot_text
 
 style page_label:
     xpadding 100
@@ -858,14 +858,20 @@ style slot_number_text is slot_button_text:
 style slot_filled_number_text is slot_number_text:
     properties gui.text_properties("slot_filled_number")
 
+style slot_text is slot_button_text:
+    properties gui.text_properties("slot")
+
+style slot_filled_text is slot_text:
+    properties gui.text_properties("slot_filled")
+
 style file_arrow_button is page_button
 
 style file_arrow_previous_button is file_arrow_button:
-    background Transform("gui/menu/menu_arrow.png", xzoom=-1)
+    background Transform("gui/menu/menu_[prefix_]arrow.png", xzoom=-1)
     yalign 0.4
 
 style file_arrow_next_button is file_arrow_button:
-    background "gui/menu/menu_arrow.png"
+    background "gui/menu/menu_[prefix_]arrow.png"
     xanchor 1.0
     xalign 1.0
     xpos 1.0
