@@ -1,5 +1,5 @@
 label orchard:
-    scene black
+    scene brown
     show bg bookstore with dissolve
     play music bookstore_vibing fadein 2.0
 
@@ -120,7 +120,7 @@ label shut_this_down:
 
     "She's right."
 
-    scene black with dissolve
+    scene brown with dissolve
     pause 2.0
     jump the_rain
 
@@ -149,6 +149,6 @@ label let_her_down_gently:
 
     "She's right."
     
-    scene black with dissolve
+    scene brown with dissolve
     pause 2.0
     jump the_rain

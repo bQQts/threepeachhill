@@ -36,6 +36,9 @@ image erin = "erin neutral.png"
 #image erin sad = "Erin Sad.png"
 #image erin shocked = "Erin Shocked.png"
 
+#image lyd = "lydia.png"
+#image oni = "oni.png"
+#image joy = "joy.png"
 image jeff = "side jeff.png"
 image timothy = "side timothy.png"
 
@@ -91,6 +94,20 @@ image date_animated_ch1:
     "gui/dateanim/ch1_july10_1.png"
     pause 0.1
     "gui/dateanim/ch1_july10_2.png"
+    pause 0.1
+    repeat
+
+image date_animated_ch3:
+    "gui/dateanim/ch3_july20_1.png"
+    pause 0.1
+    "gui/dateanim/ch3_july20_2.png"
+    pause 0.1
+    repeat
+
+image date_animated_ch3B:
+    "gui/dateanim/ch3_july27_1.png"
+    pause 0.1
+    "gui/dateanim/ch3_july27_2.png"
     pause 0.1
     repeat
 

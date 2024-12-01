@@ -2,9 +2,595 @@
 errors listed below, and try again.
 
 
-File "game/script files/9_date.rpy", line 127: end of line expected.
-    text "To Be Continued :)" xalign 0.5 yalign 0.5
-                              ^
+File "game/script files/3_pursuit.rpy", line 12: Line with id pursuit_0192f78d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:12
+
+File "game/script files/3_pursuit.rpy", line 29: Line with id cobbler_e0f3d784 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:29
+
+File "game/script files/3_pursuit.rpy", line 31: Line with id cobbler_559f6c97 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:31
+
+File "game/script files/3_pursuit.rpy", line 33: Line with id cobbler_ff164c88 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:33
+
+File "game/script files/3_pursuit.rpy", line 35: Line with id cobbler_ca91709d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:35
+
+File "game/script files/3_pursuit.rpy", line 47: Line with id orchardist_e1e79385 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:47
+
+File "game/script files/3_pursuit.rpy", line 49: Line with id orchardist_19c4a191 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:49
+
+File "game/script files/3_pursuit.rpy", line 53: Line with id orchardist_b2c75412 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:53
+
+File "game/script files/3_pursuit.rpy", line 55: Line with id orchardist_b243b2b7 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:55
+
+File "game/script files/3_pursuit.rpy", line 60: Line with id orchardist_73124012 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:60
+
+File "game/script files/3_pursuit.rpy", line 62: Line with id orchardist_8d8b4e78 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:62
+
+File "game/script files/3_pursuit.rpy", line 64: Line with id orchardist_b9d6f571 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:64
+
+File "game/script files/3_pursuit.rpy", line 66: Line with id orchardist_8c34cdd8 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:66
+
+File "game/script files/3_pursuit.rpy", line 68: Line with id orchardist_505863a2 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:68
+
+File "game/script files/3_pursuit.rpy", line 70: Line with id orchardist_af8672a4 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:70
+
+File "game/script files/3_pursuit.rpy", line 72: Line with id orchardist_9ebc19da appears twice. The other line is game/script files/3_cobblercornerstore.rpy:72
+
+File "game/script files/3_pursuit.rpy", line 74: Line with id orchardist_2298f95e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:74
+
+File "game/script files/3_pursuit.rpy", line 76: Line with id orchardist_753e400e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:76
+
+File "game/script files/3_pursuit.rpy", line 78: Line with id orchardist_9f97f3a0 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:78
+
+File "game/script files/3_pursuit.rpy", line 80: Line with id orchardist_f7f609d1 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:80
+
+File "game/script files/3_pursuit.rpy", line 82: Line with id orchardist_1798e6fe appears twice. The other line is game/script files/3_cobblercornerstore.rpy:82
+
+File "game/script files/3_pursuit.rpy", line 84: Line with id orchardist_9ec63c86 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:84
+
+File "game/script files/3_pursuit.rpy", line 86: Line with id orchardist_dd23199c appears twice. The other line is game/script files/3_cobblercornerstore.rpy:86
+
+File "game/script files/3_pursuit.rpy", line 88: Line with id orchardist_608b867e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:88
+
+File "game/script files/3_pursuit.rpy", line 90: Line with id orchardist_f3708e54 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:90
+
+File "game/script files/3_pursuit.rpy", line 92: Line with id orchardist_54358e6e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:92
+
+File "game/script files/3_pursuit.rpy", line 94: Line with id orchardist_61dcf85f appears twice. The other line is game/script files/3_cobblercornerstore.rpy:94
+
+File "game/script files/3_pursuit.rpy", line 96: Line with id orchardist_e9a1a506 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:96
+
+File "game/script files/3_pursuit.rpy", line 98: Line with id orchardist_1941c9b6 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:98
+
+File "game/script files/3_pursuit.rpy", line 108: Line with id orchardist_748e3feb appears twice. The other line is game/script files/3_cobblercornerstore.rpy:108
+
+File "game/script files/3_pursuit.rpy", line 110: Line with id orchardist_33fea3ba appears twice. The other line is game/script files/3_cobblercornerstore.rpy:110
+
+File "game/script files/3_pursuit.rpy", line 112: Line with id orchardist_8eab9887 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:112
+
+File "game/script files/3_pursuit.rpy", line 114: Line with id orchardist_807ec5e3 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:114
+
+File "game/script files/3_pursuit.rpy", line 116: Line with id orchardist_4e73dad3 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:116
+
+File "game/script files/3_pursuit.rpy", line 118: Line with id orchardist_0eada0d3 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:118
+
+File "game/script files/3_pursuit.rpy", line 120: Line with id orchardist_28d5528d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:120
+
+File "game/script files/3_pursuit.rpy", line 134: Line with id cobbler_call_aya_54fea817 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:134
+
+File "game/script files/3_pursuit.rpy", line 136: Line with id cobbler_call_aya_f90e55c4 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:136
+
+File "game/script files/3_pursuit.rpy", line 138: Line with id cobbler_call_aya_a2d83ece appears twice. The other line is game/script files/3_cobblercornerstore.rpy:138
+
+File "game/script files/3_pursuit.rpy", line 140: Line with id cobbler_call_aya_e8ca9170 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:140
+
+File "game/script files/3_pursuit.rpy", line 142: Line with id cobbler_call_aya_4355a6a3 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:142
+
+File "game/script files/3_pursuit.rpy", line 144: Line with id cobbler_call_aya_c3efa732 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:144
+
+File "game/script files/3_pursuit.rpy", line 146: Line with id cobbler_call_aya_10029665 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:146
+
+File "game/script files/3_pursuit.rpy", line 148: Line with id cobbler_call_aya_a8fef602 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:148
+
+File "game/script files/3_pursuit.rpy", line 150: Line with id cobbler_call_aya_5694f1c3 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:150
+
+File "game/script files/3_pursuit.rpy", line 152: Line with id cobbler_call_aya_a5a472da appears twice. The other line is game/script files/3_cobblercornerstore.rpy:152
+
+File "game/script files/3_pursuit.rpy", line 154: Line with id cobbler_call_aya_caa1b97f appears twice. The other line is game/script files/3_cobblercornerstore.rpy:154
+
+File "game/script files/3_pursuit.rpy", line 156: Line with id cobbler_call_aya_b1a61d0b appears twice. The other line is game/script files/3_cobblercornerstore.rpy:156
+
+File "game/script files/3_pursuit.rpy", line 158: Line with id cobbler_call_aya_d1b7fb47 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:158
+
+File "game/script files/3_pursuit.rpy", line 160: Line with id cobbler_call_aya_94a6be2b appears twice. The other line is game/script files/3_cobblercornerstore.rpy:160
+
+File "game/script files/3_pursuit.rpy", line 162: Line with id cobbler_call_aya_131e0ac2 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:162
+
+File "game/script files/3_pursuit.rpy", line 164: Line with id cobbler_call_aya_a4b204fe appears twice. The other line is game/script files/3_cobblercornerstore.rpy:164
+
+File "game/script files/3_pursuit.rpy", line 178: Line with id cobbler_erin_stayed_a6752e1d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:178
+
+File "game/script files/3_pursuit.rpy", line 180: Line with id cobbler_erin_stayed_5bd23b73 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:180
+
+File "game/script files/3_pursuit.rpy", line 182: Line with id cobbler_erin_stayed_95b7aae1 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:182
+
+File "game/script files/3_pursuit.rpy", line 184: Line with id cobbler_erin_stayed_1a8f96d1 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:184
+
+File "game/script files/3_pursuit.rpy", line 186: Line with id cobbler_erin_stayed_7843c05b appears twice. The other line is game/script files/3_cobblercornerstore.rpy:186
+
+File "game/script files/3_pursuit.rpy", line 188: Line with id cobbler_erin_stayed_8e9aad0e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:188
+
+File "game/script files/3_pursuit.rpy", line 190: Line with id cobbler_erin_stayed_57ffc5b2 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:190
+
+File "game/script files/3_pursuit.rpy", line 198: Line with id cobbler_erin_no_reason_f7f20279 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:198
+
+File "game/script files/3_pursuit.rpy", line 200: Line with id cobbler_erin_no_reason_1ac6954a appears twice. The other line is game/script files/3_cobblercornerstore.rpy:200
+
+File "game/script files/3_pursuit.rpy", line 202: Line with id cobbler_erin_no_reason_e1fd98db appears twice. The other line is game/script files/3_cobblercornerstore.rpy:202
+
+File "game/script files/3_pursuit.rpy", line 204: Line with id cobbler_erin_no_reason_76af4ea6 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:204
+
+File "game/script files/3_pursuit.rpy", line 206: Line with id cobbler_erin_no_reason_cddb8ae8 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:206
+
+File "game/script files/3_pursuit.rpy", line 208: Line with id cobbler_erin_no_reason_36427fd1 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:208
+
+File "game/script files/3_pursuit.rpy", line 219: Line with id cobbler_call_uhh_5785ded2 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:219
+
+File "game/script files/3_pursuit.rpy", line 221: Line with id cobbler_call_uhh_28a5716d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:221
+
+File "game/script files/3_pursuit.rpy", line 223: Line with id cobbler_call_uhh_12d30e6b appears twice. The other line is game/script files/3_cobblercornerstore.rpy:223
+
+File "game/script files/3_pursuit.rpy", line 225: Line with id cobbler_call_uhh_212f6c63 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:225
+
+File "game/script files/3_pursuit.rpy", line 233: Line with id cobbler_call_nothing_d4576af4 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:233
+
+File "game/script files/3_pursuit.rpy", line 235: Line with id cobbler_call_nothing_0b9ab88e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:235
+
+File "game/script files/3_pursuit.rpy", line 247: Line with id lydia_chat_8ab92e8c appears twice. The other line is game/script files/3_cobblercornerstore.rpy:247
+
+File "game/script files/3_pursuit.rpy", line 249: Line with id lydia_chat_18555a68 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:249
+
+File "game/script files/3_pursuit.rpy", line 251: Line with id lydia_chat_3e02206e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:251
+
+File "game/script files/3_pursuit.rpy", line 253: Line with id lydia_chat_1f4e435d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:253
+
+File "game/script files/3_pursuit.rpy", line 255: Line with id lydia_chat_5e3f2297 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:255
+
+File "game/script files/3_pursuit.rpy", line 257: Line with id lydia_chat_29f845a9 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:257
+
+File "game/script files/3_pursuit.rpy", line 259: Line with id lydia_chat_966d8bac appears twice. The other line is game/script files/3_cobblercornerstore.rpy:259
+
+File "game/script files/3_pursuit.rpy", line 261: Line with id lydia_chat_00015ea9 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:261
+
+File "game/script files/3_pursuit.rpy", line 263: Line with id lydia_chat_23945a28 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:263
+
+File "game/script files/3_pursuit.rpy", line 265: Line with id lydia_chat_f841fbeb appears twice. The other line is game/script files/3_cobblercornerstore.rpy:265
+
+File "game/script files/3_pursuit.rpy", line 267: Line with id lydia_chat_b50f12e5 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:267
+
+File "game/script files/3_pursuit.rpy", line 269: Line with id lydia_chat_a0c8b751 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:269
+
+File "game/script files/3_pursuit.rpy", line 271: Line with id lydia_chat_80f4e27a appears twice. The other line is game/script files/3_cobblercornerstore.rpy:271
+
+File "game/script files/3_pursuit.rpy", line 273: Line with id lydia_chat_7ba6706a appears twice. The other line is game/script files/3_cobblercornerstore.rpy:273
+
+File "game/script files/3_pursuit.rpy", line 278: Line with id lydia_chat_e3b34497 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:278
+
+File "game/script files/3_pursuit.rpy", line 280: Line with id lydia_chat_9bfcfd55 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:280
+
+File "game/script files/3_pursuit.rpy", line 282: Line with id lydia_chat_0d007b35 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:282
+
+File "game/script files/3_pursuit.rpy", line 284: Line with id lydia_chat_7a57d044 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:284
+
+File "game/script files/3_pursuit.rpy", line 286: Line with id lydia_chat_36c5c9d7 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:286
+
+File "game/script files/3_pursuit.rpy", line 288: Line with id lydia_chat_40d83ab6 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:288
+
+File "game/script files/3_pursuit.rpy", line 290: Line with id lydia_chat_4f4782ad appears twice. The other line is game/script files/3_cobblercornerstore.rpy:290
+
+File "game/script files/3_pursuit.rpy", line 292: Line with id lydia_chat_3bb23b8d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:292
+
+File "game/script files/3_pursuit.rpy", line 294: Line with id lydia_chat_22d90016 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:294
+
+File "game/script files/3_pursuit.rpy", line 296: Line with id lydia_chat_e5b6f736 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:296
+
+File "game/script files/3_pursuit.rpy", line 318: Line with id shes_clumsy_24a19314 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:318
+
+File "game/script files/3_pursuit.rpy", line 320: Line with id shes_clumsy_2b64f46a appears twice. The other line is game/script files/3_cobblercornerstore.rpy:320
+
+File "game/script files/3_pursuit.rpy", line 327: Line with id shes_bold_75e4b5b2 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:327
+
+File "game/script files/3_pursuit.rpy", line 329: Line with id shes_bold_27bb2a90 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:329
+
+File "game/script files/3_pursuit.rpy", line 331: Line with id shes_bold_e0956da9 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:331
+
+File "game/script files/3_pursuit.rpy", line 333: Line with id shes_bold_9291abf5 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:333
+
+File "game/script files/3_pursuit.rpy", line 335: Line with id shes_bold_fed4eec5 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:335
+
+File "game/script files/3_pursuit.rpy", line 337: Line with id shes_bold_a200fcd8 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:337
+
+File "game/script files/3_pursuit.rpy", line 339: Line with id shes_bold_3c378313 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:339
+
+File "game/script files/3_pursuit.rpy", line 341: Line with id shes_bold_59e6b3c0 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:341
+
+File "game/script files/3_pursuit.rpy", line 344: Line with id shes_bold_bcb3ed40 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:344
+
+File "game/script files/3_pursuit.rpy", line 346: Line with id shes_bold_5647d3ac appears twice. The other line is game/script files/3_cobblercornerstore.rpy:346
+
+File "game/script files/3_pursuit.rpy", line 349: Line with id shes_bold_f9bffa9c appears twice. The other line is game/script files/3_cobblercornerstore.rpy:349
+
+File "game/script files/3_pursuit.rpy", line 351: Line with id shes_bold_d96a2199 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:351
+
+File "game/script files/3_pursuit.rpy", line 353: Line with id shes_bold_4a5d0a08 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:353
+
+File "game/script files/3_pursuit.rpy", line 355: Line with id shes_bold_87f5037e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:355
+
+File "game/script files/3_pursuit.rpy", line 362: Line with id shes_cute_1627314f appears twice. The other line is game/script files/3_cobblercornerstore.rpy:362
+
+File "game/script files/3_pursuit.rpy", line 364: Line with id shes_cute_a801f24a appears twice. The other line is game/script files/3_cobblercornerstore.rpy:364
+
+File "game/script files/3_pursuit.rpy", line 366: Line with id shes_cute_51f2e067 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:366
+
+File "game/script files/3_pursuit.rpy", line 368: Line with id shes_cute_0f414f28 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:368
+
+File "game/script files/3_pursuit.rpy", line 370: Line with id shes_cute_aec35cad appears twice. The other line is game/script files/3_cobblercornerstore.rpy:370
+
+File "game/script files/3_pursuit.rpy", line 372: Line with id shes_cute_a53853d4 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:372
+
+File "game/script files/3_pursuit.rpy", line 374: Line with id shes_cute_016548af appears twice. The other line is game/script files/3_cobblercornerstore.rpy:374
+
+File "game/script files/3_pursuit.rpy", line 376: Line with id shes_cute_1c5597fe appears twice. The other line is game/script files/3_cobblercornerstore.rpy:376
+
+File "game/script files/3_pursuit.rpy", line 383: Line with id lydia_change_subject_8ef7a49b appears twice. The other line is game/script files/3_cobblercornerstore.rpy:383
+
+File "game/script files/3_pursuit.rpy", line 385: Line with id lydia_change_subject_470ee315 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:385
+
+File "game/script files/3_pursuit.rpy", line 387: Line with id lydia_change_subject_eb6398e2 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:387
+
+File "game/script files/3_pursuit.rpy", line 395: Line with id cobbler_end_c2d767ef appears twice. The other line is game/script files/3_cobblercornerstore.rpy:395
+
+File "game/script files/3_pursuit.rpy", line 403: Line with id cobbler_end_866e8ef3 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:403
+
+File "game/script files/3_pursuit.rpy", line 410: Line with id cornerstore_a3baf651 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:410
+
+File "game/script files/3_pursuit.rpy", line 412: Line with id cornerstore_8e7b2a81 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:412
+
+File "game/script files/3_pursuit.rpy", line 414: Line with id cornerstore_fe92afad appears twice. The other line is game/script files/3_cobblercornerstore.rpy:414
+
+File "game/script files/3_pursuit.rpy", line 417: Line with id cornerstore_119069e3 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:417
+
+File "game/script files/3_pursuit.rpy", line 418: Line with id cornerstore_b85cc221 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:418
+
+File "game/script files/3_pursuit.rpy", line 419: Line with id cornerstore_f349c9ca appears twice. The other line is game/script files/3_cobblercornerstore.rpy:419
+
+File "game/script files/3_pursuit.rpy", line 426: Line with id cornerstore_166c47a8 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:426
+
+File "game/script files/3_pursuit.rpy", line 428: Line with id cornerstore_57221ffd appears twice. The other line is game/script files/3_cobblercornerstore.rpy:428
+
+File "game/script files/3_pursuit.rpy", line 432: Line with id cornerstore_d05a246e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:432
+
+File "game/script files/3_pursuit.rpy", line 434: Line with id cornerstore_d56465c4 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:434
+
+File "game/script files/3_pursuit.rpy", line 436: Line with id cornerstore_8e72d466 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:436
+
+File "game/script files/3_pursuit.rpy", line 438: Line with id cornerstore_2fd671d8 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:438
+
+File "game/script files/3_pursuit.rpy", line 442: Line with id cornerstore_3776216d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:442
+
+File "game/script files/3_pursuit.rpy", line 444: Line with id cornerstore_42e999fd appears twice. The other line is game/script files/3_cobblercornerstore.rpy:444
+
+File "game/script files/3_pursuit.rpy", line 446: Line with id cornerstore_c7522560 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:446
+
+File "game/script files/3_pursuit.rpy", line 448: Line with id cornerstore_8229a7e9 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:448
+
+File "game/script files/3_pursuit.rpy", line 450: Line with id cornerstore_640981c4 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:450
+
+File "game/script files/3_pursuit.rpy", line 452: Line with id cornerstore_aaa969a0 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:452
+
+File "game/script files/3_pursuit.rpy", line 454: Line with id cornerstore_317d453e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:454
+
+File "game/script files/3_pursuit.rpy", line 456: Line with id cornerstore_6a822ba8 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:456
+
+File "game/script files/3_pursuit.rpy", line 458: Line with id cornerstore_516ed885 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:458
+
+File "game/script files/3_pursuit.rpy", line 460: Line with id cornerstore_569045f8 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:460
+
+File "game/script files/3_pursuit.rpy", line 462: Line with id cornerstore_efd0294e appears twice. The other line is game/script files/3_cobblercornerstore.rpy:462
+
+File "game/script files/3_pursuit.rpy", line 473: Line with id cornerstore_downtime_43732a67 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:473
+
+File "game/script files/3_pursuit.rpy", line 475: Line with id cornerstore_downtime_40049c9b appears twice. The other line is game/script files/3_cobblercornerstore.rpy:475
+
+File "game/script files/3_pursuit.rpy", line 477: Line with id cornerstore_downtime_c794a9f9 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:477
+
+File "game/script files/3_pursuit.rpy", line 483: Line with id cornerstore_lie_d1fbc80a appears twice. The other line is game/script files/3_cobblercornerstore.rpy:483
+
+File "game/script files/3_pursuit.rpy", line 485: Line with id cornerstore_lie_eae520c4 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:485
+
+File "game/script files/3_pursuit.rpy", line 487: Line with id cornerstore_lie_ab102d5f appears twice. The other line is game/script files/3_cobblercornerstore.rpy:487
+
+File "game/script files/3_pursuit.rpy", line 493: Line with id cornerstore_cont_9133e2fc appears twice. The other line is game/script files/3_cobblercornerstore.rpy:493
+
+File "game/script files/3_pursuit.rpy", line 495: Line with id cornerstore_cont_112130cc appears twice. The other line is game/script files/3_cobblercornerstore.rpy:495
+
+File "game/script files/3_pursuit.rpy", line 497: Line with id cornerstore_cont_2e83b1a2 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:497
+
+File "game/script files/3_pursuit.rpy", line 499: Line with id cornerstore_cont_33c3b73d appears twice. The other line is game/script files/3_cobblercornerstore.rpy:499
+
+File "game/script files/3_pursuit.rpy", line 501: Line with id cornerstore_cont_05d17655 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:501
+
+File "game/script files/3_pursuit.rpy", line 503: Line with id cornerstore_cont_105fda0f appears twice. The other line is game/script files/3_cobblercornerstore.rpy:503
+
+File "game/script files/3_pursuit.rpy", line 511: Line with id cornerstore_end_ad5e16aa appears twice. The other line is game/script files/3_cobblercornerstore.rpy:511
+
+File "game/script files/3_pursuit.rpy", line 517: Line with id cornerstore_end_866e8ef3 appears twice. The other line is game/script files/3_cobblercornerstore.rpy:517
+
+File "game/script files/3_pursuit.rpy", line 533: Line with id farmers_market_a87170f3 appears twice. The other line is game/script files/3_farmersmarket.rpy:12
+
+File "game/script files/3_pursuit.rpy", line 535: Line with id farmers_market_fa46aac4 appears twice. The other line is game/script files/3_farmersmarket.rpy:14
+
+File "game/script files/3_pursuit.rpy", line 537: Line with id farmers_market_8f8ecf1d appears twice. The other line is game/script files/3_farmersmarket.rpy:16
+
+File "game/script files/3_pursuit.rpy", line 539: Line with id farmers_market_9f999ede appears twice. The other line is game/script files/3_farmersmarket.rpy:18
+
+File "game/script files/3_pursuit.rpy", line 541: Line with id farmers_market_fbaccd8e appears twice. The other line is game/script files/3_farmersmarket.rpy:20
+
+File "game/script files/3_pursuit.rpy", line 543: Line with id farmers_market_19acfb66 appears twice. The other line is game/script files/3_farmersmarket.rpy:22
+
+File "game/script files/3_pursuit.rpy", line 545: Line with id farmers_market_14cb764e appears twice. The other line is game/script files/3_farmersmarket.rpy:24
+
+File "game/script files/3_pursuit.rpy", line 547: Line with id farmers_market_caff4001 appears twice. The other line is game/script files/3_farmersmarket.rpy:26
+
+File "game/script files/3_pursuit.rpy", line 549: Line with id farmers_market_1b75efc0 appears twice. The other line is game/script files/3_farmersmarket.rpy:28
+
+File "game/script files/3_pursuit.rpy", line 551: Line with id farmers_market_48c93c99 appears twice. The other line is game/script files/3_farmersmarket.rpy:30
+
+File "game/script files/3_pursuit.rpy", line 553: Line with id farmers_market_9e0d2e1f appears twice. The other line is game/script files/3_farmersmarket.rpy:32
+
+File "game/script files/3_pursuit.rpy", line 555: Line with id farmers_market_f6486ad1 appears twice. The other line is game/script files/3_farmersmarket.rpy:34
+
+File "game/script files/3_pursuit.rpy", line 557: Line with id farmers_market_663cd7c7 appears twice. The other line is game/script files/3_farmersmarket.rpy:36
+
+File "game/script files/3_pursuit.rpy", line 559: Line with id farmers_market_0de99f57 appears twice. The other line is game/script files/3_farmersmarket.rpy:38
+
+File "game/script files/3_pursuit.rpy", line 561: Line with id farmers_market_9133cd96 appears twice. The other line is game/script files/3_farmersmarket.rpy:40
+
+File "game/script files/3_pursuit.rpy", line 563: Line with id farmers_market_2543928e appears twice. The other line is game/script files/3_farmersmarket.rpy:42
+
+File "game/script files/3_pursuit.rpy", line 565: Line with id farmers_market_879e0b60 appears twice. The other line is game/script files/3_farmersmarket.rpy:44
+
+File "game/script files/3_pursuit.rpy", line 579: Line with id farmers_market_marigold_7e9996c8 appears twice. The other line is game/script files/3_farmersmarket.rpy:58
+
+File "game/script files/3_pursuit.rpy", line 581: Line with id farmers_market_marigold_af5cbc90 appears twice. The other line is game/script files/3_farmersmarket.rpy:60
+
+File "game/script files/3_pursuit.rpy", line 587: Line with id farmers_market_lavender_7efa1c85 appears twice. The other line is game/script files/3_farmersmarket.rpy:66
+
+File "game/script files/3_pursuit.rpy", line 589: Line with id farmers_market_lavender_9e5c95be appears twice. The other line is game/script files/3_farmersmarket.rpy:68
+
+File "game/script files/3_pursuit.rpy", line 591: Line with id farmers_market_lavender_58be52e7 appears twice. The other line is game/script files/3_farmersmarket.rpy:70
+
+File "game/script files/3_pursuit.rpy", line 593: Line with id farmers_market_lavender_3cb9474c appears twice. The other line is game/script files/3_farmersmarket.rpy:72
+
+File "game/script files/3_pursuit.rpy", line 599: Line with id farmers_market_cont_0eed4a2e appears twice. The other line is game/script files/3_farmersmarket.rpy:78
+
+File "game/script files/3_pursuit.rpy", line 601: Line with id farmers_market_cont_e144e2a1 appears twice. The other line is game/script files/3_farmersmarket.rpy:80
+
+File "game/script files/3_pursuit.rpy", line 603: Line with id farmers_market_cont_dd427204 appears twice. The other line is game/script files/3_farmersmarket.rpy:82
+
+File "game/script files/3_pursuit.rpy", line 605: Line with id farmers_market_cont_1ef9257e appears twice. The other line is game/script files/3_farmersmarket.rpy:84
+
+File "game/script files/3_pursuit.rpy", line 607: Line with id farmers_market_cont_cb3b2a86 appears twice. The other line is game/script files/3_farmersmarket.rpy:86
+
+File "game/script files/3_pursuit.rpy", line 609: Line with id farmers_market_cont_c88d3b3e appears twice. The other line is game/script files/3_farmersmarket.rpy:88
+
+File "game/script files/3_pursuit.rpy", line 611: Line with id farmers_market_cont_e4ab6640 appears twice. The other line is game/script files/3_farmersmarket.rpy:90
+
+File "game/script files/3_pursuit.rpy", line 613: Line with id farmers_market_cont_c2ea5d38 appears twice. The other line is game/script files/3_farmersmarket.rpy:92
+
+File "game/script files/3_pursuit.rpy", line 615: Line with id farmers_market_cont_56daecbf appears twice. The other line is game/script files/3_farmersmarket.rpy:94
+
+File "game/script files/3_pursuit.rpy", line 617: Line with id farmers_market_cont_d524cbed appears twice. The other line is game/script files/3_farmersmarket.rpy:96
+
+File "game/script files/3_pursuit.rpy", line 619: Line with id farmers_market_cont_382b8e55 appears twice. The other line is game/script files/3_farmersmarket.rpy:98
+
+File "game/script files/3_pursuit.rpy", line 621: Line with id farmers_market_cont_f05bf217 appears twice. The other line is game/script files/3_farmersmarket.rpy:100
+
+File "game/script files/3_pursuit.rpy", line 623: Line with id farmers_market_cont_5eda2408 appears twice. The other line is game/script files/3_farmersmarket.rpy:102
+
+File "game/script files/3_pursuit.rpy", line 625: Line with id farmers_market_cont_838c1e76 appears twice. The other line is game/script files/3_farmersmarket.rpy:104
+
+File "game/script files/3_pursuit.rpy", line 627: Line with id farmers_market_cont_0f4f220f appears twice. The other line is game/script files/3_farmersmarket.rpy:106
+
+File "game/script files/3_pursuit.rpy", line 629: Line with id farmers_market_cont_13586a2d appears twice. The other line is game/script files/3_farmersmarket.rpy:108
+
+File "game/script files/3_pursuit.rpy", line 631: Line with id farmers_market_cont_15897a82 appears twice. The other line is game/script files/3_farmersmarket.rpy:110
+
+File "game/script files/3_pursuit.rpy", line 633: Line with id farmers_market_cont_a4a09cb0 appears twice. The other line is game/script files/3_farmersmarket.rpy:112
+
+File "game/script files/3_pursuit.rpy", line 635: Line with id farmers_market_cont_5db8a569 appears twice. The other line is game/script files/3_farmersmarket.rpy:114
+
+File "game/script files/3_pursuit.rpy", line 637: Line with id farmers_market_cont_f7138c94 appears twice. The other line is game/script files/3_farmersmarket.rpy:116
+
+File "game/script files/3_pursuit.rpy", line 639: Line with id farmers_market_cont_b127ebf4 appears twice. The other line is game/script files/3_farmersmarket.rpy:118
+
+File "game/script files/3_pursuit.rpy", line 649: Line with id farmers_market_cont_c097c437 appears twice. The other line is game/script files/3_farmersmarket.rpy:128
+
+File "game/script files/3_pursuit.rpy", line 651: Line with id farmers_market_cont_9f0dd7f5 appears twice. The other line is game/script files/3_farmersmarket.rpy:130
+
+File "game/script files/3_pursuit.rpy", line 653: Line with id farmers_market_cont_c7e6c8f0 appears twice. The other line is game/script files/3_farmersmarket.rpy:132
+
+File "game/script files/3_pursuit.rpy", line 655: Line with id farmers_market_cont_8262ea88 appears twice. The other line is game/script files/3_farmersmarket.rpy:134
+
+File "game/script files/3_pursuit.rpy", line 657: Line with id farmers_market_cont_10c31aa1 appears twice. The other line is game/script files/3_farmersmarket.rpy:136
+
+File "game/script files/3_pursuit.rpy", line 659: Line with id farmers_market_cont_a348611d appears twice. The other line is game/script files/3_farmersmarket.rpy:138
+
+File "game/script files/3_pursuit.rpy", line 661: Line with id farmers_market_cont_2a89e1a5 appears twice. The other line is game/script files/3_farmersmarket.rpy:140
+
+File "game/script files/3_pursuit.rpy", line 663: Line with id farmers_market_cont_e311a697 appears twice. The other line is game/script files/3_farmersmarket.rpy:142
+
+File "game/script files/3_pursuit.rpy", line 665: Line with id farmers_market_cont_ad59d4a3 appears twice. The other line is game/script files/3_farmersmarket.rpy:144
+
+File "game/script files/3_pursuit.rpy", line 667: Line with id farmers_market_cont_a0e05226 appears twice. The other line is game/script files/3_farmersmarket.rpy:146
+
+File "game/script files/3_pursuit.rpy", line 669: Line with id farmers_market_cont_c68a4649 appears twice. The other line is game/script files/3_farmersmarket.rpy:148
+
+File "game/script files/3_pursuit.rpy", line 671: Line with id farmers_market_cont_c2485e90 appears twice. The other line is game/script files/3_farmersmarket.rpy:150
+
+File "game/script files/3_pursuit.rpy", line 673: Line with id farmers_market_cont_089d5141 appears twice. The other line is game/script files/3_farmersmarket.rpy:152
+
+File "game/script files/3_pursuit.rpy", line 675: Line with id farmers_market_cont_b570850d appears twice. The other line is game/script files/3_farmersmarket.rpy:154
+
+File "game/script files/3_pursuit.rpy", line 677: Line with id farmers_market_cont_d4140cac appears twice. The other line is game/script files/3_farmersmarket.rpy:156
+
+File "game/script files/3_pursuit.rpy", line 689: Line with id lamp_talk_4a7333db appears twice. The other line is game/script files/3_farmersmarket.rpy:168
+
+File "game/script files/3_pursuit.rpy", line 691: Line with id lamp_talk_c873e917 appears twice. The other line is game/script files/3_farmersmarket.rpy:170
+
+File "game/script files/3_pursuit.rpy", line 693: Line with id lamp_talk_e0864e03 appears twice. The other line is game/script files/3_farmersmarket.rpy:172
+
+File "game/script files/3_pursuit.rpy", line 695: Line with id lamp_talk_775ece09 appears twice. The other line is game/script files/3_farmersmarket.rpy:174
+
+File "game/script files/3_pursuit.rpy", line 697: Line with id lamp_talk_5312b935 appears twice. The other line is game/script files/3_farmersmarket.rpy:176
+
+File "game/script files/3_pursuit.rpy", line 699: Line with id lamp_talk_d397453e appears twice. The other line is game/script files/3_farmersmarket.rpy:178
+
+File "game/script files/3_pursuit.rpy", line 701: Line with id lamp_talk_b4816986 appears twice. The other line is game/script files/3_farmersmarket.rpy:180
+
+File "game/script files/3_pursuit.rpy", line 703: Line with id lamp_talk_993a97b1 appears twice. The other line is game/script files/3_farmersmarket.rpy:182
+
+File "game/script files/3_pursuit.rpy", line 705: Line with id lamp_talk_083ead2f appears twice. The other line is game/script files/3_farmersmarket.rpy:184
+
+File "game/script files/3_pursuit.rpy", line 707: Line with id lamp_talk_6dfc181c appears twice. The other line is game/script files/3_farmersmarket.rpy:186
+
+File "game/script files/3_pursuit.rpy", line 709: Line with id lamp_talk_a64a4751 appears twice. The other line is game/script files/3_farmersmarket.rpy:188
+
+File "game/script files/3_pursuit.rpy", line 718: Line with id lamp_talk_apology_c7bb1ecb appears twice. The other line is game/script files/3_farmersmarket.rpy:197
+
+File "game/script files/3_pursuit.rpy", line 723: Line with id lamp_cont_4ec5fdd3 appears twice. The other line is game/script files/3_farmersmarket.rpy:202
+
+File "game/script files/3_pursuit.rpy", line 725: Line with id lamp_cont_d94f38d2 appears twice. The other line is game/script files/3_farmersmarket.rpy:204
+
+File "game/script files/3_pursuit.rpy", line 727: Line with id lamp_cont_272b3fc8 appears twice. The other line is game/script files/3_farmersmarket.rpy:206
+
+File "game/script files/3_pursuit.rpy", line 729: Line with id lamp_cont_26e9163c appears twice. The other line is game/script files/3_farmersmarket.rpy:208
+
+File "game/script files/3_pursuit.rpy", line 731: Line with id lamp_cont_686bb464 appears twice. The other line is game/script files/3_farmersmarket.rpy:210
+
+File "game/script files/3_pursuit.rpy", line 733: Line with id lamp_cont_b4ecb7f0 appears twice. The other line is game/script files/3_farmersmarket.rpy:212
+
+File "game/script files/3_pursuit.rpy", line 735: Line with id lamp_cont_6a20a80d appears twice. The other line is game/script files/3_farmersmarket.rpy:214
+
+File "game/script files/3_pursuit.rpy", line 737: Line with id lamp_cont_a0a3e050 appears twice. The other line is game/script files/3_farmersmarket.rpy:216
+
+File "game/script files/3_pursuit.rpy", line 739: Line with id lamp_cont_c26487e0 appears twice. The other line is game/script files/3_farmersmarket.rpy:218
+
+File "game/script files/3_pursuit.rpy", line 741: Line with id lamp_cont_6aadc646 appears twice. The other line is game/script files/3_farmersmarket.rpy:220
+
+File "game/script files/3_pursuit.rpy", line 743: Line with id lamp_cont_ce0a3125 appears twice. The other line is game/script files/3_farmersmarket.rpy:222
+
+File "game/script files/3_pursuit.rpy", line 745: Line with id lamp_cont_08e1c31b appears twice. The other line is game/script files/3_farmersmarket.rpy:224
+
+File "game/script files/3_pursuit.rpy", line 747: Line with id lamp_cont_ad6876c1 appears twice. The other line is game/script files/3_farmersmarket.rpy:226
+
+File "game/script files/3_pursuit.rpy", line 749: Line with id lamp_cont_51e3f715 appears twice. The other line is game/script files/3_farmersmarket.rpy:228
+
+File "game/script files/3_pursuit.rpy", line 751: Line with id lamp_cont_eb32fd10 appears twice. The other line is game/script files/3_farmersmarket.rpy:230
+
+File "game/script files/3_pursuit.rpy", line 753: Line with id lamp_cont_2e7d4179 appears twice. The other line is game/script files/3_farmersmarket.rpy:232
+
+File "game/script files/3_pursuit.rpy", line 764: Line with id going_home_from_market_3aaa3f8b appears twice. The other line is game/script files/3_farmersmarket.rpy:243
+
+File "game/script files/3_pursuit.rpy", line 766: Line with id going_home_from_market_786a7d28 appears twice. The other line is game/script files/3_farmersmarket.rpy:245
+
+File "game/script files/3_pursuit.rpy", line 768: Line with id going_home_from_market_ceb818e2 appears twice. The other line is game/script files/3_farmersmarket.rpy:247
+
+File "game/script files/3_pursuit.rpy", line 770: Line with id going_home_from_market_71766c41 appears twice. The other line is game/script files/3_farmersmarket.rpy:249
+
+File "game/script files/3_pursuit.rpy", line 778: Line with id going_home_from_market_727ff95c appears twice. The other line is game/script files/3_farmersmarket.rpy:257
+
+File "game/script files/3_pursuit.rpy", line 780: Line with id going_home_from_market_1fd68f29 appears twice. The other line is game/script files/3_farmersmarket.rpy:259
+
+File "game/script files/3_pursuit.rpy", line 782: Line with id going_home_from_market_ffa13120 appears twice. The other line is game/script files/3_farmersmarket.rpy:261
+
+File "game/script files/3_pursuit.rpy", line 784: Line with id going_home_from_market_b47b1bb3 appears twice. The other line is game/script files/3_farmersmarket.rpy:263
+
+File "game/script files/3_pursuit.rpy", line 786: Line with id going_home_from_market_370b4dd1 appears twice. The other line is game/script files/3_farmersmarket.rpy:265
+
+File "game/script files/3_pursuit.rpy", line 788: Line with id going_home_from_market_130644a6 appears twice. The other line is game/script files/3_farmersmarket.rpy:267
+
+File "game/script files/3_pursuit.rpy", line 790: Line with id going_home_from_market_99c596e2 appears twice. The other line is game/script files/3_farmersmarket.rpy:269
+
+File "game/script files/3_pursuit.rpy", line 792: Line with id going_home_from_market_f50e56f1 appears twice. The other line is game/script files/3_farmersmarket.rpy:271
+
+File "game/script files/3_pursuit.rpy", line 794: Line with id going_home_from_market_4bdb9be8 appears twice. The other line is game/script files/3_farmersmarket.rpy:273
+
+File "game/script files/3_pursuit.rpy", line 796: Line with id going_home_from_market_36ad5804 appears twice. The other line is game/script files/3_farmersmarket.rpy:275
+
+File "game/script files/3_pursuit.rpy", line 798: Line with id going_home_from_market_bc88d087 appears twice. The other line is game/script files/3_farmersmarket.rpy:277
+
+File "game/script files/3_pursuit.rpy", line 800: Line with id going_home_from_market_7b88f963 appears twice. The other line is game/script files/3_farmersmarket.rpy:279
+
+File "game/script files/3_pursuit.rpy", line 802: Line with id going_home_from_market_0de3a340 appears twice. The other line is game/script files/3_farmersmarket.rpy:281
+
+File "game/script files/3_pursuit.rpy", line 813: Line with id home_stranger_bbae1d2f appears twice. The other line is game/script files/3_farmersmarket.rpy:292
+
+File "game/script files/3_pursuit.rpy", line 815: Line with id home_stranger_638445df appears twice. The other line is game/script files/3_farmersmarket.rpy:294
+
+File "game/script files/3_pursuit.rpy", line 817: Line with id home_stranger_70f167bd appears twice. The other line is game/script files/3_farmersmarket.rpy:296
+
+File "game/script files/3_pursuit.rpy", line 819: Line with id home_stranger_0fe584d6 appears twice. The other line is game/script files/3_farmersmarket.rpy:298
+
+File "game/script files/3_pursuit.rpy", line 823: Line with id younger_women_4c5b388d appears twice. The other line is game/script files/3_farmersmarket.rpy:302
+
+File "game/script files/3_pursuit.rpy", line 825: Line with id younger_women_1fe1e893 appears twice. The other line is game/script files/3_farmersmarket.rpy:304
+
+File "game/script files/3_pursuit.rpy", line 827: Line with id younger_women_34224b29 appears twice. The other line is game/script files/3_farmersmarket.rpy:306
+
+File "game/script files/3_pursuit.rpy", line 829: Line with id younger_women_94488e9d appears twice. The other line is game/script files/3_farmersmarket.rpy:308
+
+File "game/script files/3_pursuit.rpy", line 835: Line with id home_push_e91f65d5 appears twice. The other line is game/script files/3_farmersmarket.rpy:314
+
+File "game/script files/3_pursuit.rpy", line 837: Line with id home_push_31f378f4 appears twice. The other line is game/script files/3_farmersmarket.rpy:316
+
+File "game/script files/3_pursuit.rpy", line 839: Line with id home_push_850e0cae appears twice. The other line is game/script files/3_farmersmarket.rpy:318
+
+File "game/script files/3_pursuit.rpy", line 841: Line with id home_push_d5add469 appears twice. The other line is game/script files/3_farmersmarket.rpy:320
+
+File "game/script files/3_pursuit.rpy", line 843: Line with id home_push_380fd50e appears twice. The other line is game/script files/3_farmersmarket.rpy:322
+
+File "game/script files/3_pursuit.rpy", line 845: Line with id home_push_53ae43d5 appears twice. The other line is game/script files/3_farmersmarket.rpy:324
+
+File "game/script files/3_pursuit.rpy", line 847: Line with id home_push_266bea88 appears twice. The other line is game/script files/3_farmersmarket.rpy:326
+
+File "game/script files/3_pursuit.rpy", line 849: Line with id home_push_7ab6383c appears twice. The other line is game/script files/3_farmersmarket.rpy:328
+
+File "game/script files/3_pursuit.rpy", line 851: Line with id home_push_5c76f370 appears twice. The other line is game/script files/3_farmersmarket.rpy:330
+
+File "game/script files/3_pursuit.rpy", line 853: Line with id home_push_8c4f7eee appears twice. The other line is game/script files/3_farmersmarket.rpy:332
+
+File "game/script files/3_pursuit.rpy", line 855: Line with id home_push_9cc6ac76 appears twice. The other line is game/script files/3_farmersmarket.rpy:334
+
+File "game/script files/3_pursuit.rpy", line 857: Line with id home_push_59cc0688 appears twice. The other line is game/script files/3_farmersmarket.rpy:336
+
+File "game/script files/3_pursuit.rpy", line 859: Line with id home_push_99729f53 appears twice. The other line is game/script files/3_farmersmarket.rpy:338
+
+File "game/script files/3_pursuit.rpy", line 861: Line with id home_push_e6c24877 appears twice. The other line is game/script files/3_farmersmarket.rpy:340
+
+File "game/script files/3_pursuit.rpy", line 863: Line with id home_push_3d8701a5 appears twice. The other line is game/script files/3_farmersmarket.rpy:342
+
+File "game/script files/3_pursuit.rpy", line 865: Line with id home_push_ace1d738 appears twice. The other line is game/script files/3_farmersmarket.rpy:344
+
+File "game/script files/3_pursuit.rpy", line 867: Line with id home_push_a1029f5e appears twice. The other line is game/script files/3_farmersmarket.rpy:346
+
+File "game/script files/3_pursuit.rpy", line 869: Line with id home_push_f26635e9 appears twice. The other line is game/script files/3_farmersmarket.rpy:348
+
+File "game/script files/3_pursuit.rpy", line 871: Line with id home_push_212713ab appears twice. The other line is game/script files/3_farmersmarket.rpy:350
+
+File "game/script files/3_pursuit.rpy", line 873: Line with id home_push_c24b4679 appears twice. The other line is game/script files/3_farmersmarket.rpy:352
+
+File "game/script files/3_pursuit.rpy", line 875: Line with id home_push_c8775788 appears twice. The other line is game/script files/3_farmersmarket.rpy:354
+
+File "game/script files/3_pursuit.rpy", line 877: Line with id home_push_fd09d352 appears twice. The other line is game/script files/3_farmersmarket.rpy:356
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Nov 30 20:04:48 2024
+Sun Dec  1 02:01:45 2024

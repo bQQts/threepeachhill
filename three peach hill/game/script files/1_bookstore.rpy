@@ -1,11 +1,11 @@
 label bookstore:
-    scene black with dissolve
+    scene brown with dissolve
     pause 1.5
     show date_animated_ch1 with dissolve # July 10
     pause 2.5
     stop music fadeout 3.0
     hide date_animated_ch1 with Dissolve(2)
-    scene black with dissolve
+    scene brown with dissolve
     pause 1.0
     show bg bookstore with dissolve
     play music bookstore_vibing fadein 1.0

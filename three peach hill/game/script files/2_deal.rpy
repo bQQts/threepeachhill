@@ -33,7 +33,7 @@ label deal:
 
     e neutral "\"Really...?\""
 
-    scene black with dissolve
+    scene brown with dissolve
     stop music fadeout 1.0
     pause 2.0
     show bg bookstore with dissolve
@@ -165,13 +165,15 @@ label deal_cont:
 
     e neutral "\"That's like, next month, right?\""
 
-    a neutral "\"Yes, {b}the evening of the 22nd{/b}. That a problem?\""
+    a neutral "\"Yes, {color=#F87B4E}the evening of the 22nd{/color}. That a problem?\""
 
     "She pulls out her phone, presumably to check her calendar, and bites her lip. It's more distracting than I care to admit."
 
     e happy "\"It could be... but I said I'd fix your lamp, and that's a promise. I'll make it work. Can I borrow your pen?\""
 
     "I wordlessly pass her the marker, which has a plastic spoon taped to it. She takes it and signs the bottom of the page."
+
+    ##in a future version it would be cool to have art/simple animation of the contract going golden
 
     "Our signatures ignite in a heatless golden flame that traces the lines of ink."
 
@@ -205,5 +207,5 @@ label deal_cont:
 
     a tsuntsun "\"Wh... what...!\""
 
-    scene black with irisin
+    scene brown with irisin
     jump pursuit
