@@ -95,6 +95,8 @@ label the_rain:
 
     a gloom "\"11... 0... 2.\""
 
+    play sound "sound/keypad-door.flac"
+    
     "I hear the beep of her punching in the code, and the click of the bolt sliding open."
 
     # door sound

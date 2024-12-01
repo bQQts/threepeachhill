@@ -74,6 +74,9 @@ label lost_market_find_out:
     "At home, I put on a jacket and sneakers and pace in the front room, trying to decide where to start looking for her."
     hide bg kitchen with dissolve
     show bg gate with dissolve
+    
+    play sound "sound/Knocking-2.flac"
+    
     "There's a knock at the door, and I run to open it."
 
     a shocked "\"Erin? Oh, Lydia! What are you doing here?\""

@@ -22,6 +22,8 @@ label bookstore:
 
     "It's a family business. It's been here for ages and will surely carry on well beyond my tenure."
     
+    play sound "sound/JingleDoor.flac"
+
     "My ear twitches at the sound of bells jingling, the shop door swinging open slowly. I fidget with the fan some more and say,"
 
 
@@ -96,7 +98,7 @@ label bookstore_Girl:
 
     e sad "\"...well, I hope nothing else got too damaged. I'm really sorry. Let me help clean up!\""
 
-    a neutral "Don't worry about that right now, are you injured?"
+    a neutral "\"Don't worry about that right now, are you injured?\""
 
     "She shakes her head and lets me help her up. Up close, she's even cuter than I realized. My heart flutters."
 

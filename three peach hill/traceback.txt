@@ -1,28 +1,41 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script files/credits.rpy", line 9, in script
-    scene black with dissolve[5]
-  File "game/script files/credits.rpy", line 9, in <module>
-    scene black with dissolve[5]
-TypeError: 'Partial' object is not subscriptable
+OSError: Couldn't find file 'sample-sound.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script files/credits.rpy", line 9, in script
-    scene black with dissolve[5]
-  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1359, in execute
-    paired = renpy.python.py_eval(self.paired)
-  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script files/credits.rpy", line 9, in <module>
-    scene black with dissolve[5]
-TypeError: 'Partial' object is not subscriptable
+  File "renpy/common/_layout/screen_load_save.rpym", line 35, in script
+    $ ui.interact()
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_load_save.rpym", line 35, in <module>
+    $ ui.interact()
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 3018, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1205, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1183, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1125, in periodic_pass
+    c.periodic()
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "C:\Users\mcboots42\Downloads\renpy-8.2.0-sdk\renpy\loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'sample-sound.ogg'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.0.24012702
 Three Peach Hill 1.0
-Sat Nov 30 19:59:18 2024
+Sun Dec  1 12:31:55 2024
