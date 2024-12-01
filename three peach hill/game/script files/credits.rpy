@@ -3,8 +3,11 @@ label credits:
 
     $ credits_speed = 80
     scene brown with dissolve
-    show credits at Move((0.5, 1.0), (0.5, -5.0), credits_speed, xanchor=0.5, yanchor=0) with Pause(credits_speed+40) 
-    stop music fadeout 5.0
+    show credits at Move((0.5, 1.0), (0.5, -3.6), credits_speed, xanchor=0.5, yanchor=0) with Pause(credits_speed+10) 
+    
+    stop music fadeout 10.0
+    scene black with Dissolve(10.0)
+    pause 2.0
 
     #"\"Journey To Ascend\" Kevin MacLeod
     #(incompetech.com)"

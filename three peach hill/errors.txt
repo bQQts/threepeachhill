@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script files/1_bookstore.rpy", line 28: end of line expected.
-    show erin happy at center with dissolve, erin_size
-                                           ^
+File "game/script files/9_date.rpy", line 127: end of line expected.
+    text "To Be Continued :)" xalign 0.5 yalign 0.5
+                              ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Nov 29 15:20:23 2024
+Sat Nov 30 20:04:48 2024

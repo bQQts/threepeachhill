@@ -122,5 +122,13 @@ label confession:
 
     scene black with irisin
     stop music fadeout 3.0
-    pause 5.0
+    pause 1.0
+
+    show tbc with dissolve
+    pause 3.5
+
+    hide tbc with Dissolve(3)
+    pause 2.0
+
+
     jump credits

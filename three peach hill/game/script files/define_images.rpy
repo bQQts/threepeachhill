@@ -93,3 +93,10 @@ image date_animated_ch8:
     "gui/dateanim/ch8_2.png"
     pause 0.1
     repeat
+
+image tbc:
+    "gui/dateanim/tbc_1.png"
+    pause 0.1
+    "gui/dateanim/tbc_2.png"
+    pause 0.1
+    repeat
