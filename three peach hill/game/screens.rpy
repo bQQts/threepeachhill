@@ -852,6 +852,11 @@ style slot_filled_button is slot_button:
 style slot_empty_button is slot_button:
     background "gui/menu/slot_empty_button.png"
 
+style slot_number_text is slot_button_text:
+    properties gui.text_properties("slot_number")
+
+style slot_filled_number_text is slot_number_text:
+    properties gui.text_properties("slot_filled_number")
 
 style file_arrow_button is page_button
 

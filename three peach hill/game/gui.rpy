@@ -253,6 +253,34 @@ define gui.file_slot_cols = 2
 define gui.file_slot_rows = 2
 
 
+define gui.slot_number_text_size = 76
+define gui.slot_number_text_color = "#D1A185"
+define gui.slot_number_text_xalign = 0
+define gui.slot_number_text_yalign = 0
+define gui.slot_number_text_xpos = 0
+define gui.slot_number_text_ypos = 0
+define gui.slot_number_text_xoffset = 180
+define gui.slot_number_text_yoffset = 391
+define gui.slot_number_text_idle_color = "#D1A185"
+define gui.slot_number_text_hover_color = "#E7C0A9"
+define gui.slot_number_text_selected_idle_color = "#D1A185"
+define gui.slot_number_text_selected_hover_color = "#E7C0A9"
+define gui.slot_number_text_outlines = [(absolute(1), "#D1A185", 0, 0)]
+define gui.slot_number_text_hover_outlines = [(absolute(1), "#E7C0A9", 0, 0)]
+
+
+define gui.slot_filled_number_text_size = 80
+define gui.slot_filled_number_text_xoffset = 190
+define gui.slot_filled_number_text_yoffset = 408
+define gui.slot_filled_number_text_color = "#FFB69F"
+define gui.slot_filled_number_text_idle_color = "#FFB69F"
+define gui.slot_filled_number_text_hover_color = "#fff"
+define gui.slot_filled_number_text_selected_idle_color = "#FFB69F"
+define gui.slot_filled_number_text_selected_hover_color = "#fff"
+define gui.slot_filled_number_text_outlines = [(absolute(1), "#FFB69F", 0, 0)]
+define gui.slot_filled_number_text_hover_outlines = [(absolute(1), "#fff", 0, 0)]
+
+
 ## Positioning and Spacing #####################################################
 ##
 ## These variables control the positioning and spacing of various user interface
