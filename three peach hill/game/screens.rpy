@@ -341,20 +341,23 @@ screen menu_navigation():
 
         spacing gui.menu_navigation_spacing
 
-        textbutton _("PLAY") action Start()
+        textbutton _("      PLAY      ") action Start()
 
-        textbutton _("LOAD") action ShowMenu("load")
+        textbutton _("      LOAD      ") action ShowMenu("load")
 
-        textbutton _("OPTIONS") action ShowMenu("preferences")
+        textbutton _("      OPTIONS      ") action ShowMenu("preferences")
 
-        textbutton _("CREDITS") action ShowMenu("about")
+        textbutton _("      CREDITS      ") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("HELP") action ShowMenu("help")
+            textbutton _("      HELP      ") action ShowMenu("help")
+
+image menu_navigation_button_gif = "gui/menu/menu_navigation_button.png"
 
 style menu_navigation_button is default:
     properties gui.button_properties("menu_navigation_button")
+    background "menu_navigation_[prefix_]button_gif"
 
 style menu_navigation_button_text is default:
     subpixel True
@@ -405,7 +408,7 @@ screen navigation():
 
             textbutton _("MAIN MENU") action MainMenu()
 
-        textbutton _("ABOUT") action ShowMenu("about")
+        textbutton _("CREDITS") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
@@ -646,7 +649,7 @@ screen about():
 
         vbox:
 
-            label "[config.name!t]"
+            label "Credits"
             text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
@@ -654,8 +657,6 @@ screen about():
                 text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
-
 
 
 style about_label is gui_label

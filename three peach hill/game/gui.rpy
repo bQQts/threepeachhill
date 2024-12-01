@@ -336,10 +336,6 @@ define gui.unscrollable = "hide"
 
 define menu_font_color = '#CA613F'
 
-# define gui.navigation_button_width = 250
-define gui.menu_navigation_text_size = 85
-define gui.menu_navigation_text_color = menu_font_color
-
 define gui.menu_navigation_button_text_size = 80
 
 define gui.menu_navigation_button_text_idle_color = menu_font_color
@@ -347,11 +343,19 @@ define gui.menu_navigation_button_text_hover_color = menu_font_color
 define gui.menu_navigation_button_text_insensitive_color = menu_font_color
 define gui.menu_navigation_button_text_outlines = [(absolute(.85), menu_font_color, 0, 0)]
 
+define gui.menu_navigation_button_text_kerning = 1.25
+define gui.menu_navigation_button_text_line_spacing = 1.12
+define gui.menu_navigation_button_text_yalign = 0.55
+
+define gui.menu_navigation_button_text_xmargin = 72
+define gui.menu_navigation_button_ypadding = 10
+
 define gui.menu_navigation_xalign = 0.5
 define gui.menu_navigation_yalign = 0.9
 
-## Buttons in the navigation section of the main and game menus.
-define gui.menu_navigation_spacing = 250
+define gui.menu_navigation_spacing = 20
+define gui.menu_navigation_button_ysize = 110
+define gui.menu_navigation_button_height = 110
 
 
 ## Game Menu Navigation ########################################################
