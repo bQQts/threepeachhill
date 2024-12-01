@@ -1,10 +1,10 @@
 label credits:
     play music credits noloop
 
-    $ credits_speed = 160
-    scene brown
-    show credits at Move((0.5, 1.0), (0.5, -5.0), credits_speed, xanchor=0.5, yanchor=0) with Pause(credits_speed+10) 
-
+    $ credits_speed = 80
+    scene brown with dissolve
+    show credits at Move((0.5, 1.0), (0.5, -5.0), credits_speed, xanchor=0.5, yanchor=0) with Pause(credits_speed+40) 
+    stop music fadeout 5.0
 
     #"\"Journey To Ascend\" Kevin MacLeod
     #(incompetech.com)"
