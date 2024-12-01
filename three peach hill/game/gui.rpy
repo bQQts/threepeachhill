@@ -194,8 +194,6 @@ define gui.check_button_borders = Borders(36, 8, 8, 8)
 
 define gui.confirm_button_text_xalign = 0.5
 
-define gui.page_button_borders = Borders(20, 8, 20, 8)
-
 define gui.quick_button_borders = Borders(20, 8, 20, 0)
 define gui.quick_button_text_size = 28
 define gui.quick_button_text_idle_color = gui.idle_small_color
@@ -400,6 +398,16 @@ define gui.navigation_top_button_text_idle_color = '#6C2B20'
 define gui.navigation_top_button_text_outlines = [(absolute(2), '#671716', 0, 0)]
 define gui.navigation_top_button_text_hover_color = '#ffffff'
 define gui.navigation_top_button_text_hover_outlines = [(absolute(3), '#6C2B20', 0, 0)]
+
+## File Slot Menu ##############################################################
+
+define gui.page_button_text_font = gui.text_font
+define gui.page_button_text_size = 84
+define gui.page_button_text_color = "#FFD3B0"
+define gui.page_button_text_selected_color = "#6E523C"
+define gui.page_button_text_selected_hover_color = "#6E523C"
+
+define gui.page_button_text_hover_outlines = [(absolute(2), '#A8795E', 0, 0)]
 
 ## History #####################################################################
 ##
