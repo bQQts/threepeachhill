@@ -519,7 +519,7 @@ style main_menu_version:
 ## This screen is intended to be used with one or more children, which are
 ## transcluded (placed) inside it.
 
-screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+screen game_menu(scroll=None, yinitial=0.0, spacing=0):
 
     style_prefix "game_menu"
 
@@ -528,7 +528,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     frame:
         style "game_menu_outer_frame"
 
-        hbox:
+        vbox:
 
             ## Reserve space for the navigation section.
             frame:
@@ -545,13 +545,14 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
                         mousewheel True
                         draggable True
                         pagekeys True
-
                         side_yfill True
 
-                        vbox:
-                            spacing spacing
-
-                            transclude
+                        frame:
+                            style "game_menu_scroll_frame"
+                            padding (120, 60)
+                            vbox:
+                                spacing spacing
+                                transclude
 
                 elif scroll == "vpgrid":
 
@@ -576,8 +577,6 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
     use navigation
 
-    label title
-
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
 
@@ -585,53 +584,41 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 style game_menu_outer_frame is empty
 style game_menu_navigation_frame is empty
 style game_menu_content_frame is empty
-style game_menu_viewport is gui_viewport
-style game_menu_side is gui_side
+style game_menu_scroll_frame is gui_viewport
 style game_menu_scrollbar is gui_vscrollbar
 
 style game_menu_label is gui_label
 style game_menu_label_text is gui_label_text
 
-style return_button is navigation_button
-style return_button_text is navigation_button_text
-
 style game_menu_outer_frame:
-    bottom_padding 60
-    top_padding 240
-
-style game_menu_navigation_frame:
-    xsize 560
+    xfill True
     yfill True
 
-style game_menu_content_frame:
-    left_margin 80
-    right_margin 40
-    top_margin 20
+style game_menu_navigation_frame:
+    xfill True
+    ysize 300
+    yalign 0
 
-style game_menu_viewport:
-    xsize 1840
-    ysize 900
+style game_menu_content_frame:
+    xfill True
+    yfill True
+    yoffset -120
+
+style game_menu_scroll_frame:
+    xalign 0
+    xsize 1280
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
 
-style game_menu_side:
-    spacing 20
-
 style game_menu_label:
-    xpos 100
+    xalign 0.5
     ysize 240
 
 style game_menu_label_text:
     size gui.title_text_size
     color gui.accent_color
     yalign 0.5
-
-style return_button:
-    xpos 0
-    yalign 1.0
-    yoffset -60
-
 
 ## About screen ################################################################
 ##
@@ -647,7 +634,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("Credits"), scroll="viewport"):
+    use game_menu(scroll="viewport"):
 
         style_prefix "about"
 
@@ -681,117 +668,131 @@ style about_label_text:
 ## www.renpy.org/doc/html/screen_special.html#load
 
 screen save():
-
     tag menu
-
-    use file_slots(_("Save"))
-
+    use file_slots()
 
 screen load():
-
     tag menu
+    use file_slots()
 
-    use file_slots(_("Load"))
+screen file_slots():
+    use game_menu():
+        vbox:
+            fixed:
+                ## This ensures the input will get the enter event before any of the
+                ## buttons do.
+                order_reverse True
+                
+                if not page_type == FilePageType.AUTO:
+                    button style "file_arrow_previous_button" action TrackedFilePagePrevious() activate_sound "sound/Haptics.flac" 
+                if not page_num == 9:
+                    button style "file_arrow_next_button" action TrackedFilePageNext() activate_sound "sound/Haptics.flac" 
 
+                ## The grid of file slots.
+                grid gui.file_slot_cols gui.file_slot_rows:
 
-screen file_slots(title):
-
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
-
-    use game_menu(title):
-
-        fixed:
-
-            ## This ensures the input will get the enter event before any of the
-            ## buttons do.
-            order_reverse True
-
-            ## The page name, which can be edited by clicking on a button.
-            button:
-                style "page_label"
-                activate_sound "sound/Haptics.flac" 
-                key_events True
-                xalign 0.5
-                action page_name_value.Toggle()
-
-                input:
-                    style "page_label_text"
-                    value page_name_value
-
-            ## The grid of file slots.
-            grid gui.file_slot_cols gui.file_slot_rows:
-                style_prefix "slot"
-
-                xalign 0.5
-                yalign 0.5
-
-                spacing gui.slot_spacing
-
-                for i in range(gui.file_slot_cols * gui.file_slot_rows):
-
-                    $ slot = i + 1
-
-                    button:
-                        activate_sound "sound/Haptics.flac" 
-                        action FileAction(slot)
-
-                        has vbox
-
-                        add FileScreenshot(slot) xalign 0.5
-
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                            style "slot_time_text"
-
-                        text FileSaveName(slot):
-                            style "slot_name_text"
-
-                        key "save_delete" action FileDelete(slot)
-
-            ## Buttons to access other pages.
-            vbox:
-                style_prefix "page"
-
-                xalign 0.5
-                yalign 1.0
-
-                hbox:
                     xalign 0.5
+                    yalign 0.5
+
+                    spacing gui.slot_spacing
+
+                    default empty_text = "EMPTY SLOT"
+                    $ slots_order = [0, 2, 1, 3]
+                    for i in slots_order:
+                        python:
+                            slot = i + 1
+                            slot_text = FileTime(slot, format=_("{#file_time}%b %d, %Y %I:%M %p"), empty=_(empty_text))
+                            is_empty = slot_text == empty_text
+                            corrected_page_num = page_num - 1 if page_type == FilePageType.NORMAL else page_num
+                            slot_number = len(slots_order) * (corrected_page_num) + slot
+                            slot_label = "SLOT NO. "
+                            if page_type == FilePageType.QUICKSAVE:
+                                slot_label = "QUICKSAVE "
+                            elif page_type == FilePageType.AUTO:
+                                slot_label = "AUTOSAVE "
+                        
+                        fixed:
+                            xsize gui.slot_button_width
+                            ysize gui.slot_button_height
+
+                            add Transform(
+                                Transform(FileScreenshot(slot), 
+                                        size=(config.thumbnail_width, config.thumbnail_height), 
+                                        fit="cover"), 
+                                crop=(86, 0, 470, config.thumbnail_height)):
+                                    xalign 0
+                                    xoffset 68
+                                    yoffset 14
+
+                            button:
+                                if is_empty:
+                                    style_prefix "slot"
+                                else:
+                                    style_prefix "slot_filled"
+                                activate_sound "sound/Haptics.flac" 
+                                action FileAction(slot)
+
+                                hbox:
+                                    vbox:
+                                        # Represents space for the thumbnail image.
+                                        xsize 530
+
+                                    vbox:
+                                        if is_empty:
+                                            style_prefix "slot"
+                                        else:
+                                            style_prefix "slot_filled"
+
+                                        yalign 0.5
+                                        spacing gui.slot_text_spacing
+
+                                        text slot_text
+                                        if not is_empty:
+                                            text FileSaveName(slot) + "CHAPTER NO."
+                                            text "DURATION"
+
+                                        key "save_delete" action FileDelete(slot)
+
+                                fixed:
+                                    text "[slot_label][slot_number]":
+                                        if is_empty:
+                                            style "slot_number_text"
+                                        else:
+                                            style "slot_filled_number_text"
+
+            frame:
+                style "file_page_navigation"
+
+                ## Buttons to access other pages.
+                hbox:
+                    style_prefix "page"
+
+                    xalign 0.5
+                    yalign 1
 
                     spacing gui.page_spacing
 
-                    textbutton _("<") action FilePagePrevious()
-
                     if config.has_autosave:
-                        textbutton _("{#auto_page}A"):
-                            activate_sound "sound/Haptics.flac" 
-                            action FilePage("auto")
+                        textbutton _("{#auto_page}A") action TrackedFilePage(0, FilePageType.AUTO) activate_sound "sound/Haptics.flac" 
 
                     if config.has_quicksave:
-                        textbutton _("{#quick_page}Q"):
-                            activate_sound "sound/Haptics.flac" 
-                            action FilePage("quick")
+                        textbutton _("{#quick_page}Q") action TrackedFilePage(0, FilePageType.QUICKSAVE) activate_sound "sound/Haptics.flac" 
 
                     ## range(1, 10) gives the numbers from 1 to 9.
                     for page in range(1, 10):
-                        textbutton "[page]":
-                            activate_sound "sound/Haptics.flac" 
-                            action FilePage(page)
+                        textbutton "[page]" action TrackedFilePage(page) activate_sound "sound/Haptics.flac" 
 
-                    textbutton _(">"):
-                        activate_sound "sound/Haptics.flac" 
-                        action FilePageNext()
-
-                if config.has_sync:
-                    if CurrentScreenName() == "save":
-                        textbutton _("Upload Sync"):
-                            activate_sound "sound/Haptics.flac" 
-                            action UploadSync()
-                            xalign 0.5
-                    else:
-                        textbutton _("Download Sync"):
-                            activate_sound "sound/Haptics.flac" 
-                            action DownloadSync()
-                            xalign 0.5
+                    if config.has_sync:
+                        if CurrentScreenName() == "save":
+                            textbutton _("Upload Sync")  style"page_sync_button":
+                                action UploadSync()
+                                activate_sound "sound/Haptics.flac" 
+                                xalign 0.5
+                        else:
+                            textbutton _("Download Sync") style "page_sync_button":
+                                action DownloadSync()
+                                activate_sound "sound/Haptics.flac" 
+                                xalign 0.5
 
 
 style page_label is gui_label
@@ -814,16 +815,49 @@ style page_label_text:
     hover_color gui.hover_color
 
 style page_button:
+    ysize 140
+    xsize 178
     properties gui.button_properties("page_button")
+    background "gui/menu/menu_bar_[prefix_]button.png"
 
 style page_button_text:
+    yalign 0.6
+    xalign 0.5
     properties gui.text_properties("page_button")
+
+style page_sync_button is page_button:
+    xsize 460
+    background None
+style page_sync_button_text is page_button_text
+
+style file_page_navigation:
+    background "gui/menu/menu_bar.png"
+    xsize 2560
+    ysize 140
+    yalign 1
+    ypos 1
+
 
 style slot_button:
     properties gui.button_properties("slot_button")
 
 style slot_button_text:
     properties gui.text_properties("slot_button")
+
+
+style file_arrow_button is page_button
+
+style file_arrow_previous_button is file_arrow_button:
+    background Transform("gui/menu/menu_arrow.png", xzoom=-1)
+    yalign 0.4
+
+style file_arrow_next_button is file_arrow_button:
+    background "gui/menu/menu_arrow.png"
+    xanchor 1.0
+    xalign 1.0
+    xpos 1.0
+    xoffset -36  # ew why do I have to add this? gross
+    yalign 0.4
 
 
 ## Preferences screen ##########################################################
@@ -837,7 +871,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(scroll="viewport"):
 
         vbox:
 
@@ -1010,7 +1044,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+    use game_menu(scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
 
         style_prefix "history"
 
@@ -1097,7 +1131,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Help"), scroll="viewport"):
+    use game_menu(scroll="viewport"):
 
         style_prefix "help"
 
