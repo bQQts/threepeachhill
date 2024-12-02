@@ -76,6 +76,8 @@ label chapter_three:
         "Upstairs, however, has the must and dust of decades of unchanging use. It's where the real business happens."
 
         "I'm fixing my hair in an old mirror in the break room when I hear Joy approach."
+        
+        show joy at right, joy_size
 
         joy "\"Aya! The boys told me someone was here for me, it's good to see you.\""
 
@@ -257,7 +259,9 @@ label chapter_three:
         "I swing open the garden gate and look for her."
 
         "I find her weeding a garden box of catnip, looking blissed as all hell. She has a small, curvaceous figure and wears a painter's jumpsuit with thick yellow gardening gloves."
-
+        
+        show lydia at right, lydia_size
+        
         "Her thick, calico colored hair is pulled back into a low ponytail, and a broad straw sunhat shades her head and shoulders. Holes are cut into the hat to leave room for her ears. Her spotted tail is adorned with a blue ribbon and a little gold bell that jingles lighty as her tail swings back and forth."
 
         "Lydia always looks like she's no older than 40, but I know she's much, much older. Spirits age slowly."
@@ -276,6 +280,7 @@ label chapter_three:
 
         scene brown
         show bg lydias with dissolve
+        show lydia at right, lydia_size
 
         "Inside the cottage, Lydia puts on a kettle of tea and pulls out two handcrafted glazed mugs. We scoop the cobbler into a ceramic pot and put it into the oven to heat."
 
@@ -296,6 +301,7 @@ label chapter_three:
         "I explain that I'm looking for a spell that fixes a broken lamp, and tell her about Erin and the pact she made with me."
 
         lyd "\"Ah, a human girl... tell me more about her.\""
+        hide lydia with dissolve
 
 label tell_lydia_about_erin:
 
@@ -316,16 +322,16 @@ label tell_lydia_about_erin:
             jump lydia_change_subject
 
     label shes_clumsy:
-
+        show lydia at right, lydia_size
         lyd "\"Well, obviously.\""
 
         lyd "\"Is that all?\""
-
+        hide lydia with dissolve
         jump tell_lydia_about_erin
 
 
     label shes_bold:
-
+        show lydia at right, lydia_size
         a blush "\"I liked her. The way she was so resolved to pay me back was charming. And she was so bold when she left.\""
 
         lyd "\"How so?\""
@@ -355,12 +361,14 @@ label tell_lydia_about_erin:
         "Lydia primly sips her tea. I know she's probably right, but I just don't know..."
 
         "I guess I'll just have to see what happens if I run into her."
+        
+        hide lydia with dissolve
 
         jump cobbler_end
 
 
     label shes_cute:
-
+        show lydia at right, lydia_size
         a blush "\"Really cute. Clumsy and cute.\""
 
         lyd "\"Oh my, does little Aya have a crush?\""
@@ -376,17 +384,19 @@ label tell_lydia_about_erin:
         lyd "\"Just saying!\""
 
         "I grumble something into my teacup and she pretends to not hear me, ears swiveled away."
-
+        hide lydia with dissolve
         jump cobbler_end
 
 
     label lydia_change_subject:
-
+        show lydia at right, lydia_size
         "I don't really want to talk about Erin..."
 
         a tsuntsun "\"She's just some girl, I don't have much to say about her.\""
 
         "Which is more or less true. I don't like the way Lydia looks at me, though. She's got this \"knowing old woman\" expression that looks out of place on her unlined face."
+        
+        hide lydia with dissolve
 
         jump cobbler_end
 

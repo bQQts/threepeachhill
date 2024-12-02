@@ -10,5 +10,15 @@ transform erin_size:
     
 transform lydia_size:
     subpixel True
-    zoom 0.4
-    yoffset -150
+    zoom 0.7
+    yoffset -300
+
+transform joy_size:
+    subpixel True
+    zoom 0.7
+    yoffset -300
+
+transform oni_size:
+    subpixel True
+    zoom 0.7
+    yoffset -300

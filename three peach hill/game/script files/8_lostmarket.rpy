@@ -82,7 +82,7 @@ label chapter_eight:
         "There's a knock at the door, and I run to open it."
 
         a shocked "\"Erin? Oh, Lydia! What are you doing here?\""
-
+        show lydia night at right, lydia_size
         "It's not who I was hoping it would be, and judging by Lydia's expression, I'm not about to be happy that she's here either."
 
         lyd "\"You haven't found a spell to fix that lamp yet, right?\""
@@ -106,6 +106,8 @@ label chapter_eight:
         a neutral "\"I need to find her, fast. Where's the entrance?\""
 
         lyd "\"The alley between the grocer and the barber. Be safe, and be quick. I hope you find her in time.\""
+        
+        hide lydia with dissolve
 
         "I run."
 
@@ -185,6 +187,7 @@ label chapter_eight:
             linear 0.85 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.42)*HueMatrix(0.0) 
             linear 5.00 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.42)*HueMatrix(0.0) 
             linear 1.15 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+        show oni night at center, oni_size
         show erin neutral at right, erin_size
 
         with Pause(3.10)

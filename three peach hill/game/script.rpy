@@ -33,6 +33,7 @@ label start:
 
 label startbutitsalabel:
 
+
     #play music ### fadein 1.5  ## uncomment this line and comment the next one to test out songs at beginning of game lol
 
     jump bookstore
