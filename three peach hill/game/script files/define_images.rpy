@@ -78,6 +78,16 @@ image cg piggyback = "cg_piggyback.png"
 
 image credits = "gui/credits.png"
 
+
+image plusone = "gui/PLUS ONE.png"
+#        subpixel True anchor (-599, -743) 
+
+#image plusoneanimation:
+
+
+
+
+
 image main_menu_animated:
     "gui/main_menu_anim/1.png"
     pause 0.14

@@ -59,6 +59,17 @@ label chapter_three_b:
 
             "Lavender and larkspur":
                 $ kind_points += 1
+                show plusone:
+                    subpixel True
+                    xanchor -1595
+                    #xanchor -599 
+                    yanchor -643 alpha 0.0 
+                    linear 0.18 yanchor -535 alpha 1.0 
+                    linear 0.25 yanchor -439 alpha 1.0 
+                    linear 0.15 yanchor -351 alpha 0.0 
+                with Pause(0.68)
+                show plusone:
+                    yanchor -251 alpha 0.0
                 jump farmers_market_lavender
 
         label farmers_market_marigold:

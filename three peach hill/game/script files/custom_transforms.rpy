@@ -22,3 +22,7 @@ transform oni_size:
     subpixel True
     zoom 0.7
     yoffset -300
+
+transform plusone_location:
+    subpixel True
+    anchor (-599, -743) 

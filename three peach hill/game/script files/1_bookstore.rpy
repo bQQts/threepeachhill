@@ -16,6 +16,7 @@ label chapter_one:
         "It's been a slow summer. Slower than usual. The buzzing of cicadas and unyielding humidity drown our little town in syrupy hot summer."
 
         "The familiar sound seems to say, \"You have all the time in the world.\" A clock hanging by the cluttered storefront counter slowly {i}tic tic tics{/i} in agreement."
+
         stop sound fadeout 3.0
         "I adjust the angle of my desk fan to get a better breeze. It helps, but sweat still sticks my crisp white dress shirt to my skin."
 
@@ -77,6 +78,17 @@ label chapter_one:
 
             "Check on the girl":
                     $ kind_points += 1
+                    show plusone:
+                        subpixel True
+                        xanchor -1595
+                        #xanchor -599 
+                        yanchor -643 alpha 0.0 
+                        linear 0.18 yanchor -535 alpha 1.0 
+                        linear 0.25 yanchor -439 alpha 1.0 
+                        linear 0.15 yanchor -351 alpha 0.0 
+                    with Pause(0.68)
+                    show plusone:
+                        yanchor -251 alpha 0.0
                     jump bookstore_Girl
 
             "Check the lamp":
@@ -140,6 +152,17 @@ label chapter_one:
             menu:
                 "Grab her hand":
                     $ kind_points += 1
+                    show plusone:
+                        subpixel True
+                        xanchor -1595
+                        #xanchor -599 
+                        yanchor -643 alpha 0.0 
+                        linear 0.18 yanchor -535 alpha 1.0 
+                        linear 0.25 yanchor -439 alpha 1.0 
+                        linear 0.15 yanchor -351 alpha 0.0 
+                    with Pause(0.68)
+                    show plusone:
+                        yanchor -251 alpha 0.0
                     jump lamp_grab
 
                 "Freeze in surprise":

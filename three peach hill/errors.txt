@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 418: Line is indented, but the preceding textbutton statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    activate_sound "sound/Haptics.flac" 
+File "game/script files/1_bookstore.rpy", line 81: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    show plusone:
     ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Dec  1 14:03:42 2024
+Mon Dec  2 16:50:12 2024
