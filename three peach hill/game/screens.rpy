@@ -347,6 +347,7 @@ style quick_button_text:
 ################################################################################
 ## Main Menu Navigation
 ################################################################################
+
 screen menu_navigation():
 
     hbox:
@@ -357,17 +358,27 @@ screen menu_navigation():
 
         spacing gui.menu_navigation_spacing
 
-        textbutton _("      PLAY      ") action Start() activate_sound "sound/Haptics.flac" 
+        textbutton _("      PLAY      "): 
+            activate_sound "sound/Haptics.flac" 
+            action Start()
 
-        textbutton _("      LOAD      ") action ShowMenu("load") activate_sound "sound/Haptics.flac" 
+        textbutton _("      LOAD      "):
+            activate_sound "sound/Haptics.flac" 
+            action ShowMenu("load")
 
-        textbutton _("      OPTIONS      ") action ShowMenu("preferences") activate_sound "sound/Haptics.flac" 
+        textbutton _("      OPTIONS      "):
+            activate_sound "sound/Haptics.flac" 
+            action ShowMenu("options")
 
-        textbutton _("      CREDITS      ") action ShowMenu("about") activate_sound "sound/Haptics.flac" 
+        textbutton _("      CREDITS      "):
+            activate_sound "sound/Haptics.flac" 
+            action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("      HELP      ") action ShowMenu("help") activate_sound "sound/Haptics.flac" 
+            textbutton _("      HELP      "):
+                activate_sound "sound/Haptics.flac" 
+                action ShowMenu("help")
 
 image menu_navigation_button_gif = "gui/menu/menu_navigation_button.png"
 
@@ -391,7 +402,10 @@ style menu_navigation_button_text is default:
 screen navigation():
 
     # Add the fancy twirly return icon here later.
-    textbutton _("RETURN") style "navigation_top_left_button" action Return()
+    textbutton _("RETURN"):
+        style "navigation_top_left_button"
+        activate_sound "sound/Haptics.flac" 
+        action Return()
 
     #vbox:
     hbox:
@@ -402,19 +416,33 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        textbutton _("RETURN") style "navigation_top_left_button" action Return() activate_sound "sound/Haptics.flac" 
-
-        textbutton _("SAVE") action ShowMenu("save") activate_sound "sound/Haptics.flac" 
-        textbutton _("LOAD") action ShowMenu("load") activate_sound "sound/Haptics.flac" 
-        textbutton _("OPTIONS") action ShowMenu("preferences") activate_sound "sound/Haptics.flac" 
+        # Switch between Save/Load based on which one makes sense.
+        textbutton _("SAVE"):
+            activate_sound "sound/Haptics.flac" 
+            action ShowMenu("save")
+        textbutton _("LOAD"):
+            activate_sound "sound/Haptics.flac" 
+            action ShowMenu("load")
+        textbutton _("OPTIONS"):
+            activate_sound "sound/Haptics.flac" 
+            action ShowMenu("options")
 
     if _in_replay:
-        textbutton _("END REPLAY") style "navigation_top_right_button" action EndReplay(confirm=True) activate_sound "sound/Haptics.flac" 
+        textbutton _("END REPLAY"):
+            style "navigation_top_right_button"
+            activate_sound "sound/Haptics.flac" 
+            action EndReplay(confirm=True)
     elif renpy.variant("pc"):
         ## The quit button is banned on iOS and unnecessary on Android and Web.
-        textbutton _("EXIT GAME") style "navigation_top_right_button" action Quit(confirm=not main_menu) activate_sound "sound/Haptics.flac" 
+        textbutton _("EXIT GAME"):
+            style "navigation_top_right_button" 
+            activate_sound "sound/Haptics.flac" 
+            action Quit(confirm=not main_menu)
     else:
-        textbutton _("MAIN MENU") style "navigation_top_right_button" action MainMenu() activate_sound "sound/Haptics.flac" 
+        textbutton _("MAIN MENU"):
+            style "navigation_top_right_button" 
+            activate_sound "sound/Haptics.flac" 
+            action MainMenu()
 
 
 style navigation_button is gui_button
@@ -729,6 +757,7 @@ screen file_slots():
                                     style_prefix "slot"
                                 else:
                                     style_prefix "slot_filled"
+
                                 activate_sound "sound/Haptics.flac" 
                                 action FileAction(slot)
 
@@ -773,14 +802,20 @@ screen file_slots():
                     spacing gui.page_spacing
 
                     if config.has_autosave:
-                        textbutton _("{#auto_page}A") action TrackedFilePage(0, FilePageType.AUTO) activate_sound "sound/Haptics.flac" 
+                        textbutton _("{#auto_page}A"):
+                            activate_sound "sound/Haptics.flac" 
+                            action TrackedFilePage(0, FilePageType.AUTO)
 
                     if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action TrackedFilePage(0, FilePageType.QUICKSAVE) activate_sound "sound/Haptics.flac" 
+                        textbutton _("{#quick_page}Q"):
+                            activate_sound "sound/Haptics.flac" 
+                            action TrackedFilePage(0, FilePageType.QUICKSAVE)
 
                     ## range(1, 10) gives the numbers from 1 to 9.
                     for page in range(1, 10):
-                        textbutton "[page]" action TrackedFilePage(page) activate_sound "sound/Haptics.flac" 
+                        textbutton "[page]":
+                            activate_sound "sound/Haptics.flac" 
+                            action TrackedFilePage(page)
 
                     if config.has_sync:
                         if CurrentScreenName() == "save":
@@ -793,6 +828,7 @@ screen file_slots():
                                 activate_sound "sound/Haptics.flac" 
                                 action DownloadSync()
                                 xalign 0.5
+
 
 style page_label is gui_label
 style page_label_text is gui_label_text
@@ -896,9 +932,9 @@ screen options():
         
     # Add the buttons to flip through to different pages.
     if not options_page_type == OptionsPageType.SLIDERS:
-        button style "file_arrow_previous_button" action OpenOptionsPageSliders()
+        button style "file_arrow_previous_button" action OpenOptionsPageSliders() activate_sound "sound/Haptics.flac" 
     if not options_page_type == OptionsPageType.BUTTONS:
-        button style "file_arrow_next_button" action OpenOptionsPageButtons()
+        button style "file_arrow_next_button" action OpenOptionsPageButtons() activate_sound "sound/Haptics.flac" 
 
 screen options_sliders():
     hbox:
@@ -928,6 +964,7 @@ screen options_sliders():
 
                 textbutton _("Mute All"):
                     action Preference("all mute", "toggle")
+                    activate_sound "sound/Haptics.flac" 
                     style "mute_all_button"
         vbox:
             label _("TEXT SPEED") style "options_section_label"
@@ -944,15 +981,25 @@ screen options_buttons():
     hbox:
         vbox:
             label _("TEXT SKIP") style "options_section_label"
-            textbutton _("Unseen Text") action Preference("skip", "toggle")
-            textbutton _("After Choices") action Preference("after choices", "toggle")
-            textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+            textbutton _("Unseen Text"):
+                action Preference("skip", "toggle") 
+                activate_sound "sound/Haptics.flac" 
+            textbutton _("After Choices"):
+                action Preference("after choices", "toggle") 
+                activate_sound "sound/Haptics.flac" 
+            textbutton _("Transitions"):
+                action InvertSelected(Preference("transitions", "toggle")) 
+                activate_sound "sound/Haptics.flac" 
         
         if renpy.variant("pc") or renpy.variant("web"):
             vbox:
                 label _("GAME DISPLAY") style "options_section_label"
-                textbutton _("Window") action Preference("display", "window")
-                textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                textbutton _("Window"):
+                    action Preference("display", "window") 
+                    activate_sound "sound/Haptics.flac" 
+                textbutton _("Fullscreen"):
+                    action Preference("display", "fullscreen") 
+                    activate_sound "sound/Haptics.flac" 
 
 style options_hbox is hbox:
     yfill True
@@ -1149,11 +1196,15 @@ screen help():
 
             hbox:
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
+                textbutton _("Keyboard"):
+                    activate_sound "sound/Haptics.flac" 
+                    action SetScreenVariable("device", "keyboard")
                 textbutton _("Mouse") action SetScreenVariable("device", "mouse")
 
                 if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+                    textbutton _("Gamepad"):
+                        activate_sound "sound/Haptics.flac" 
+                        action SetScreenVariable("device", "gamepad")
 
             if device == "keyboard":
                 use keyboard_help
@@ -1263,7 +1314,9 @@ screen gamepad_help():
         label _("Y/Top Button")
         text _("Hides the user interface.")
 
-    textbutton _("Calibrate") action GamepadCalibrate()
+    textbutton _("Calibrate"):
+        activate_sound "sound/Haptics.flac" 
+        action GamepadCalibrate()
 
 
 style help_button is gui_button
@@ -1328,8 +1381,12 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 200
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                textbutton _("Yes"):
+                    activate_sound "sound/Haptics.flac" 
+                    action yes_action
+                textbutton _("No"):
+                    activate_sound "sound/Haptics.flac" 
+                    action no_action
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
@@ -1486,6 +1543,7 @@ screen nvl(dialogue, items=None):
         for i in items:
 
             textbutton i.caption:
+                activate_sound "sound/Haptics.flac" 
                 action i.action
                 style "nvl_button"
 
@@ -1688,12 +1746,12 @@ screen quick_menu():
                 activate_sound "sound/Haptics.flac" 
                 action Rollback()
             textbutton _("Skip"):
-                activate_sound "sound/Haptics.flac" 
+                activate_sound "sound/Haptics.flac"  
                 action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto"):
+            textbutton _("Auto"): 
                 activate_sound "sound/Haptics.flac" 
                 action Preference("auto-forward", "toggle")
-            textbutton _("Menu"):
+            textbutton _("Menu"): 
                 activate_sound "sound/Haptics.flac" 
                 action ShowMenu()
 
