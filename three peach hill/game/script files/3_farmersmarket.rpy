@@ -1,371 +1,373 @@
-label farmers_market:
-    pause 1.5
-    show date_animated_ch3B with dissolve  # July 27
-    pause 2.5
-    hide date_animated_ch3B with Dissolve(2)
+label chapter_three_b:
+    $ chapter_num = 3
+    label farmers_market:
+        pause 1.5
+        show date_animated_ch3B with dissolve  # July 27
+        pause 2.5
+        hide date_animated_ch3B with Dissolve(2)
 
 
-    # Screen that says a week passes ## wait I'm not sure if its a week from the 20th or a week from the 27th....... D:
-    # Farmers Market title screen
+        # Screen that says a week passes ## wait I'm not sure if its a week from the 20th or a week from the 27th....... D:
+        # Farmers Market title screen
 
-    scene brown with dissolve
-    stop music fadeout 2.0
-    show bg market with dissolve
-    play music quiet_village fadein .5
-    
-    "The smell of food wafts across the town on a light breeze that carries away the lingering summer's humidity."
+        scene brown with dissolve
+        stop music fadeout 2.0
+        show bg market with dissolve
+        play music quiet_village fadein .5
+        
+        "The smell of food wafts across the town on a light breeze that carries away the lingering summer's humidity."
 
-    "As I walk down the street toward the town's central plaza, I hear the hum of small generators and the bustling of people a couple blocks away."
+        "As I walk down the street toward the town's central plaza, I hear the hum of small generators and the bustling of people a couple blocks away."
 
-    "The farmers market is in full swing for harvest season."
+        "The farmers market is in full swing for harvest season."
 
-    "There are vendors selling early peaches from Joy's orchard, while others sell the last of the season's blackberries. The usual veggie stands have a bounty of fresh treasures."
-    
-    "A honey merchant has paired up with a woodworker who's selling wooden wands and bread bowls to go with the honey."
+        "There are vendors selling early peaches from Joy's orchard, while others sell the last of the season's blackberries. The usual veggie stands have a bounty of fresh treasures."
+        
+        "A honey merchant has paired up with a woodworker who's selling wooden wands and bread bowls to go with the honey."
 
-    "Rows of tents offer unique, handcrafted goods from merchants in the surrounding regions who've come to this town to peddle their wares."
+        "Rows of tents offer unique, handcrafted goods from merchants in the surrounding regions who've come to this town to peddle their wares."
 
-    "There's even a fox spirit selling lucky talismans. They're real magic, though the workings are quite small; it's better not to swing the karmic balance too far in any direction unless you really know what you're doing."
+        "There's even a fox spirit selling lucky talismans. They're real magic, though the workings are quite small; it's better not to swing the karmic balance too far in any direction unless you really know what you're doing."
 
-    "The first farmers market of the season is always a big one."
+        "The first farmers market of the season is always a big one."
 
-    "I pick up some veggies, a cup of black coffee, and buy a loaf of bread from a baker who drove 3 hours to be here. It's divine."
+        "I pick up some veggies, a cup of black coffee, and buy a loaf of bread from a baker who drove 3 hours to be here. It's divine."
 
-    "After a good lap around the produce side of the market, my bags are getting heavy. I head to a flower stand I've bought from in the past in search of my usual marigold and sunflowers."
+        "After a good lap around the produce side of the market, my bags are getting heavy. I head to a flower stand I've bought from in the past in search of my usual marigold and sunflowers."
 
-    pause 2.0
+        pause 2.0
 
-    "I hear her voice before I see her."
+        "I hear her voice before I see her."
 
-    e happy "\"Coming right up! Let me get those bagged for you.\""
+        e happy "\"Coming right up! Let me get those bagged for you.\""
 
-    "A customer hands Erin a bouquet of daisies and she turns around to place it in a water-sealed paper bag."
+        "A customer hands Erin a bouquet of daisies and she turns around to place it in a water-sealed paper bag."
 
-    "She's smiling when she returns the bouquet to the customer, then sees me and waves."
+        "She's smiling when she returns the bouquet to the customer, then sees me and waves."
 
-    e excited "\"Aya! Are you here to get flowers??\""
+        e excited "\"Aya! Are you here to get flowers??\""
 
-    a happy "\"I sure am. I didn't expect to see you here!\""
+        a happy "\"I sure am. I didn't expect to see you here!\""
 
-    e happy "\"It's a part time gig! I helped unload everything. I could probably give you some ideas on what looked the prettiest today! What would you think about this little bouquet of lavender and larkspur?\""
+        e happy "\"It's a part time gig! I helped unload everything. I could probably give you some ideas on what looked the prettiest today! What would you think about this little bouquet of lavender and larkspur?\""
 
-    menu:
-        "Should I get my usual bouquet, or go for the lavender and larkspur like Erin suggests?"
+        menu:
+            "Should I get my usual bouquet, or go for the lavender and larkspur like Erin suggests?"
 
-        "Marigold and sunflowers":
-            jump farmers_market_marigold
+            "Marigold and sunflowers":
+                jump farmers_market_marigold
 
-        "Lavender and larkspur":
-            $ kind_points += 1
-            jump farmers_market_lavender
+            "Lavender and larkspur":
+                $ kind_points += 1
+                jump farmers_market_lavender
 
-    label farmers_market_marigold:
+        label farmers_market_marigold:
 
-        a "\"Thanks, but I think I'll get my usual. A bouquet each of marigold and sunflowers, please.\""
+            a "\"Thanks, but I think I'll get my usual. A bouquet each of marigold and sunflowers, please.\""
 
-        e "\"Oooh how pretty! I love that, I'll bag those for you.\""
+            e "\"Oooh how pretty! I love that, I'll bag those for you.\""
 
-        jump farmers_market_cont
+            jump farmers_market_cont
 
-    label farmers_market_lavender:
+        label farmers_market_lavender:
 
-        a "\"That's a good suggestion, I'll take the lavender and larkspur.\""
+            a "\"That's a good suggestion, I'll take the lavender and larkspur.\""
 
-        "She beams at me and nearly bounces to fetch a bouquet of purple and blue sprigs."
+            "She beams at me and nearly bounces to fetch a bouquet of purple and blue sprigs."
 
-        e blush "\"Here, this is my favorite one from this morning! Do you like it??\""
+            e blush "\"Here, this is my favorite one from this morning! Do you like it??\""
 
-        a excited "\"I love it.\""
+            a excited "\"I love it.\""
 
-        jump farmers_market_cont
+            jump farmers_market_cont
 
-label farmers_market_cont:
+    label farmers_market_cont:
 
-    "Erin bags the flowers and waves over the flower merchant so I can pay for them."
+        "Erin bags the flowers and waves over the flower merchant so I can pay for them."
 
-    jeff "Oh, hello there Aya!"
+        jeff "Oh, hello there Aya!"
 
-    e neutral "\"You know Aya?\""
+        e neutral "\"You know Aya?\""
 
-    jeff "\"Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she comes by almost every weekend during the market season!\""
+        jeff "\"Kiddo, you forget I've been selling here for ages. Aya's a long time customer, she comes by almost every weekend during the market season!\""
 
-    e happy "\"Oh, duh! Aya, you must really like flowers!\""
+        e happy "\"Oh, duh! Aya, you must really like flowers!\""
 
-    "I chuckle. Jeff gives the two of us a knowing look."
+        "I chuckle. Jeff gives the two of us a knowing look."
 
-    jeff "\"You know, Erin, if you'd like to call it a day here I'm sure Aya would be happy to show you around the rest of the market.\""
+        jeff "\"You know, Erin, if you'd like to call it a day here I'm sure Aya would be happy to show you around the rest of the market.\""
 
-    "He winks at me on the sly."
+        "He winks at me on the sly."
 
-    a neutral "\"Oh no, Jeff, if you need the extra help I really don't want to pull her away. I was just stopping by to get flowers—\""
+        a neutral "\"Oh no, Jeff, if you need the extra help I really don't want to pull her away. I was just stopping by to get flowers—\""
 
-    jeff "\"Nonsense, we'll be just fine. She was a huge help unloading everything this morning, but we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market.\""
+        jeff "\"Nonsense, we'll be just fine. She was a huge help unloading everything this morning, but we can take it from here. Kiddo, let me pay you now so you have some change for the rest of the market.\""
 
-    e excited "\"Really?! Thank you! This is great!!\""
+        e excited "\"Really?! Thank you! This is great!!\""
 
-    "She unties her apron and lays it over the back of a folding chair behind the sales table, slings her book bag over her shoulder, then comes around to join me."
+        "She unties her apron and lays it over the back of a folding chair behind the sales table, slings her book bag over her shoulder, then comes around to join me."
 
-    e happy "\"Won't you show me around the market? I bet you know where all the good stuff is!\""
+        e happy "\"Won't you show me around the market? I bet you know where all the good stuff is!\""
 
-    a tsuntsun "\"I suppose...\""
+        a tsuntsun "\"I suppose...\""
 
-    "Jeff comes back with an envelope for Erin and a big grin for us both."
+        "Jeff comes back with an envelope for Erin and a big grin for us both."
 
-    jeff "\"You two take care, now!\""
+        jeff "\"You two take care, now!\""
 
-    a happy "\"Thanks, old man. Likewise!\""
+        a happy "\"Thanks, old man. Likewise!\""
 
-    "I tuck the flowers into the larger of my tote bags and heft them so the straps rest more comfortably on my shoulders."
+        "I tuck the flowers into the larger of my tote bags and heft them so the straps rest more comfortably on my shoulders."
 
-    "Erin notices the motion and offers a hand."
+        "Erin notices the motion and offers a hand."
 
-    e neutral "\"Let me carry your bags, okay? You must be tired from carrying them around all day.\""
+        e neutral "\"Let me carry your bags, okay? You must be tired from carrying them around all day.\""
 
-    "I start to protest, but she insists, and I end up giving her the two smaller totes while I hang on to the largest one with the flowers."
+        "I start to protest, but she insists, and I end up giving her the two smaller totes while I hang on to the largest one with the flowers."
 
-    scene bg market
-    stop music fadeout 3.0
-    scene brown with dissolve
-    pause 1.5
-    show bg market with dissolve
-    play music happy_village fadein 1.5 noloop
-    pause 2.0
+        scene bg market
+        stop music fadeout 3.0
+        scene brown with dissolve
+        pause 1.5
+        show bg market with dissolve
+        play music happy_village fadein 1.5 noloop
+        pause 2.0
 
-    "We walk through the market, trying food samples and looking at crafts and jewelry."
+        "We walk through the market, trying food samples and looking at crafts and jewelry."
 
-    "After a while, Erin takes a detour to the restrooms and leaves the bags with me. I decide to look around a bit, and one booth catches my eye."
+        "After a while, Erin takes a detour to the restrooms and leaves the bags with me. I decide to look around a bit, and one booth catches my eye."
 
-    "It's a table with hair pins of all different styles. I find a brass pin with a cast sunflower at the end of it. It's just my style."
-    
-    "I almost check out then, but then I see that one pin is part wood and part resin-cast. The resin looks like it has frozen big rainbow bubbles in time."
+        "It's a table with hair pins of all different styles. I find a brass pin with a cast sunflower at the end of it. It's just my style."
+        
+        "I almost check out then, but then I see that one pin is part wood and part resin-cast. The resin looks like it has frozen big rainbow bubbles in time."
 
-    "(Erin likes to wear her hair up...)"
+        "(Erin likes to wear her hair up...)"
 
-    ##Could add a choice here to buy both or just Aya's pin
+        ##Could add a choice here to buy both or just Aya's pin
 
-    "I hesitate for a moment, then buy both pins."
+        "I hesitate for a moment, then buy both pins."
 
-    "I head back to the spot where Erin left, and I'm waiting there when she returns."
+        "I head back to the spot where Erin left, and I'm waiting there when she returns."
 
-    "She holds a hand out for the bags and I shove the bubble hair pin towards her."
+        "She holds a hand out for the bags and I shove the bubble hair pin towards her."
 
-    e excited "\"What's this?\""
+        e excited "\"What's this?\""
 
-    a blush "\"It's a hair pin. For you.\""
+        a blush "\"It's a hair pin. For you.\""
 
-    "(Please don't make a big deal out of it.)"
+        "(Please don't make a big deal out of it.)"
 
-    "Her eyes shine and she holds it to her chest."
+        "Her eyes shine and she holds it to her chest."
 
-    e blush "\"You didn't have to do that!\""
+        e blush "\"You didn't have to do that!\""
 
-    a tsuntsun "\"It's just a hair pin, don't mention it.\""
+        a tsuntsun "\"It's just a hair pin, don't mention it.\""
 
-    e excited "\"Well, thank you! It's so cute!!!\""
+        e excited "\"Well, thank you! It's so cute!!!\""
 
-    "She tucks it away safely in her book bag and we continue walking around the market."
+        "She tucks it away safely in her book bag and we continue walking around the market."
 
-    scene brown with dissolve
-    pause 2.0
-    jump lamp_talk
+        scene brown with dissolve
+        pause 2.0
+        jump lamp_talk
 
-label lamp_talk:
-    show bg market with dissolve
-    stop music fadeout 3.0
-    pause 1.0
-    queue music quiet_village fadein 0.5
+    label lamp_talk:
+        show bg market with dissolve
+        stop music fadeout 3.0
+        pause 1.0
+        queue music quiet_village fadein 0.5
 
-    a sad "\"So, I wanted to talk about that lamp...\"" 
+        a sad "\"So, I wanted to talk about that lamp...\"" 
 
-    "I trail off, lost in the memory for a moment. My throat feels tight, my chest heavy."
+        "I trail off, lost in the memory for a moment. My throat feels tight, my chest heavy."
 
-    e gloom "\"I'm sorry about that. I really want to make it up to you.\""
+        e gloom "\"I'm sorry about that. I really want to make it up to you.\""
 
-    "Erin picks at a ragged cuticle, her eyes downcast."
+        "Erin picks at a ragged cuticle, her eyes downcast."
 
-    a shocked "\"Oh, I'm not bringing it up for you to keep apologizing!\""
-    
-    a neutral "\"No... I just felt like you should know why it was important to me. Important enough to try to go to the Lost Market, you know?\""
+        a shocked "\"Oh, I'm not bringing it up for you to keep apologizing!\""
+        
+        a neutral "\"No... I just felt like you should know why it was important to me. Important enough to try to go to the Lost Market, you know?\""
 
-    "Erin looks sidelong at me, saying nothing. Just waiting, patient. I have her full attention."
+        "Erin looks sidelong at me, saying nothing. Just waiting, patient. I have her full attention."
 
-    "I clear my throat a little and continue,"
+        "I clear my throat a little and continue,"
 
-    a happy "\"It was my mom's. She made it when I was really young. They kept it up on a high shelf so I wouldn't accidentally... break it.\""
+        a happy "\"It was my mom's. She made it when I was really young. They kept it up on a high shelf so I wouldn't accidentally... break it.\""
 
-    a "\"I didn't really appreciate that lamp 'til I was older. It grew on me, and turning it was like a reminder that mom's still around, lighting up the darkness.\""
+        a "\"I didn't really appreciate that lamp 'til I was older. It grew on me, and turning it was like a reminder that mom's still around, lighting up the darkness.\""
 
-    a "\"It's special to me.\""
+        a "\"It's special to me.\""
 
 
-    if lamp_check == True:
-        jump lamp_talk_apology
-    else:
+        if lamp_check == True:
+            jump lamp_talk_apology
+        else:
+            jump lamp_cont
+
+    label lamp_talk_apology:
+        a sad "\"I'm sorry I didn't check to see if you were okay first, that was kinda shitty of me. It's just... it was another piece of her gone, just like that.\""
+
         jump lamp_cont
 
-label lamp_talk_apology:
-    a sad "\"I'm sorry I didn't check to see if you were okay first, that was kinda shitty of me. It's just... it was another piece of her gone, just like that.\""
+    label lamp_cont:
+        "Erin gently rests her free hand on my shoulder."
 
-    jump lamp_cont
+        e neutral "\"What happened to her? Sorry, that's not really a polite question. You just sound so wistful, but not really sad?\""
 
-label lamp_cont:
-    "Erin gently rests her free hand on my shoulder."
+        "I smile a little at her concern and pat her hand, drawing it down from my shoulder and clasping it between us. Her soft hand is warm and a little bit tacky from the humid summer air."
 
-    e neutral "\"What happened to her? Sorry, that's not really a polite question. You just sound so wistful, but not really sad?\""
+        a sad "\"One of her lovers was mortally wounded in an accident and had to return to The Other Side to recover, and she was so depressed about it.\""
+        
+        a "\"Dad encouraged her to go back to The Other Side to be with her lover, and when she eventually went, he went with her.\""
 
-    "I smile a little at her concern and pat her hand, drawing it down from my shoulder and clasping it between us. Her soft hand is warm and a little bit tacky from the humid summer air."
+        e sad "\"Is that like... dying? Going to The Other Side?\""
 
-    a sad "\"One of her lovers was mortally wounded in an accident and had to return to The Other Side to recover, and she was so depressed about it.\""
-    
-    a "\"Dad encouraged her to go back to The Other Side to be with her lover, and when she eventually went, he went with her.\""
+        "I shake my head."
 
-    e sad "\"Is that like... dying? Going to The Other Side?\""
+        a happy "\"No, it's more like... going to a faraway place that's hard to travel to, and harder to return from. They could come back, but time moves differently there.\""
+        
+        a neutral "\"Sometimes it goes faster, sometimes much slower. So they could show back up here at any time, really. Or it could be decades. There isn't a good way to know.\""
 
-    "I shake my head."
+        "Erin tilts her head to the side, contemplating the new information."
 
-    a happy "\"No, it's more like... going to a faraway place that's hard to travel to, and harder to return from. They could come back, but time moves differently there.\""
-    
-    a neutral "\"Sometimes it goes faster, sometimes much slower. So they could show back up here at any time, really. Or it could be decades. There isn't a good way to know.\""
+        e neutral "\"Do you miss them?\""
 
-    "Erin tilts her head to the side, contemplating the new information."
+        "I feel my eyes start to mist up and blink the tears back."
 
-    e neutral "\"Do you miss them?\""
+        a sad "\"I do. I can't wait to see them again, but I'm nowhere near ready to go to The Other Side myself. I'm enjoying this mortal life.\""
 
-    "I feel my eyes start to mist up and blink the tears back."
+        "I realize I'm still holding her hand and loosen my grip as if to pull away, but she keeps holding on and gives my hand a little squeeze."
+        
+        "(So, we're both aware of it. But neither of us is saying anything about it. And it's... nice. I suppose it isn't doing any harm.)"
 
-    a sad "\"I do. I can't wait to see them again, but I'm nowhere near ready to go to The Other Side myself. I'm enjoying this mortal life.\""
+        "I leave my hand in hers. We walk in silence, hand in hand, cicadas buzzing in the trees along the sidewalk."
 
-    "I realize I'm still holding her hand and loosen my grip as if to pull away, but she keeps holding on and gives my hand a little squeeze."
-    
-    "(So, we're both aware of it. But neither of us is saying anything about it. And it's... nice. I suppose it isn't doing any harm.)"
+        scene brown with irisin
+        pause 2.0
+        jump going_home_from_market
 
-    "I leave my hand in hers. We walk in silence, hand in hand, cicadas buzzing in the trees along the sidewalk."
 
-    scene brown with irisin
-    pause 2.0
-    jump going_home_from_market
+    label going_home_from_market:
 
+        show bg gate with dissolve
 
-label going_home_from_market:
+        "Erin walks me home, still carrying my bags from the market."
 
-    show bg gate with dissolve
+        a happy "\"Thank you, today was really nice!\""
 
-    "Erin walks me home, still carrying my bags from the market."
+        e happy "\"It's no trouble, I'm glad I was able to give you a hand.\""
 
-    a happy "\"Thank you, today was really nice!\""
+        "I invite her in, kicking off my shoes at the front door and stepping into a cozy pair of slippers instead. She pauses to slide out of her sneakers and carries the bags in, looking around."
 
-    e happy "\"It's no trouble, I'm glad I was able to give you a hand.\""
+        hide bg gate with dissolve
+        stop music fadeout 3
+        pause 1.5
+        show bg kitchen with dissolve
+        play music romance fadein 1.5
 
-    "I invite her in, kicking off my shoes at the front door and stepping into a cozy pair of slippers instead. She pauses to slide out of her sneakers and carries the bags in, looking around."
+        a "\"Please, make yourself at home.\""
 
-    hide bg gate with dissolve
-    stop music fadeout 3
-    pause 1.5
-    show bg kitchen with dissolve
-    play music romance fadein 1.5
+        "I go to the fridge."
 
-    a "\"Please, make yourself at home.\""
+        a neutral "\"Water? Beer? Tea?\""
 
-    "I go to the fridge."
+        e excited "\"Beer sounds amazing! Thanks.\""
 
-    a neutral "\"Water? Beer? Tea?\""
+        a happy "\"Of course!\""
 
-    e excited "\"Beer sounds amazing! Thanks.\""
+        "We sit in companionable silence for a little bit, sipping at our drinks."
 
-    a happy "\"Of course!\""
+        e blush "\"I meant what I said that day, you know.\""
 
-    "We sit in companionable silence for a little bit, sipping at our drinks."
+        a "\"Which day?\""
 
-    e blush "\"I meant what I said that day, you know.\""
+        e excited "\"When I said you're beautiful.\""
 
-    a "\"Which day?\""
+        a tsuntsun "\"O-oh! That day, right. Thank you. I'm flattered!\""
 
-    e excited "\"When I said you're beautiful.\""
+        "I hurriedly busy myself with putting things away and desperately try not to blush."
 
-    a tsuntsun "\"O-oh! That day, right. Thank you. I'm flattered!\""
+        e happy "\"I didn't say it to flatter you. I'm interested in you. And you like me too, right?\""
 
-    "I hurriedly busy myself with putting things away and desperately try not to blush."
+        "I nearly drop a cabbage. She says it so frankly, with no hesitation."
 
-    e happy "\"I didn't say it to flatter you. I'm interested in you. And you like me too, right?\""
+    menu:
+        "We're basically strangers.":
+            jump home_stranger
 
-    "I nearly drop a cabbage. She says it so frankly, with no hesitation."
+        "How would you know who I'm into?":
+            jump younger_women
 
-menu:
-    "We're basically strangers.":
-        jump home_stranger
 
-    "How would you know who I'm into?":
-        jump younger_women
+    label home_stranger:
+        a neutral "\"You hardly know me.\""
 
+        e  excited "\"It doesn't have to stay that way, you know. I want to learn more.\""
 
-label home_stranger:
-    a neutral "\"You hardly know me.\""
+        a happy "\"Hmm.\""
 
-    e  excited "\"It doesn't have to stay that way, you know. I want to learn more.\""
+        "I run out of things to mess with so I clasp my hands to keep from fidgeting."
+        jump home_push
 
-    a happy "\"Hmm.\""
+    label younger_women:
+        a blush "\"What if I said I'm not into younger women?\""
 
-    "I run out of things to mess with so I clasp my hands to keep from fidgeting."
-    jump home_push
+        e rizzler "\"Then I'll just never tell you my age!\""
 
-label younger_women:
-    a blush "\"What if I said I'm not into younger women?\""
+        a "\"Silly.\""
 
-    e rizzler "\"Then I'll just never tell you my age!\""
+        e "\"I'm serious! We obviously have chemistry.\""
+        jump home_push
 
-    a "\"Silly.\""
 
-    e "\"I'm serious! We obviously have chemistry.\""
-    jump home_push
+    label home_push:
 
+        "I sigh, blushing, and down the rest of my beer."
 
-label home_push:
+        a tsuntsun "\"Pushing me about this is not going to do you any favors, kid.\""
 
-    "I sigh, blushing, and down the rest of my beer."
+        e gloom "\"I'm not a kid, don't look down on me. I'm... I'm 23.\""
 
-    a tsuntsun "\"Pushing me about this is not going to do you any favors, kid.\""
+        e neutral "\"But... sorry. you're right.\""
 
-    e gloom "\"I'm not a kid, don't look down on me. I'm... I'm 23.\""
+        a happy "\"No, you're right. You're not a kid. But you ARE very frank.\""
 
-    e neutral "\"But... sorry. you're right.\""
+        "She giggles. It's REALLY cute."
 
-    a happy "\"No, you're right. You're not a kid. But you ARE very frank.\""
+        e "\"Well, I learned that if I don't use my words, people can't read my mind. So I just say what's on my mind instead of worrying about it.\""
 
-    "She giggles. It's REALLY cute."
+        a neutral "\"That... seems reasonable, actually. Doesn't it get you into trouble?\""
 
-    e "\"Well, I learned that if I don't use my words, people can't read my mind. So I just say what's on my mind instead of worrying about it.\""
+        e happy "\"Sometimes. But most of the time, it's the opposite.\""
 
-    a neutral "\"That... seems reasonable, actually. Doesn't it get you into trouble?\""
+        "I crush my empty can and toss it into a recycling bin, then lean against a wall, arms crossed."
 
-    e happy "\"Sometimes. But most of the time, it's the opposite.\""
+        e "\"So... about my question.\""
 
-    "I crush my empty can and toss it into a recycling bin, then lean against a wall, arms crossed."
+        a blush "\"Um, it's getting pretty late...\""
 
-    e "\"So... about my question.\""
+        e happy "\"Alright, I'll go then. Will you at least give it some thought? I'm not asking for a confession or anything, just that you give me a chance.\""
 
-    a blush "\"Um, it's getting pretty late...\""
+        a "\"No promises.\""
 
-    e happy "\"Alright, I'll go then. Will you at least give it some thought? I'm not asking for a confession or anything, just that you give me a chance.\""
+        e excited "\"Worth a try. Just so you know, I'm going to win you over.\""
 
-    a "\"No promises.\""
+        "I don't know what to say to that, but that seems okay with Erin."
 
-    e excited "\"Worth a try. Just so you know, I'm going to win you over.\""
+        "When she leaves, I lock the door behind her and sit on my heels, one hand still on the door."
 
-    "I don't know what to say to that, but that seems okay with Erin."
+        a blush "\"She's so tenacious... And it's SO cute. What am I going to do?!\""
 
-    "When she leaves, I lock the door behind her and sit on my heels, one hand still on the door."
+        "I bury my face in my hands, feeling heat flood my cheeks, my ears, down my neck."
 
-    a blush "\"She's so tenacious... And it's SO cute. What am I going to do?!\""
+        a "\"I think I'm doomed.\""
 
-    "I bury my face in my hands, feeling heat flood my cheeks, my ears, down my neck."
+        "The words ring true even as I determine to steel myself."
 
-    a "\"I think I'm doomed.\""
+        "I'm not going to fall for someone who's just passing through town. She's sticking around to pay back the debt she owes, no other reason."
 
-    "The words ring true even as I determine to steel myself."
-
-    "I'm not going to fall for someone who's just passing through town. She's sticking around to pay back the debt she owes, no other reason."
-
-    scene brown with dissolve
-    stop music fadeout 2.0
-    pause 3.0
-    jump orchard
+        scene brown with dissolve
+        stop music fadeout 2.0
+        pause 3.0
+        jump orchard
