@@ -491,8 +491,6 @@ style main_menu_frame:
     xsize 560
     yfill True
 
-    #background "gui/overlay/main_menu.png"
-
 style main_menu_vbox:
     xalign 1.0
     xoffset -40
@@ -905,24 +903,21 @@ screen options():
 screen options_sliders():
     hbox:
         vbox:
-            if config.has_music:
-                label _("Music Volume")
+            label _("GAME VOLUME") style "options_section_label"
 
+            if config.has_music:
+                label _("MUSIC VOLUME")
                 bar value Preference("music volume")
 
             if config.has_sound:
-
-                label _("Sound Volume")
-
+                label _("SFX VOLUME")
                 bar value Preference("sound volume")
 
                 # if config.sample_sound:
                 #     textbutton _("Test") action Play("sound", config.sample_sound)
 
-
             if config.has_voice:
-                label _("Voice Volume")
-
+                label _("VOICE VOLUME")
                 bar value Preference("voice volume")
 
                 # if config.sample_voice:
@@ -935,25 +930,27 @@ screen options_sliders():
                     action Preference("all mute", "toggle")
                     style "mute_all_button"
         vbox:
-            label _("Text Speed")
+            label _("TEXT SPEED") style "options_section_label"
+
+            label _("TEXT SPEED")
 
             bar value Preference("text speed")
 
-            label _("Auto-Forward Time")
+            label _("AUTOFORWARD")
 
             bar value Preference("auto-forward time")
 
 screen options_buttons():
     hbox:
         vbox:
-            label _("Skip")
+            label _("TEXT SKIP") style "options_section_label"
             textbutton _("Unseen Text") action Preference("skip", "toggle")
             textbutton _("After Choices") action Preference("after choices", "toggle")
             textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
         
         if renpy.variant("pc") or renpy.variant("web"):
             vbox:
-                label _("Display")
+                label _("GAME DISPLAY") style "options_section_label"
                 textbutton _("Window") action Preference("display", "window")
                 textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
@@ -965,6 +962,10 @@ style options_vbox is vbox:
     xsize 1280
     yalign 0.5
     background "#f00"
+
+style options_section_label is gui_label:
+    properties gui.text_properties("options_section_label")
+    background "gui/menu/options_section_label.png"
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text

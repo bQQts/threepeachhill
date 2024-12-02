@@ -261,11 +261,13 @@ define gui.slot_number_text_xpos = 0
 define gui.slot_number_text_ypos = 0
 define gui.slot_number_text_xoffset = 182
 define gui.slot_number_text_yoffset = 394
+define gui.slot_number_text_hover_size = 80
+define gui.slot_number_text_hover_yoffset = 400
 define gui.slot_number_text_idle_color = "#D1A185"
-define gui.slot_number_text_hover_color = "#E7C0A9"
+define gui.slot_number_text_hover_color = "#E1562B"
 define gui.slot_number_text_selected_idle_color = "#D1A185"
 define gui.slot_number_text_selected_hover_color = "#E7C0A9"
-define gui.slot_number_text_hover_outlines = [(absolute(1), "#E7C0A9", 0, 0)]
+define gui.slot_number_text_hover_outlines = [(absolute(1), "#E1562B", 0, 0)]
 
 # The slot number label for a filled cell.
 define gui.slot_filled_number_text_size = 80
@@ -284,13 +286,13 @@ define gui.slot_filled_number_text_hover_outlines = [(absolute(1), "#E1562B", 0,
 define gui.slot_filled_number_text_selected_outlines = [(absolute(1), "#FFB69F", 0, 0)]
 define gui.slot_filled_number_text_selected_hover_outlines = [(absolute(1), "#fff", 0, 0)]
 
-
 # The description text for an empty cell.
 define gui.slot_text_size = 54
 define gui.slot_text_xalign = 0
 define gui.slot_text_xoffset = 72
 define gui.slot_text_yoffset = 64
-define gui.slot_text_color = "#D1A185"
+define gui.slot_text_color = "#E7BFA9"
+define gui.slot_text_hover_color = "#D29F83"
 define gui.slot_text_spacing = 16
 
 # The description text for a filled cell.
@@ -300,6 +302,16 @@ define gui.slot_filled_text_color = "#D1A185"
 define gui.slot_filled_text_hover_color = "#E1562B"
 define gui.slot_filled_text_selected_color = "#AC3F1D"
 define gui.slot_filled_text_selected_hover_color = "#E1562B"
+
+## Options Screen ##############################################################
+
+define gui.options_section_label_text_size = 96
+define gui.options_section_label_text_color = "#fff"
+define gui.options_section_label_text_xalign = 0.5
+define gui.options_section_label_text_yalign = 0.5
+define gui.options_section_label_text_xsize = 568
+define gui.options_section_label_text_ysize = 172
+define gui.options_section_label_text_outlines = [(absolute(1), "#fff", 0, 0)]
 
 ## Positioning and Spacing #####################################################
 ##
