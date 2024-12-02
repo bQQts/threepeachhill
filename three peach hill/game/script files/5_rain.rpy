@@ -1,8 +1,8 @@
-label chapter_five:
+label chapter_five:    # 5. The Rain - Caught in the rain… and there was only one bed? Perchance?
     $ chapter_num = 5
     label the_rain:
-    # 5. The Rain - Caught in the rain… and there was only one bed? Perchance?
-        scene black
+
+        scene brown
         show bg orchard with dissolve
 
         "I finish picking the peaches by myself. By the time I'm done, the remaining daylight is nearly smothered by thick clouds. I hadn't noticed how dense they had gotten, but a brief glance is enough to confirm that they look heavy and full, as if ready to spill at any moment."
@@ -11,6 +11,7 @@ label chapter_five:
 
         a gloom "\"This is going to suck.\""
 
+        play sound "{loop 0.1}sound/Rain Moderate.flac" fadein 1.5 volume 0.6 loop
         "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches as the early evening sets in."
 
 
@@ -65,9 +66,10 @@ label chapter_five:
         "I climb on, still holding the umbrella in one hand. She hikes me up, grasping below my thighs and leaning forward. My wet hair sticks to her neck. I try not to think about it."
 
         window hide dissolve
+        stop sound fadeout 3.0
         pause 1.0
-        scene black
-        show cg piggyback with dissolve
+        scene brown
+        show cg piggyback with Dissolve(3)
 
         pause 120.0
 
@@ -79,13 +81,14 @@ label chapter_five:
 
         "I let the umbrella rest over our backs, which probably makes us look like an overly large beetle, and let the sway of her steps and the sound of her breathing lull me into a half-slumber."
         
-        screen hide
+        window hide
         $ make_night()
-        scene black with dissolve
+        scene brown with Dissolve(3)
         stop music fadeout 3.0
+        stop sound fadeout 3.0
         pause 3.0
         show bg gate night with dissolve
-        screen show
+        window show
 
         e "\"What's your door code? ...Aya?\""
 
@@ -100,8 +103,6 @@ label chapter_five:
         play sound "sound/keypad-door.flac"
         
         "I hear the beep of her punching in the code, and the click of the bolt sliding open."
-
-        # door sound
 
         "She gently pries the umbrella from my arms and leaves it just inside the front door to dry on the doormat. Most of the mud washed off us from the rain, but we're still drenched."
 
@@ -261,6 +262,8 @@ label chapter_five:
         $ make_night()
         show bg bedroom night with dissolve
 
+        play sound "sound/Rain Drippy.flac" volume 0.2 fadein 2.0 loop
+
         e happy "\"Aya?\""
 
         a happy "\"Mmhm?\""
@@ -285,10 +288,11 @@ label chapter_five:
 
         "This feels... right."
         
-        scene black with dissolve
+        scene brown with dissolve
         stop music fadeout 2.0
+        stop sound fadeout 2.0
         pause 3.0
-    # CHOICE
+    
     menu:
         "Wake up bright and early":
             jump rain_wake_early
@@ -321,17 +325,27 @@ label chapter_five:
 
         "I did NOT mean to say that out loud."
 
+        "But I didn't seem to wake her, thankfully."
 
+        "I slip out of the bed and tiptoe to the bathroom to get myself ready for the day."
 
+        "I take my time. When I'm feeling fresh and ready for the day I plod over to the kitchen. Maybe I should make her breakfast."
 
-
-    # Cute sleepy Erin is curled against Aya's back, with Aya's fluffy tail draped over her like a blanket.
-    # Really cute morning moment where Aya just admires Erin and thinks about what it would be like to wake up like this every morning. Erin wakes up, and Aya pretends she has just awoken as well.
-    # Aya heads to the bathroom while Erin makes the bed.
         jump the_call
 
     label rain_sleep_in:
-        "TBD"
-    # The bed is empty when Aya wakes up. Erin's blankets are neatly folded back on the dresser.
-    # In the kitchen, there's a plate with an upside down bowl sitting atop it. Aya takes off the bowl, revealing toast and eggs that are still warm.
+        "The bed is empty when I wake up, Erin's blankets folded neatly back up on the side table."
+        
+        "I rub the sleep from my eyes and slip from the bed, heading to the bathroom."
+
+        "Did she leave?"
+
+        "I get myself ready for the day and trod to the kitchen."
+
+        "Something's out of place."
+
+        "There's a plate on the dining table with an overturned bowl on it. I lift the bowl, revealing still-warm eggs and a bagel inside."
+
+        "It looks like Erin cooked breakfast! I need a drink, then I should find her and thank her."
+
         jump the_call

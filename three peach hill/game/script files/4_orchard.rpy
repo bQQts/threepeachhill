@@ -1,11 +1,14 @@
 label chapter_four:
     $ chapter_num = 4
     label orchard:
+        pause 1.5
+        show date_animated_ch4 with dissolve  # August 3
+        pause 2.5
+        hide date_animated_ch4 with Dissolve(2)
+        
         scene brown
         show bg bookstore with dissolve
         play music bookstore_vibing fadein 2.0
-
-        # August 3
 
         "Another week goes by and I manage to avoid running into Erin. She's texted me more pictures of the gray cat outside of the cornerstore, but I haven't replied."
 
@@ -13,7 +16,11 @@ label chapter_four:
 
         "The whole thing—trying to smother my feelings, avoiding her—it's got me in a sour mood. So, today I'm going out."
 
-        "Three Peach Hill is an orchard known for its stunning peach trees. Like the name implies, it spans rolling hills."
+        "Three Peach Hill is an orchard known for its stunning peach trees. The orchard started very small, with just three peach saplings on the big hill."
+
+        "The orchard expanded outward from that hill. Those first three peach trees are now massive. They should be well past their prime, but through magic they've stayed young and healthy and continue to produce beautiful fruit every season."
+
+        "I've loved resting under their boughs since I was a kit. It's not a private place by any means, but it's {i}my{/i} spot. A visit seems like just the thing to center me right now."
         
         hide bg bookstore with dissolve
         show bg orchard with dissolve
@@ -22,20 +29,25 @@ label chapter_four:
         queue music quiet_village fadein 0.5
 
         "The team of farmers who tend the orchard under Head Orchardist Joy have been quite busy as many of the trees are ready for harvest."
+        
+        show joy at right with dissolve:
+            subpixel True
+            zoom 0.7
+            yoffset -300
 
-        "I see Joy directing a couple farmers who are helping load her truck with an order of peaches and I wave to her as I park my bicycle alongside the orchard's front office building. She waves back with a big grin."
+        a excited "I see Joy directing a couple farmers who are helping load her truck with an order of peaches and I wave to her as I park my bicycle alongside the orchard's front office building. She waves back with a big grin."
 
         "Yesterday she had posted a picture of the first ripe peaches dangling from trees on social media with the caption, \"Peach picking is open! Come by to fill a cart or basket!\""
+        hide joy with dissolve
+        "I couldn't make it out here yesterday, but it's a nice Saturday and I have the whole day free. The pie I'm gonna make out of these is going to be legendary."
 
-        "I couldn't make it out here yesterday, but it's a nice Saturday and I have the whole day free. So here I am, on my way to fill a cart of peaches. The pie I'm gonna make out of these is going to be legendary."
+        "The farmers at the orchard recognize me and let me find my way to the big trees."
 
-        "The farmers at the orchard point me toward the hill where the peaches are available for the public to pick."
-
-        "I'm walking up the hill when I hear her voice, and my heart beats a little faster."
+        "I'm walking up the hill when I hear her voice. My heart beats a little faster."
 
         "Erin is here of all places, on today of all days. Just my luck."
 
-        "Her oversized shirt and messy bun are so cute on her. She wipes her brow with the back of a work-gloved hand, laughing at something a girl in a VOLUNTEER vest said. I keep walking, hoping she doesn't notice me."
+        "Her oversized shirt and messy bun are so cute on her. She wipes her brow with the back of a work-gloved hand, laughing at something a girl in a VOLUNTEER vest said. There's a basket of peaches on the ground beside them. I keep walking, hoping she doesn't notice me."
 
         e happy "\"Aya,\""
 
@@ -45,9 +57,9 @@ label chapter_four:
 
         a gloom "\"Hi.\"" 
 
-        "The word came out crabbier than I meant it to."
+        "The greeting came out crabbier than I meant it to."
 
-        "But... I'm trying to avoid her! Surely she'll get the memo if I'm brusque with her. Right? So maybe crabby isn't a bad thing!"
+        "But... I'm trying to avoid her! Surely she'll get the memo if I'm brusque with her. Right? So maybe crabby isn't a bad thing."
 
         e neutral "\"Wait!\"" 
 
@@ -55,7 +67,7 @@ label chapter_four:
 
         a sad "\"What do you want?\""
 
-        e sad "\"It's just, it seems like you've been avoiding me—or maybe I'm just reading into it?\""
+        e sad "\"Oh, sorry, didn't mean to throw you off balance. I just wanted to talk 'cuz it seems like you've been avoiding me—or maybe I'm just reading into it?\""
 
         a "\"...\""
 
@@ -67,11 +79,15 @@ label chapter_four:
         
         a sad "\"That's true... but... I just wanted some space.\""
 
-        e sad "\"Was I being too much?\""
+        e sad "\"Was I sending too many pictures of Cloud? Or maybe... was I being too much?\""
 
         a blush "\"No! No, I...\""
         
-        e rizzler "\"Wait... wait, were you possibly avoiding me because youuuu like me back?\""
+        e neutral "\"Wait...\""
+
+        "She lookes closer at my face and sees the blush in my cheeks."
+
+        e rizzler "\"Were you possibly avoiding me because youuuu like me back?\""
 
         "I flush hot red."
 
@@ -81,7 +97,9 @@ label chapter_four:
 
         a tsuntsun "\"What! No! That's absurd!\""
 
-        e gloom "\"Your face says otherwise, but fine. Explain it to me, then. What are you running from?\""
+        e gloom "\"Your face says otherwise, but fine.\""
+        
+        e neutral "\"Explain it to me, then. What are you running from?\""
 
         "She looks a bit hurt, and my heart aches at the sight."
         
@@ -95,7 +113,7 @@ label chapter_four:
         "Shut this down hard":
             jump shut_this_down
 
-        "Let her down gently" if kind_points >= 2:
+        "{color=#222}(2+ Hearts) Let her down gently{/color}" if kind_points >= 2:
             jump let_her_down_gently
 
     label shut_this_down:
@@ -104,7 +122,9 @@ label chapter_four:
 
         a "\"I don't want to waste my time.\""
 
-        "...is what I said. It's partly true, I am worried. But what I mean, and what I can't tell her, is that I'm afraid she might be what I want. And I don't want it to hurt when she leaves."
+        "...is what I said. It's partly true, I am worried. But what I mean, and what I can't tell her, is that I'm afraid she might be what I want."
+        
+        "(I don't want it to hurt when she leaves.)"
 
         "Erin's eyes mist with tears."
 
@@ -116,7 +136,7 @@ label chapter_four:
 
         "She stiffens."
 
-        e neutral "\"So you're just afraid.\""
+        e neutral "\"So you're just afraid. You like me, but you're being mean because you're a coward.\""
 
         "Without another word, she turns and walks away."
 
@@ -133,9 +153,9 @@ label chapter_four:
         queue music rain
         a blush "\"I'm not really available right now... I'm, uh, looking for something specific.\""
 
-        e neutral "\"I could be what you want. Just tell me who to be and I'll be that.\""
+        e neutral "\"Oh, that's okay! I could be what you want. Just tell me who to be and I'll be that.\""
 
-        "That sentence hurts my heart."
+        "That hurts my heart."
 
         a tsunstsun "\"No, I'm not going to tell you who to be! That would be horrible.\""
 
@@ -145,11 +165,13 @@ label chapter_four:
 
         a gloom "\"I... don't have a good answer.\""
 
-        e shocked "\"You're just afraid, aren't you?\""
+        e shocked "\"You're just afraid, aren't you? You like me, but you're too scared to do anything about it.\""
+        
+        e sad "\"That's... disappointing. I thought you were cool.\""
 
-        "She almost yells the words. Then she shoves her hands into her shorts pockets and strides away, back down the hill."
+        "Then she shoves her hands into her shorts pockets and stridesback down the hill, eyes downcast."
 
-        "She's right."
+        "She's right. I am afraid."
         
         scene brown with dissolve
         pause 2.0

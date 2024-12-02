@@ -11,11 +11,12 @@ label chapter_one:
         pause 1.0
         show bg bookstore with dissolve
         play music bookstore_vibing fadein 1.0
-
+        pause 1.0
+        play sound "sound/Cicada Ambience.flac" volume 0.3 fadein 2.0 loop
         "It's been a slow summer. Slower than usual. The buzzing of cicadas and unyielding humidity drown our little town in syrupy hot summer."
 
         "The familiar sound seems to say, \"You have all the time in the world.\" A clock hanging by the cluttered storefront counter slowly {i}tic tic tics{/i} in agreement."
-
+        stop sound fadeout 3.0
         "I adjust the angle of my desk fan to get a better breeze. It helps, but sweat still sticks my crisp white dress shirt to my skin."
 
         "Business has been far too slow."

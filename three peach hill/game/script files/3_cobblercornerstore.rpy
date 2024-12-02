@@ -10,7 +10,7 @@ label chapter_three:
 
         hide date_animated_ch3 with Dissolve(2)
 
-
+        play sound "sound/Cicada Ambience.flac" volume 0.3 fadein 2.0 loop
         "The next week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, a totally open weekend comes calling."
 
     menu:
@@ -25,7 +25,7 @@ label chapter_three:
             jump cornerstore
 
     label cobbler:
-
+        stop sound fadeout 2.0
         show bg kitchen with dissolve
 
         "Fortunately, the peaches had sustained no damage at all during The Incident, and I'm able to whip up a couple of test cobblers."
@@ -419,6 +419,7 @@ label tell_lydia_about_erin:
 
 
     label cornerstore:
+        stop sound fadeout 2.0
         "The cornerstore is on the far side of town but it's a nice day, so I leave my bike behind and equip myself with a couple of sturdy tote bags."
         
         "It's been a couple weeks since I've gone, so I'll probably grab a bunch of snacks and drinks to supplement the usual groceries."
@@ -463,7 +464,7 @@ label tell_lydia_about_erin:
 
         "She steps past me and starts to unpack the box, restocking the shelf."
 
-        "She stepped close enough that the scent of citrus and apples wafted from her hair. It's a very bright and happy scent, and it suits her."
+        "She's close enough that the light scent of citrus and apples wafts from her hair. It's a very bright and happy scent that suits her."
 
         e rizzler "\"I have! So, you doing some shopping today? Or did you just come here to find me?\""
 
@@ -474,10 +475,10 @@ label tell_lydia_about_erin:
         "This seems like a hint. I'm not doing anything, but I want to keep to myself this weekend and recharge..."
 
         menu:
-            "Having some downtime to myself tonight.":
+            "\"Having some downtime to myself tonight.\"":
                 jump cornerstore_downtime
             
-            "(Lie.) Magic stuff. Spirit things.":
+            "(Lie.) \"Magic stuff. Spirit things.\"":
                 jump cornerstore_lie
 
 
@@ -496,7 +497,7 @@ label tell_lydia_about_erin:
 
         e happy "\"That sounds important, I don't want to intrude on that.\""
 
-        "I feel a little bad for the lie. She really took that at face value."
+        "I feel a little bad for the lie."
         
         jump cornerstore_cont
 

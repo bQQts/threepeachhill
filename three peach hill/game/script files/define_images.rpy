@@ -114,10 +114,22 @@ image date_animated_ch3B:
     pause 0.1
     repeat
 
-image date_animated_ch8:
-    "gui/dateanim/ch8_1.png"
+image date_animated_ch4:
+    "gui/dateanim/ch4_aug3_1.png"
     pause 0.1
-    "gui/dateanim/ch8_2.png"
+    "gui/dateanim/ch4_aug3_2.png"
+    pause 0.1
+    repeat
+
+
+
+
+
+
+image date_animated_ch8:
+    "gui/dateanim/ch8_aug19_1.png"
+    pause 0.1
+    "gui/dateanim/ch8_aug19_2.png"
     pause 0.1
     repeat
 

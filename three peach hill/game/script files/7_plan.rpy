@@ -1,10 +1,11 @@
 label chapter_seven:
     $ chapter_num = 7
     label the_plan:
-        scene black with dissolve
+        scene brown with dissolve
         stop music fadeout 2.0
         pause 2.0
-        show bg kitchen with irisin
+        show bg kitchen with dissolve
+        play music rain fadein 3.0
         a shocked "\"What do you mean they want us to close the bookstore?!\""
 
         "Erin's eyes go wide and she looks horrified."
@@ -26,7 +27,7 @@ label chapter_seven:
         "I scoff."
 
         a "\"Ten thousand in a small town is not a terribly small number, Erin.\""
-
+        stop music fadeout 3.0
         e happy "\"Well, I could help you!\""
 
         a neutral "\"How?\""
@@ -43,7 +44,7 @@ label chapter_seven:
 
         "We spend the rest of the afternoon drawing up a plan."
 
-        scene black with dissolve
+        scene brown with dissolve
         pause 2.0
 
     label plan_execution:
@@ -60,13 +61,13 @@ label chapter_seven:
 
         e neutral "\"Anyway... I should probably get going. Gotta get a change of clothes for my shift at the cornerstore later."
 
-        a sad "\"Yeah. Before you go, I just wanted to apologize for how I acted back... before the rain. That wasn't fair, and you were right."
+        a sad "\"Yeah. Before you go, I just wanted to apologize for how I acted back... before the rain. That wasn't fair, and you were right.\""
 
         "She smiles a little."
 
         a neutral "\"And... thank you again for bringing me home safe and sound.\""
 
-        e happy "\"Apology accepted. And, I'd do it again in a heartbeat.\""
+        e happy "\"Apology accepted. I'd come to your rescue anytime.\""
 
         "It's pretty brisk outside when I walk her out."
 
@@ -88,7 +89,7 @@ label chapter_seven:
 
         "It might still be a little risky, but maybe liking Erin is worth the risk."
 
-        scene black with irisin
+        scene brown with irisin
         stop music fadeout 3.0
         pause 2.0
 

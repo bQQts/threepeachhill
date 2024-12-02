@@ -86,6 +86,11 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         "(I'm sure there's somebody in here who could fix the lamp.)"
 
+        play sound "sound/PageTurn.flac"
+        pause 0.8
+        queue sound "sound/PageTurn.flac" volume 0.7
+        #queue sound "sound/Glass Sweep.flac" volume 0.7
+        queue sound "sound/PageTurn.flac" volume 0.4
         "The bookshop's vibey music is accented by the sounds of pages flipping and glass pieces clinking as we work away."
 
         pause 2.0
@@ -104,13 +109,14 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         a sad "\"Well, you're right about that.\""
 
+        #play sound "Marker.flac"
         "I finish writing the last few words and sign the bottom of the page with a flourish before sliding the sheet over to Erin."
 
         "She peers at the page, brows furrowed cutely in concentration."
 
         e neutral "\"What's this? Is this... a contract?\""
 
-        "My mouth curls into a smile, and my tone is light when I explain."
+        "My mouth curls into a tiny smile, and my tone is light when I explain."
 
         a neutral "\"It's just something simple. Sign it with your name and it will mean you can accompany me to the Lost Market.\""
         
@@ -173,11 +179,10 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
         "I wordlessly pass her the marker, which has a plastic spoon taped to it. She takes it and signs the bottom of the page."
 
         ## in a future version it would be cool to have art/simple animation of the contract going golden
-        ## and a sound effect???? 
+        play sound "sound/Magic Spell Push.flac" volume 0.5
+        "With a whoosh, heatless golden flames trace the lines of ink and the page disappears."
 
-        "Heatless golden flames trace the lines of ink, and the page disappears."
-
-        "If we were on The Other Side, we'd be able to see the little red ribbon of promise between us. But we're here, so we can't."
+        "If we were on The Other Side, we'd be able to see the little red ribbon of promise that now connects us. But we're here, so we can't."
 
         "Erin startles."
 
