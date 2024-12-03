@@ -78,13 +78,13 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         a neutral "\"Put the pieces in this. I'm going to go look something up.\""
 
-        "As Erin collects the pieces, I go get the address book from the front counter and start flipping through it. \"Book\" is a term used loosely in this context."
+        "As Erin collects the pieces, I go get the address book from the front counter and start flipping through it. \"Book\" is a generous descriptor for this mishmash."
             
         "It's a huge leather binder that's been stuffed full of additional sheaves of paper, parchment, newspaper ad clippings, and even some pressed leaves inscribed with nearly illegible writings."
 
-        "These are notes, contacts, fliers, and advertisements from all manner of local, both human and spirit. My parents added their notes when they took over the shop, and I've added a few of my own over the years."
+        "These are notes, contacts, fliers, and advertisements from all manner of local business, both human and spirit. My parents added their notes when they took over the shop, and I've added a few of my own over the years."
 
-        "(I'm sure there's somebody in here who could fix the lamp.)"
+        "(There must be somebody in here who could fix the lamp.)"
 
         play sound "sound/PageTurn.flac"
         pause 0.8
@@ -97,7 +97,9 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         e neutral "\"Hey, Aya?\""
 
-        "I pin a loose sheaf with an index finger so the little fan doesn't blow it away while I write in thick marker on a blank page from a nearby notebook. I reply distractedly,"
+        "(There! I've got it!)"
+        
+        "I pin a no-longer-sticky sticky note with an index finger so the little fan doesn't blow it away while I write in thick marker on a blank page from a nearby notebook. I reply distractedly,"
 
         a neutral "\"Yeah?\""
 

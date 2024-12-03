@@ -71,7 +71,7 @@ label chapter_one:
 
         "A glance tells me the girl survived the fall. The lamp, on the other hand, did not."
 
-        "The mosaic glass panels shattered back into un-mosaicked shards. My heart lurches."
+        "The mosaic glass panels shattered, reverting the art piece to merely a chaotic array of un-mosaicked shards."
 
         menu:
             "Quick! What should I do?!"
