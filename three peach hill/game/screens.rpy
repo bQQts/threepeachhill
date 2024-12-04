@@ -969,29 +969,25 @@ screen options_sliders():
             use options_bar(_("TEXT SPEED"), "text speed")
             use options_bar(_("AUTOFORWARD SKIP"), "auto-forward time")
 
+
 screen options_buttons():
     hbox:
         vbox:
             label _("TEXT SKIP")
-            textbutton _("Unseen Text") style "options_text_skip_unseen_button":
-                action Preference("skip", "toggle") 
-                activate_sound "sound/Haptics.flac" 
-            textbutton _("After Choices") style "options_text_skip_after_button":
-                action Preference("after choices", "toggle") 
-                activate_sound "sound/Haptics.flac" 
-            textbutton _("Transitions") style "options_text_skip_transition_button":
-                action InvertSelected(Preference("transitions", "toggle")) 
-                activate_sound "sound/Haptics.flac" 
+            use options_radio_button(
+                "UNSEEN TEXT", "options_text_unseen", Preference("skip", "toggle"), "options_text_radio")
+            use options_radio_button(
+                "AFTER CHOICES", "options_text_after", Preference("after choices", "toggle"), "options_text_radio")
+            use options_radio_button(
+                "TRANSITIONS", "options_text_transitions", Preference("transitions", "toggle"), "options_text_radio")
         
         if renpy.variant("pc") or renpy.variant("web"):
             vbox:
                 label _("GAME DISPLAY")
-                textbutton _("Window") style "options_display_window_button":
-                    action Preference("display", "window") 
-                    activate_sound "sound/Haptics.flac" 
-                textbutton _("Fullscreen") style "options_display_fullscreen_button":
-                    action Preference("display", "fullscreen") 
-                    activate_sound "sound/Haptics.flac" 
+                use options_radio_button(
+                    "WINDOWED", "options_display_windowed", Preference("display", "window"), "options_display_radio")
+                use options_radio_button(
+                    "FULLSCREEN", "options_display_fullscreen", Preference("display", "fullscreen"), "options_display_radio")
 
 screen options_bar(display_text, preference_var):
     style_prefix "options_bar"
@@ -1016,6 +1012,13 @@ screen options_bar(display_text, preference_var):
         $ if isinstance(pref_wrapper, MixerValue): pref_value = f"{int(pref_wrapper.get_volume() * 100)}%"
         $ if isinstance(pref_wrapper, FieldValue): pref_value = int(pref_wrapper.get_value())
         text "[pref_value]" xalign 0.45
+
+screen options_radio_button(display_text, image_name, click_action, style_prefix_name):
+    style_prefix style_prefix_name
+    textbutton display_text:
+        action click_action
+        activate_sound "sound/Haptics.flac" 
+        background "gui/menu/" + image_name + "_[prefix_]button.png"
 
 style options_hbox is hbox:
     yfill True
@@ -1044,22 +1047,37 @@ style options_content:
     xoffset 120
     xsize 880
 
+
 style options_bar_vbox is options_content:
     xsize 920  
 
 style options_bar_text is options_text:
     properties gui.text_properties("options_bar")
 
+
 style options_button is options_content
+
+style options_radio_button is options_button:
+    properties gui.button_properties("options_radio_button")
+
+style options_text_radio_button is options_radio_button:
+    properties gui.button_properties("options_text_radio_button")
+
+style options_display_radio_button is options_radio_button:
+    properties gui.button_properties("options_display_radio_button")
+
 
 style options_button_text is options_content:
     properties gui.text_properties("options_button")
 
-style options_text_skip_unseen_button is options_text_button
-style options_text_skip_after_button is options_text_button
-style options_text_skip_transition_button is options_text_button
-style options_display_window_button is options_text_button
-style options_display_fullscreen_button is options_text_button
+style options_radio_button_text:
+    properties gui.text_properties("options_radio_button")
+
+style options_text_radio_button_text is options_radio_button_text:
+    properties gui.text_properties("options_text_radio_button")
+
+style options_display_radio_button_text is options_radio_button_text:
+    properties gui.text_properties("options_display_radio_button")
 
 
 ## History screen ##############################################################

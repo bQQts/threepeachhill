@@ -327,6 +327,26 @@ define gui.options_button_text_selected_hover_outlines = [(absolute(1), "#FF5758
 define gui.options_bar_text_color = "#FF5758"
 define gui.options_bar_text_outlines = [(absolute(1), "#FF5758", 0, 0)]
 
+define gui.options_radio_button_xsize = 960
+define gui.options_radio_button_xoffset = 60
+define gui.options_radio_button_text_size = 80
+define gui.options_radio_button_text_xalign = 0
+define gui.options_radio_button_text_yalign = 0.5
+define gui.options_radio_button_text_color = "#D5A387"
+define gui.options_radio_button_text_hover_color = "#FF845D"
+define gui.options_radio_button_text_selected_color = "#FF5758"
+define gui.options_radio_button_text_selected_hover_color = "#FF5758"
+define gui.options_radio_button_text_outlines = [(absolute(1), "#D5A387", 0, 0)]
+define gui.options_radio_button_text_hover_outlines = [(absolute(1), "#FFBDAA", 0, 0)]
+define gui.options_radio_button_text_selected_outlines = [(absolute(1), "#FF5758", 0, 0)]
+define gui.options_radio_button_text_selected_hover_outlines = [(absolute(1), "#FF5758", 0, 0)]
+
+define gui.options_text_radio_button_height = 296
+define gui.options_display_radio_button_height = 444
+
+define gui.options_text_radio_button_text_xoffset = 420
+define gui.options_display_radio_button_text_xoffset = 640
+
 ## Positioning and Spacing #####################################################
 ##
 ## These variables control the positioning and spacing of various user interface
