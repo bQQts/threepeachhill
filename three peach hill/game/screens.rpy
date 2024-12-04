@@ -486,28 +486,27 @@ style navigation_top_right_button_text is navigation_top_button_text
 screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
-    use options()
 
-    # add gui.main_menu_background
+    add gui.main_menu_background
 
-    # ## This empty frame darkens the main menu.
-    # frame:
-    #     style "main_menu_frame"
+    ## This empty frame darkens the main menu.
+    frame:
+        style "main_menu_frame"
 
-    # ## The use statement includes another screen inside this one. The actual
-    # ## contents of the main menu are in the navigation screen.
-    # use menu_navigation
+    ## The use statement includes another screen inside this one. The actual
+    ## contents of the main menu are in the navigation screen.
+    use menu_navigation
 
-    # if gui.show_name:
+    if gui.show_name:
 
-    #     vbox:
-    #         style "main_menu_vbox"
+        vbox:
+            style "main_menu_vbox"
 
-    #         text "[config.name!t]":
-    #             style "main_menu_title"
+            text "[config.name!t]":
+                style "main_menu_title"
 
-    #         text "[config.version]":
-    #             style "main_menu_version"
+            text "[config.version]":
+                style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -921,7 +920,6 @@ style file_arrow_next_button is file_arrow_button:
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
 screen options():
-
     tag menu
 
     use game_menu():
@@ -938,6 +936,15 @@ screen options():
         button style "file_arrow_next_button" action OpenOptionsPageButtons() activate_sound "sound/Haptics.flac" 
 
 screen options_sliders():
+    fixed:
+        xoffset 520
+        yoffset 140
+        if config.has_music or config.has_sound or config.has_voice:
+            null height gui.pref_spacing
+
+            textbutton "MUTE ALL":
+                action Preference("all mute", "toggle")
+                activate_sound "sound/Haptics.flac" 
     hbox:
         vbox:
             label _("GAME VOLUME")
@@ -956,14 +963,6 @@ screen options_sliders():
 
                 # if config.sample_voice:
                 #     textbutton _("Test") action Play("voice", config.sample_voice)
-
-            if config.has_music or config.has_sound or config.has_voice:
-                null height gui.pref_spacing
-
-                textbutton _("Mute All"):
-                    action Preference("all mute", "toggle")
-                    activate_sound "sound/Haptics.flac" 
-                    style "mute_all_button"
         vbox:
             label _("TEXT SPEED")
 
@@ -1016,7 +1015,7 @@ screen options_bar(display_text, preference_var):
         $ pref_value = ""
         $ if isinstance(pref_wrapper, MixerValue): pref_value = f"{int(pref_wrapper.get_volume() * 100)}%"
         $ if isinstance(pref_wrapper, FieldValue): pref_value = int(pref_wrapper.get_value())
-        text "[pref_value]" xalign 0.5
+        text "[pref_value]" xalign 0.45
 
 style options_hbox is hbox:
     yfill True
@@ -1028,7 +1027,7 @@ style options_vbox is vbox:
     yoffset 94
     xoffset 80
 
-style options_text is gui_label_text:
+style options_text is gui_text:
     properties gui.text_properties("options")
 
 style options_label is gui_label:
@@ -1051,16 +1050,16 @@ style options_bar_vbox is options_content:
 style options_bar_text is options_text:
     properties gui.text_properties("options_bar")
 
-style options_text_button is options_content
+style options_button is options_content
+
+style options_button_text is options_content:
+    properties gui.text_properties("options_button")
 
 style options_text_skip_unseen_button is options_text_button
 style options_text_skip_after_button is options_text_button
 style options_text_skip_transition_button is options_text_button
 style options_display_window_button is options_text_button
 style options_display_fullscreen_button is options_text_button
-
-style mute_all_button is gui_button
-style mute_all_button_text is gui_button_text
 
 
 ## History screen ##############################################################
