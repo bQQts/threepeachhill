@@ -181,19 +181,20 @@ label chapter_eight:
         "I have to go faster!"
 
         "I run and I run, and finally I know I'm drawing near when the tether glows brighter. A small crowd has formed a circle around her."
-
-        show bg nightmarket red with dissolve
-        
         window hide
+        show bg nightmarket red with dissolve
+           
         $ make_night()
         hide aya with dissolve
 
-        with Pause(3.10)
-
-        show oni night at right, oni_size
-        show erin neutral at center, erin_size
-
-
+        show oni night at right with dissolve:
+            subpixel True
+            zoom 0.7   
+            yoffset -300
+        show erin neutral at center with dissolve:
+            subpixel True
+            zoom 0.35
+            yoffset -200
         show aya fox at left with dissolve:
             subpixel True zoom 0.39 
         window show
