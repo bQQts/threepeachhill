@@ -486,27 +486,28 @@ style navigation_top_right_button_text is navigation_top_button_text
 screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
+    use options()
 
-    add gui.main_menu_background
+    # add gui.main_menu_background
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    # ## This empty frame darkens the main menu.
+    # frame:
+    #     style "main_menu_frame"
 
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
-    use menu_navigation
+    # ## The use statement includes another screen inside this one. The actual
+    # ## contents of the main menu are in the navigation screen.
+    # use menu_navigation
 
-    if gui.show_name:
+    # if gui.show_name:
 
-        vbox:
-            style "main_menu_vbox"
+    #     vbox:
+    #         style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+    #         text "[config.name!t]":
+    #             style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+    #         text "[config.version]":
+    #             style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -939,22 +940,19 @@ screen options():
 screen options_sliders():
     hbox:
         vbox:
-            label _("GAME VOLUME") style "options_section_label"
+            label _("GAME VOLUME")
 
             if config.has_music:
-                label _("MUSIC VOLUME")
-                bar value Preference("music volume")
+                use options_bar(_("MUSIC VOLUME"), "music volume")
 
             if config.has_sound:
-                label _("SFX VOLUME")
-                bar value Preference("sound volume")
+                use options_bar(_("SFX VOLUME"), "sound volume")
 
                 # if config.sample_sound:
                 #     textbutton _("Test") action Play("sound", config.sample_sound)
 
             if config.has_voice:
-                label _("VOICE VOLUME")
-                bar value Preference("voice volume")
+                use options_bar(_("VOICE VOLUME"), "voice volume")
 
                 # if config.sample_voice:
                 #     textbutton _("Test") action Play("voice", config.sample_voice)
@@ -967,39 +965,58 @@ screen options_sliders():
                     activate_sound "sound/Haptics.flac" 
                     style "mute_all_button"
         vbox:
-            label _("TEXT SPEED") style "options_section_label"
-
             label _("TEXT SPEED")
 
-            bar value Preference("text speed")
-
-            label _("AUTOFORWARD")
-
-            bar value Preference("auto-forward time")
+            use options_bar(_("TEXT SPEED"), "text speed")
+            use options_bar(_("AUTOFORWARD SKIP"), "auto-forward time")
 
 screen options_buttons():
     hbox:
         vbox:
-            label _("TEXT SKIP") style "options_section_label"
-            textbutton _("Unseen Text"):
+            label _("TEXT SKIP")
+            textbutton _("Unseen Text") style "options_text_skip_unseen_button":
                 action Preference("skip", "toggle") 
                 activate_sound "sound/Haptics.flac" 
-            textbutton _("After Choices"):
+            textbutton _("After Choices") style "options_text_skip_after_button":
                 action Preference("after choices", "toggle") 
                 activate_sound "sound/Haptics.flac" 
-            textbutton _("Transitions"):
+            textbutton _("Transitions") style "options_text_skip_transition_button":
                 action InvertSelected(Preference("transitions", "toggle")) 
                 activate_sound "sound/Haptics.flac" 
         
         if renpy.variant("pc") or renpy.variant("web"):
             vbox:
-                label _("GAME DISPLAY") style "options_section_label"
-                textbutton _("Window"):
+                label _("GAME DISPLAY")
+                textbutton _("Window") style "options_display_window_button":
                     action Preference("display", "window") 
                     activate_sound "sound/Haptics.flac" 
-                textbutton _("Fullscreen"):
+                textbutton _("Fullscreen") style "options_display_fullscreen_button":
                     action Preference("display", "fullscreen") 
                     activate_sound "sound/Haptics.flac" 
+
+screen options_bar(display_text, preference_var):
+    style_prefix "options_bar"
+    vbox:
+        text _(display_text)
+        bar: 
+            value Preference(preference_var)
+            range 100
+            left_bar "gui/menu/options_bar_fill.png"
+            right_bar "gui/menu/options_bar_empty.png"
+            thumb "gui/menu/options_bar_thumb.png"
+            thumb_offset 50
+            left_gutter 38
+            right_gutter 38
+            xsize 846
+            ysize 146
+            xalign 0.5
+            yalign 0.5
+            xoffset -48
+        $ pref_wrapper = Preference(preference_var)
+        $ pref_value = ""
+        $ if isinstance(pref_wrapper, MixerValue): pref_value = f"{int(pref_wrapper.get_volume() * 100)}%"
+        $ if isinstance(pref_wrapper, FieldValue): pref_value = int(pref_wrapper.get_value())
+        text "[pref_value]" xalign 0.5
 
 style options_hbox is hbox:
     yfill True
@@ -1007,82 +1024,43 @@ style options_hbox is hbox:
     background "#0f0"
 style options_vbox is vbox:
     xsize 1280
-    yalign 0.5
-    background "#f00"
+    yalign 0
+    yoffset 94
+    xoffset 80
 
-style options_section_label is gui_label:
-    properties gui.text_properties("options_section_label")
+style options_text is gui_label_text:
+    properties gui.text_properties("options")
+
+style options_label is gui_label:
+    xsize 568
+    ysize 172
+    xalign 0
     background "gui/menu/options_section_label.png"
 
-style pref_label is gui_label
-style pref_label_text is gui_label_text
-style pref_vbox is vbox
+style options_label_text is options_text:
+    properties gui.text_properties("options_label")
 
-style radio_label is pref_label
-style radio_label_text is pref_label_text
-style radio_button is gui_button
-style radio_button_text is gui_button_text
-style radio_vbox is pref_vbox
+style options_content:
+    xalign 0
+    xoffset 120
+    xsize 880
 
-style check_label is pref_label
-style check_label_text is pref_label_text
-style check_button is gui_button
-style check_button_text is gui_button_text
-style check_vbox is pref_vbox
+style options_bar_vbox is options_content:
+    xsize 920  
 
-style slider_label is pref_label
-style slider_label_text is pref_label_text
-style slider_slider is gui_slider
-style slider_button is gui_button
-style slider_button_text is gui_button_text
-style slider_pref_vbox is pref_vbox
+style options_bar_text is options_text:
+    properties gui.text_properties("options_bar")
 
-style mute_all_button is check_button
-style mute_all_button_text is check_button_text
+style options_text_button is options_content
 
-style pref_label:
-    top_margin gui.pref_spacing
-    bottom_margin 4
+style options_text_skip_unseen_button is options_text_button
+style options_text_skip_after_button is options_text_button
+style options_text_skip_transition_button is options_text_button
+style options_display_window_button is options_text_button
+style options_display_fullscreen_button is options_text_button
 
-style pref_label_text:
-    yalign 1.0
-
-style pref_vbox:
-    xsize 450
-
-style radio_vbox:
-    spacing gui.pref_button_spacing
-
-style radio_button:
-    properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
-
-style radio_button_text:
-    properties gui.text_properties("radio_button")
-
-style check_vbox:
-    spacing gui.pref_button_spacing
-
-style check_button:
-    properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
-
-style check_button_text:
-    properties gui.text_properties("check_button")
-
-style slider_slider:
-    xsize 700
-
-style slider_button:
-    properties gui.button_properties("slider_button")
-    yalign 0.5
-    left_margin 20
-
-style slider_button_text:
-    properties gui.text_properties("slider_button")
-
-style slider_vbox:
-    xsize 900
+style mute_all_button is gui_button
+style mute_all_button_text is gui_button_text
 
 
 ## History screen ##############################################################
