@@ -212,7 +212,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         "My heart skips a beat and I hesitate, not sure if she means that in an I-love-women way or a complimenting-between-girlies way."
         
-        "She notices the heat warning my cheeks. Before I can say anything in response, she ducks out of the store, giggling."
+        "She notices the heat warming my cheeks. Before I can say anything in response, she ducks out of the store, giggling."
 
         a tsuntsun "\"Wh... what...!\""
 
