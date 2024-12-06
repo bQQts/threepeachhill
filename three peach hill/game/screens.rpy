@@ -745,12 +745,13 @@ screen file_slots():
 
                             add Transform(
                                 Transform(FileScreenshot(slot), 
-                                        size=(config.thumbnail_width, config.thumbnail_height), 
                                         fit="cover"), 
                                 crop=(86, 0, 470, config.thumbnail_height)):
                                     xalign 0
                                     xoffset 68
                                     yoffset 14
+                                    xsize config.thumbnail_width
+                                    ysize config.thumbnail_height 
 
                             button:
                                 if is_empty:
