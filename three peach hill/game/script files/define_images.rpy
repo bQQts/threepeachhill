@@ -88,8 +88,37 @@ image plusone = "gui/PLUS ONE.png"
 #image plusoneanimation:
 
 
-
-
+default pause_length = 0.25
+image choice_button:
+    "gui/menu/choice_button_1.png"
+    pause pause_length
+    "gui/menu/choice_button_2.png"
+    pause pause_length
+    repeat
+image choice_hover_button:
+    "gui/menu/choice_hover_button_1.png"
+    pause pause_length
+    "gui/menu/choice_hover_button_2.png"
+    pause pause_length
+    repeat
+image choice_night_button:
+    "gui/menu/choice_night_button_1.png"
+    pause pause_length
+    "gui/menu/choice_night_button_2.png"
+    pause pause_length
+    repeat
+image choice_night_hover_button:
+    "gui/menu/choice_night_hover_button_1.png"
+    pause pause_length
+    "gui/menu/choice_night_hover_button_2.png"
+    pause pause_length
+    repeat
+image menu_navigation_hover_button:
+    "gui/menu/menu_navigation_hover_button_1.png"
+    pause pause_length
+    "gui/menu/menu_navigation_hover_button_2.png"
+    pause pause_length
+    repeat
 
 image main_menu_animated:
     "gui/main_menu_anim/1.png"

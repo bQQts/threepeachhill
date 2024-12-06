@@ -272,14 +272,14 @@ style choice_vbox is vbox:
     spacing gui.choice_spacing
 style choice_button is button:
     properties gui.button_properties("choice_button")
-    background "choice_[night_prefix][prefix_]button_gif"
+    background "choice_[night_prefix][prefix_]button"
 style choice_button_text is button_text:
     properties gui.text_properties("choice_button")
 
 style choice_night_vbox is choice_vbox
 style choice_night_button is choice_button:
     properties gui.button_properties("choice_night_button")
-    background "choice_[night_prefix][prefix_]button_gif"
+    background "choice_[night_prefix][prefix_]button"
 style choice_night_button_text is choice_button_text:
     properties gui.text_properties("choice_night_button")
 
@@ -380,11 +380,11 @@ screen menu_navigation():
                 activate_sound "sound/Haptics.flac" 
                 action ShowMenu("help")
 
-image menu_navigation_button_gif = "gui/menu/menu_navigation_button.png"
+image menu_navigation_button = "gui/menu/menu_navigation_button.png"
 
 style menu_navigation_button is default:
     properties gui.button_properties("menu_navigation_button")
-    background "menu_navigation_[prefix_]button_gif"
+    background "menu_navigation_[prefix_]button"
 
 style menu_navigation_button_text is default:
     subpixel True

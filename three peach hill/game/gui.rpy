@@ -444,7 +444,8 @@ define gui.menu_navigation_button_text_outlines = [(absolute(.85), menu_font_col
 
 define gui.menu_navigation_button_text_kerning = 1.25
 define gui.menu_navigation_button_text_line_spacing = 1.12
-define gui.menu_navigation_button_text_yalign = 0.55
+define gui.menu_navigation_button_text_xoffset = 10
+define gui.menu_navigation_button_text_yalign = 0.45
 
 define gui.menu_navigation_button_text_xmargin = 72
 define gui.menu_navigation_button_ypadding = 10
@@ -453,8 +454,9 @@ define gui.menu_navigation_xalign = 0.5
 define gui.menu_navigation_yalign = 0.9
 
 define gui.menu_navigation_spacing = 20
-define gui.menu_navigation_button_ysize = 110
-define gui.menu_navigation_button_height = 110
+define gui.menu_navigation_button_xsize = 384
+define gui.menu_navigation_button_ysize = 158
+define gui.menu_navigation_button_height = 158
 
 
 ## Game Menu Navigation ########################################################
