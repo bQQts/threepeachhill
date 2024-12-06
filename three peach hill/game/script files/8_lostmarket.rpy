@@ -50,39 +50,43 @@ label chapter_eight:
         window hide
 
     label lost_market_find_out:
-        scene black with irisin
+        scene brown with irisin
         stop music fadeout 3
         pause 2.0
         show date_animated_ch8 with dissolve    # August 19, Monday
         pause 5.0
-        scene black with dissolve
+        $ make_night()
+        scene brown with dissolve
 
         "Erin didn't show up at the usual meeting time. I wait 20 minutes."
 
         play music rain_transition noloop
 
         "Twenty minutes turns into an hour, then two. She's not answering her phone."
-        show bg bookstore with dissolve 
+        show bg bookstore night with dissolve 
         "I check near the bookstore. She's not there."
-        hide bg bookstore with dissolve
-        show bg cornerstore with dissolve
+        hide bg bookstore night with dissolve
+        show bg cornerstore night with dissolve
 
         "I call the cornerstore and the orchard office, and am told she's not there either."
-        hide bg cornerstore with dissolve
-        scene black with dissolve
+        hide bg cornerstore night with dissolve
+        scene brown with dissolve
 
         "I bite my lip. I'm starting to worry that something has happened."
-        show bg kitchen with dissolve
+        show bg kitchen night with dissolve
         "At home, I put on a jacket and sneakers and pace in the front room, trying to decide where to start looking for her."
-        hide bg kitchen with dissolve
-        show bg gate with dissolve
+        hide bg kitchen night with dissolve
+        show bg gate night with dissolve
         
         play sound "sound/Knocking-2.flac"
         
         "There's a knock at the door, and I run to open it."
 
         a shocked "\"Erin? Oh, Lydia! What are you doing here?\""
-        show lydia night at right, lydia_size
+        show lydia night at right with dissolve:
+            subpixel True
+            zoom 0.7
+            yoffset -300
         "It's not who I was hoping it would be, and judging by Lydia's expression, I'm not about to be happy that she's here either."
 
         lyd "\"You haven't found a spell to fix that lamp yet, right?\""
@@ -107,8 +111,9 @@ label chapter_eight:
 
         lyd "\"The alley between the grocer and the barber. Be safe, and be quick. I hope you find her in time.\""
         
-        hide lydia with dissolve
-
+        window hide
+        hide lydia night with dissolve
+        scene brown with dissolve
         "I run."
 
         stop music fadeout 2.0
@@ -117,8 +122,8 @@ label chapter_eight:
 
     label lost_market_inside:
 
-        scene black
-        show bg rain
+        scene brown
+        show bg rain night
         show aya at center
         stop music fadeout 3.0
         play music spirit fadein 0.5
@@ -131,8 +136,7 @@ label chapter_eight:
 
         "And if you can't see it, it can't see you back."
 
-        scene black with dissolve
-        $ make_night()
+        scene brown with dissolve
         show bg rain night with dissolve
 
         "I slow down and start walking down the alley. It's actually faster to walk than it is to run. It's tricky like that."
@@ -141,7 +145,7 @@ label chapter_eight:
 
         "The amber glow grows, and I step out of the alley into a street full of spirits of all shape and size."
         hide bg rain night with dissolve
-        scene black
+        scene brown
         window hide
         $ make_day()
         show bg nightmarket with dissolve
@@ -152,6 +156,7 @@ label chapter_eight:
 
 
         window hide
+        play sound "sound/Deep Echo Passby 01.flac"
         show aya fox:
             subpixel True 
             matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(0.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
@@ -176,97 +181,100 @@ label chapter_eight:
         "I have to go faster!"
 
         "I run and I run, and finally I know I'm drawing near when the tether glows brighter. A small crowd has formed a circle around her."
-
-        show bg nightmarket red with dissolve
-        
         window hide
+        show bg nightmarket red with dissolve
+           
         $ make_night()
-        show aya fox:
-            subpixel True 
-            matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
-            linear 0.85 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.42)*HueMatrix(0.0) 
-            linear 5.00 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.42)*HueMatrix(0.0) 
-            linear 1.15 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
-        show oni night at center, oni_size
-        show erin neutral at right, erin_size
+        hide aya with dissolve
 
-        with Pause(3.10)
-
-        show aya fox:
-            matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+        show oni night at right with dissolve:
+            subpixel True
+            zoom 0.7   
+            yoffset -300
+        show erin neutral at center with dissolve:
+            subpixel True
+            zoom 0.35
+            yoffset -200
+        show aya fox at left with dissolve:
+            subpixel True zoom 0.39 
         window show
 
 
 
         "She's standing boldly before an oni girl with impossibly sharp horns. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
-        window hide   
-        
-
-
-        show aya fox:
-            subpixel True 
-            matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-696.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
-            linear 0.49 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-529.9050997782706, -176.03, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
-            linear 0.18 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-385.32, -147.73181818181817, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
-            linear 0.15 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(-506.83636363636367, -124.15, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
-            linear 0.22 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(12.0, -108.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
-        with Pause(1.14)
-        show aya fox:
-            matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(12.0, -108.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
-        window show
-
 
         "I leap, snapping at the ribbon. It shatters into sparkling shards of light between my sharp teeth."
 
+        hide erin with dissolve
+
+
         "Oni" "\"You dare to intefere? This human wished to make a pact with me, fox. I was simply going to lead her out of here.\""
         
-        hide aya fox with dissolve
-
+        hide aya
         a fox "\"In exchange for what?\""
-
+        
+        show aya fox at left:
+            subpixel True zoom 0.39 
         "Oni" "\"A trifling matter. She was to bring me across to the mortal realm with her.\""
-
-        a "\"I'm afraid that is not going to be possible. This human is spoken for. She's already in a pact with me.\""
-
+        
+        hide aya 
+        a fox "\"I'm afraid that is not going to be possible. This human is spoken for. She's already in a pact with me.\""
+        
+        show aya fox at left:
+            subpixel True zoom 0.39 
         "Oni" "\"If that is so, why did she need a guide out?\""
-
-        a "\"I was merely busy for a moment, but am here now.\""
-
+        
+        hide aya
+        a fox "\"I was merely busy for a moment, but am here now.\""
+        
+        show aya fox at left:
+            subpixel True zoom 0.39 
         "Erin looks at me, astonished at my form."
 
         hide erin with dissolve
-
+        hide aya with dissolve
         e shocked "\"Wait... Aya?! You can... talk like that?\""
 
-        a "\"Of course. I'm still me.\""
-
+        a fox "\"Of course. I'm still me.\""
+     
+        show aya fox at left:
+            subpixel True zoom 0.39 
         "I address the oni."
 
-        a "\"We must depart. Kindly find someone else to bargain with.\""
+        hide aya
+        a fox "\"We must depart. Kindly find someone else to bargain with.\""
 
+        show aya fox at left:
+            subpixel True zoom 0.39 
         "The oni glares at me and crosses her arms."
-
-        a "\"Erin, climb upon my back. I'll take us out of here.\""
+        
+        hide aya
+        a fox "\"Erin, climb upon my back. I'll take us out of here.\""
 
         e sad "\"Are you sure? Shouldn't we find that spell?\""
 
-        a "\"Not tonight.\""
+        a fox "\"Not tonight.\""
 
+        show aya fox at left:
+            subpixel True zoom 0.39 
         "She reluctantly grabs hold of my fur and hauls herself onto my back, hugging my neck tightly."
-
+        
+        hide oni night with dissolve
         show bg nightmarket night with dissolve
 
         "I fly like the wind and take us back to the alley. The streets shift around us, but I know exactly where to go."
+        hide aya
+        a fox "\"Close your eyes.\""
 
-        a "\"Close your eyes.\""
-
+        show aya fox at left:
+            subpixel True zoom 0.39 
         "We race across the border between the spirit and mortal worlds. It's easier to leave with both of us present."
 
 
         "The air around us blurs and I shift back, now holding Erin in my arms."
 
         stop music fadeout 3.0
-        scene black with dissolve
+        scene brown with dissolve
         pause 2.0
         show bg market night with dissolve
         play music quiet_village fadein 0.5
@@ -324,8 +332,9 @@ label chapter_eight:
         a happy "\"I'll walk you home.\""
 
         e happy "\"Sure, I'd like that.\""
-
-        scene black with dissolve
+        
+        window hide
+        scene brown with dissolve
         pause 2.0
 
         jump date

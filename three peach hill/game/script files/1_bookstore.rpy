@@ -11,11 +11,13 @@ label chapter_one:
         pause 1.0
         show bg bookstore with dissolve
         play music bookstore_vibing fadein 1.0
-
+        pause 1.0
+        play sound "sound/Cicada Ambience.flac" volume 0.3 fadein 2.0 loop
         "It's been a slow summer. Slower than usual. The buzzing of cicadas and unyielding humidity drown our little town in syrupy hot summer."
 
         "The familiar sound seems to say, \"You have all the time in the world.\" A clock hanging by the cluttered storefront counter slowly {i}tic tic tics{/i} in agreement."
 
+        stop sound fadeout 3.0
         "I adjust the angle of my desk fan to get a better breeze. It helps, but sweat still sticks my crisp white dress shirt to my skin."
 
         "Business has been far too slow."
@@ -69,13 +71,24 @@ label chapter_one:
 
         "A glance tells me the girl survived the fall. The lamp, on the other hand, did not."
 
-        "The mosaic glass panels shattered back into un-mosaicked shards. My heart lurches."
+        "The mosaic glass panels shattered, reverting the art piece to merely a chaotic array of un-mosaicked shards."
 
         menu:
             "Quick! What should I do?!"
 
             "Check on the girl":
                     $ kind_points += 1
+                    show plusone:
+                        subpixel True
+                        xanchor -1595
+                        #xanchor -599 
+                        yanchor -643 alpha 0.0 
+                        linear 0.18 yanchor -535 alpha 1.0 
+                        linear 0.25 yanchor -439 alpha 1.0 
+                        linear 0.15 yanchor -351 alpha 0.0 
+                    with Pause(0.68)
+                    show plusone:
+                        yanchor -251 alpha 0.0
                     jump bookstore_Girl
 
             "Check the lamp":
@@ -139,6 +152,17 @@ label chapter_one:
             menu:
                 "Grab her hand":
                     $ kind_points += 1
+                    show plusone:
+                        subpixel True
+                        xanchor -1595
+                        #xanchor -599 
+                        yanchor -643 alpha 0.0 
+                        linear 0.18 yanchor -535 alpha 1.0 
+                        linear 0.25 yanchor -439 alpha 1.0 
+                        linear 0.15 yanchor -351 alpha 0.0 
+                    with Pause(0.68)
+                    show plusone:
+                        yanchor -251 alpha 0.0
                     jump lamp_grab
 
                 "Freeze in surprise":

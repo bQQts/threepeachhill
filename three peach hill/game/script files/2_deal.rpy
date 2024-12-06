@@ -78,21 +78,28 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         a neutral "\"Put the pieces in this. I'm going to go look something up.\""
 
-        "As Erin collects the pieces, I go get the address book from the front counter and start flipping through it. \"Book\" is a term used loosely in this context."
+        "As Erin collects the pieces, I go get the address book from the front counter and start flipping through it. \"Book\" is a generous descriptor for this mishmash."
             
         "It's a huge leather binder that's been stuffed full of additional sheaves of paper, parchment, newspaper ad clippings, and even some pressed leaves inscribed with nearly illegible writings."
 
-        "These are notes, contacts, fliers, and advertisements from all manner of local, both human and spirit. My parents added their notes when they took over the shop, and I've added a few of my own over the years."
+        "These are notes, contacts, fliers, and advertisements from all manner of local business, both human and spirit. My parents added their notes when they took over the shop, and I've added a few of my own over the years."
 
-        "(I'm sure there's somebody in here who could fix the lamp.)"
+        "(There must be somebody in here who could fix the lamp.)"
 
+        play sound "sound/PageTurn.flac"
+        pause 0.8
+        queue sound "sound/PageTurn.flac" volume 0.7
+        #queue sound "sound/Glass Sweep.flac" volume 0.7
+        queue sound "sound/PageTurn.flac" volume 0.4
         "The bookshop's vibey music is accented by the sounds of pages flipping and glass pieces clinking as we work away."
 
         pause 2.0
 
         e neutral "\"Hey, Aya?\""
 
-        "I pin a loose sheaf with an index finger so the little fan doesn't blow it away while I write in thick marker on a blank page from a nearby notebook. I reply distractedly,"
+        "(There! I've got it!)"
+        
+        "I pin a no-longer-sticky sticky note with an index finger so the little fan doesn't blow it away while I write in thick marker on a blank page from a nearby notebook. I reply distractedly,"
 
         a neutral "\"Yeah?\""
 
@@ -104,13 +111,14 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         a sad "\"Well, you're right about that.\""
 
+        #play sound "Marker.flac"
         "I finish writing the last few words and sign the bottom of the page with a flourish before sliding the sheet over to Erin."
 
         "She peers at the page, brows furrowed cutely in concentration."
 
         e neutral "\"What's this? Is this... a contract?\""
 
-        "My mouth curls into a smile, and my tone is light when I explain."
+        "My mouth curls into a tiny smile, and my tone is light when I explain."
 
         a neutral "\"It's just something simple. Sign it with your name and it will mean you can accompany me to the Lost Market.\""
         
@@ -173,11 +181,10 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
         "I wordlessly pass her the marker, which has a plastic spoon taped to it. She takes it and signs the bottom of the page."
 
         ## in a future version it would be cool to have art/simple animation of the contract going golden
-        ## and a sound effect???? 
+        play sound "sound/Magic Spell Push.flac" volume 0.5
+        "With a whoosh, heatless golden flames trace the lines of ink and the page disappears."
 
-        "Heatless golden flames trace the lines of ink, and the page disappears."
-
-        "If we were on The Other Side, we'd be able to see the little red ribbon of promise between us. But we're here, so we can't."
+        "If we were on The Other Side, we'd be able to see the little red ribbon of promise that now connects us. But we're here, so we can't."
 
         "Erin startles."
 
@@ -205,7 +212,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         "My heart skips a beat and I hesitate, not sure if she means that in an I-love-women way or a complimenting-between-girlies way."
         
-        "She notices the heat warning my cheeks. Before I can say anything in response, she ducks out of the store, giggling."
+        "She notices the heat warming my cheeks. Before I can say anything in response, she ducks out of the store, giggling."
 
         a tsuntsun "\"Wh... what...!\""
 

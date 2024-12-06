@@ -1,7 +1,7 @@
 label chapter_nine:
     $ chapter_num = 9
     label date:
-        scene black
+        scene brown
         stop music fadeout 2.0
         $ make_day()
         show bg bathroom with dissolve
@@ -9,15 +9,19 @@ label chapter_nine:
 
         "After what happened at the Lost Market, Erin took the last two days off to rest. She slept for about 20 hours the first day, which had me worried."
 
+        ## phone buzz sound effect
         "My phone buzzes. It's a text from Erin."
         
         "\"See you in a bit!\""
     
         "I asked her to meet me at the nearby cafe so I could check on her, and because I've come to a decision."
 
-        scene black with dissolve
+        scene brown with dissolve
         play music coffee fadein 0.5
         show bg lydias with dissolve
+
+        play sound "sound/Cup.flac"
+        "I set my coffee cup down. The ceramic clinks against the saucer."
 
         a neutral "\"I've given it a lot of thought, and... I don't want to go to the Lost Market tomorrow.\""
 
@@ -84,6 +88,7 @@ label chapter_nine:
         
         a neutral "\"I release you from the pact.\""
 
+        ## sound effect here
         "With those simple words, the page crumbles into dust."
 
         "I can feel the faint snap of the contractual bond between us breaking."
@@ -122,7 +127,7 @@ label chapter_nine:
 
         window hide
 
-        scene black with irisin
+        scene brown with irisin
         stop music fadeout 3.0
         pause 1.0
 

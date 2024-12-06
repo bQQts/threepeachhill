@@ -2,13 +2,15 @@ label chapter_six:
     $ chapter_num = 6
     label the_call:
 
+        scene bg kitchen
         "I'm filling a glass of water when I hear Erin's muffled voice. She must be out on the balcony, and by the sound of it, she's having a not-very-fun conversation."
+        
+        stop music fadeout 4.0
+        "When she comes in                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     she seems deflated."
 
-        "When she comes inside, she seems deflated."
+        a neutral "\"Oh, there you are! Were you on the phone?\""
 
-        a neutral "\"Who was that?\""
-
-        e neutral "\"My parents. They want me to come back to the city.\""
+        e neutral "\"Yeah. It was my parents. They want me to come back to the city.\""
 
         "My stomach drops."
 
@@ -17,8 +19,8 @@ label chapter_six:
         e gloom "\"Sigh. I haven't decided yet, to be honest. It's nice out here, and...\""
 
         "She looks sidelong at me through lowered lashes."
-
-        e happy "\"I've found somewhere I like being, rather than just existing somewhere I don't really care about.\""
+        play music romance fadein 1.0
+        e happy "\"I've found somewhere I like being. This feels like a place I could belong.\""
 
         "Oh."
 
@@ -41,7 +43,7 @@ label chapter_six:
         "She smiles shyly at me."
 
         "That's when I get a call myself. One that dooms me in a way I was totally unprepared for."
-
-        scene black with irisin
+        window hide
+        scene brown with irisin
         pause 2.0
         jump the_plan

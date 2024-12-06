@@ -920,7 +920,6 @@ style file_arrow_next_button is file_arrow_button:
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
 screen options():
-
     tag menu
 
     use game_menu():
@@ -937,69 +936,89 @@ screen options():
         button style "file_arrow_next_button" action OpenOptionsPageButtons() activate_sound "sound/Haptics.flac" 
 
 screen options_sliders():
+    fixed:
+        xoffset 520
+        yoffset 140
+        if config.has_music or config.has_sound or config.has_voice:
+            null height gui.pref_spacing
+
+            textbutton "MUTE ALL":
+                action Preference("all mute", "toggle")
+                activate_sound "sound/Haptics.flac" 
     hbox:
         vbox:
-            label _("GAME VOLUME") style "options_section_label"
+            label _("GAME VOLUME")
 
             if config.has_music:
-                label _("MUSIC VOLUME")
-                bar value Preference("music volume")
+                use options_bar(_("MUSIC VOLUME"), "music volume")
 
             if config.has_sound:
-                label _("SFX VOLUME")
-                bar value Preference("sound volume")
+                use options_bar(_("SFX VOLUME"), "sound volume")
 
                 # if config.sample_sound:
                 #     textbutton _("Test") action Play("sound", config.sample_sound)
 
             if config.has_voice:
-                label _("VOICE VOLUME")
-                bar value Preference("voice volume")
+                use options_bar(_("VOICE VOLUME"), "voice volume")
 
                 # if config.sample_voice:
                 #     textbutton _("Test") action Play("voice", config.sample_voice)
-
-            if config.has_music or config.has_sound or config.has_voice:
-                null height gui.pref_spacing
-
-                textbutton _("Mute All"):
-                    action Preference("all mute", "toggle")
-                    activate_sound "sound/Haptics.flac" 
-                    style "mute_all_button"
         vbox:
-            label _("TEXT SPEED") style "options_section_label"
-
             label _("TEXT SPEED")
 
-            bar value Preference("text speed")
+            use options_bar(_("TEXT SPEED"), "text speed")
+            use options_bar(_("AUTOFORWARD SKIP"), "auto-forward time")
 
-            label _("AUTOFORWARD")
-
-            bar value Preference("auto-forward time")
 
 screen options_buttons():
     hbox:
         vbox:
-            label _("TEXT SKIP") style "options_section_label"
-            textbutton _("Unseen Text"):
-                action Preference("skip", "toggle") 
-                activate_sound "sound/Haptics.flac" 
-            textbutton _("After Choices"):
-                action Preference("after choices", "toggle") 
-                activate_sound "sound/Haptics.flac" 
-            textbutton _("Transitions"):
-                action InvertSelected(Preference("transitions", "toggle")) 
-                activate_sound "sound/Haptics.flac" 
+            label _("TEXT SKIP")
+            use options_radio_button(
+                "UNSEEN TEXT", "options_text_unseen", Preference("skip", "toggle"), "options_text_radio")
+            use options_radio_button(
+                "AFTER CHOICES", "options_text_after", Preference("after choices", "toggle"), "options_text_radio")
+            use options_radio_button(
+                "TRANSITIONS", "options_text_transitions", Preference("transitions", "toggle"), "options_text_radio")
         
         if renpy.variant("pc") or renpy.variant("web"):
             vbox:
-                label _("GAME DISPLAY") style "options_section_label"
-                textbutton _("Window"):
-                    action Preference("display", "window") 
-                    activate_sound "sound/Haptics.flac" 
-                textbutton _("Fullscreen"):
-                    action Preference("display", "fullscreen") 
-                    activate_sound "sound/Haptics.flac" 
+                label _("GAME DISPLAY")
+                use options_radio_button(
+                    "WINDOWED", "options_display_windowed", Preference("display", "window"), "options_display_radio")
+                use options_radio_button(
+                    "FULLSCREEN", "options_display_fullscreen", Preference("display", "fullscreen"), "options_display_radio")
+
+screen options_bar(display_text, preference_var):
+    style_prefix "options_bar"
+    vbox:
+        text _(display_text)
+        bar: 
+            value Preference(preference_var)
+            range 100
+            left_bar "gui/menu/options_bar_fill.png"
+            right_bar "gui/menu/options_bar_empty.png"
+            thumb "gui/menu/options_bar_thumb.png"
+            thumb_offset 50
+            left_gutter 38
+            right_gutter 38
+            xsize 846
+            ysize 146
+            xalign 0.5
+            yalign 0.5
+            xoffset -48
+        $ pref_wrapper = Preference(preference_var)
+        $ pref_value = ""
+        $ if isinstance(pref_wrapper, MixerValue): pref_value = f"{int(pref_wrapper.get_volume() * 100)}%"
+        $ if isinstance(pref_wrapper, FieldValue): pref_value = int(pref_wrapper.get_value())
+        text "[pref_value]" xalign 0.45
+
+screen options_radio_button(display_text, image_name, click_action, style_prefix_name):
+    style_prefix style_prefix_name
+    textbutton display_text:
+        action click_action
+        activate_sound "sound/Haptics.flac" 
+        background "gui/menu/" + image_name + "_[prefix_]button.png"
 
 style options_hbox is hbox:
     yfill True
@@ -1007,82 +1026,58 @@ style options_hbox is hbox:
     background "#0f0"
 style options_vbox is vbox:
     xsize 1280
-    yalign 0.5
-    background "#f00"
+    yalign 0
+    yoffset 94
+    xoffset 80
 
-style options_section_label is gui_label:
-    properties gui.text_properties("options_section_label")
+style options_text is gui_text:
+    properties gui.text_properties("options")
+
+style options_label is gui_label:
+    xsize 568
+    ysize 172
+    xalign 0
     background "gui/menu/options_section_label.png"
 
-style pref_label is gui_label
-style pref_label_text is gui_label_text
-style pref_vbox is vbox
+style options_label_text is options_text:
+    properties gui.text_properties("options_label")
 
-style radio_label is pref_label
-style radio_label_text is pref_label_text
-style radio_button is gui_button
-style radio_button_text is gui_button_text
-style radio_vbox is pref_vbox
+style options_content:
+    xalign 0
+    xoffset 120
+    xsize 880
 
-style check_label is pref_label
-style check_label_text is pref_label_text
-style check_button is gui_button
-style check_button_text is gui_button_text
-style check_vbox is pref_vbox
 
-style slider_label is pref_label
-style slider_label_text is pref_label_text
-style slider_slider is gui_slider
-style slider_button is gui_button
-style slider_button_text is gui_button_text
-style slider_pref_vbox is pref_vbox
+style options_bar_vbox is options_content:
+    xsize 920  
 
-style mute_all_button is check_button
-style mute_all_button_text is check_button_text
+style options_bar_text is options_text:
+    properties gui.text_properties("options_bar")
 
-style pref_label:
-    top_margin gui.pref_spacing
-    bottom_margin 4
 
-style pref_label_text:
-    yalign 1.0
+style options_button is options_content
 
-style pref_vbox:
-    xsize 450
+style options_radio_button is options_button:
+    properties gui.button_properties("options_radio_button")
 
-style radio_vbox:
-    spacing gui.pref_button_spacing
+style options_text_radio_button is options_radio_button:
+    properties gui.button_properties("options_text_radio_button")
 
-style radio_button:
-    properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
+style options_display_radio_button is options_radio_button:
+    properties gui.button_properties("options_display_radio_button")
 
-style radio_button_text:
-    properties gui.text_properties("radio_button")
 
-style check_vbox:
-    spacing gui.pref_button_spacing
+style options_button_text is options_content:
+    properties gui.text_properties("options_button")
 
-style check_button:
-    properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
+style options_radio_button_text:
+    properties gui.text_properties("options_radio_button")
 
-style check_button_text:
-    properties gui.text_properties("check_button")
+style options_text_radio_button_text is options_radio_button_text:
+    properties gui.text_properties("options_text_radio_button")
 
-style slider_slider:
-    xsize 700
-
-style slider_button:
-    properties gui.button_properties("slider_button")
-    yalign 0.5
-    left_margin 20
-
-style slider_button_text:
-    properties gui.text_properties("slider_button")
-
-style slider_vbox:
-    xsize 900
+style options_display_radio_button_text is options_radio_button_text:
+    properties gui.text_properties("options_display_radio_button")
 
 
 ## History screen ##############################################################

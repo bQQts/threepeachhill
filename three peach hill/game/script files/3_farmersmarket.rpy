@@ -59,6 +59,17 @@ label chapter_three_b:
 
             "Lavender and larkspur":
                 $ kind_points += 1
+                show plusone:
+                    subpixel True
+                    xanchor -1595
+                    #xanchor -599 
+                    yanchor -643 alpha 0.0 
+                    linear 0.18 yanchor -535 alpha 1.0 
+                    linear 0.25 yanchor -439 alpha 1.0 
+                    linear 0.15 yanchor -351 alpha 0.0 
+                with Pause(0.68)
+                show plusone:
+                    yanchor -251 alpha 0.0
                 jump farmers_market_lavender
 
         label farmers_market_marigold:
@@ -195,7 +206,7 @@ label chapter_three_b:
 
         a happy "\"It was my mom's. She made it when I was really young. They kept it up on a high shelf so I wouldn't accidentally... break it.\""
 
-        a "\"I didn't really appreciate that lamp 'til I was older. It grew on me, and turning it was like a reminder that mom's still around, lighting up the darkness.\""
+        a "\"I didn't really appreciate that lamp 'til I was older. It grew on me, and turning it on each day was like a reminder that mom's still around, lighting up the darkness.\""
 
         a "\"It's special to me.\""
 
@@ -361,11 +372,11 @@ label chapter_three_b:
 
         "I bury my face in my hands, feeling heat flood my cheeks, my ears, down my neck."
 
-        a "\"I think I'm doomed.\""
+        a "\"I like her.\""
 
         "The words ring true even as I determine to steel myself."
 
-        "I'm not going to fall for someone who's just passing through town. She's sticking around to pay back the debt she owes, no other reason."
+        "I'm not going to fall for someone who's just passing through town. She's sticking around to pay back the debt she owes, no other reason. I've gotta get her out of my head."
 
         scene brown with dissolve
         stop music fadeout 2.0

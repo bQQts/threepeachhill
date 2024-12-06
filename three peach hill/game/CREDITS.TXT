@@ -1,0 +1,25 @@
+# Sounds
+
+Some of this game's sound effects are from the Sonniss #GameAudioGDC Bundle (https://sonniss.com/gameaudiogdc)
+Licensed under THE #GAMEAUDIOGDC BUNDLE LICENSING AGREEMENT
+(https://sonniss.com/gdc-bundle-license)
+
+
+# Fonts
+
+IBM Plex Mono
+(https://fonts.google.com/specimen/IBM+Plex+Mono)
+
+Autumn in September by Misti's Fonts
+(https://mistifonts.com/autumn-in-september/)
+
+Wildy Sans by Andika Setiawan
+(https://pixelify.net/download/free-fonts/script-handwritten/wildy-sans/)
+
+# Music
+
+Original Tracks by SnugglyBun:
+
+
+
+Original Tracks by Undine Soundworks:

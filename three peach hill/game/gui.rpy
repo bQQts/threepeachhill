@@ -305,13 +305,47 @@ define gui.slot_filled_text_selected_hover_color = "#E1562B"
 
 ## Options Screen ##############################################################
 
-define gui.options_section_label_text_size = 96
-define gui.options_section_label_text_color = "#fff"
-define gui.options_section_label_text_xalign = 0.5
-define gui.options_section_label_text_yalign = 0.5
-define gui.options_section_label_text_xsize = 568
-define gui.options_section_label_text_ysize = 172
-define gui.options_section_label_text_outlines = [(absolute(1), "#fff", 0, 0)]
+define gui.options_text_size = 76
+
+define gui.options_label_text_size = 92
+define gui.options_label_text_color = "#FFD5C5"
+define gui.options_label_text_xalign = 0.5
+define gui.options_label_text_yalign = 0.55
+define gui.options_label_text_outlines = [(absolute(3), "#6C1F24", 0, 0)]
+
+define gui.options_button_text_size = 84
+define gui.options_button_text_color = "#FF5758"
+define gui.options_button_text_outlines = [(absolute(1), "#FF5758", 0, 0)]
+define gui.options_button_text_hover_color = "#CD9C89"
+define gui.options_button_text_hover_outlines = [(absolute(1), "#CD9C89", 0, 0)]
+
+define gui.options_button_text_selected_color = "#CD9C89"
+define gui.options_button_text_selected_outlines = [(absolute(1), "#CD9C89", 0, 0)]
+define gui.options_button_text_selected_hover_color = "#FF5758"
+define gui.options_button_text_selected_hover_outlines = [(absolute(1), "#FF5758", 0, 0)]
+
+define gui.options_bar_text_color = "#FF5758"
+define gui.options_bar_text_outlines = [(absolute(1), "#FF5758", 0, 0)]
+
+define gui.options_radio_button_xsize = 960
+define gui.options_radio_button_xoffset = 60
+define gui.options_radio_button_text_size = 80
+define gui.options_radio_button_text_xalign = 0
+define gui.options_radio_button_text_yalign = 0.5
+define gui.options_radio_button_text_color = "#D5A387"
+define gui.options_radio_button_text_hover_color = "#FF845D"
+define gui.options_radio_button_text_selected_color = "#FF5758"
+define gui.options_radio_button_text_selected_hover_color = "#FF5758"
+define gui.options_radio_button_text_outlines = [(absolute(1), "#D5A387", 0, 0)]
+define gui.options_radio_button_text_hover_outlines = [(absolute(1), "#FFBDAA", 0, 0)]
+define gui.options_radio_button_text_selected_outlines = [(absolute(1), "#FF5758", 0, 0)]
+define gui.options_radio_button_text_selected_hover_outlines = [(absolute(1), "#FF5758", 0, 0)]
+
+define gui.options_text_radio_button_height = 296
+define gui.options_display_radio_button_height = 444
+
+define gui.options_text_radio_button_text_xoffset = 420
+define gui.options_display_radio_button_text_xoffset = 640
 
 ## Positioning and Spacing #####################################################
 ##

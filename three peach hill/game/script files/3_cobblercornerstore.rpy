@@ -10,7 +10,7 @@ label chapter_three:
 
         hide date_animated_ch3 with Dissolve(2)
 
-
+        play sound "sound/Cicada Ambience.flac" volume 0.3 fadein 2.0 loop
         "The next week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, a totally open weekend comes calling."
 
     menu:
@@ -25,7 +25,7 @@ label chapter_three:
             jump cornerstore
 
     label cobbler:
-
+        stop sound fadeout 2.0
         show bg kitchen with dissolve
 
         "Fortunately, the peaches had sustained no damage at all during The Incident, and I'm able to whip up a couple of test cobblers."
@@ -67,7 +67,7 @@ label chapter_three:
 
         a happy "\"Oh! No problem, I'll just drop this off upstairs.\""
 
-        "The gentlemen wave in acknowledgement, and I take the stairs to the second floor, where the actual offices and the break room await my cobbler-laden picnic basket."
+        "The gentlemen wave in acknowledgement. I and my cobbler-laden picnic basket take the stairs to the second floor break room."
 
         "I borrow a sticky note from Joy's desk and jot down a note mentioning the cobbler, then put the cobbler in the break room fridge."
 
@@ -93,9 +93,9 @@ label chapter_three:
 
         joy "\"Sorry to hear that, have you thought about doing more social media marketing?\""
 
-        a excited "\"Joy, you sound like such a youngster when you say stuff like that. But you know I'm not tech-savvy like that. And I don't know how that would work for a bookstore...\""
+        a excited "\"Joy, you sound like such a youngster when you say stuff like that. But you know I'm not as tech-savvy as you. And I don't know how well would work for a bookstore...\""
 
-        joy "\"Ah, sorry, didn't mean to go straight into solutions-mode. Let me know if there's anything I can do to help, okay? And take care of yourself, honey. You focus too much on work.\""
+        joy "\"Ah, sorry, Aya. I didn't mean to go straight into giving you unsolicited advice. Let me know if there's anything I can do to help, okay? And take care of yourself, honey. You focus too much on work.\""
 
         "She takes my hand and pats it comfortingly."
 
@@ -109,7 +109,7 @@ label chapter_three:
 
         # title where it's "back at the bookstore"
 
-        "I should call her."
+        "(I should call her.)"
 
         "I stare at the broken lightbulb in the dustbin."
 
@@ -153,39 +153,51 @@ label chapter_three:
 
         a excited "\"This is so cute! Where did you take this?\""
 
-        e rizzler "\"Trade secret, I\'m afraid!\""
+        if cobblerfirst == True:
+            e rizzler "\"Trade secret, I\'m afraid!\""
 
-        a neutral "\"For what trade?\""
+            a neutral "\"For what trade?\""
 
-        e "\"It\'s a secret I\'ll trade for a kiss!\""
+            e "\"It\'s a secret I\'ll trade for a kiss!\""
 
-        a blush "\"A kiss, huh? How will I do that if I don\'t know where you are?\""
+            a blush "\"A kiss, huh? Now, how will I do that if I don\'t know where you are?\""
 
-        "Erin giggles, the sound partly clipped by the phone\'s mic."
+            "Erin giggles, the sound partly clipped by the phone\'s mic."
 
-        e blush "\"I suppose you have a point. Darn.\""
+            e blush "\"I suppose you have a point. Darn.\""
 
-        e happy "\"Wait, was there a reason you called me?\""
+        if cornerstorefirst == True:
+            e excited "\"At work!\""
+
+            a happy "\"Makes sense!\""
+
+        e happy "\"So, was there a reason you called me?\""
 
 
         menu:
-            "I wanted to know if you stayed in town...":
+            "\"I wanted to know if you're staying in town...\"":
                 $ kind_points += 1
                 jump cobbler_erin_stayed
 
-            "I didn\'t really have a reason":
+            "(Lie) \"I didn\'t really have a reason.\"":
                 jump cobbler_erin_no_reason
 
 
     label cobbler_erin_stayed:
 
-        a neutral "\"...or if you had gone back to the city.\""
+        a neutral "\"...or if you're going back to the city.\""
 
         e neutral "\"Oh, you think I\'m a city kid, huh?\""
 
         a "\"Aren\'t you?\""
 
-        e happy "\"I hate it there! I\'m still out here. I\'m sure we\'ll run into each other soon. You'll just have to figure out where I'm spending my time.\""
+        e happy "\"I hate it there! I decided to stick around, so I\'m still out here. I\'m sure we\'ll run into each other again soon.\""
+        
+        if cobblerfirst == True:        
+            e happy "\"You'll just have to figure out where I'm spending my time.\""
+
+        if cornerstorefirst == True:
+            e happy "\"I'll be at the cornerstore a lot of the time, truth be told.\""
 
         e "\"Anyway, I gotta go! I\'ll text you later, bye!\""
 
@@ -207,9 +219,9 @@ label chapter_three:
 
         "She sounds a little deflated when she responds."
 
-        e gloom "\"Right, of course, that\'s alright. Well... I gotta get going, I\'ll text you later! Bye!\""
+        e gloom "\"Right, of course. That\'s alright. Well... I gotta get going, I\'ll text you later! Bye!\""
 
-        "Wait... wait. Wait. Was she asking me out? WAIT."
+        "Wait... wait. WAIT. Was she asking me out?"
 
         scene brown with dissolve
         jump cobbler_end
@@ -312,10 +324,32 @@ label tell_lydia_about_erin:
 
         "She was bold":
             $ kind_points += 1
+            show plusone:
+                subpixel True
+                xanchor -1595
+                #xanchor -599 
+                yanchor -643 alpha 0.0 
+                linear 0.18 yanchor -535 alpha 1.0 
+                linear 0.25 yanchor -439 alpha 1.0 
+                linear 0.15 yanchor -351 alpha 0.0 
+            with Pause(0.68)
+            show plusone:
+                yanchor -251 alpha 0.0
             jump shes_bold
 
         "She was cute":
             $ kind_points += 1
+            show plusone:
+                subpixel True
+                xanchor -1595
+                #xanchor -599 
+                yanchor -643 alpha 0.0 
+                linear 0.18 yanchor -535 alpha 1.0 
+                linear 0.25 yanchor -439 alpha 1.0 
+                linear 0.15 yanchor -351 alpha 0.0 
+            with Pause(0.68)
+            show plusone:
+                yanchor -251 alpha 0.0
             jump shes_cute
 
         "(Change the subject)":
@@ -404,6 +438,8 @@ label tell_lydia_about_erin:
 
     label cobbler_end:
         if cobblerfirst:
+            scene brown with dissolve
+            pause 1.5
             "It's been a big day. I'll go to the cornerstore tomorrow."
 
             scene brown with dissolve
@@ -419,11 +455,12 @@ label tell_lydia_about_erin:
 
 
     label cornerstore:
+        stop sound fadeout 2.0
         "The cornerstore is on the far side of town but it's a nice day, so I leave my bike behind and equip myself with a couple of sturdy tote bags."
         
         "It's been a couple weeks since I've gone, so I'll probably grab a bunch of snacks and drinks to supplement the usual groceries."
 
-        "Some tiny birds peck at seeds and tiny crumbs scattered on the sidewalk, and the little fellows hop out of the way when I walk past."
+        "Some little birds peck at scattered seeds and tiny crumbs on the sidewalk. The little fellows hop out of the way when I walk past."
 
         if milk_carton == True:
             "Outside the cornerstore I see a stack of familiar blue milk cartons."
@@ -435,7 +472,7 @@ label tell_lydia_about_erin:
         show bg cornerstore with dissolve
         play music cornerstore
 
-        "I nod at a couple people in the cornerstore. I don't know them by name, but I broadly recognize them as locals."
+        "I nod at a couple I recognize in the cornerstore. I don't know them by name, but I know they're locals. We've been nodding at each other for years."
 
         e neutral "\"Aya? Is that you?\""
 
@@ -457,27 +494,29 @@ label tell_lydia_about_erin:
 
         e excited "\"I wasn't ready to go back yet. Besides... I still gotta help you find that spell, right?\""
 
-        "Right... in a month!"
+        "Right... but that's not for another month. I thought she'd just come back when it's time, but I guess not."
 
         a happy "\"Ah, well... it's good to see you. I hope you've been well?\""
 
         "She steps past me and starts to unpack the box, restocking the shelf."
 
-        "She stepped close enough that the scent of citrus and apples wafted from her hair. It's a very bright and happy scent, and it suits her."
+        "She's close enough that the light scent of citrus and apples wafts from her hair. It's a very bright and happy scent that suits her."
 
         e rizzler "\"I have! So, you doing some shopping today? Or did you just come here to find me?\""
 
-        a tsuntsun "\"I didn't know where to find you, really. Just here to pick some things up that I missed at the grocer.\""
+        a tsuntsun "\"I didn't know where to find you, really.\""
+        
+        a happy "\"Just here to pick some things up that I missed at the grocer.\""
 
-        e happy "\"Nice! What are you doing after? I'm here 'til 7, but not busy after. We could hang out!\""
+        e happy "\"Nice! What are you doing later? I'm here 'til 7, but not busy tonight. We could hang out!\""
 
         "This seems like a hint. I'm not doing anything, but I want to keep to myself this weekend and recharge..."
 
         menu:
-            "Having some downtime to myself tonight.":
+            "\"Having some downtime to myself tonight.\"":
                 jump cornerstore_downtime
             
-            "(Lie.) Magic stuff. Spirit things.":
+            "(Lie.) \"Magic stuff. Spirit things.\"":
                 jump cornerstore_lie
 
 
@@ -496,7 +535,7 @@ label tell_lydia_about_erin:
 
         e happy "\"That sounds important, I don't want to intrude on that.\""
 
-        "I feel a little bad for the lie. She really took that at face value."
+        "I feel a little bad for the lie."
         
         jump cornerstore_cont
 
@@ -513,19 +552,24 @@ label tell_lydia_about_erin:
         a happy "\"Catch you later, Erin.\""
 
         "The rest of my shopping goes by quickly, though I do steal a few glances of Erin busying herself around the shop. She was certainly quite clumsy at my shop, but it looks like she's doing good work here."
-
+        
+        "Time to head home."
+        window hide
+        scene brown with dissolve
         jump cornerstore_end
-
+        
 
     label cornerstore_end:
 
-        if cornerstorefirst:
-            "It's been a big day. I'll make cobbler tomorrow."
+        if cornerstorefirst:     
+            "I unpack the groceries and make myself a cold lemonade."
+            "I think I'll chill for the rest of today and make cobbler tomorrow."
             scene brown with dissolve
             jump cobbler
 
         else:
             if cobblerfirst:
+                "I unpack the groceries and make myself a cold lemonade."
                 "What a weekend. It was good, but I'm so tired... at least the bookstore will be quiet this week!"
                 scene brown with dissolve
                 jump farmers_market
