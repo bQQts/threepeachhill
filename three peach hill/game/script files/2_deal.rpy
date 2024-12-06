@@ -33,7 +33,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
         e neutral "Erin looks doubtful."
 
         e neutral "\"Really...?\""
-
+        hide brokenlamp with dissolve
         scene brown with dissolve
         pause 1.0
         show bg bookstore with dissolve
@@ -93,8 +93,6 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
         queue sound "sound/PageTurn.flac" volume 0.4
         "The bookshop's vibey music is accented by the sounds of pages flipping and glass pieces clinking as we work away."
 
-        pause 2.0
-
         e neutral "\"Hey, Aya?\""
 
         "(There! I've got it!)"
@@ -132,7 +130,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         a excited "\"No, no, nothing like that. Just regular money. Most spirits in the modern era use human currency to keep things simple,\""
         
-        a "\"though it's possible to find the odd esoteric spirit who wants weird ingredients, favors, or labor as their exchange rate.\""
+        a "\"...though it's possible to find the odd esoteric spirit who wants weird ingredients, favors, or labor as their exchange rate.\""
         
         a gloom "\"But whatever the cost, nothing is ever free.\""
 

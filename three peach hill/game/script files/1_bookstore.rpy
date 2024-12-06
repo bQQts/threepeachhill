@@ -67,12 +67,13 @@ label chapter_one:
 
         "She tumbles to the ground in a heap as the rack slams into a nearby bookshelf, knocking off the blue heirloom lamp that, moments before, had minded its own business for as long as I can remember."
 
+        show brokenlamp with dissolve
         "(Oh no...)"
 
         "A glance tells me the girl survived the fall. The lamp, on the other hand, did not."
 
         "The mosaic glass panels shattered, reverting the art piece to merely a chaotic array of un-mosaicked shards."
-
+        hide brokenlamp with dissolve
         menu:
             "Quick! What should I do?!"
 
@@ -109,6 +110,8 @@ label chapter_one:
 
             e gloom "\"I'm so sorry!!! I didn't see the box, I hope nothing...\""
 
+            show brokenlamp with dissolve
+            
             "Her gaze slides to the broken lamp and she gulps."
 
             e sad "\"...well, I hope nothing else got too damaged. I'm really sorry. Let me help clean up!\""
@@ -124,6 +127,8 @@ label chapter_one:
 
         label bookstore_Lamp:
             $ lamp_check = True
+
+            show brokenlamp with dissolve
 
             "Surveying the shattered lamp yields nothing I didn't already suspect. The glass lampshade was a mosaic of shades of blue stained glass pieces welded together at the seams."
             

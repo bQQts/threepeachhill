@@ -147,6 +147,7 @@ label chapter_three:
 
         "A faint rustle emits from the phone as Erin finds the photo and sends it to me."
 
+        show kitty day with dissolve
         "*ding*"
 
         "It\'s adorable. A little grey cat, barely more than a kitten, is napping in a milk carton lit by a perfect sunbeam."
@@ -171,6 +172,7 @@ label chapter_three:
 
             a happy "\"Makes sense!\""
 
+        hide kitty day with dissolve
         e happy "\"So, was there a reason you called me?\""
 
 
@@ -464,7 +466,7 @@ label tell_lydia_about_erin:
 
         if milk_carton == True:
             "Outside the cornerstore I see a stack of familiar blue milk cartons."
-            a "\"No way.\""
+            a excited "\"No way.\""
             "I guess this is where she's been... closer than I thought!"
             pause 2.0
 

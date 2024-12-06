@@ -74,6 +74,9 @@ image bg rain night = "rain night.png"
 
 image bg nightmarket red = "nightmarket red.png"
 
+image kitty day = "kitty day.png"
+image brokenlamp = "brokenlamp.png"
+
 image cg piggyback = "cg_piggyback.png"
 
 image credits = "gui/credits.png"
