@@ -301,30 +301,14 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back"):
-                activate_sound "sound/Haptics.flac" 
-                action Rollback()
-            textbutton _("History"):
-                activate_sound "sound/Haptics.flac" 
-                action ShowMenu('history')
-            textbutton _("Skip"):
-                activate_sound "sound/Haptics.flac" 
-                action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto"):
-                activate_sound "sound/Haptics.flac" 
-                action Preference("auto-forward", "toggle")
-            textbutton _("Save"):
-                activate_sound "sound/Haptics.flac" 
-                action ShowMenu('save')
-            textbutton _("Q.Save"):
-                activate_sound "sound/Haptics.flac" 
-                action QuickSave()
-            textbutton _("Q.Load"):
-                activate_sound "sound/Haptics.flac" 
-                action QuickLoad()
-            textbutton _("Prefs"):
-                activate_sound "sound/Haptics.flac" 
-                action ShowMenu('preferences')
+            textbutton _("Back") action Rollback()
+            textbutton _("History") action ShowMenu('history')
+            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Auto") action Preference("auto-forward", "toggle")
+            textbutton _("Save") action ShowMenu('save')
+            textbutton _("Q.Save") action QuickSave()
+            textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -498,7 +482,6 @@ screen navigation():
     # Add the fancy twirly return icon here later.
     textbutton _("RETURN"):
         style "navigation_top_left_button"
-        activate_sound "sound/Haptics.flac" 
         action Return()
 
     #vbox:
@@ -511,25 +494,17 @@ screen navigation():
         spacing gui.navigation_spacing
 
         # Switch between Save/Load based on which one makes sense.
-        textbutton _("SAVE"):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("save")
-        textbutton _("LOAD"):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("load")
-        textbutton _("OPTIONS"):
-            activate_sound "sound/Haptics.flac" 
-            action ShowMenu("options")
+        textbutton _("SAVE") action ShowMenu("save")
+        textbutton _("LOAD") action ShowMenu("load")
+        textbutton _("OPTIONS") action ShowMenu("options")
 
     if _in_replay:
         textbutton _("END REPLAY"):
             style "navigation_top_right_button"
-            activate_sound "sound/Haptics.flac" 
             action EndReplay(confirm=True)
     else:
         textbutton _("EXIT"):
             style "navigation_top_right_button" 
-            activate_sound "sound/Haptics.flac" 
             action ShowMenu("selection_menu")
 
 
@@ -805,9 +780,9 @@ screen file_slots():
                 order_reverse True
                 
                 if not page_type == FilePageType.AUTO:
-                    button style "file_arrow_previous_button" action TrackedFilePagePrevious() activate_sound "sound/Haptics.flac" 
+                    button style "file_arrow_previous_button" action TrackedFilePagePrevious()
                 if not page_num == 9:
-                    button style "file_arrow_next_button" action TrackedFilePageNext() activate_sound "sound/Haptics.flac" 
+                    button style "file_arrow_next_button" action TrackedFilePageNext()
 
                 ## The grid of file slots.
                 grid gui.file_slot_cols gui.file_slot_rows:
@@ -852,7 +827,6 @@ screen file_slots():
                                 else:
                                     style_prefix "slot_filled"
 
-                                activate_sound "sound/Haptics.flac" 
                                 action FileAction(slot)
 
                                 hbox:
@@ -896,30 +870,22 @@ screen file_slots():
                     spacing gui.page_spacing
 
                     if config.has_autosave:
-                        textbutton _("{#auto_page}A"):
-                            activate_sound "sound/Haptics.flac" 
-                            action TrackedFilePage(0, FilePageType.AUTO)
+                        textbutton _("{#auto_page}A") action TrackedFilePage(0, FilePageType.AUTO)
 
                     if config.has_quicksave:
-                        textbutton _("{#quick_page}Q"):
-                            activate_sound "sound/Haptics.flac" 
-                            action TrackedFilePage(0, FilePageType.QUICKSAVE)
+                        textbutton _("{#quick_page}Q") action TrackedFilePage(0, FilePageType.QUICKSAVE)
 
                     ## range(1, 10) gives the numbers from 1 to 9.
                     for page in range(1, 10):
-                        textbutton "[page]":
-                            activate_sound "sound/Haptics.flac" 
-                            action TrackedFilePage(page)
+                        textbutton "[page]" action TrackedFilePage(page)
 
                     if config.has_sync:
                         if CurrentScreenName() == "save":
                             textbutton _("Upload Sync")  style"page_sync_button":
-                                activate_sound "sound/Haptics.flac" 
                                 action UploadSync()
                                 xalign 0.5
                         else:
                             textbutton _("Download Sync") style "page_sync_button":
-                                activate_sound "sound/Haptics.flac" 
                                 action DownloadSync()
                                 xalign 0.5
 
@@ -1025,9 +991,9 @@ screen options():
         
     # Add the buttons to flip through to different pages.
     if not options_page_type == OptionsPageType.SLIDERS:
-        button style "file_arrow_previous_button" action OpenOptionsPageSliders() activate_sound "sound/Haptics.flac" 
+        button style "file_arrow_previous_button" action OpenOptionsPageSliders()
     if not options_page_type == OptionsPageType.BUTTONS:
-        button style "file_arrow_next_button" action OpenOptionsPageButtons() activate_sound "sound/Haptics.flac" 
+        button style "file_arrow_next_button" action OpenOptionsPageButtons()
 
 screen options_sliders():
     fixed:
@@ -1038,7 +1004,6 @@ screen options_sliders():
 
             textbutton "MUTE ALL":
                 action Preference("all mute", "toggle")
-                activate_sound "sound/Haptics.flac" 
     hbox:
         vbox:
             label _("GAME VOLUME")
@@ -1111,7 +1076,6 @@ screen options_radio_button(display_text, image_name, click_action, style_prefix
     style_prefix style_prefix_name
     textbutton display_text:
         action click_action
-        activate_sound "sound/Haptics.flac" 
         background "gui/menu/" + image_name + "_[prefix_]button.png"
 
 style options_hbox is hbox:
@@ -1287,21 +1251,19 @@ screen help():
                 xalign 0.5
                 yalign 0.5
                 ysize 1100
-                vbox:
-                    xsize 1180
-                    yalign 0.5
-                    textbutton _("KEYBOARD"):
-                        activate_sound "sound/Haptics.flac" 
-                        action SetScreenVariable("device", "keyboard")
-                    textbutton _("MOUSE") action SetScreenVariable("device", "mouse")
 
-                    if GamepadExists():
-                        textbutton _("GAMEPAD"):
-                            activate_sound "sound/Haptics.flac" 
-                            action SetScreenVariable("device", "gamepad")
                 vbox:
                     xsize 1180
                     yalign 0.5
+
+                    textbutton _("KEYBOARD") action SetScreenVariable("device", "keyboard")
+                    textbutton _("MOUSE") action SetScreenVariable("device", "mouse")
+                    if GamepadExists():
+                        textbutton _("GAMEPAD") action SetScreenVariable("device", "gamepad")
+                vbox:
+                    xsize 1180
+                    yalign 0.5
+
                     if device == "keyboard":
                         use keyboard_help
                     elif device == "mouse":
@@ -1413,7 +1375,6 @@ screen gamepad_help():
     text ""
 
     textbutton _("CALIBRATE"):
-        activate_sound "sound/Haptics.flac" 
         xalign 0.5
         action GamepadCalibrate()
 
@@ -1466,7 +1427,6 @@ screen confirm(message, yes_action, no_action):
     add "gui/overlay/confirm.png"
 
     frame:
-
         vbox:
             xalign .5
             yalign .5
@@ -1481,10 +1441,8 @@ screen confirm(message, yes_action, no_action):
                 spacing 200
 
                 textbutton _("Yes"):
-                    activate_sound "sound/Haptics.flac" 
                     action yes_action
                 textbutton _("No"):
-                    activate_sound "sound/Haptics.flac" 
                     action no_action
 
     ## Right-click and escape answer "no".
@@ -1641,7 +1599,6 @@ screen nvl(dialogue, items=None):
         for i in items:
 
             textbutton i.caption:
-                activate_sound "sound/Haptics.flac" 
                 action i.action
                 style "nvl_button"
 
@@ -1841,16 +1798,12 @@ screen quick_menu():
             yalign 1.0
 
             textbutton _("Back"):
-                activate_sound "sound/Haptics.flac" 
                 action Rollback()
             textbutton _("Skip"):
-                activate_sound "sound/Haptics.flac"  
                 action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto"): 
-                activate_sound "sound/Haptics.flac" 
                 action Preference("auto-forward", "toggle")
             textbutton _("Menu"): 
-                activate_sound "sound/Haptics.flac" 
                 action ShowMenu()
 
 
