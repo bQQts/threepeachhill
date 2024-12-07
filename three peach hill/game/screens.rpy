@@ -394,10 +394,12 @@ screen selection_menu():
         background None
         window:
             if selection_menu_type is SelectionMenuType.QUIT:
-                if main_menu:
-                    use selection_menu_quit_or_main()
-                else:
+                if renpy.variant("web"):
+                    use selection_menu_title()
+                elif main_menu:
                     use selection_menu_quit()
+                else:
+                    use selection_menu_quit_or_main()
             else:
                 use selection_menu_confirm()
 
@@ -405,6 +407,7 @@ screen selection_menu_quit_or_main():
     vbox:
         yalign 0.65
         text "Do you want to return to title or quit game?"
+        text "(Unsaved progress will be lost)" style "selection_menu_subtext"
         hbox:
             textbutton _("RETURN TO TITLE"):
                 action OnSelectionMenuTitleConfirm()
@@ -417,12 +420,24 @@ screen selection_menu_quit_or_main():
 screen selection_menu_quit():
     vbox:
         text "Do you want to quit the game?"
+        text "(Unsaved progress will be lost)" style "selection_menu_subtext"
         hbox:
             textbutton _("NO"):
                 style "selection_menu_cancel_button"
                 action ResetSelectionMenu()
             textbutton _("YES"):
                 action Quit()
+
+screen selection_menu_title():
+    vbox:
+        text "Do you want to return to title?"
+        text "(Unsaved progress will be lost)" style "selection_menu_subtext"
+        hbox:
+            textbutton _("NO"):
+                style "selection_menu_cancel_button"
+                action ResetSelectionMenu()
+            textbutton _("YES"):
+                action ResetAndReturnToMain()
 
 screen selection_menu_confirm():
     vbox:
@@ -471,6 +486,9 @@ style selection_menu_text:
     color "#FF662E"
     size 72
     outlines [(absolute(.75), "#FF662E", 0, 0)]
+
+style selection_menu_subtext is selection_menu_text:
+    size 52
 
 style selection_menu_button is button:
     properties gui.button_properties("selection_menu_button")

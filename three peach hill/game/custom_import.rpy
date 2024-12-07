@@ -127,8 +127,4 @@ init -100 python:
     
     class ResetAndReturnToMain(Action, DictEquality):
         def __call__(self):
-            global selection_menu_type
-            selection_menu_type = SelectionMenuType.QUIT
-            renpy.hide_screen("selection_menu")
-            renpy.show_screen("main_menu")
-            renpy.restart_interaction()
+            renpy.full_restart()
