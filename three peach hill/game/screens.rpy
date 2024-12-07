@@ -318,7 +318,7 @@ init python:
 
 default quick_menu = True
 
-style quick_button is default
+style quick_button is button
 style quick_button_text is button_text
 
 style quick_button:
@@ -366,7 +366,7 @@ screen menu_navigation():
 
 image menu_navigation_button = "gui/menu/menu_navigation_button.png"
 
-style menu_navigation_button is default:
+style menu_navigation_button is button:
     properties gui.button_properties("menu_navigation_button")
     background "menu_navigation_[prefix_]button"
 
@@ -455,7 +455,7 @@ style selection_menu_hbox:
     xalign 0.5
     yalign 0.5
 
-style selection_menu_button:
+style selection_menu_button is button:
     background "gui/selection_menu/menu_selection_[prefix_]button.png"
     properties gui.button_properties("selection_menu")
 
@@ -997,7 +997,7 @@ screen options():
 
 screen options_sliders():
     fixed:
-        xoffset 520
+        xoffset 468
         yoffset 140
         if config.has_music or config.has_sound or config.has_voice:
             null height gui.pref_spacing
@@ -1112,8 +1112,10 @@ style options_bar_vbox is options_content:
 style options_bar_text is options_text:
     properties gui.text_properties("options_bar")
 
-
-style options_button is options_content
+style options_button is button:
+    xsize 920
+    xalign 0
+    xoffset 160
 
 style options_radio_button is options_button:
     properties gui.button_properties("options_radio_button")
