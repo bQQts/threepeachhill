@@ -390,81 +390,101 @@ screen selection_menu():
 
     frame:
         background "#000" at fade_in_overlay
+    frame:
+        background None
         window:
-            vbox:
-                spacing 20
-                if selection_menu_type is SelectionMenuType.QUIT:
-                    if main_menu:
-                        use selection_menu_quit_or_main()
-                    else:
-                        use selection_menu_quit()
+            if selection_menu_type is SelectionMenuType.QUIT:
+                if main_menu:
+                    use selection_menu_quit_or_main()
                 else:
-                    use selection_menu_confirm()
+                    use selection_menu_quit()
+            else:
+                use selection_menu_confirm()
 
 screen selection_menu_quit_or_main():
-    style_prefix "selection_menu"
-    text "Do you want to quit or return to title?"
-    hbox:
-        textbutton _("CLOSE GAME"):
-            action OnSelectionMenuQuitConfirm()
-        textbutton _("TITLE SCREEN"):
-            action OnSelectionMenuTitleConfirm()
-    textbutton _("CLOSE WINDOW"):
-        action ResetSelectionMenu()
-
-screen selection_menu_quit():
-    text "Do you want to quit the game?"
-    hbox:
-        textbutton _("NO"):
+    vbox:
+        yalign 0.65
+        text "Do you want to return to title or quit game?"
+        hbox:
+            textbutton _("RETURN TO TITLE"):
+                action OnSelectionMenuTitleConfirm()
+            textbutton _("CLOSE GAME"):
+                action OnSelectionMenuQuitConfirm()
+        textbutton _("CLOSE WINDOW"):
             style "selection_menu_cancel_button"
             action ResetSelectionMenu()
-        textbutton _("YES"):
-            action Quit()
 
-screen selection_menu_confirm():
-    text "Confirm:"
-    hbox:
-        textbutton _("NO"):
-            action ResetSelectionMenu()
-        if selection_menu_selection is SelectionMenuSelection.QUIT:
+screen selection_menu_quit():
+    vbox:
+        text "Do you want to quit the game?"
+        hbox:
+            textbutton _("NO"):
+                style "selection_menu_cancel_button"
+                action ResetSelectionMenu()
             textbutton _("YES"):
                 action Quit()
-        else:
-            textbutton _("YES"):
-                action ResetAndReturnToMain()
+
+screen selection_menu_confirm():
+    vbox:
+        text "Confirm:"
+        hbox:
+            textbutton _("NO"):
+                style "selection_menu_cancel_button"
+                action ResetSelectionMenu()
+            if selection_menu_selection is SelectionMenuSelection.QUIT:
+                textbutton _("YES"):
+                    action Quit()
+            else:
+                textbutton _("YES"):
+                    action ResetAndReturnToMain()
 
 style selection_menu_frame:
     xfill True
     yfill True
-    xalign 0.5
-    yalign 0.5
+    xalign 0
+    yalign 0
+    xpos 0
+    ypos 0
 
 style selection_menu_window:
     background "gui/selection_menu/base.png"
     xsize 1092
     ysize 674
     yalign 0.5
+    xanchor 0.5
+    xalign 0.5
 
-style selection_menu_vbox:
+style selection_menu_vbox is vbox:
+    xanchor 0.5
+    xalign 0.52
+    yalign 0.55
+    spacing 30
+    
+style selection_menu_hbox is hbox:
+    xanchor 0.5
     xalign 0.5
     yalign 0.5
+    spacing 40
 
-style selection_menu_hbox:
+style selection_menu_text:
     xalign 0.5
-    yalign 0.5
+    color "#FF662E"
+    size 72
+    outlines [(absolute(.75), "#FF662E", 0, 0)]
 
 style selection_menu_button is button:
+    properties gui.button_properties("selection_menu_button")
     background "gui/selection_menu/menu_selection_[prefix_]button.png"
-    properties gui.button_properties("selection_menu")
 
 style selection_menu_button_text:
-    properties gui.text_properties("selection_menu")
+    properties gui.text_properties("selection_menu_button")
 
 style selection_menu_cancel_button is selection_menu_button:
+    xalign 0.5
     background "gui/selection_menu/menu_selection_cancel_[prefix_]button.png"
 
 style selection_menu_cancel_button_text is selection_menu_button_text:
-    properties gui.text_properties("selection_menu_cancel")
+    properties gui.text_properties("selection_menu_cancel_button")
 
 
 ################################################################################

@@ -517,15 +517,29 @@ define gui.navigation_top_button_text_hover_outlines = [(absolute(3), '#6C2B20',
 
 ## Selection Menu ##############################################################
 
+define gui.selection_menu_button_width = 410
+define gui.selection_menu_button_height = 120
 define gui.selection_menu_button_xsize = 410
 define gui.selection_menu_button_ysize = 120
 define gui.selection_menu_button_xalign = 0.5
+define gui.selection_menu_button_yalign = 0.5
+define gui.selection_menu_button_xanchor = 0.5
+define gui.selection_menu_button_yanchor = 0.5
 
-define gui.selection_menu_text_idle_color = menu_font_color
-define gui.selection_menu_text_hover_color = "#fff"
+define gui.selection_menu_button_text_xsize = 410
+define gui.selection_menu_button_text_yalign = 0.5
+define gui.selection_menu_button_text_xalign = 0.5
+define gui.selection_menu_button_text_size = 60
+define gui.selection_menu_button_text_idle_color = "#FF662E"
+define gui.selection_menu_button_text_outlines = [(absolute(1), "#FF662E", 0, 0)]
+define gui.selection_menu_button_text_hover_color = "#fff"
+define gui.selection_menu_button_text_hover_outlines = [(absolute(1), "#fff", 0, 0)]
 
-define gui.selection_menu_cancel_text_idle_color = "#000"
-define gui.selection_menu_cancel_text_hover_color = "#00f"
+define gui.selection_menu_cancel_button_text_idle_color = "#81A0C1"
+define gui.selection_menu_cancel_button_text_outlines = [(absolute(1), '#81A0C1', 0, 0)]
+define gui.selection_menu_cancel_button_text_hover_color = "#fff"
+define gui.selection_menu_cancel_button_text_hover_outlines = [(absolute(1), "#fff", 0, 0)]
+
 
 ## History #####################################################################
 ##
