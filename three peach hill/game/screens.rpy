@@ -208,6 +208,8 @@ style say_dialogue:
     ypos gui.dialogue_ypos
 
     adjust_spacing False
+    
+    yoffset -44
 
 style namebox_night is namebox:
     background Frame("gui/namebox_night.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
@@ -907,11 +909,13 @@ screen file_slots():
 
                     spacing gui.page_spacing
 
-                    if config.has_autosave:
-                        textbutton _("{#auto_page}A") action TrackedFilePage(0, FilePageType.AUTO)
+                    # For now, remove these buttons on mobile.
+                    if not renpy.variant("mobile"):
+                        if config.has_autosave:
+                            textbutton _("{#auto_page}A") action TrackedFilePage(0, FilePageType.AUTO)
 
-                    if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action TrackedFilePage(0, FilePageType.QUICKSAVE)
+                        if config.has_quicksave:
+                            textbutton _("{#quick_page}Q") action TrackedFilePage(0, FilePageType.QUICKSAVE)
 
                     ## range(1, 10) gives the numbers from 1 to 9.
                     for page in range(1, 10):
@@ -1878,6 +1882,7 @@ screen quick_menu():
 style window:
     variant "small"
     background "gui/phone/textbox.png"
+    color "#f00"
 
 style radio_button:
     variant "small"
