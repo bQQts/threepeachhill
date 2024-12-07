@@ -405,12 +405,10 @@ screen selection_menu_quit_or_main():
     style_prefix "selection_menu"
     text "Do you want to quit or return to title?"
     hbox:
-        button:
-            text _("CLOSE GAME")
-            action OpenSelectionMenuConfirm(SelectionMenuSelection.QUIT)
-        button:
-            text _("TITLE SCREEN")
-            action OpenSelectionMenuConfirm(SelectionMenuSelection.MAIN_MENU)
+        textbutton _("CLOSE GAME"):
+            action OnSelectionMenuQuitConfirm()
+        textbutton _("TITLE SCREEN"):
+            action OnSelectionMenuTitleConfirm()
     textbutton _("CLOSE WINDOW"):
         action ResetSelectionMenu()
 
@@ -421,7 +419,7 @@ screen selection_menu_quit():
             style "selection_menu_cancel_button"
             action ResetSelectionMenu()
         textbutton _("YES"):
-            action Quit(confirm=not main_menu)
+            action Quit()
 
 screen selection_menu_confirm():
     text "Confirm:"
@@ -430,10 +428,10 @@ screen selection_menu_confirm():
             action ResetSelectionMenu()
         if selection_menu_selection is SelectionMenuSelection.QUIT:
             textbutton _("YES"):
-                action Quit(confirm=not main_menu)
+                action Quit()
         else:
             textbutton _("YES"):
-                action MainMenu()
+                action ResetAndReturnToMain()
 
 style selection_menu_frame:
     xfill True

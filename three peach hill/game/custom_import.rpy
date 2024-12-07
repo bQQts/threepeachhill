@@ -104,23 +104,31 @@ init -100 python:
 
     selection_menu_selection = SelectionMenuSelection.QUIT
 
-    class OpenSelectionMenuQuit(Action, DictEquality):
+    class OnSelectionMenuQuitConfirm(Action, DictEquality):
         def __call__(self):
-            global selection_menu_type
-            selection_menu_type = SelectionMenuType.QUIT
+            global selection_menu_selection, selection_menu_type
+            selection_menu_selection = SelectionMenuSelection.QUIT
+            selection_menu_type = SelectionMenuType.CONFIRM
             renpy.restart_interaction()
-
-    class OpenSelectionMenuConfirm(Action, DictEquality):
-        def __init__(self, selection):
-            global selection_menu_selection
-            selection_menu_selection = selection
-
+            
+    class OnSelectionMenuTitleConfirm(Action, DictEquality):
         def __call__(self):
-            global selection_menu_type
+            global selection_menu_selection, selection_menu_type
+            selection_menu_selection = SelectionMenuSelection.MAIN_MENU
             selection_menu_type = SelectionMenuType.CONFIRM
             renpy.restart_interaction()
 
-    class ResetSelectionMenu(OpenSelectionMenuQuit):
+    class ResetSelectionMenu(Action, DictEquality):
         def __call__(self):
+            global selection_menu_type
+            selection_menu_type = SelectionMenuType.QUIT
             renpy.hide_screen("selection_menu")
-            super().__call__()
+            renpy.restart_interaction()
+    
+    class ResetAndReturnToMain(Action, DictEquality):
+        def __call__(self):
+            global selection_menu_type
+            selection_menu_type = SelectionMenuType.QUIT
+            renpy.hide_screen("selection_menu")
+            renpy.show_screen("main_menu")
+            renpy.restart_interaction()

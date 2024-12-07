@@ -519,6 +519,7 @@ define gui.navigation_top_button_text_hover_outlines = [(absolute(3), '#6C2B20',
 
 define gui.selection_menu_button_xsize = 410
 define gui.selection_menu_button_ysize = 120
+define gui.selection_menu_button_xalign = 0.5
 
 define gui.selection_menu_text_idle_color = menu_font_color
 define gui.selection_menu_text_hover_color = "#fff"
