@@ -394,7 +394,7 @@ screen selection_menu():
         background None
         window:
             if selection_menu_type is SelectionMenuType.QUIT:
-                if renpy.variant("web"):
+                if renpy.variant("web") or renpy.variant("mobile"):
                     use selection_menu_title()
                 elif main_menu:
                     use selection_menu_quit()
@@ -1861,14 +1861,15 @@ screen quick_menu():
 
             xalign 0.5
             yalign 1.0
+            yoffset -36
 
-            textbutton _("Back"):
+            textbutton _("BACK"):
                 action Rollback()
-            textbutton _("Skip"):
+            textbutton _("SKIP"):
                 action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto"): 
+            textbutton _("AUTO"): 
                 action Preference("auto-forward", "toggle")
-            textbutton _("Menu"): 
+            textbutton _("MENU"): 
                 action ShowMenu()
 
 
@@ -1890,11 +1891,9 @@ style nvl_window:
 
 style main_menu_frame:
     variant "small"
-    background "gui/phone/overlay/main_menu.png"
 
 style game_menu_outer_frame:
     variant "small"
-    background "gui/phone/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
     variant "small"

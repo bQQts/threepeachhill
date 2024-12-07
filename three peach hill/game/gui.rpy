@@ -650,15 +650,9 @@ init python:
 
         ## Adjust the location of the textbox.
         gui.textbox_height = 480
-        gui.name_xpos = 160
-        gui.dialogue_xpos = 180
-        gui.dialogue_width = 2200
 
         ## Change the size and spacing of various things.
         gui.slider_size = 72
-
-        gui.choice_button_width = 2480
-        gui.choice_button_text_size = 60
 
         gui.navigation_spacing = 40
         gui.pref_button_spacing = 20
@@ -666,7 +660,7 @@ init python:
         gui.history_height = 380
         gui.history_text_width = 1380
 
-        gui.quick_button_text_size = 40
+        gui.quick_button_text_size = 64
 
         ## File button layout.
         gui.file_slot_cols = 2
