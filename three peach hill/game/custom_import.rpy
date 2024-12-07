@@ -90,3 +90,37 @@ init -100 python:
             global options_page_type
             options_page_type = OptionsPageType.BUTTONS
             renpy.restart_interaction()
+
+
+    class SelectionMenuType(Enum):
+        QUIT = 1
+        CONFIRM = 2
+
+    selection_menu_type = SelectionMenuType.QUIT
+
+    class SelectionMenuSelection(Enum):
+        QUIT = 1
+        MAIN_MENU = 2
+
+    selection_menu_selection = SelectionMenuSelection.QUIT
+
+    class OpenSelectionMenuQuit(Action, DictEquality):
+        def __call__(self):
+            global selection_menu_type
+            selection_menu_type = SelectionMenuType.QUIT
+            renpy.restart_interaction()
+
+    class OpenSelectionMenuConfirm(Action, DictEquality):
+        def __init__(self, selection):
+            global selection_menu_selection
+            selection_menu_selection = selection
+
+        def __call__(self):
+            global selection_menu_type
+            selection_menu_type = SelectionMenuType.CONFIRM
+            renpy.restart_interaction()
+
+    class ResetSelectionMenu(OpenSelectionMenuQuit):
+        def __call__(self):
+            renpy.hide_screen("selection_menu")
+            super().__call__()

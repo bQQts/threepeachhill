@@ -29,33 +29,20 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
-CREATIVE DIRECTOR    M Ebel
-
-CHARACTER ART          Tia @ Rhondolier
-
-BACKGROUND ART      Jeanie Choi
-
-UI/UX DESIGN           Leycalate
-
-~                               Tia @ Rhondolier
-
-~                               Jeanie Choi
-
-~                               M Ebel
-
-COMPOSERS              SnugglyBun
-
-~                               Undine Soundworks
-
-SOUND DESIGN         Undine Soundworks
-
-WRITING                   M Ebel
-
-PROGRAMMING         M Ebel
-
-
-""")
+define gui.about = """
+CREATIVE DIRECTOR  \t\t    M Ebel                 \n
+CHARACTER ART      \t\t\t\t\t\tTia @ Rhondolier     \n
+BACKGROUND ART     \t\t\t  Jeanie Choi             \n
+UI/UX DESIGN       \t\t\t\t\t\t Leycalate            \n
+            \t\t\t\t\t\t\t\t\t\t\t\t\t\t    Tia @ Rhondolier    \n
+            \t\t\t\t\t\t\t\t\t\t\t\t\t\t    M Ebel              \n
+COMPOSERS          \t\t\t\t\t\tSnugglyBun           \n
+            \t\t\t\t\t\t\t\t\t\t\t\t\t\t    Undine Soundworks   \n
+SOUND DESIGN       \t\t\t\t  Undine Soundworks      \n
+WRITING            \t\t\t\t\t\t\t\t M Ebel            \n
+PROGRAMMING        \t\t\t\t M Ebel                  \n
+            \t\t\t\t\t\t\t\t\t\t\t\t\t\t    Jeanie Choi             \n
+"""
 
 
 ## A short name for the game used for executables and directories in the built

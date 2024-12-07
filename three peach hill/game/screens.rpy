@@ -392,6 +392,100 @@ style menu_navigation_button_text is default:
 
 
 ################################################################################
+## Selection Menu Popup
+################################################################################
+
+transform fade_in_overlay:
+    alpha 0.0  # Start fully transparent
+    linear 0.3 alpha 0.75  # Fade in over 0.3 seconds
+
+screen selection_menu():
+    modal True 
+    zorder 100
+    style_prefix "selection_menu"
+
+    frame:
+        background "#000" at fade_in_overlay
+        window:
+            vbox:
+                spacing 20
+                if selection_menu_type is SelectionMenuType.QUIT:
+                    if main_menu:
+                        use selection_menu_quit_or_main()
+                    else:
+                        use selection_menu_quit()
+                else:
+                    use selection_menu_confirm()
+
+screen selection_menu_quit_or_main():
+    style_prefix "selection_menu"
+    text "Do you want to quit or return to title?"
+    hbox:
+        button:
+            text _("CLOSE GAME")
+            action OpenSelectionMenuConfirm(SelectionMenuSelection.QUIT)
+        button:
+            text _("TITLE SCREEN")
+            action OpenSelectionMenuConfirm(SelectionMenuSelection.MAIN_MENU)
+    textbutton _("CLOSE WINDOW"):
+        action ResetSelectionMenu()
+
+screen selection_menu_quit():
+    text "Do you want to quit the game?"
+    hbox:
+        textbutton _("NO"):
+            style "selection_menu_cancel_button"
+            action ResetSelectionMenu()
+        textbutton _("YES"):
+            action Quit(confirm=not main_menu)
+
+screen selection_menu_confirm():
+    text "Confirm:"
+    hbox:
+        textbutton _("NO"):
+            action ResetSelectionMenu()
+        if selection_menu_selection is SelectionMenuSelection.QUIT:
+            textbutton _("YES"):
+                action Quit(confirm=not main_menu)
+        else:
+            textbutton _("YES"):
+                action MainMenu()
+
+style selection_menu_frame:
+    xfill True
+    yfill True
+    xalign 0.5
+    yalign 0.5
+
+style selection_menu_window:
+    background "gui/selection_menu/base.png"
+    xsize 1092
+    ysize 674
+    yalign 0.5
+
+style selection_menu_vbox:
+    xalign 0.5
+    yalign 0.5
+
+style selection_menu_hbox:
+    xalign 0.5
+    yalign 0.5
+
+style selection_menu_button:
+    background "gui/selection_menu/menu_selection_[prefix_]button.png"
+    properties gui.button_properties("selection_menu")
+
+style selection_menu_button_text:
+    properties gui.text_properties("selection_menu")
+
+style selection_menu_cancel_button is selection_menu_button:
+    background "gui/selection_menu/menu_selection_cancel_[prefix_]button.png"
+
+style selection_menu_cancel_button_text is selection_menu_button_text:
+    properties gui.text_properties("selection_menu_cancel")
+
+
+################################################################################
 ## Game Menu Screens
 ################################################################################
 
@@ -432,17 +526,11 @@ screen navigation():
             style "navigation_top_right_button"
             activate_sound "sound/Haptics.flac" 
             action EndReplay(confirm=True)
-    elif renpy.variant("pc"):
-        ## The quit button is banned on iOS and unnecessary on Android and Web.
-        textbutton _("EXIT GAME"):
-            style "navigation_top_right_button" 
-            activate_sound "sound/Haptics.flac" 
-            action Quit(confirm=not main_menu)
     else:
-        textbutton _("MAIN MENU"):
+        textbutton _("EXIT"):
             style "navigation_top_right_button" 
             activate_sound "sound/Haptics.flac" 
-            action MainMenu()
+            action ShowMenu("selection_menu")
 
 
 style navigation_button is gui_button
@@ -660,20 +748,25 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(scroll="viewport"):
+    use game_menu():
 
         style_prefix "about"
         hbox:
+            xalign 0.5
             vbox:
-                xsize 1280
-                label "Credits"
-                text _("Version [config.version!t]\n")
+                xsize 1160
+                yalign 0.5
 
                 ## gui.about is usually set in options.rpy.
                 if gui.about:
-                    text "[gui.about!t]\n"
+                    text "[gui.about!t]":
+                        line_spacing -20
             vbox:
-                xsize 1280
+                yalign 0.4
+                xsize 1160
+                xoffset 60
+                label "CREDITS"
+                text _("Version [config.version!t]\n")
                 text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
@@ -1191,23 +1284,30 @@ screen help():
             spacing 30
 
             hbox:
-
-                textbutton _("Keyboard"):
-                    activate_sound "sound/Haptics.flac" 
-                    action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
-
-                if GamepadExists():
-                    textbutton _("Gamepad"):
+                xalign 0.5
+                yalign 0.5
+                ysize 1100
+                vbox:
+                    xsize 1180
+                    yalign 0.5
+                    textbutton _("KEYBOARD"):
                         activate_sound "sound/Haptics.flac" 
-                        action SetScreenVariable("device", "gamepad")
+                        action SetScreenVariable("device", "keyboard")
+                    textbutton _("MOUSE") action SetScreenVariable("device", "mouse")
 
-            if device == "keyboard":
-                use keyboard_help
-            elif device == "mouse":
-                use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
+                    if GamepadExists():
+                        textbutton _("GAMEPAD"):
+                            activate_sound "sound/Haptics.flac" 
+                            action SetScreenVariable("device", "gamepad")
+                vbox:
+                    xsize 1180
+                    yalign 0.5
+                    if device == "keyboard":
+                        use keyboard_help
+                    elif device == "mouse":
+                        use mouse_help
+                    elif device == "gamepad":
+                        use gamepad_help
 
 
 screen keyboard_help():
@@ -1309,9 +1409,12 @@ screen gamepad_help():
     hbox:
         label _("Y/Top Button")
         text _("Hides the user interface.")
+    
+    text ""
 
-    textbutton _("Calibrate"):
+    textbutton _("CALIBRATE"):
         activate_sound "sound/Haptics.flac" 
+        xalign 0.5
         action GamepadCalibrate()
 
 
@@ -1483,7 +1586,6 @@ screen notify(message):
         text "[message!tq]"
 
     timer 3.25 action Hide('notify')
-
 
 transform notify_appear:
     on show:

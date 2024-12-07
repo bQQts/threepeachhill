@@ -347,6 +347,18 @@ define gui.options_display_radio_button_height = 444
 define gui.options_text_radio_button_text_xoffset = 420
 define gui.options_display_radio_button_text_xoffset = 640
 
+## Helop Screen ###############################################################
+
+define gui.help_button_text_size = 84
+define gui.help_button_text_color = "#D5A387"
+define gui.help_button_text_hover_color = "#FF845D"
+define gui.help_button_text_selected_color = "#FF5758"
+define gui.help_button_text_selected_hover_color = "#FF5758"
+define gui.help_button_text_outlines = [(absolute(1), "#D5A387", 0, 0)]
+define gui.help_button_text_hover_outlines = [(absolute(1), "#FFBDAA", 0, 0)]
+define gui.help_button_text_selected_outlines = [(absolute(1), "#FF5758", 0, 0)]
+define gui.help_button_text_selected_hover_outlines = [(absolute(1), "#FF5758", 0, 0)]
+
 ## Positioning and Spacing #####################################################
 ##
 ## These variables control the positioning and spacing of various user interface
@@ -376,6 +388,7 @@ define gui.slot_spacing = 20
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 1.0
 
+define gui.interface_text_line_spacing = 0.5
 
 ## Frames ######################################################################
 ##
@@ -502,6 +515,16 @@ define gui.navigation_top_button_text_outlines = [(absolute(1), '#FFDDCB', 0, 0)
 define gui.navigation_top_button_text_hover_color = '#ffffff'
 define gui.navigation_top_button_text_hover_outlines = [(absolute(3), '#6C2B20', 0, 0)]
 
+## Selection Menu ##############################################################
+
+define gui.selection_menu_button_xsize = 410
+define gui.selection_menu_button_ysize = 120
+
+define gui.selection_menu_text_idle_color = menu_font_color
+define gui.selection_menu_text_hover_color = "#fff"
+
+define gui.selection_menu_cancel_text_idle_color = "#000"
+define gui.selection_menu_cancel_text_hover_color = "#00f"
 
 ## History #####################################################################
 ##
