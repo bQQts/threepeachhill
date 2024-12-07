@@ -308,7 +308,7 @@ screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Prefs") action ShowMenu("options")
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -426,7 +426,7 @@ screen selection_menu_quit():
                 style "selection_menu_cancel_button"
                 action ResetSelectionMenu()
             textbutton _("YES"):
-                action Quit()
+                action Quit(confirm=False)
 
 screen selection_menu_title():
     vbox:
@@ -448,7 +448,7 @@ screen selection_menu_confirm():
                 action ResetSelectionMenu()
             if selection_menu_selection is SelectionMenuSelection.QUIT:
                 textbutton _("YES"):
-                    action Quit()
+                    action Quit(confirm=False)
             else:
                 textbutton _("YES"):
                     action ResetAndReturnToMain()
@@ -1454,60 +1454,87 @@ style help_label_text:
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
 screen confirm(message, yes_action, no_action):
-
-    ## Ensure other screens do not get input while this screen is displayed.
-    modal True
-
-    zorder 200
-
+    modal True 
+    zorder 100
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
-
     frame:
-        vbox:
-            xalign .5
-            yalign .5
-            spacing 60
+        background "#000" at fade_in_overlay
+    frame:
+        background None
+        window:
+            vbox:
+                xoffset 20
+                label _(message):
+                    style "confirm_prompt"
+                    xalign 0.5
 
-            label _(message):
-                style "confirm_prompt"
-                xalign 0.5
-
-            hbox:
-                xalign 0.5
-                spacing 200
-
-                textbutton _("Yes"):
-                    action yes_action
-                textbutton _("No"):
-                    action no_action
-
+                hbox:
+                    textbutton _("NO"):
+                        style "confirm_cancel_button"
+                        xalign 0.5
+                        action no_action
+                    textbutton _("YES"):
+                        action yes_action
+                        xalign 0.5
+                    
     ## Right-click and escape answer "no".
-    key "game_menu" action no_action
-
-
-style confirm_frame is gui_frame
-style confirm_prompt is gui_prompt
-style confirm_prompt_text is gui_prompt_text
-style confirm_button is gui_medium_button
-style confirm_button_text is gui_medium_button_text
+    key "game_menu" action no_action                
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
-    padding gui.confirm_frame_borders.padding
-    xalign .5
-    yalign .5
+    xfill True
+    yfill True
+    xalign 0
+    yalign 0
+    xpos 0
+    ypos 0
 
-style confirm_prompt_text:
-    textalign 0.5
-    layout "subtitle"
+style confirm_window:
+    background "gui/selection_menu/base.png"
+    xsize 1092
+    ysize 674
+    yalign 0.5
+    xanchor 0.5
+    xalign 0.5
 
-style confirm_button:
-    properties gui.button_properties("confirm_button")
+style confirm_vbox is vbox:
+    xanchor 0.5
+    xalign 0.5
+    yalign 0.55
+    spacing 30
+    
+style confirm_hbox is hbox:
+    xanchor 0.5
+    xalign 0.5
+    yalign 0.5
+    spacing 40
+
+style confirm_text:
+    xanchor 0.5
+    xalign 0.5
+    color "#FF662E"
+    size 72
+    outlines [(absolute(.75), "#FF662E", 0, 0)]
+
+style confirm_label:
+    xanchor 0.5
+    xalign 0.5
+style confirm_label_text is confirm_text
+
+style confirm_button is button:
+    properties gui.button_properties("selection_menu_button")
+    xalign 0.5
+    background "gui/selection_menu/menu_selection_[prefix_]button.png"
 
 style confirm_button_text:
-    properties gui.text_properties("confirm_button")
+    properties gui.text_properties("selection_menu_button")
+
+style confirm_cancel_button is confirm_button:
+    xalign 0.5
+    background "gui/selection_menu/menu_selection_cancel_[prefix_]button.png"
+
+style confirm_cancel_button_text is confirm_button_text:
+    properties gui.text_properties("selection_menu_cancel_button")
 
 
 ## Skip indicator screen #######################################################
