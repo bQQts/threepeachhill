@@ -298,7 +298,10 @@ screen quick_menu():
     if quick_menu:
 
         hbox:
-            style_prefix "quick"
+            if is_night:
+                style_prefix "quick_night"
+            else:
+                style_prefix "quick"
 
             xalign 0.5
             yalign 1.0
@@ -313,6 +316,16 @@ screen quick_menu():
             textbutton _("Q.SAVE") action QuickSave()
             textbutton _("Q.LOAD") action QuickLoad()
             textbutton _("OPTIONS") action ShowMenu("options")
+
+            # AUTO
+            # SKIP
+            
+            # BACK
+            # SAVE
+            # LOAD
+            # OPTIONS
+            # Q.SAVE
+            # Q.LOAD
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -330,6 +343,12 @@ style quick_button:
 
 style quick_button_text:
     properties gui.text_properties("quick_button")
+
+style quick_night_button is quick_button:
+    properties gui.button_properties("quick_night_button")
+
+style quick_night_button_text is quick_button_text:
+    properties gui.text_properties("quick_night_button")
 
 
 ################################################################################
@@ -1863,7 +1882,10 @@ screen quick_menu():
     if quick_menu:
 
         hbox:
-            style_prefix "quick"
+            if is_night:
+                style_prefix "quick_night"
+            else:
+                style_prefix "quick"
 
             xalign 0.5
             yalign 1.0
@@ -1879,10 +1901,28 @@ screen quick_menu():
                 action ShowMenu()
 
 
+            # AUTO
+            # SKIP
+            
+            # BACK
+            # SAVE
+            # LOAD
+            # OPTIONS
+
+            # textbutton _("BACK") action Rollback()
+            # # textbutton _("HISTORY") action ShowMenu('history')    # hiding for now
+            # textbutton _("SKIP") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("AUTO") action Preference("auto-forward", "toggle")
+            # textbutton _("SAVE") action ShowMenu('save')
+            # textbutton _("Q.SAVE") action QuickSave()
+            # textbutton _("Q.LOAD") action QuickLoad()
+            # textbutton _("OPTIONS") action ShowMenu("options")
+
+
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
-    color "#f00"
+    xalign 0.5
+    background Frame("textbox[night_suffix]", xalign=0.5, yalign=1.0)
 
 style radio_button:
     variant "small"

@@ -196,8 +196,16 @@ define gui.confirm_button_text_xalign = 0.5
 
 define gui.quick_button_borders = Borders(20, 8, 20, 0)
 define gui.quick_button_text_size = 48
-define gui.quick_button_text_idle_color = gui.idle_small_color
-define gui.quick_button_text_selected_color = gui.accent_color
+
+define gui.quick_button_text_idle_color = "#5C5C5C"
+define gui.quick_button_text_outlines = [(absolute(2), "#FFEEE3", 0, 0)]
+define gui.quick_button_text_hover_color = "#fff"
+define gui.quick_button_text_hover_outlines = [(absolute(2), '#BC7855', 0, 0)]
+
+define gui.quick_night_button_text_idle_color = "#646975"
+define gui.quick_night_button_text_outlines = [(absolute(1), "#2E384D", 0, 0)]
+define gui.quick_night_button_text_hover_color = "#fff"
+define gui.quick_night_button_text_hover_outlines = [(absolute(1), '#2E384D', 0, 0)]
 
 
 ## Choice Buttons ##############################################################
