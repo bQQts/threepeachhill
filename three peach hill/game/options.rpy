@@ -30,7 +30,7 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = """
-CREATIVE DIRECTOR  \t\t    M Ebel                 \n
+LEAD DEV & PRODUCER \t\t    M Ebel                 \n
 CHARACTER ART      \t\t\t\t\t\tTia @ Rhondolier     \n
 BACKGROUND ART     \t\t\t  Jeanie Choi             \n
 UI/UX DESIGN       \t\t\t\t\t\t Leycalate            \n
@@ -77,7 +77,7 @@ define config.sample_voice = "sample-voice.ogg"
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "music/Main Title.flac"
+define config.main_menu_music = "music/Menu.flac"
 
 
 ## Transitions #################################################################
