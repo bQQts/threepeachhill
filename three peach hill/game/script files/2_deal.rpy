@@ -22,7 +22,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         a happy "\"First, what's your name?\""
 
-        e excited "\"Oh, right. I'm Erin. Erin Marten! And you are...?\""
+        e excited "\"Oh, right. I'm Erin. Erin Prammale! And you are...?\""
 
         a "\"You can call me Aya.\""
 
