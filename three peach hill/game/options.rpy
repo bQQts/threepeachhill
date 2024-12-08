@@ -30,12 +30,11 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = """
-LEAD DEV & PRODUCER \t\t    M Ebel                 \n
+LEAD DEV & PRODUCER  \tM Ebel                 \n
 CHARACTER ART      \t\t\t\t\t\tTia @ Rhondolier     \n
 BACKGROUND ART     \t\t\t  Jeanie Choi             \n
 UI/UX DESIGN       \t\t\t\t\t\t Leycalate            \n
             \t\t\t\t\t\t\t\t\t\t\t\t\t\t    Tia @ Rhondolier    \n
-            \t\t\t\t\t\t\t\t\t\t\t\t\t\t    M Ebel              \n
 COMPOSERS          \t\t\t\t\t\tSnugglyBun           \n
             \t\t\t\t\t\t\t\t\t\t\t\t\t\t    Undine Soundworks   \n
 SOUND DESIGN       \t\t\t\t  Undine Soundworks      \n
