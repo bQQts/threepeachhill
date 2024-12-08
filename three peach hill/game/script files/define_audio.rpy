@@ -1,4 +1,3 @@
-
 define audio.main = "music/Menu.flac"
 define audio.bookstore_sunshine = "music/Hanging Around The Library.flac"
 define audio.bookstore_vibing = "music/Hanging Around The Library (Lofi Variant).flac"
