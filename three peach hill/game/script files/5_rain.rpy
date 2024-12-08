@@ -334,6 +334,10 @@ label chapter_five:    # 5. The Rain - Caught in the rain… and there was only 
         jump the_call
 
     label rain_sleep_in:
+        $ make_day()
+        show bg bedroom with dissolve
+        play music coffee fadein 0.5
+
         "The bed is empty when I wake up, Erin's blankets folded neatly back up on the side table."
         
         "I rub the sleep from my eyes and slip from the bed, heading to the bathroom."
@@ -341,6 +345,8 @@ label chapter_five:    # 5. The Rain - Caught in the rain… and there was only 
         "Did she leave?"
 
         "I get myself ready for the day and trod to the kitchen."
+        
+        show bg kitchen with dissolve
 
         "Something's out of place."
 

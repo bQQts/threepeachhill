@@ -6,7 +6,7 @@ label chapter_six:
         "I'm filling a glass of water when I hear Erin's muffled voice. She must be out on the balcony, and by the sound of it, she's having a not-very-fun conversation."
         
         stop music fadeout 4.0
-        "When she comes in                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     she seems deflated."
+        "When she comes in she seems deflated."
 
         a neutral "\"Oh, there you are! Were you on the phone?\""
 

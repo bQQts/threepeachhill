@@ -26,6 +26,8 @@ label chapter_three:
 
     label cobbler:
         stop sound fadeout 2.0
+        stop music fadeout 2.0
+        play music happy_village fadein 1.0
         show bg kitchen with dissolve
 
         "Fortunately, the peaches had sustained no damage at all during The Incident, and I'm able to whip up a couple of test cobblers."
@@ -86,7 +88,10 @@ label chapter_three:
 
         "I'm fixing my hair in an old mirror in the break room when I hear Joy approach."
         
-        show joy at right, joy_size
+        show joy at right with dissolve:
+            subpixel True
+            zoom 0.7
+            yoffset -300   
 
         joy "\"Aya! The boys told me someone was here for me, it's good to see you.\""
 
@@ -111,7 +116,7 @@ label chapter_three:
         a happy "\"I'll take care of myself. You eat that cobbler, okay? And give me notes!\""
 
         scene brown with irisin
-        stop music fadeout 2.0
+        stop music fadeout 3.0
         pause 3.0
         scene bg bookstore with dissolve
         play music bookstore_sunshine
