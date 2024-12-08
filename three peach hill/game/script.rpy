@@ -8,8 +8,8 @@ define e = Character("Erin", image="erin", who_color= "#faf6f5")
 
 define lyd = Character("Lydia")
 define joy = Character("Joy")
-define jeff = Character("Jeff", image="jeff")
-define timothy = Character("Timothy", image="timothy")
+define jeff = Character("Jeff")
+define timothy = Character("Timothy")
 
 
 default kind_points = 0

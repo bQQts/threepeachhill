@@ -113,7 +113,7 @@ label chapter_four:
         "Shut this down hard":
             jump shut_this_down
 
-        "{color=#222}(2+ Hearts) Let her down gently{/color}" if kind_points >= 2:
+        "(2+ Hearts) Let her down gently" if kind_points >= 2:
             jump let_her_down_gently
 
     label shut_this_down:

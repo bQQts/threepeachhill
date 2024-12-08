@@ -11,7 +11,7 @@ label chapter_five:    # 5. The Rain - Caught in the rain… and there was only 
 
         a gloom "\"This is going to suck.\""
 
-        play sound "{loop 0.1}sound/Rain Moderate.flac" fadein 1.5 volume 0.6 loop
+        play sound "sound/Rain Moderate.flac" fadein 1.5 volume 0.6 loop
         "The dirt path quickly turns to mud that sucks at my feet with every step. But still, I keep on, now dragging my mud-caked cart of peaches as the early evening sets in."
 
 

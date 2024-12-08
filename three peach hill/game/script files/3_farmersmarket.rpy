@@ -96,6 +96,11 @@ label chapter_three_b:
 
         "Erin bags the flowers and waves over the flower merchant so I can pay for them."
 
+        show jeff at right with dissolve:
+            subpixel True
+            zoom 0.7
+            yoffset -300
+
         jeff "Oh, hello there Aya!"
 
         e neutral "\"You know Aya?\""
@@ -127,6 +132,10 @@ label chapter_three_b:
         jeff "\"You two take care, now!\""
 
         a happy "\"Thanks, old man. Likewise!\""
+
+        hide jeff with dissolve
+
+        pause 0.5
 
         "I tuck the flowers into the larger of my tote bags and heft them so the straps rest more comfortably on my shoulders."
 

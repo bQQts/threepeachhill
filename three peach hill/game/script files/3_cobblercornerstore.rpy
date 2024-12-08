@@ -59,6 +59,13 @@ label chapter_three:
         scene brown with dissolve
         show bg orchard with dissolve
 
+        pause 0.5
+
+        show timothy at right with dissolve:
+            subpixel True
+            zoom 0.7
+            yoffset -300
+
         timothy "\"Well hey there! You lookin' for Joy, by any chance?\""
 
         a excited "\"Hey! Sure am.\""
@@ -66,6 +73,8 @@ label chapter_three:
         timothy "\"She's out in the trees today.\""
 
         a happy "\"Oh! No problem, I'll just drop this off upstairs.\""
+
+        hide timothy with dissolve
 
         "The gentlemen wave in acknowledgement. I and my cobbler-laden picnic basket take the stairs to the second floor break room."
 

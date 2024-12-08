@@ -84,11 +84,15 @@ label chapter_nine:
 
         "With a wave of my left hand, I summon the contract we signed. It's as simple as plucking the page from the air."
 
+        show signed contract with dissolve
+
         "I take the contract in one hand, still holding Erin's hand with the other, and when I speak my words ring clear as a bell."
         
         a neutral "\"I release you from the pact.\""
 
-        ## sound effect here
+        hide signed contract with dissolve
+        play sound "sound/Magic Spell Push.flac" volume 0.5
+
         "With those simple words, the page crumbles into dust."
 
         "I can feel the faint snap of the contractual bond between us breaking."

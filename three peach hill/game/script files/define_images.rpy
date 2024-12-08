@@ -42,8 +42,10 @@ image oni = "oni day.png"
 image oni night = "oni night.png"
 image joy = "joy day.png"
 image joy night = "joy night.png"
-image jeff = "side jeff.png"
-image timothy = "side timothy.png"
+image jeff = "jeff.png"
+image jeff night = "jeff night.png"
+image timothy = "timothy.png"
+image timothy night = "timothy night.png"
 
 
 ## define bgs
@@ -76,6 +78,8 @@ image bg nightmarket red = "nightmarket red.png"
 
 image kitty day = "kitty day.png"
 image brokenlamp = "brokenlamp.png"
+image unsigned contract = "unsigned contract.png"
+image signed contract = "signed contract.png"
 
 image cg piggyback = "cg_piggyback.png"
 
@@ -111,6 +115,18 @@ image choice_night_hover_button:
     "gui/menu/choice_night_hover_button_1.png"
     pause pause_length
     "gui/menu/choice_night_hover_button_2.png"
+    pause pause_length
+    repeat
+image choice_special_button:
+    "gui/menu/choice_special_button_1.png"
+    pause pause_length
+    "gui/menu/choice_special_button_2.png"
+    pause pause_length
+    repeat
+image choice_special_hover_button:
+    "gui/menu/choice_special_hover_button_1.png"
+    pause pause_length
+    "gui/menu/choice_special_hover_button_2.png"
     pause pause_length
     repeat
 image menu_navigation_hover_button:

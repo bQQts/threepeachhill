@@ -112,6 +112,8 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
         #play sound "Marker.flac"
         "I finish writing the last few words and sign the bottom of the page with a flourish before sliding the sheet over to Erin."
 
+        show unsigned contract with dissolve
+
         "She peers at the page, brows furrowed cutely in concentration."
 
         e neutral "\"What's this? Is this... a contract?\""
@@ -178,9 +180,16 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         "I wordlessly pass her the marker, which has a plastic spoon taped to it. She takes it and signs the bottom of the page."
 
+        show signed contract with dissolve
+
+        pause 1
+
         ## in a future version it would be cool to have art/simple animation of the contract going golden
         play sound "sound/Magic Spell Push.flac" volume 0.5
+        hide unsigned contract with dissolve
         "With a whoosh, heatless golden flames trace the lines of ink and the page disappears."
+
+        hide signed contract with dissolve
 
         "If we were on The Other Side, we'd be able to see the little red ribbon of promise that now connects us. But we're here, so we can't."
 

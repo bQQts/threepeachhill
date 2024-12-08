@@ -156,11 +156,13 @@ screen say(who, what):
 
         text what id "what"
 
-
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     #if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
+
+        fixed:
+            use quick_menu()
 
 
 ## Make the namebox available for styling through the Character object.
@@ -285,6 +287,9 @@ style choice_night_button is choice_button:
 style choice_night_button_text is choice_button_text:
     properties gui.text_properties("choice_night_button")
 
+style choice_special_button is choice_button:
+    background "choice_special_[prefix_]button"
+
 ## Quick Menu screen ###########################################################
 ##
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
@@ -326,12 +331,6 @@ screen quick_menu():
             # OPTIONS
             # Q.SAVE
             # Q.LOAD
-
-
-## This code ensures that the quick_menu screen is displayed in-game, whenever
-## the player has not explicitly hidden the interface.
-init python:
-    config.overlay_screens.append("quick_menu")
 
 default quick_menu = True
 
