@@ -117,7 +117,7 @@ label chapter_five:    # 5. The Rain - Caught in the rain… and there was only 
 
         "My house is still quite warm from the summer day, but dry—dehumidifiers and a little bit of magic always ensure that the house stays dry and relatively cool, to preserve the condition of the books on the first floor."
         
-        play music "music/Romance LoFi.flac" fadein 3.5
+        play music romance fadein 3.5
         
         "Erin looks around for the bathroom, finds it, and leads me over to it. She flicks on the lights."
 

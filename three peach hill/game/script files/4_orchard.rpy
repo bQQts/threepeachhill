@@ -149,7 +149,7 @@ label chapter_four:
 
 
     label let_her_down_gently:
-        queue music rain_transition fadein 0.5 noloop
+        queue music rain_transition fadein 0.5
         queue music rain
         a blush "\"I'm not really available right now... I'm, uh, looking for something specific.\""
 
@@ -169,7 +169,7 @@ label chapter_four:
         
         e sad "\"That's... disappointing. I thought you were cool.\""
 
-        "Then she shoves her hands into her shorts pockets and stridesback down the hill, eyes downcast."
+        "Then she shoves her hands into her shorts pockets and strides back down the hill, eyes downcast."
 
         "She's right. I am afraid."
         
