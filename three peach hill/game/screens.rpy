@@ -376,6 +376,11 @@ screen menu_navigation():
             activate_sound "sound/Haptics.flac" 
             action ShowMenu("options")
 
+        textbutton _("      ACHIEVEMENTS      "):
+            activate_sound "sound/Haptics.flac" 
+            # action ShowMenu("achievements")
+            action ShowMenu("achievement_gallery")
+
         textbutton _("      CREDITS      "):
             activate_sound "sound/Haptics.flac" 
             action ShowMenu("about")
