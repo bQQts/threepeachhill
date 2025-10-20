@@ -14,7 +14,7 @@ label chapter_three:
         "The next week is much less eventful. The air is as humid as ever. The cicadas continue to play their summer soundtrack. Finally, a totally open weekend comes calling."
 
     menu:
-        "Which should I do first?"
+        "You have two goals today. Which will you do first?"
 
         "Make peach cobbler":
             $ cobblerfirst = True
@@ -30,33 +30,33 @@ label chapter_three:
         play music happy_village fadein 1.0
         show bg kitchen with dissolve
 
-        "Fortunately, the peaches had sustained no damage at all during The Incident, and I'm able to whip up a couple of test cobblers."
+        "Fortunately, the peaches had sustained no damage at all during The Incident and you're able to whip up a couple of test cobblers."
 
-        "The local peaches aren't quite in season yet, so these are just some of the early bloomers that Joy at the orchard set aside for me."
+        "The local peaches aren't quite in season yet. These are early bloomers that your friend Joy at the orchard had set aside for you."
 
-        "The cobblers aren't bad. They're not as sweet as I had hoped they'd be, but that makes sense since peach season starts next month. I should have accounted for the difference and adjusted my recipe, but this is good practice for the real thing!"
+        "The cobblers aren't bad. They're not as sweet as you had hoped they'd be, but that makes sense since peach season starts next month. You wish you had accounted for the difference and adjusted your recipe, but this is good practice for the real thing!"
 
-        "I divide the cobblers into plastic food storage bins and pack a small picnic basket with the bins I don't put in the fridge. Some of my older friends will probably love this."
+        "You divide the cobblers into plastic food storage bins, packing some into a small picnic basket and the rest into the fridge. Some of my older friends will probably love this."
 
         menu:
-            "Who should I visit today?"
+            "Baking went quickly and you have some time to kill, which friend do you want to share some pie with?"
 
-            "Joy, the orchardist":
+            "The wholesome old orchardist":
                 jump orchardist
 
-            "The cat spirit":
+            "The gossipy old cat spirit":
                 jump lydia_chat
 
     label orchardist:
-        "Joy and I have been friends for almost my whole life. She's been running the orchard for as long as I can remember, and is probably in her 60s now."
+        "Joy has been an ever-present friend for most of your life. She's been running the orchard for as long as you can remember and is probably in her 60s now."
 
-        "We run into each other now and then, and we're friends on social media. She's a much more active poster than I am, and the extra marketing has been helpful for her orchard. People come from all over to pick peaches."
+        "You run into each other now and then, but you see each other most on social media. She's a much more active poster than you are and the extra marketing has been helpful for her orchard. People come from all over to pick peaches from Three Peach Hill."
 
-        "(It's nearly time for peach picking to open up, but not quite yet!)"
+        a excited "(It's nearly time for peach picking to open up, but not quite yet!)"
 
-        "Since she spends all her time managing the business, she doesn't tend to do a lot of baking. I try to bring her things once in a while to check in."
+        "Since she spends all her time managing the business, she doesn't tend to do a lot of baking. You try to bring her things once in a while to check in."
 
-        "I take my bike to her office, which is a small two-story building at the very foot of the orchard's hills. Wind chimes hang from the stoop, and the sign on the door says OPEN. When I swing the door open and step inside, I'm greeted by a couple of my neighbors sipping coffee in the lobby."
+        "You bike to her office, a small two-story building at the very foot of the orchard's hills. Wind chimes hang from the stoop, and the sign on the door says OPEN. The door jingles as you push it open and step inside. You're greated by your neighbor Timothy and his very good friend."
         
         scene brown with dissolve
         show bg orchard with dissolve
@@ -68,7 +68,7 @@ label chapter_three:
             zoom 0.7
             yoffset -300
 
-        timothy "\"Well hey there! You lookin' for Joy, by any chance?\""
+        timothy "\"Well if it isn't our resident bookworm! You looking for Joy, by any chance?\""
 
         a excited "\"Hey! Sure am.\""
 
@@ -78,40 +78,42 @@ label chapter_three:
 
         hide timothy with dissolve
 
-        "The gentlemen wave in acknowledgement. I and my cobbler-laden picnic basket take the stairs to the second floor break room."
+        "The gentlemen wave in acknowledgement. You haul your cobbler-laden picnic basket to the second floor."
 
-        "I borrow a sticky note from Joy's desk and jot down a note mentioning the cobbler, then put the cobbler in the break room fridge."
+        "This orchard front house is cozy, very modern for a historic administrative building. Joy turned the downstairs into a social space with couches, bar counters, and plenty of plants so visitors and farmers alike have a place to relax out of the sun."
 
-        "It's cozy, very lived-in for an administrative building. Joy's turned the downstairs into a social space with couches, bar counters, and plenty of plants so visitors and farmers alike have a place to relax out of the sun."
+        "The modern space is in stark contrast to the must and dust of the upstairs, which largely resembles an attic. It's where the real business happens."
 
-        "Upstairs, however, has the must and dust of decades of unchanging use. It's where the real business happens."
+        "Joy's cluttered desk has a notepad, so you jot down a note mentioning the cobbler and place it atop her keyboard. The cobbler goes right into the fridge."
 
-        "I'm fixing my hair in an old mirror in the break room when I hear Joy approach."
+        "You're fixing your hair in an old mirror on the wall when your sensitive ears hear Joy's soft footsteps as she climbs the stair steps."
         
         show joy at right with dissolve:
             subpixel True
             zoom 0.7
             yoffset -300   
 
-        joy "\"Aya! The boys told me someone was here for me, it's good to see you.\""
+        joy "\"Aya! The boys told me someone was here for me, it's good to see you. Did you like those peaches?\""
 
-        a excited "\"It's good to see you too! I left you a note, there's peach cobbler in the fridge for you. Not too sweet.\""
+        a excited "\"It's good to see you too, ma'am! Yes, I turned it into cobbler! There's some in the fridge for you. Not too sweet.\""
 
-        joy "\"That's awful kind of you, thanks for thinking of me. I'll be sure to bring it home with me tonight.\""
+        joy "\"That's awful kind of you, dearie. You're always so thoughtful. I'll be sure to bring it home for a midnight snack.\""
 
         a happy "\"Putting in a full work day?\""
 
-        joy "\"The work never stops! And we're getting ready for picking season. How's the bookstore?\""
+        joy "\"The work never stops! And we're getting ready for real picking season. How's the bookstore?\""
 
         a sad "\"Not so good, at least not lately. Having a hard time getting customers.\""
 
-        joy "\"Sorry to hear that, have you thought about doing more social media marketing?\""
+        joy "\"Ah! Have you thought about doing more social media marketing?\""
 
-        a excited "\"Joy, you sound like such a youngster when you say stuff like that. But you know I'm not as tech-savvy as you. And I don't know how well would work for a bookstore...\""
+        a excited "\"Joy, you sound like such a youngster when you say stuff like that. But you know I'm not as tech-savvy as you. And I don't know how well it would work for a bookstore... But I have time! No need for a solution today, ha!\""
 
-        joy "\"Ah, sorry, Aya. I didn't mean to go straight into giving you unsolicited advice. Let me know if there's anything I can do to help, okay? And take care of yourself, honey. You focus too much on work.\""
+        joy "\"I must apologize, I didn't mean to go straight into giving you unsolicited advice. Let me know if there's anything I can do to help, okay? And take care of yourself, honey. You focus too much on work for a fox in the prime of her life!\""
 
-        "She takes my hand and pats it comfortingly."
+        "She takes your hand and pats it comfortingly."
+
+        "You chuckle ruefully."
 
         a happy "\"I'll take care of myself. You eat that cobbler, okay? And give me notes!\""
 
@@ -123,19 +125,20 @@ label chapter_three:
 
         # title where it's "back at the bookstore"
 
-        "(I should call her.)"
+        "You stare at the broken lightbulb in the dustbin."
 
-        "I stare at the broken lightbulb in the dustbin."
+        a neutral "(Joy's right... I should call her.)"
 
-        "I dial the number I had saved to my contacts after Erin left the shop that day."
+        "You dial the number you saved to your contacts after Erin left the shop that day."
 
+        # add dial tone sound
         "It rings once... twice..."
 
         e neutral "\"*click* Hello?\""
 
         "(She answered!!)"
 
-        "(What do I say?! I didn't think this through!)"
+        a tsuntsun "(What do I say?! I didn't think this through!)"
 
     menu:
         "Hey, this is Aya":
@@ -151,15 +154,15 @@ label chapter_three:
         $ milk_carton = True
         e excited "\"The bookstore fox!\""
 
-        a tsuntsun "\"Fox {i}spirit{/i}, thank you.\""
+        a tsuntsun "\"Well, fox {i}spirit{/i}. But yeah, it's me~\""
 
-        e "\"I'm so glad you called so I have your number, I saw this cat today and wanted so badly to send you a picture of it!\""
+        e "\"I'm so glad you called so I have your number, I saw this cat outside just now and wanted so badly to send you a picture of it!\""
 
         a happy "\"Oh, sure! I'd like that.\""
 
         e "\"One sec,\""
 
-        "A faint rustle emits from the phone as Erin finds the photo and sends it to me."
+        "A faint rustle emits from the phone as Erin finds the photo and sends it."
 
         show kitty day with dissolve
         "*ding*"
@@ -171,9 +174,9 @@ label chapter_three:
         if cobblerfirst == True:
             e rizzler "\"Trade secret, I\'m afraid!\""
 
-            a neutral "\"For what trade?\""
+            a neutral "\"Trade secret?\""
 
-            e "\"It\'s a secret I\'ll trade for a kiss!\""
+            e "\"Yeees, in that it\'s a secret I\'ll trade for a kiss!\""
 
             a blush "\"A kiss, huh? Now, how will I do that if I don\'t know where you are?\""
 
@@ -182,9 +185,9 @@ label chapter_three:
             e blush "\"I suppose you have a point. Darn.\""
 
         if cornerstorefirst == True:
-            e excited "\"At work!\""
+            e excited "\"I'm at work!\""
 
-            a happy "\"Makes sense!\""
+            a happy "\"Oh! Wonderful!\""
 
         hide kitty day with dissolve
         e happy "\"So, was there a reason you called me?\""
@@ -205,9 +208,9 @@ label chapter_three:
 
         e neutral "\"Oh, you think I\'m a city kid, huh?\""
 
-        a "\"Aren\'t you?\""
+        a "\"Well, aren\'t you?\""
 
-        e happy "\"I hate it there! I decided to stick around, so I\'m still out here. I\'m sure we\'ll run into each other again soon.\""
+        e happy "\"I hate it there! I decided to stick around these parts a while longer. I\'m sure we\'ll run into each other again soon.\""
         
         if cobblerfirst == True:        
             e happy "\"You'll just have to figure out where I'm spending my time.\""
@@ -219,7 +222,7 @@ label chapter_three:
 
         "*click*"
 
-        "Okay, that was {i}definitely{/i} flirting, right?"
+        "That was {i}definitely{/i} flirting... right?"
 
         scene brown with dissolve
         jump cobbler_end
@@ -237,7 +240,9 @@ label chapter_three:
 
         e gloom "\"Right, of course. That\'s alright. Well... I gotta get going, I\'ll text you later! Bye!\""
 
-        "Wait... wait. WAIT. Was she asking me out?"
+        "*click*"
+
+        "You wonder at the strange lilt of disappointment in her voice. What just happened?"
 
         scene brown with dissolve
         jump cobbler_end
@@ -262,9 +267,11 @@ label chapter_three:
 
     label cobbler_call_nothing:
 
-        e sad "\"Another spam caller??? Stop calling me!\""
+        e sad "\"Helloooo? Another spam caller??? Hmph!\""
 
-        "Well, that didn't go the way I thought it would. Not sure what I was expecting..."
+        "*click*"
+
+        "Well, that didn't go the way you thought it would. Though you're not sure what reaction you were expecting..."
 
         scene brown with dissolve
         jump cobbler_end
@@ -276,29 +283,31 @@ label chapter_three:
         scene brown
         show bg market with dissolve
 
-        "Lydia is a cat spirit who tends a large garden near the post office. She has a little cottage that's perfect for just her, and she likes living alone."
+        "Lydia is a sassy old calico who tends a large garden near the post office. Her little cottage is the perfect size for her to sprawl out and enjoy her solitude."
 
-        "In fact, she thrives by spending her time humming to budding flowers and sprouting vegetables, taking naps in her sun chair, and just being outside in general. But not in a sporty way, she's just kind of an outside cat."
+        "But Lydia is no hermit. She revels in spending her time humming to budding flowers and sprouting vegetables, taking naps in her sun chair, and just being outside in general. And more than anything else, Lydia looooves gossip."
+b
+        "You try to catch up with her regularly; it's good to have other spirits as friends nearby, especially at times where you need some magical help."
 
-        "I try to catch up with her regularly, but I'm a bit more of an indoorsy spirit. Still, it's good to have other spirits as friends nearby, especially at a time like this."
+        "She might have a spell to fix broken lamps, which would save you a lot of time and effort."
 
-        "She might have a spell to fix broken lamps, which would save me a lot of time and effort."
+        "You push open the wooden garden gate and listen for the sound of her voice."
 
-        "I swing open the garden gate and look for her."
-
-        "I find her weeding a garden box of catnip, looking blissed as all hell. She has a small, curvaceous figure and wears a painter's jumpsuit with thick yellow gardening gloves."
+        "You find her weeding a garden box of catnip, looking way beyond blissed-out. A painter's jumpsuit flatters her small, curvaceous figure, and thick yellow gardening gloves protect her paws from the weeds."
         
         show lydia at right, lydia_size
         
-        "Her thick, calico colored hair is pulled back into a low ponytail, and a broad straw sunhat shades her head and shoulders. Holes are cut into the hat to leave room for her ears. Her spotted tail is adorned with a blue ribbon and a little gold bell that jingles lighty as her tail swings back and forth."
+        "Her thick hair is pulled back into a low ponytail, and a broad straw sunhat shades her head and shoulders. Holes are cut into the hat to leave room for her ears. Her spotted tail is adorned with a blue ribbon and a little gold bell that jingles lighty as her tail swings back and forth."
 
-        "Lydia always looks like she's no older than 40, but I know she's much, much older. Spirits age slowly."
+        "Lydia always looks like she's no older than 40, but she's much, much older. Spirits age slowly."
 
-        a happy "\"I hope I'm not interrupting!\""
+        a happy "\"I hope I'm not interrupting...\""
 
-        "My tone is warm, and as I speak I sway my picnic basket in front of me."
+        "You sway your picnic basket tantalizingly."
 
-        lyd "\"What have you brought me this time? I hope it isn't more pickles. You know how I hate pickles.\""
+        a happy "\"...but I did bring a treat to make my surprise appearance worth your time!\""
+
+        lyd "\"What have you brought me this time? I hope it isn't more cucumber salad. You know how I hate cucumber.\""
 
         a "\"Well, I know that now. I didn't know at the time! It was supposed to be a surprise.\""
 
@@ -310,23 +319,23 @@ label chapter_three:
         show bg lydias with dissolve
         show lydia at right, lydia_size
 
-        "Inside the cottage, Lydia puts on a kettle of tea and pulls out two handcrafted glazed mugs. We scoop the cobbler into a ceramic pot and put it into the oven to heat."
+        "Inside the cottage, Lydia puts on a kettle of tea and selects two handcrafted glazed mugs. She scoops the cobbler into a ceramic pot and put it in the oven to heat."
 
-        "I don't say anything. Lydia likes to take her time and bristles if she's rushed."
+        "You don't say anything, not yet. Lydia likes to take her time and bristles if she's rushed."
 
-        "The teapot whistles. She pours tea: spearmint for her and Earl Grey for me. The cobbler is hot and ready after another twenty minutes of quiet contemplation."
+        "The teapot whistles. She pours tea: spearmint for her and Earl Grey for you. The cobbler is hot and ready after another twenty minutes of quiet contemplation."
 
-        "As we begin to eat, she finally asks me the reason for my visit."
+        "As you begin to eat, she finally asks for the reason for your visit."
 
         a excited "\"I simply wanted to share this with you. I thought you'd enjoy it.\""
 
-        "She gives me a look from below lowered lashes."
+        "She gives you a disbelieving look from below lowered lashes."
 
         lyd "\"And that's all?\""
 
         a blush "\"Well... there is something, actually.\""
 
-        "I explain that I'm looking for a spell that fixes a broken lamp, and tell her about Erin and the pact she made with me."
+        "You explain that you're looking for a spell that fixes a broken lamp. You describe Erin and the pact she made with you."
 
         lyd "\"Ah, a human girl... tell me more about her.\""
         hide lydia with dissolve
@@ -386,7 +395,7 @@ label tell_lydia_about_erin:
 
         lyd "\"How so?\""
 
-        a tsuntsun "\"She called me beautiful. Out of the blue!\""
+        a tsuntsun "\"She called me gorgeous!\""
 
         lyd "\"Aya, that's adorable!\""
 
@@ -394,7 +403,7 @@ label tell_lydia_about_erin:
 
         lyd "\"But what if it WAS flirting? And you liked her. So you should give her a chance and see where it goes.\""
 
-        a "\"I don't want to assume that and get hurt, you know? It's been hard since mom and dad left. You know I haven't dated anyone since then. Plus, she's younger than me\""
+        a "\"I don't want to assume that and get hurt, you know? It's been hard since mom and dad left. You know I haven't dated anyone since then. Plus, she's younger than me...\""
 
         lyd "\"I get where you're coming from, but you need to live a little. Have a little summer romance. It'll be fine, it'll be fun! And don't talk to me about age, you're both youngsters. You don't know how annoying age gap problems can be when you get to be 300 instead of 30.\""
 
@@ -408,9 +417,9 @@ label tell_lydia_about_erin:
             
             lyd "\"See? She's staying!\""
 
-        "Lydia primly sips her tea. I know she's probably right, but I just don't know..."
+        "Lydia primly sips her tea. You know she's probably right, but..."
 
-        "I guess I'll just have to see what happens if I run into her."
+        "You'll have to see what happens."
         
         hide lydia with dissolve
 
@@ -433,19 +442,20 @@ label tell_lydia_about_erin:
 
         lyd "\"Just saying!\""
 
-        "I grumble something into my teacup and she pretends to not hear me, ears swiveled away."
+        "You grumble something rude into your teacup and she pretends to not hear, ears swiveled away."
         hide lydia with dissolve
         jump cobbler_end
 
 
     label lydia_change_subject:
         show lydia at right, lydia_size
-        "I don't really want to talk about Erin..."
+        "You don't really want to talk about Erin..."
 
         a tsuntsun "\"She's just some girl, I don't have much to say about her.\""
 
-        "Which is more or less true. I don't like the way Lydia looks at me, though. She's got this \"knowing old woman\" expression that looks out of place on her unlined face."
+        "Which is more or less true. Lydia gives you a dirty look. She's got this \"knowing old woman\" expression that looks out of place on her unlined face."
         
+        lyd "\"Fine, keep your secrets.\""
         hide lydia with dissolve
 
         jump cobbler_end
@@ -456,7 +466,7 @@ label tell_lydia_about_erin:
         if cobblerfirst:
             scene brown with dissolve
             pause 1.5
-            "It's been a big day. I'll go to the cornerstore tomorrow."
+            "It's been a big day. You'll go to the cornerstore tomorrow."
 
             scene brown with dissolve
             pause 3.0  
@@ -464,7 +474,7 @@ label tell_lydia_about_erin:
 
         else:
             if cornerstorefirst:
-                "What a weekend. It was good, but I'm so tired... at least the bookstore will be quiet this week!"
+                "What a weekend. It was good, but you're so tired... at least the bookstore will be quiet this week!"
                 scene brown with dissolve
                 pause 3.0
                 jump farmers_market
@@ -472,23 +482,27 @@ label tell_lydia_about_erin:
 
     label cornerstore:
         stop sound fadeout 2.0
-        "The cornerstore is on the far side of town but it's a nice day, so I leave my bike behind and equip myself with a couple of sturdy tote bags."
+        "The cornerstore is mile away but it's a nice day, so you leave your bike behind and equip yourself with a couple of sturdy tote bags."
         
-        "It's been a couple weeks since I've gone, so I'll probably grab a bunch of snacks and drinks to supplement the usual groceries."
+        "It's been a couple weeks since you've gone, so you're off to grab a bunch of snacks to supplement the usual groceries."
 
-        "Some little birds peck at scattered seeds and tiny crumbs on the sidewalk. The little fellows hop out of the way when I walk past."
+        "Little birds peck at scattered seeds and tiny crumbs on the sidewalk. The little fellows hop out of the way when you walk past."
 
         if milk_carton == True:
-            "Outside the cornerstore I see a stack of familiar blue milk cartons."
+            "Outside the cornerstore you see a stack of familiar blue milk cartons."
             a excited "\"No way.\""
-            "I guess this is where she's been... closer than I thought!"
+            "Looks like this is where she's been... closer than you thought!"
             pause 2.0
 
         stop music fadeout 1.0
         show bg cornerstore with dissolve
         play music cornerstore
 
-        "I nod at a couple I recognize in the cornerstore. I don't know them by name, but I know they're locals. We've been nodding at each other for years."
+        "You walk the aisles, picking treats off shelves. Your neighbor Timothy gives you a nod as he walks past you with a canvas tote bag over his shoulder. You nod back." 
+        
+        "Whenever you run into each other here he's always picking up an unbelievable quantity of whipped cream. You're sure that's what he got today, too."
+
+        "He must really love the stuff."
 
         e neutral "\"Aya? Is that you?\""
 
@@ -496,27 +510,27 @@ label tell_lydia_about_erin:
 
         "She's here. Like a breath of fresh air."
 
-        a shocked "\"Oh! Erin!\""
+        a shocked "\"Erin!\""
 
-        "I take in her apron and the box of candies she's holding tucked under one arm."
+        "You take in her apron and the box of candies she's holding tucked under one arm."
 
-        a "\"So this is where you've been?\""
+        a "\"So this is where you've been! You're... working here? How'd you get a job so fast?\""
 
         hide erin with dissolve
 
-        e happy "\"Mostly! Doing jobs here and there. I'm renting a room from the owner.\""
+        e happy "\"Oh, I'm doing jobs here and there around town. But I'm renting a room from this store's owner.\""
 
         a neutral "\"Cindy, right? She's very sweet. I'm glad you found a place to stay, but why aren't you back home?\""
 
         e excited "\"I wasn't ready to go back yet. Besides... I still gotta help you find that spell, right?\""
 
-        "Right... but that's not for another month. I thought she'd just come back when it's time, but I guess not."
+        "Right... but that's not for another month. You thought she'd just come back when it's time, but apparently not."
 
         a happy "\"Ah, well... it's good to see you. I hope you've been well?\""
 
-        "She steps past me and starts to unpack the box, restocking the shelf."
+        "She steps past you and starts to unpack the box, restocking the shelf."
 
-        "She's close enough that the light scent of citrus and apples wafts from her hair. It's a very bright and happy scent that suits her."
+        "She's close enough that the light scent of citrus and apples wafts from her hair. It's a very bright and happy scent... it suits her."
 
         e rizzler "\"I have! So, you doing some shopping today? Or did you just come here to find me?\""
 
@@ -524,9 +538,9 @@ label tell_lydia_about_erin:
         
         a happy "\"Just here to pick some things up that I missed at the grocer.\""
 
-        e happy "\"Nice! What are you doing later? I'm here 'til 7, but not busy tonight. We could hang out!\""
+        e happy "\"I'm glad our paths crossed, then! What are you doing later? I'm here 'til 7, but not busy tonight. We could hang out!\""
 
-        "This seems like a hint. I'm not doing anything, but I want to keep to myself this weekend and recharge..."
+        "This seems like a hint. You're not doing anything, but you want to keep to yourself this weekend and recharge..."
 
         menu:
             "\"Having some downtime to myself tonight.\"":
@@ -539,7 +553,7 @@ label tell_lydia_about_erin:
     label cornerstore_downtime:
         a sad "\"So I'll be busy, sorry.\""
 
-        "She tucks a loose strand of hair behind her ear and smiles up at me from where she squats next to a shelf."
+        "Erin tucks a loose strand of hair behind her ear and smiles up at you from where she squats next to a shelf."
 
         e excited "\"That's alright! Another time, then.\""
 
@@ -551,7 +565,7 @@ label tell_lydia_about_erin:
 
         e happy "\"That sounds important, I don't want to intrude on that.\""
 
-        "I feel a little bad for the lie."
+        "You feel a little bad for the lie."
         
         jump cornerstore_cont
 
@@ -567,7 +581,7 @@ label tell_lydia_about_erin:
 
         a happy "\"Catch you later, Erin.\""
 
-        "The rest of my shopping goes by quickly, though I do steal a few glances of Erin busying herself around the shop. She was certainly quite clumsy at my shop, but it looks like she's doing good work here."
+        "The rest of the shopping goes by quickly, though you do steal a few glances of Erin busying herself around the shop. She was certainly quite clumsy at your bookstore, but it looks like she's doing good work here."
         
         "Time to head home."
         window hide
@@ -578,15 +592,15 @@ label tell_lydia_about_erin:
     label cornerstore_end:
 
         if cornerstorefirst:     
-            "I unpack the groceries and make myself a cold lemonade."
-            "I think I'll chill for the rest of today and make cobbler tomorrow."
+            "You unpack the groceries and make yourself a cold lemonade."
+            "You'll chill for the rest of today and make cobbler tomorrow."
             scene brown with dissolve
             jump cobbler
 
         else:
             if cobblerfirst:
-                "I unpack the groceries and make myself a cold lemonade."
-                "What a weekend. It was good, but I'm so tired... at least the bookstore will be quiet this week!"
+                "You unpack the groceries and make myself a cold lemonade."
+                "What a weekend. It was good, but you're so tired... at least the bookstore will be quiet this week!"
                 scene brown with dissolve
                 jump farmers_market
 

@@ -4,7 +4,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         e neutral "\"It was an accident, but I broke it. So I should fix it.\""
 
-        "She says it with conviction. I let go of her and cross my arms."
+        "She says it with conviction. You let go of her and cross your arms."
 
         a gloom "\"And how are you going to fix it? By picking up broken glass with your bare hands?\""
 
@@ -16,7 +16,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         e "\"Humor me, how much?\""
 
-        "I snort and give her a number. Her eyes bulge."
+        "You snort and give her a number. Her eyes bulge."
 
         e shocked "\"I-I, uh, I can't pay that now but let me write you an IOU. And, um... I can leave something as collateral... does that work...?\""
 
@@ -26,7 +26,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         a "\"You can call me Aya.\""
 
-        "I step gingerly past the lamp to grab the broom and dustpan from an alcove next to the front door and hand her the implements."
+        "You step gingerly past the lamp to grab the broom and dustpan from an alcove next to the front door and hand her the implements."
 
         a excited "\"You could start by sweeping up all these pieces. Try not to miss any! I actually do have an idea for how we could fix it, but we'll need as many of the pieces as possible.\""
 
@@ -52,21 +52,21 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         e gloom "\"Thank you, I'm sorry for the trouble.\""
 
-        "I turn off the neon OPEN sign at the front door, grabbing a dry erase marker to scribble out a note that says \"Back at 12:45\", which I stick to the front door."
+        "You flick off the neon OPEN sign at the front door, grabbing a dry erase marker to scribble out a note that says \"Back at 12:45\", which you stick to the front door itself."
 
-        "We quickly wash our hands at the bathroom sink and return to the front counter. I reach under it and pull out a first aid kit, removing iodine, gauze, tweezers, and a small bandage."
+        "You both quickly wash your hands at the bathroom sink and return to the front counter. You reach under it and pull out a first aid kit, removing iodine, gauze, tweezers, and a small bandage."
 
-        "She winces as I press the iodine-soaked gauze into the wound but does not pull away. It only takes a minute to finish treating and bandaging the cut."
+        "She winces as you press the iodine-soaked gauze into the wound but does not pull away. It only takes a minute to finish treating and bandaging the cut."
 
         a sad "\"This shouldn't leave a scar, just be sure to keep it clean and dry.\""
 
         e blush "\"Thank you, Aya.\""
 
-        "For some reason, I really like the sound of my name from her lips."
+        "For some reason, you really like the sound of your name from her lips."
 
-        "(What am I thinking?)"
+        a tsuntsun "(What am I thinking?)"
     
-        "I shake my head to clear the thought from my mind, and clear my throat softly."
+        "You shake your head and clear your throat softly."
 
         a tsuntsun "\"Okay. Let's get that glass cleaned up before any more visitors come in. I'll... move the peaches, too.\""
 
@@ -74,30 +74,30 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
     label deal_cont:
         
-        "I pop into the back to find a bucket."
+        "You pop into the back to find a bucket."
 
         a neutral "\"Put the pieces in this. I'm going to go look something up.\""
 
-        "As Erin collects the pieces, I go get the address book from the front counter and start flipping through it. \"Book\" is a generous descriptor for this mishmash."
+        "As Erin collects the pieces, you fetch the address book from the front counter and flip through it. \"Book\" is a generous descriptor for this mishmash."
             
         "It's a huge leather binder that's been stuffed full of additional sheaves of paper, parchment, newspaper ad clippings, and even some pressed leaves inscribed with nearly illegible writings."
 
-        "These are notes, contacts, fliers, and advertisements from all manner of local business, both human and spirit. My parents added their notes when they took over the shop, and I've added a few of my own over the years."
+        "These are notes, contacts, fliers, and advertisements from all manner of local business, both human and spirit. Your parents added their notes when they took over the shop, and you've added a few of your own over the years."
 
-        "(There must be somebody in here who could fix the lamp.)"
+        a neutral "(There must be somebody in here who could fix the lamp.)"
 
         play sound "sound/PageTurn.flac"
         pause 0.8
         queue sound "sound/PageTurn.flac" volume 0.7
         #queue sound "sound/Glass Sweep.flac" volume 0.7
         queue sound "sound/PageTurn.flac" volume 0.4
-        "The bookshop's vibey music is accented by the sounds of pages flipping and glass pieces clinking as we work away."
+        "The bookshop's vibey music is accented by the sounds of pages flipping and glass pieces clinking as Erin sweeps them up."
 
         e neutral "\"Hey, Aya?\""
 
-        "(There! I've got it!)"
+        a excited "(There! I've got it!)"
         
-        "I pin a no-longer-sticky sticky note with an index finger so the little fan doesn't blow it away while I write in thick marker on a blank page from a nearby notebook. I reply distractedly,"
+        "You pin a no-longer-sticky note to the table with an index finger so your little fan doesn't blow it away. With the other hand you pick up a fat black marker with a plastic spoon taped to it. As you write something on a blank page in the notebook beside you, you reply to Erin distractedly,"
 
         a neutral "\"Yeah?\""
 
@@ -105,12 +105,12 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         e gloom "\"Whatever solution you're thinking of had better be magic, because I don't know anyone who could put together all those tiny pieces in a way that fits right. It's pretty busted.\""
 
-        "Her voice is hesitant and full of regret."
+        "She sounds hesitant and regretful."
 
-        a sad "\"Well, you're right about that.\""
+        a sad "\"Well, you're right about that. Good thing we do have magic!\""
 
         #play sound "Marker.flac"
-        "I finish writing the last few words and sign the bottom of the page with a flourish before sliding the sheet over to Erin."
+        "You finish writing the last few words and sign the bottom of the page with a flourish before sliding the sheet over to Erin."
 
         show unsigned contract with dissolve
 
@@ -118,7 +118,7 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         e neutral "\"What's this? Is this... a contract?\""
 
-        "My mouth curls into a tiny smile, and my tone is light when I explain."
+        "Your mouth curls into a tiny smile, and your tone is light as you explain."
 
         a neutral "\"It's just something simple. Sign it with your name and it will mean you can accompany me to the Lost Market.\""
         
@@ -126,9 +126,9 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         "Erin gulps."
 
-        e shocked "\"What do I have to pay with? Is it... do I have to pay with, like, blood? Or years off my life? Or my firstborn child? Or—"
+        e shocked "\"What do I have to pay with? Is it... do I have to pay with, like, blood? Or years off my life? Or my firstborn child? Or—\""
 
-        "I interrupt before her imagination takes her farther into a spiral."
+        "You interrupt before her imagination takes her farther into a spiral."
 
         a excited "\"No, no, nothing like that. Just regular money. Most spirits in the modern era use human currency to keep things simple,\""
         
@@ -136,13 +136,13 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
         
         a gloom "\"But whatever the cost, nothing is ever free.\""
 
-        e neutral "\"So you want me to go with you to the spirit world?"
+        e neutral "\"So you want me to go with you to the spirit world?\""
 
         a neutral "\"It's not really the Other Side, which is what you're referring to. It's more of a liminal space between the two worlds.\""
         
         a "\"It's easy to travel between worlds through the market as long as you've made a deal before you go. If you don't... the Lost Market keeps you until you do.\""
 
-        "I see the worried look on her face."
+        "She looks worried."
 
         a excited "\"Which won't be a problem, since we'll have a deal in place already!\""
 
@@ -150,35 +150,35 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         a "\"Gods, no. It'll cost enough, and you'll be able to cover it. It's a magic thing.\""
 
-        "She waggles a finger at me."
+        "She waggles a finger at you."
 
         e gloom "\"You don't know just how broke I am. I'm a college student.\""
 
-        "My ear twitches and I shrug."
+        "Your ear twitches and you shrug."
 
         a happy "\"It'll be fine! Anyway, if you're that broke you should probably pay better attention to your surroundings so you don't accidentally break peoples' stuff.\""
 
-        "I'm mostly joking. We both know it wasn't really her fault. She takes it in stride."
+        "You're joking... mostly. You both know it wasn't really her fault. She takes it in stride."
 
-        "She reads the contract very carefully, and I feel a sense of approval about the care she's taking. Always know what you're signing up for."
+        "She reads the contract very carefully. You like how much care she's taking. Your parents always said you should always know what you're signing up for."
 
-        "She might be a bit clumsy, but she's not a fool. After a couple of minutes, she nods and sets the paper down."
+        "She might be a bit clumsy, but she's not a fool. A couple of minutes pass, then she nods and sets the paper down."
 
         e excited "\"So when do we go?\""
 
-        "I tap a finger against the countertop and think it over."
+        "You tap a finger against the countertop and think it over."
 
-        a shocked "\"We should be able to go on the night of the autumn equinox. That's when it's pretty much guaranteed to show up. Any other time can be kind of hit or miss."
+        a shocked "\"We should be able to go on the night of the autumn equinox. That's when it's pretty much guaranteed to show up. Any other time can be kind of hit or miss.\""
 
         e neutral "\"That's like, next month, right?\""
 
         a neutral "\"Yes, {color=#F87B4E}the evening of the 22nd{/color}. That a problem?\""
 
-        "She pulls out her phone, presumably to check her calendar, and bites her lip. It's more distracting than I care to admit."
+        "She pulls out her phone, presumably to check her calendar, and bites her lip. It's more distracting than you care to admit."
 
         e happy "\"It could be... but I said I'd fix your lamp, and that's a promise. I'll make it work. Can I borrow your pen?\""
 
-        "I wordlessly pass her the marker, which has a plastic spoon taped to it. She takes it and signs the bottom of the page."
+        "You wordlessly pass her the marker. She takes it and signs the bottom of the page."
 
         show signed contract with dissolve
 
@@ -187,13 +187,13 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
         ## in a future version it would be cool to have art/simple animation of the contract going golden
         play sound "sound/Magic Spell Push.flac" volume 0.5
         hide unsigned contract with dissolve
-        "With a whoosh, heatless golden flames trace the lines of ink and the page disappears."
+        "With a whoosh, heatless golden flames trace the black lines of ink and the page disappears."
 
         hide signed contract with dissolve
 
-        "If we were on The Other Side, we'd be able to see the little red ribbon of promise that now connects us. But we're here, so we can't."
+        "If you were on The Other Side, you'd be able to see the little red ribbon of magical promise that now connects you. But you're here, so you can't."
 
-        "Erin startles."
+        "Erin startles at the flame."
 
         e shocked "\"What was that?\""
 
@@ -207,19 +207,19 @@ label chapter_two:   ## 2. The Deal - Erin makes a pact with a spirit, and is su
 
         e happy "\"Alright, that makes sense. Then... I guess I'll see you around? Oh wait, let me give you my number.\""
 
-        "I expect her to jot it down on the paper, but she confidently takes my wrist and writes the number there, the marker tickling my skin. She grins."
+        "You expect her to jot it down on the paper, but she confidently takes your wrist in her soft hand and writes the number there, the marker tickling your skin. She grins."
 
         e rizzler "\"So you don't lose it!\""
 
-        "I blush furiously."
+        "You blush furiously."
 
-        "Erin rocks back on her heels and does a little spin, walking lightly to the door. Hand poised to open it, she looks back over her shoulder at me."
+        "Erin rocks back on her heels and does a little spin, walking lightly to the door. Hand poised to open it, she looks back over her shoulder at you."
 
         e excited "\"Bye, gorgeous!\""
 
-        "My heart skips a beat and I hesitate, not sure if she means that in an I-love-women way or a complimenting-between-girlies way."
+        "Your heart skips a beat and you hesitate, not sure if she means that in an I-think-you're-hot way or a casual straight-girl way."
         
-        "She notices the heat warming my cheeks. Before I can say anything in response, she ducks out of the store, giggling."
+        "You hope she doesn't notice the heat warming your cheeks. Before you can form a response she ducks out of the store, giggling."
 
         a tsuntsun "\"Wh... what...!\""
 

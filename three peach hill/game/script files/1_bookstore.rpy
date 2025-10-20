@@ -18,64 +18,62 @@ label chapter_one:
         "The familiar sound seems to say, \"You have all the time in the world.\" A clock hanging by the cluttered storefront counter slowly {i}tic tic tics{/i} in agreement."
 
         stop sound fadeout 3.0
-        "I adjust the angle of my desk fan to get a better breeze. It helps, but sweat still sticks my crisp white dress shirt to my skin."
+        "You adjust the angle of your desk fan to get a better breeze. It helps, but sweat still sticks your crisp white dress shirt to your skin."
 
         "Business has been far too slow."
 
-        "I need to do something about it this summer, but I'm not in a rush."
+        "You need to do something about it this summer, but there's no rush."
 
-        "It's a family business. It's been here for ages and will surely carry on well beyond my tenure."
+        "It's a family business. It's been here for ages and will surely carry on well beyond your tenure."
         
         play sound "sound/JingleDoor.flac"
 
-        "My ear twitches at the sound of bells jingling, the shop door swinging open slowly. I fidget with the fan some more and say,"
+        "Your soft foxen ear twitches at the sound of bells jingling as the shop door swings open. You make a couple more adjustments as you call in the direction of the door."
 
 
         a neutral "\"Welcome in, feel free to browse.\""
 
 
-        "I look up and my breath catches."
+        "There's an excited giggle. You look up and your breath catches."
 
 
         show erin happy at center, erin_size, with dissolve
 
-        "She's adorable. Beautiful, really. Her warm brown eyes sparkle, and her dark hair is pulled up into a bun tied with a blue scarf. I have just a moment to take it all in before time freezes."
+        "An adorable college girl you've never seen before. Her dark hair is pulled up into a bun and tied with a blue scarf. Heart-meltingly warm brown eyes sparkle warmly at you. Possibilities hang heavy in the air."
 
         show erin shocked
 
-        "She locks eyes with me. Her breath catches, and she's falling for me."
+        "Then she's falling for you."
 
         "Literally."
         
-        "Her lips part in an \"oh\" of surprise as she trips over the box of peaches that my neighbor so kindly left by the door for me."
+        "Her lips part in an \"oh\" of surprise as she trips over the box of peaches that your neighbor so kindly left just inside the door."
 
-        "(Damnit! I knew I should have moved it while it was on my mind.)"
+        "You must have been in the back, because you don't remember them stopping by."
 
         hide erin with dissolve
 
         "The fall is epic."
-
-        "The moment feels suspended in time."
         
         "Her tote bag soars, colored gel pens tumbling out to rain down in a myriad rainbow that bounces on the hardwood floor."
         
-        "Loose pages slide from the bag, valiantly taking flight, and each sheaf makes its lazy way to earth."
+        "Loose pages slide from the bag and take flight, scattering across the hardwood floor."
 
-        "Her body slams into the book rack near the entrance and she pivots, angling the shelf away from the front counter."
+        "The young woman's body slams into the book rack between you and she pivots, angling the shelf away from the front counter."
         
-        "Away from {i}me{/i}."
+        "Away from {i}you{/i}."
 
-        "She tumbles to the ground in a heap as the rack slams into a nearby bookshelf, knocking off the blue heirloom lamp that, moments before, had minded its own business for as long as I can remember."
+        "She tumbles to the ground in a heap as the rack crashes into a nearby bookshelf. It knocks off the blue heirloom lamp that until this moment had minded its business for as long as you can remember."
 
         show brokenlamp with dissolve
         "(Oh no...)"
 
-        "A glance tells me the girl survived the fall. The lamp, on the other hand, did not."
+        "A glance tells you the girl survived the fall. The lamp, on the other hand, did not."
 
-        "The mosaic glass panels shattered, reverting the art piece to merely a chaotic array of un-mosaicked shards."
+        "The mosaic glass panels shattered, reducing what once was a work of art into a pile of shards."
         hide brokenlamp with dissolve
         menu:
-            "Quick! What should I do?!"
+            "You should act fast."
 
             "Check on the girl":
                     $ kind_points += 1
@@ -100,13 +98,13 @@ label chapter_one:
 
         label bookstore_Girl:
 
-            "I rush over to her, taking hold of her arm and helping her upright."
+            "You rush over, taking hold of her arm and helping her upright."
 
             a shocked "\"Are you okay?!\""
 
-            "She groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and makes another small noise of dismay as she sees the destruction her fumble wrought upon the store."
+            "She groans as she sits up in a pile of books, clutching at her left shin. She lightly smacks a palm against her forehead when she sees the destruction her fumble wrought upon the store."
 
-            "The fallen shelves. The shattered lamp. My concern."
+            "The fallen shelves. The shattered lamp. The alarmed and bewildered expression on your face."
 
             e gloom "\"I'm so sorry!!! I didn't see the box, I hope nothing...\""
 
@@ -118,7 +116,7 @@ label chapter_one:
 
             a neutral "\"Don't worry about that right now, are you injured?\""
 
-            "She shakes her head and lets me help her up. Up close, she's even cuter than I realized. My heart flutters."
+            "She shakes her head and lets you help her up. Up close, she's even cuter than you realized. Your heart flutters."
 
             e sad "\"No, but... what about the lamp?\""
 
@@ -130,7 +128,7 @@ label chapter_one:
 
             show brokenlamp with dissolve
 
-            "Surveying the shattered lamp yields nothing I didn't already suspect. The glass lampshade was a mosaic of shades of blue stained glass pieces welded together at the seams."
+            "Surveying the shattered lamp yields nothing you didn't already suspect. The glass lampshade was a mosaic of shades of blue stained glass pieces welded together at the seams."
             
             "Four panels had joined at their long edges to create a lampshade reminiscent of a boxy, blue, crystalline moth."
 
@@ -141,11 +139,11 @@ label chapter_one:
             
             "The lamp murderer groans as she sits up in a pile of books, clutching at her left shin. She puts a hand to her brow and makes another small noise of dismay as she sees the destruction her fumble wrought upon the store."
                 
-            "The fallen shelves. The shattered lamp. My concern."
+            "The fallen shelves. The shattered lamp. Your horrified expression."
 
-            "I almost expect her to run away. She's young, maybe a college student? And she's human! I open my mouth to say something, to tell her off or ask if she's okay, but..."
+            "You almost expect her to run away. She's definitely a college student, but she looks so young. And she's human! You want to say something, to tell her off or ask if she's okay, but..."
             
-            "I can't find the words as I watch her stand up, dust herself off, and limp over to inspect the shattered lamp."
+            "You can't find the words as you watch her stand up, dust herself off, and limp over to inspect the shattered lamp."
 
             hide erin with dissolve
 
@@ -177,13 +175,15 @@ label chapter_one:
 
             label lamp_grab:
 
-                "My hand darts out and grabs hold of the girl's wrist."
+                "Your hand darts out to grasp the girl's wrist before she can pick anything up."
 
                 a shocked "\"Don't! Don't, you could hurt yourself.\""
 
-                "She freezes, then turns to look me in the eye."
+                "She freezes, then turns to look you in the eye."
 
                 "Her face is so close. Her eyes are a warm brown that reminds me of hot chocolate, or perhaps the old walnut table upstairs. It's a familiar, comfortable shade."
+
+                "You feel heat creeping into your cheeks. You're blushing!"
 
                 jump deal
 
@@ -202,6 +202,6 @@ label chapter_one:
 
                 a tsuntsun "\"Stop!\""
 
-                "Finally, she stops fiddling with the broken shards. She clutches her bleeding finger and looks up at me."
+                "Finally, she stops fiddling with the broken shards. She clutches her bleeding finger and looks up at me with watery eyes."
 
                 jump deal
