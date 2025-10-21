@@ -1058,14 +1058,19 @@ screen options():
         style_prefix "options"
         if options_page_type == OptionsPageType.SLIDERS:
             use options_sliders()
-        else:
+        elif options_page_type == OptionsPageType.BUTTONS:
             use options_buttons()
+        else:
+            use options_character_sliders()
         
     # Add the buttons to flip through to different pages.
-    if not options_page_type == OptionsPageType.SLIDERS:
-        button style "file_arrow_previous_button" action OpenOptionsPageSliders()
-    if not options_page_type == OptionsPageType.BUTTONS:
+    if options_page_type == OptionsPageType.SLIDERS:
         button style "file_arrow_next_button" action OpenOptionsPageButtons()
+    if options_page_type == OptionsPageType.BUTTONS:
+        button style "file_arrow_previous_button" action OpenOptionsPageSliders()
+        button style "file_arrow_next_button" action OpenOptionsPageCharacters()
+    if options_page_type == OptionsPageType.CHARACTERS:
+        button style "file_arrow_previous_button" action OpenOptionsPageButtons()
 
 screen options_sliders():
     fixed:
@@ -1120,6 +1125,22 @@ screen options_buttons():
                 use options_radio_button(
                     "FULLSCREEN", "options_display_fullscreen", Preference("display", "fullscreen"), "options_display_radio")
 
+screen options_character_sliders():
+    fixed:
+        xoffset 468
+        yoffset 140
+    hbox:
+        vbox:
+            label _("CHARACTER VOICE VOLUMES")
+            use character_options_bar(_("Narrator"), "narrator")
+            use character_options_bar(_("Aya"), "aya")
+            use character_options_bar(_("Erin"), "erin")
+        vbox:
+            use character_options_bar(_("Lydia"), "lydia")
+            use character_options_bar(_("Joy"), "joy")
+            use character_options_bar(_("Jeff"), "jeff")
+            use character_options_bar(_("Timothy"), "timothy")
+
 screen options_bar(display_text, preference_var):
     style_prefix "options_bar"
     vbox:
@@ -1142,6 +1163,29 @@ screen options_bar(display_text, preference_var):
         $ pref_value = ""
         $ if isinstance(pref_wrapper, MixerValue): pref_value = f"{int(pref_wrapper.get_volume() * 100)}%"
         $ if isinstance(pref_wrapper, FieldValue): pref_value = int(pref_wrapper.get_value())
+        text "[pref_value]" xalign 0.45
+
+screen character_options_bar(display_text, character_mixer):
+    style_prefix "options_bar"
+    vbox:
+        text _(display_text)
+        bar:
+            value MixerValue(character_mixer)
+            range 100
+            left_bar "gui/menu/options_bar_fill.png"
+            right_bar "gui/menu/options_bar_empty.png"
+            thumb "gui/menu/options_bar_thumb.png"
+            thumb_offset 50
+            left_gutter 38
+            right_gutter 38
+            xsize 846
+            ysize 146
+            xalign 0.5
+            yalign 0.5
+            xoffset -48
+            thumb_align 0.5
+        $ pref_wrapper = MixerValue(character_mixer)
+        $ pref_value = f"{int(pref_wrapper.get_volume() * 100)}%"
         text "[pref_value]" xalign 0.45
 
 screen options_radio_button(display_text, image_name, click_action, style_prefix_name):
