@@ -10,17 +10,17 @@ label chapter_four:
         show bg bookstore with dissolve
         play music bookstore_vibing fadein 2.0
 
-        "Another week goes by and I manage to avoid running into Erin. She's texted me more pictures of the gray cat outside of the cornerstore, but I haven't replied."
+        "Another week goes by. You manage to avoid running into Erin. She's sent more pictures of the gray cat outside of the cornerstore, but you haven't replied."
 
-        "She's really persistent, though, and dripping with optimism. But I feel like she can probably tell that something's off."
+        "She's really persistent and dripping with optimism. But you suspect she can probably tell that something's off."
 
-        "The whole thing—trying to smother my feelings, avoiding her—it's got me in a sour mood. So, today I'm going out."
+        "The whole thing—trying to smother your feelings, avoiding her—it's got you in a sour mood. So, today you're going out."
 
-        "Three Peach Hill is an orchard known for its stunning peach trees. The orchard started very small, with just three peach saplings on the big hill."
+        "Your first stop is the orchard. Three Peach Hill started very small, and like the name implies, it began with just three peach saplings on the big hill."
 
         "The orchard expanded outward from that hill. Those first three peach trees are now massive. They should be well past their prime, but through magic they've stayed young and healthy and continue to produce beautiful fruit every season."
 
-        "I've loved resting under their boughs since I was a kit. It's not a private place by any means, but it's {i}my{/i} spot. A visit seems like just the thing to center me right now."
+        "You've loved resting under their boughs since you were a kit. It's not a private place by any means, but it's {i}your{/i} spot. A visit seems like just the thing to center you right now."
         
         hide bg bookstore with dissolve
         show bg orchard with dissolve
@@ -28,70 +28,84 @@ label chapter_four:
         stop music fadeout 3.0
         queue music quiet_village fadein 0.5
 
-        "The team of farmers who tend the orchard under Head Orchardist Joy have been quite busy as many of the trees are ready for harvest."
+        "The team who tends the orchard under Head Orchardist Joy have been busy now that harvest season's here."
         
         show joy at right with dissolve:
             subpixel True
             zoom 0.7
             yoffset -300
 
-        a excited "I see Joy directing a couple farmers who are helping load her truck with an order of peaches and I wave to her as I park my bicycle alongside the orchard's front office building. She waves back with a big grin."
+        a excited "Joy is directing a couple of young men loading her truck with an order of peaches. You wave to her as you park your bicycle alongside the orchard's front office building. She waves back with a big grin."
 
-        "Yesterday she had posted a picture of the first ripe peaches dangling from trees on social media with the caption, \"Peach picking is open! Come by to fill a cart or basket!\""
+        "Yesterday she had posted a picture of the juciest looking peaches hanging heavy on their branches to her social media page with the caption, \"Peach picking is open! Come by to fill a cart or basket!\""
         hide joy with dissolve
-        "I couldn't make it out here yesterday, but it's a nice Saturday and I have the whole day free. The pie I'm gonna make out of these is going to be legendary."
+        "You couldn't make it out here yesterday, but it's a nice Saturday, you have the whole day free, and this is your favorite place to relax. The pie you're gonna make out of these is going to be legendary."
 
-        "The farmers at the orchard recognize me and let me find my way to the big trees."
+        "You're walking up the hill when you hear her voice. Your heart beats a little faster. Is it anxiety, or excitement?"
 
-        "I'm walking up the hill when I hear her voice. My heart beats a little faster."
+        "Erin is here of all places, on today of all days. Just your luck."
 
-        "Erin is here of all places, on today of all days. Just my luck."
-
-        "Her oversized shirt and messy bun are so cute on her. She wipes her brow with the back of a work-gloved hand, laughing at something a girl in a VOLUNTEER vest said. There's a basket of peaches on the ground beside them. I keep walking, hoping she doesn't notice me."
+        "She looks incredible in her oversized shirt and messy bun. She wipes her brow with the back of a work-gloved hand, laughing at something a girl in a VOLUNTEER vest said."
+        
+        "There's a basket of peaches on the ground beside them. You keep walking, hoping she doesn't notice you."
 
         e happy "\"Aya,\""
 
-        "Erin calls out to me, jogging to catch up to me as I {i}very subtly{/i} pick up my pace."
+        "Erin calls out to you, jogging to catch up as you {i}very subtly{/i} pick up your pace."
 
-        e excited "\"Hi!\""
+        e excited "\"Oh my god hi! I didn't expect to see you here!\""
+
+        "You reply without looking back:"
 
         a gloom "\"Hi.\"" 
 
-        "The greeting came out crabbier than I meant it to."
+        "You can't hide your mood. In fact, you're sure your ears are flopped down pathetically."
 
-        "But... I'm trying to avoid her! Surely she'll get the memo if I'm brusque with her. Right? So maybe crabby isn't a bad thing."
+        "How rude of her to thwart your avoidance of her by total coincidence!" 
+        
+        "Surely she'll get the memo if you're brusque with her. Right? So maybe you should be a little crabbier. That'll push her away."
+
+        "You walk faster."
 
         e neutral "\"Wait!\"" 
 
-        "She catches my hand and I lurch as she tugs my arm gently but firmly. I yank my arm back, and she lets go. The lack of resistance throws me off balance, and I stumble."
+        "She catches your hand and you lurch as she tugs your arm gently but firmly. You yank your arm back, and she immediately lets go. The lack of resistance throws you off balance. You stumble."
 
-        a sad "\"What do you want?\""
+        "You know you're being dramatic. The embarassment of it all stings."
 
-        e sad "\"Oh, sorry, didn't mean to throw you off balance. I just wanted to talk 'cuz it seems like you've been avoiding me—or maybe I'm just reading into it?\""
+        a sad "\"What... what do you want?\""
+
+        e sad "\"Oh, sorry, didn't mean to throw you off balance. I just wanted to talk 'cuz it seems like you've been avoiding me—or maybe I'm just reading into it? But you haven't responded to any of my cat pics and I haven't seen you around the cornerstore.\""
 
         a "\"...\""
 
-        "I sigh."
+        "You sigh."
 
-        a neutral "\"I have been.\""
+        a neutral "\"I have been. Avoiding you, that is.\""
 
         e neutral "\"I didn't do anything, though.\""
         
-        a sad "\"That's true... but... I just wanted some space.\""
+        a sad "\"No, you're right. That's true... but...\""
 
         e sad "\"Was I sending too many pictures of Cloud? Or maybe... was I being too much?\""
 
+        "Her tone alarms you. This isn't what you wanted!"
+
         a blush "\"No! No, I...\""
+
+        "You don't want her to stop doing any of that."
         
         e neutral "\"Wait...\""
 
-        "She lookes closer at my face and sees the blush in my cheeks."
+        a "(Oh no. Stay cool, Aya.)"
+
+        "She lookes closer at your face and sees the blush creeping across your cheeks."
 
         e rizzler "\"Were you possibly avoiding me because youuuu like me back?\""
 
-        "I flush hot red."
+        "It's too much. The closeness of her face, her directness... You flush hot red."
 
-        e excited "\"Oh my gods! You like me!\""
+        e excited "\"Eeeeee! You like me!!!\""
 
         "She covers a grin with her hand and giggles."
 
@@ -99,7 +113,7 @@ label chapter_four:
 
         e gloom "\"Your face says otherwise, but fine.\""
         
-        e neutral "\"Explain it to me, then. What are you running from?\""
+        e neutral "\"Explain it to me, then. If I haven't done anything wrong, why are you avoiding me? I think it's because you like me and are just feeling shy. Am I wrong?\""
 
         "She looks a bit hurt, and my heart aches at the sight."
         
@@ -110,37 +124,45 @@ label chapter_four:
     menu:
         "I've got to put an end to this before something starts."
 
-        "Shut this down hard":
+        "\"You're wrong!\" (Be harsh)":
             jump shut_this_down
 
-        "(2+ Hearts) Let her down gently" if kind_points >= 2:
+        "(2+ Hearts) \"I do like you, but...\" (Be gentle)" if kind_points >= 2:
             jump let_her_down_gently
 
     label shut_this_down:
         queue music rain_transition fadein 1.0 noloop
         queue music rain
 
-        a "\"I don't want to waste my time.\""
+        a "\"I don't like you at all.\""
 
-        "...is what I said. It's partly true, I am worried. But what I mean, and what I can't tell her, is that I'm afraid she might be what I want."
+        "...is what you said. It's a blatant lie. But you say it with enough conviction that it sells the lie."
         
-        "(I don't want it to hurt when she leaves.)"
+        a sad "(I don't want it to hurt when she leaves.)"
 
         "Erin's eyes mist with tears."
 
-        e sad "\"Wasting time? What do you mean? Is there something wrong with me?\""
+        e sad "\"But, I thought... at the market, and then at your house...\""
 
-        "I wince."
+        "Your heart hurts. You loved that day. You reach for something to say that might get you out of here."
 
-        a sad "\"W-we're just not a good fit. You're not... you're not... actually, it's not really about you.\""
+        a sad "\"W-we're just not a good fit.\""
 
-        "She stiffens."
+        e neutral "\"What do you mean? Oh my gosh, is there someone else? If so I'm sorry, I didn't realize...!\""
 
-        e neutral "\"So you're just afraid. You like me, but you're being mean because you're a coward.\""
+        a neutral "\"No, that's not it. There's no one. I just can't.\""
+
+        e neutral "\"Are you afraid to like me?\""
+
+        "You don't respond. That's answer enough for Erin."
+
+        e "\"...I hope I can earn your trust, Aya. I'll give you some space.\""
 
         "Without another word, she turns and walks away."
 
-        "She's right."
+        "You wonder if you blew it. But maybe that's what you wanted."
+        
+        "What have you done?"
 
         scene brown with dissolve
         pause 2.0
@@ -151,27 +173,29 @@ label chapter_four:
     label let_her_down_gently:
         queue music rain_transition fadein 0.5
         queue music rain
-        a blush "\"I'm not really available right now... I'm, uh, looking for something specific.\""
+        a blush "\"I'm, uh, taking some time to work on myself.\""
 
-        e neutral "\"Oh, that's okay! I could be what you want. Just tell me who to be and I'll be that.\""
+        e happy "\"Oh, that's okay! I don't need you to be different. You can just be yourself...!\""
 
-        "That hurts my heart."
+        "That hurts your heart. She's almost too sweet." 
 
-        a tsunstsun "\"No, I'm not going to tell you who to be! That would be horrible.\""
+        "It would break your heart for her to leave you."
 
-        e gloom "\"But you don't like who I am and I don't know why.\""
+        a tsunstsun "\"I can't!\""
 
-        "(I do like you. But you have school, you're bound to leave, and I don't think you'll come back out here when you're done.)"
+        e gloom "\"What?\""
 
-        a gloom "\"I... don't have a good answer.\""
+        a gloom "(I do like you. But you have school, you're bound to leave, and I don't think you'll come back out here when you're done.)"
 
-        e shocked "\"You're just afraid, aren't you? You like me, but you're too scared to do anything about it.\""
+        a gloom "\"...What if I mess up?\""
+
+        e shocked "\"So, you like me, but you're too scared to do anything about it because you think you'll mess it up or something?\""
         
-        e sad "\"That's... disappointing. I thought you were cool.\""
+        e sad "\"I like who you are.\""
 
         "Then she shoves her hands into her shorts pockets and strides back down the hill, eyes downcast."
 
-        "She's right. I am afraid."
+        "She's right. You are afraid."
         
         scene brown with dissolve
         pause 2.0
