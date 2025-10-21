@@ -1,6 +1,7 @@
 label chapter_one:
     $ chapter_num = 1
     label bookstore:
+        $ hello_world.grant()
         scene brown with dissolve
         pause 1.5
         show date_animated_ch1 with dissolve # July 10
