@@ -284,7 +284,7 @@ label chapter_five:    # 5. The Rain - Caught in the rain… and there was only 
 
         a blush "\"Y-you're sweet, too.\""
 
-        "In the dim light I can see the curve of her cheek as she smiles."
+        "In the dim light you can see the curve of her cheek as she smiles."
 
         "You smile back and roll over, burying your face in the pillow."
 
