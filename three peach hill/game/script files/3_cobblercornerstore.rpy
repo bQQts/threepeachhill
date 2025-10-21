@@ -39,7 +39,7 @@ label chapter_three:
         "You divide the cobblers into plastic food storage bins, packing some into a small picnic basket and the rest into the fridge. Some of my older friends will probably love this."
 
         menu:
-            "Baking went quickly and you have some time to kill, which friend do you want to share some pie with?"
+            "Baking went quickly and you have some time to kill, which friend do you want to share some cobbler with?"
 
             "The wholesome old orchardist":
                 jump orchardist
@@ -286,7 +286,7 @@ label chapter_three:
         "Lydia is a sassy old calico who tends a large garden near the post office. Her little cottage is the perfect size for her to sprawl out and enjoy her solitude."
 
         "But Lydia is no hermit. She revels in spending her time humming to budding flowers and sprouting vegetables, taking naps in her sun chair, and just being outside in general. And more than anything else, Lydia looooves gossip."
-b
+      
         "You try to catch up with her regularly; it's good to have other spirits as friends nearby, especially at times where you need some magical help."
 
         "She might have a spell to fix broken lamps, which would save you a lot of time and effort."

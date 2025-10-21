@@ -334,11 +334,11 @@ label chapter_three_b:
 
         label kitchen_water:
             "So refreshing."
-                jump kitchen_drinks
+            jump kitchen_drinks
 
         label kitchen_beer:
             "You can't let Erin crack a cold one alone, right?"
-                jump kitchen_drinks
+            jump kitchen_drinks
 
         label kitchen_tea:
             "Your hot water machine is ready and waiting--no kettle necessary. Truly, you live in luxury."
@@ -455,7 +455,7 @@ label chapter_three_b:
         label getting_late:
             e happy "\"No worries! I would hate to overstay.\"" 
 
-                jump give_her_a_chance
+            jump give_her_a_chance
         
     label give_her_a_chance:
 
