@@ -355,7 +355,6 @@ style quick_night_button_text is quick_button_text:
 ################################################################################
 
 screen menu_navigation():
-
     hbox:
         style_prefix "menu_navigation"
 
@@ -375,6 +374,14 @@ screen menu_navigation():
         textbutton _("      OPTIONS      "):
             activate_sound "sound/Haptics.flac" 
             action ShowMenu("options")
+
+    hbox:
+        style_prefix "menu_navigation"
+
+        xalign gui.menu_navigation_xalign
+        yalign gui.menu_navigation_yalign + 0.1
+
+        spacing gui.menu_navigation_spacing
 
         textbutton _("      ACHIEVEMENTS      "):
             activate_sound "sound/Haptics.flac" 
