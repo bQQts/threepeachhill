@@ -12,7 +12,7 @@ label chapter_seven:
 
         a "\"I told you, I'm not closing it! I'll figure something out. Tell them I said that.\""
 
-        "I end the call and shove my phone into the pocket of my sweatpants."
+        "You end the call and shove your phone into the pocket of your sweatpants."
 
         e shocked "\"Why would the store close? Doesn't your family own it?\""
 
@@ -20,29 +20,30 @@ label chapter_seven:
 
         e neutral "\"What's left to pay?\""
 
-        a gloom "\"About ten thousand dollars. Due before the new year.\""
+        a gloom "\"One hundred. Due before the new year.\""
 
-        e "\"That's not too bad...\""
+        e "\"That's a problem because...?\""
 
-        "I scoff."
-
-        a "\"Ten thousand in a small town is not a terribly small number, Erin.\""
+        a "\"One hundred thousand. We'll be cutting it close.\""
         stop music fadeout 3.0
-        e happy "\"Well, I could help you!\""
+
+        "It's a daunting number for a little bookshop but she's nonplussed."
+
+        e happy "\"I could help you!\""
 
         a neutral "\"How?\""
 
-        e excited "\"I'm studying marketing. I can come up with a plan that'll bring in more business. We could even find some donors who want to invest in the bookstore and would cover that cost.\""
+        e excited "\"My major is marketing! I can come up with a plan that'll bring in more business. We could even find some sponsors who want to invest in the bookstore and would cover that cost, easy.\""
 
-        a "\"I had no idea. Do you really think we could pull that off?\""
+        a "\"I had no idea you had that skillset! Will people really just... give us money?\""
 
-        "My brow furrows, and my ears lie flat against my head."
+        "Your brow furrows."
 
-        "She frowns a little and reaches up to smooth my brow with a gentle thumb."
+        "Erin frowns a little and reaches up to smooth the wrinkle with a gentle thumb."
 
         e "\"Don't worry. We'll get you sorted, no problem.\""
 
-        "We spend the rest of the afternoon drawing up a plan."
+        "You spend the rest of the afternoon drawing up a plan."
 
         scene brown with dissolve
         pause 2.0
@@ -51,7 +52,7 @@ label chapter_seven:
         show bg kitchen with dissolve
         play music quiet_village
 
-        "Erin finishes jotting down notes in the composition notepad I grabbed from my desk."
+        "Erin finishes jotting down notes in the composition notepad you grabbed from a bookshelf."
 
         e happy "\"And that's how we'll do it.\""
 
@@ -59,7 +60,7 @@ label chapter_seven:
 
         e "\"It's no problem! Like I said, this is my thing.\""
 
-        e neutral "\"Anyway... I should probably get going. Gotta get a change of clothes for my shift at the cornerstore later."
+        e neutral "\"Anyway... I should probably get going. Gotta get a change of clothes for my shift at the cornerstore later.\""
 
         a sad "\"Yeah. Before you go, I just wanted to apologize for how I acted back... before the rain. That wasn't fair, and you were right.\""
 
@@ -69,25 +70,27 @@ label chapter_seven:
 
         e happy "\"Apology accepted. I'd come to your rescue anytime.\""
 
-        "It's pretty brisk outside when I walk her out."
+        "When you walk her downstairs to the front door and open it a gust of chilly autumn air leaves you shivering."
 
-        a happy "\"Wait, let me get you something.\""
+        a happy "\"Wait, let me get you something before you leave.\""
 
         e "\"Sure!\""
 
-        "I come back with one of my light jackets."
+        "You return with one of your light jackets in tow."
 
         a tsuntsun "\"Um, you can borrow this. Don't catch a cold.\""
 
-        e blush "\"Oh Aya, thank you. You're sweet!\""
+        e blush "\"Oh Aya, thank you. You ARE sweet!\""
 
-        "I wave a hand at her to brush off the praise."
+        "You wave a hand at her to brush off the praise."
 
-        "She starts down the road, spinning around at the corner to wave at me one more time."
+        "She starts down the road, spinning around at the corner to wave at you one more time."
 
-        "She said she likes being here, and she's quickly entwining herself in different parts of my life. It's... really sweet."
+        "She said she likes being here, and she's quickly entwining herself in different parts of your life."
 
-        "It might still be a little risky, but maybe liking Erin is worth the risk."
+        "Maybe she WILL stay."
+
+        "Opening your heart still feels risky, but maybe Erin is worth the risk."
 
         scene brown with irisin
         stop music fadeout 3.0

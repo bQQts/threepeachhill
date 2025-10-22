@@ -3,7 +3,7 @@ label chapter_six:
     label the_call:
 
         scene bg kitchen
-        "I'm filling a glass of water when I hear Erin's muffled voice. She must be out on the balcony, and by the sound of it, she's having a not-very-fun conversation."
+        "You're filling a glass of water when you hear Erin's muffled voice. She must be out on the balcony, and by the sound of it she's not having a very fun conversation."
         
         stop music fadeout 4.0
         "When she comes in she seems deflated."
@@ -12,13 +12,13 @@ label chapter_six:
 
         e neutral "\"Yeah. It was my parents. They want me to come back to the city.\""
 
-        "My stomach drops."
+        "Your stomach drops. This can't be happening."
 
         a "\"I see. So... are you going?\""
 
         e gloom "\"Sigh. I haven't decided yet, to be honest. It's nice out here, and...\""
 
-        "She looks sidelong at me through lowered lashes."
+        "She looks sidelong at you through lowered lashes."
         play music romance fadein 1.0
         e happy "\"I've found somewhere I like being. This feels like a place I could belong.\""
 
@@ -32,17 +32,17 @@ label chapter_six:
 
         e "\"What about them? I appreciate that they want to look out for me, but I'm doing just fine. I'm not doing anything wrong by trying to be happy.\""
 
-        a happy "\"You know what? That's pretty compelling.\""
+        a happy "\"That's kind of a great outlook.\""
 
         e happy "\"Right?\""
 
-        "I can't help myself. I reach out and rub her shoulder."
+        "You can't help yourself. You reach out and rub her shoulder."
 
         a "\"I'm glad you found somewhere you want to be. Belonging somewhere is something everyone needs, humans and spirits alike.\""
 
-        "She smiles shyly at me."
+        "She smiles shyly at you."
 
-        "That's when I get a call myself. One that dooms me in a way I was totally unprepared for."
+        "That's when YOU get a call. One you're totally unprepared for."
         window hide
         scene brown with irisin
         pause 2.0

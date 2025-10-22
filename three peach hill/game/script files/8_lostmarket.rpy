@@ -4,48 +4,48 @@ label chapter_eight:
 
         "The next couple of weeks are peaceful. The air keeps getting cooler, the farmers markets have been lovely."
 
-        "I get into a sort of routine with Erin."
+        "You get into a sort of routine with Erin."
 
         menu:
-            "We meet at the bookstore":
+            "You meet in the bookstore":
                 jump lost_market_bookstore
             
-            "We meet at the orchard office":
+            "You meet at the orchard office":
                 jump lost_market_office
             
-            "We meet at my house":
+            "You meet at your house":
                 jump lost_market_aya_house
 
 
     label lost_market_bookstore:
         show bg bookstore with dissolve
         play music bookstore_sunshine fadein 0.5 noloop
-        "The bookstore is the perfect place to meet up and talk about marketing plans."
+        "The bookstore is the perfect environment to meet up and talk about marketing plans, surrounded by generations of words of wisdom and creative ideas."
 
         jump lost_market_cont
 
     label lost_market_office:
         show bg orchard with dissolve
         play music happy_village fadein 0.5 noloop
-        "The office has lots of room to meet with people and map out plans on the big, clear tables."
+        "The office has lots of room to meet with people and map out plans on the big glass tables."
 
         jump lost_market_cont
 
     label lost_market_aya_house:
         show bg kitchen with dissolve
         play music romance fadein 0.5
-        "My house. It's comfortable, private, and we can make as much of a mess of notes and projects as we want."
+        "Your house. It's comfortable, private, and you can make as much of a mess of notes and projects as you want."
 
         jump lost_market_cont
 
 
     label lost_market_cont:
 
-        "When Erin isn't working, we make drafts, print posters and fliers, and make this our base of operations for the Great Bookstore Revival."
+        "When Erin isn't working, you make drafts, print posters and fliers, and otherwise enact the Great Bookstore Revival."
 
-        "Erin calls investors and organizations who might help with such a funding project, while I call local shops to discuss business collaborations."
+        "Erin calls investors and organizations who might help with such a funding project while you call local shops to discuss business collaborations."
 
-        "It's really nice."
+        "She's so supportive and optimistic that you can't help but catch her energy and feel that way, too."
 
         window hide
 
@@ -58,36 +58,39 @@ label chapter_eight:
         $ make_night()
         scene brown with dissolve
 
-        "Erin didn't show up at the usual meeting time. I wait 20 minutes."
+        "Erin didn't show up at the usual meeting time."
+        
+        "You wait twenty minutes."
 
         play music rain_transition noloop
 
         "Twenty minutes turns into an hour, then two. She's not answering her phone."
         show bg bookstore night with dissolve 
-        "I check near the bookstore. She's not there."
+        "You check near the bookstore. She's not there."
         hide bg bookstore night with dissolve
         show bg cornerstore night with dissolve
 
-        "I call the cornerstore and the orchard office, and am told she's not there either."
+        "You call the cornerstore and the orchard office and are told she's not there either."
         hide bg cornerstore night with dissolve
         scene brown with dissolve
 
-        "I bite my lip. I'm starting to worry that something has happened."
+        "You bite your lip. What if something's happened"
         show bg kitchen night with dissolve
-        "At home, I put on a jacket and sneakers and pace in the front room, trying to decide where to start looking for her."
+
+        "At home, you put on a jacket and sneakers and pace in the front room, trying to decide where to start looking for her."
         hide bg kitchen night with dissolve
         show bg gate night with dissolve
         
         play sound "sound/Knocking-2.flac"
         
-        "There's a knock at the door, and I run to open it."
+        "There's a knock at the door, and you run to open it."
 
-        a shocked "\"Erin? Oh, Lydia! What are you doing here?\""
+        a shocked "\"Erin--! Oh, Lydia? What are you doing here?\""
         show lydia night at right with dissolve:
             subpixel True
             zoom 0.7
             yoffset -300
-        "It's not who I was hoping it would be, and judging by Lydia's expression, I'm not about to be happy that she's here either."
+        "It's not who you were hoping it would be, and judging by Lydia's expression, you're not about to be happy that she's here either."
 
         lyd "\"You haven't found a spell to fix that lamp yet, right?\""
 
@@ -95,9 +98,9 @@ label chapter_eight:
 
         lyd "\"The Market came early, Aya.\""
 
-        "I get a sinking feeling in my stomach."
+        "No... Oh no..."
 
-        a shocked "\"No. She couldn't have...\""
+        a shocked "\"She couldn't have...\""
 
         lyd "\"She did. Terry the fox spirit saw her go in unaccompanied and ran to tell me.\""
 
@@ -109,12 +112,12 @@ label chapter_eight:
 
         a neutral "\"I need to find her, fast. Where's the entrance?\""
 
-        lyd "\"The alley between the grocer and the barber. Be safe, and be quick. I hope you find her in time.\""
+        lyd "\"The alley between the grocer and the barber. Be safe, and be quick. I really do hope you find her in time.\""
         
         window hide
         hide lydia night with dissolve
         scene brown with dissolve
-        "I run."
+        "You run."
 
         stop music fadeout 2.0
 
@@ -128,9 +131,9 @@ label chapter_eight:
         stop music fadeout 3.0
         play music spirit fadein 0.5
 
-        "I run faster than I ever have before. My legs and lungs burn, and I gasp for air, but I push through it and finally make it to the entrance."
+        "You run faster than you ever have before. Your legs and lungs burn and you gasp for air, but push through the exhaustion and make it to the entrance."
 
-        "The entrance to the Lost Market always looks like a really, really, REALLY long, dark alleyway with floating lights at the far end of it."
+        "No matter where it shows up, the entrance to the Lost Market always looks like a really, REALLY long and dark alleyway with floating lights flickering at the far end of it."
 
         "It doesn't usually pose a risk to humans, since you have to be a spirit or in a pact with a spirit to be able to see it at all."
 
@@ -139,11 +142,11 @@ label chapter_eight:
         scene brown with dissolve
         show bg rain night with dissolve
 
-        "I slow down and start walking down the alley. It's actually faster to walk than it is to run. It's tricky like that."
+        "You slow down and start walking down the alley. It's faster to walk than to run. It's tricky like that."
 
         "The floating lights start to illuminate faint edges of structures in the alleyway; the ground, the brick walls, loose rocks, some cardboard boxes."
 
-        "The amber glow grows, and I step out of the alley into a street full of spirits of all shape and size."
+        "The amber glow grows. You step out of the alley into a street full of spirits of all shape and size."
         hide bg rain night with dissolve
         scene brown
         window hide
@@ -168,19 +171,22 @@ label chapter_eight:
         window show
 
 
-        "As naturally as breathing, I shift fully into my spirit form: an enormous pink three-tailed fox with small red horns. I sniff the air and stretch out each leg, feeling my paws against the cool ground."
+        "As naturally as breathing, you shift fully into your spirit form: an enormous pink three-tailed fox with small red horns. You sniff the air and stretch out each leg, feeling your paws against the cool ground."
 
 
 
-        "Tall, shapeless giants and tiny floating imps float alongside animal spirits like myself."
+        "Tall, shapeless giants and tiny floating imps float alongside animal spirits like yourself."
 
-        "I don't waste any time."
+        "You don't waste any time."
 
-        "I run, weaving through the silent crowd, following the faint, unmistakable glowing tether of the pact we made. I pick up the citrus and apple scent of Erin's shampoo."
+        "You run, weaving through the silent crowd, following the faint, unmistakable glowing red tether of the pact you made. Your sensitive nose picks up the citrus and apple scent of Erin's shampoo."
 
-        "I have to go faster!"
+        "You have to go faster!"
 
-        "I run and I run, and finally I know I'm drawing near when the tether glows brighter. A small crowd has formed a circle around her."
+        "You run and run, and finally you know you're drawing near when the tether glows brighter."
+        
+        "A small crowd has formed a circle around Erin, and she's not alone."
+
         window hide
         show bg nightmarket red with dissolve
            
@@ -201,9 +207,9 @@ label chapter_eight:
 
 
 
-        "She's standing boldly before an oni girl with impossibly sharp horns. A red ribbon floats around the oni, and a tendril begins to reach towards Erin."
+        "She's standing boldly before an oni girl with impossibly sharp horns. A red ribbon--not yours--floats around the oni, and a tendril of it begins to reach towards Erin."
 
-        "I leap, snapping at the ribbon. It shatters into sparkling shards of light between my sharp teeth."
+        "You leap, snapping at the ribbon. It shatters into sparkling shards of light between your sharp teeth."
 
         hide erin with dissolve
 
@@ -229,49 +235,61 @@ label chapter_eight:
         
         show aya fox at left:
             subpixel True zoom 0.39 
-        "Erin looks at me, astonished at my form."
+        "Erin gapes at you, astonished."
 
         hide erin with dissolve
         hide aya with dissolve
         e shocked "\"Wait... Aya?! You can... talk like that?\""
 
+        "Wait, she's not surprised that you're a fox... just surprised that you can talk?"
+
         a fox "\"Of course. I'm still me.\""
      
         show aya fox at left:
             subpixel True zoom 0.39 
-        "I address the oni."
+        "You address the oni."
 
         hide aya
         a fox "\"We must depart. Kindly find someone else to bargain with.\""
 
         show aya fox at left:
             subpixel True zoom 0.39 
-        "The oni glares at me and crosses her arms."
+        "The oni glares at you and crosses her arms."
+
+        "The crowd around you becomes agitated."
+
+        "You had better not linger."
         
         hide aya
         a fox "\"Erin, climb upon my back. I'll take us out of here.\""
 
         e sad "\"Are you sure? Shouldn't we find that spell?\""
 
+        "You shake your head."
+
         a fox "\"Not tonight.\""
 
         show aya fox at left:
             subpixel True zoom 0.39 
-        "She reluctantly grabs hold of my fur and hauls herself onto my back, hugging my neck tightly."
+        "She reluctantly grabs hold of your fur and hauls herself onto your back, hugging your neck tightly."
         
         hide oni night with dissolve
         show bg nightmarket night with dissolve
 
-        "I fly like the wind and take us back to the alley. The streets shift around us, but I know exactly where to go."
+        "You fly like the wind and take her back to the alley. The streets shift around you, but you know exactly where to go."
         hide aya
         a fox "\"Close your eyes.\""
 
+        "You can't tell if she followed the instruction, so you just have to hope she heard you."
+
         show aya fox at left:
             subpixel True zoom 0.39 
-        "We race across the border between the spirit and mortal worlds. It's easier to leave with both of us present."
+        "You race across the border between the spirit and mortal worlds. It's easier to leave with the both of you present."
 
 
-        "The air around us blurs and I shift back, now holding Erin in my arms."
+        "The air around you blurs and you shift back, now holding Erin in your arms."
+
+        "Her eyes are shut tight."
 
         stop music fadeout 3.0
         scene brown with dissolve
@@ -281,17 +299,23 @@ label chapter_eight:
 
         a blush "\"You can open your eyes now, Erin.\""
 
-        "She does."
+        "She opens her eyes and gazes into yours from so very close."
+
+        "Her body is warm against yours."
+
+        "Her lips part invitingly."
+
+        "You could kiss her if you just..."
 
         e blush "\"Uh, you don't have to keep carrying me.\""
 
         a "\"Ah, sorry.\""
 
-        "I set her on her feet and help straighten out her clothes. I check her for the telltale ribbons of other pacts but see none."
+        "You set her on her feet and straighten her clothes, looking her all over. There are no telltale ribbons of other pacts, but you have to be sure."
 
         a sad "\"Are you alright? You didn't make any other bargains while there, right?\""
 
-        e neutral "\"No, no. That was close, though. I had been there for hours, and had been hounded by all sorts of spirits wanting... different things.\""
+        e neutral "\"No, no. That was close, though. It felt like I had been there for hours, and had been hounded by all sorts of spirits wanting... different things.\""
 
         e "\"That last one was kinder than the others, though, so it seemed like my best option for getting back home.\""
 
@@ -301,7 +325,7 @@ label chapter_eight:
 
         e "\"O-oh.\""
 
-        "I soften my expression."
+        "You soften your expression."
 
         a neutral "\"How did you get there, anyway?\""
 
@@ -309,15 +333,15 @@ label chapter_eight:
 
         a "\"Oh, Erin.\""
 
-        "I pull her into my arms and hold her tightly."
+        "You pull her into your arms and hold her tightly. You feel so... protective of her."
 
-        a shocked "\"I'm so glad I found you in time. That was so reckless!\""
+        a shocked "\"I'm so glad I found you in time. That you didn't get hurt!\""
 
-        e gloom "\"I didn't know what would happen!\""
+        e gloom "\"I didn't know how dangerous it was... So scary...\""
 
-        "I smooth her hair and heave a sigh of relief."
+        "You smooth her hair and heave a sigh of relief."
 
-        a happy "\"I know. It's okay. Just... don't go into any weird alleys like that without me, okay? Don't make me worry like that!\""
+        a happy "\"I know. It's okay. Just... don't go following weird lights like that without me, okay?\""
 
         e sad "\"I won't. But do you think that cat is okay?\""
 
@@ -327,7 +351,7 @@ label chapter_eight:
 
         e excited "\"Thank goodness!\""
 
-        "We stay embraced for a few long breaths as our heartbeats slow, then I release her."
+        "You stay embraced for a few long breaths as your heartbeats slow."
 
         a happy "\"I'll walk you home.\""
 

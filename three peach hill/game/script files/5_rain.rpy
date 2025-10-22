@@ -5,7 +5,7 @@ label chapter_five:    # 5. The Rain - Caught in the rain… and there was only 
         scene brown
         show bg orchard with dissolve
 
-        "YOu finish picking the peaches by yourself. By the time you're done, the remaining daylight is nearly smothered by thick clouds."
+        "You finish picking the peaches by yourself. By the time you're done, the remaining daylight is nearly smothered by thick clouds."
         
         "You hadn't noticed how dense they had gotten, but a brief glance is enough to confirm that they look heavy and full, as if ready to spill at any moment."
 
@@ -336,7 +336,7 @@ label chapter_five:    # 5. The Rain - Caught in the rain… and there was only 
 
         "You can practically feel her smile on your back."
 
-        "Eventually, the patter of the rain on the roof lulls yo uboth until you can't keep awake any longer. You fall into a dreamless sleep."
+        "Eventually, the patter of the rain on the roof lulls you both until you can't keep awake any longer. You fall into a dreamless sleep."
 
         "This feels... right."
         
