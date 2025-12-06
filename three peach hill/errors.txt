@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script files/1_bookstore.rpy", line 81: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    show plusone:
+File "game/script files/1_bookstore.rpy", line 104: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "You rush over to her."
     ^
 
-Ren'Py Version: Ren'Py 8.2.0.24012702
-Mon Dec  2 16:50:12 2024
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Sat Dec  6 12:44:35 2025
