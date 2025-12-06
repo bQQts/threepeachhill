@@ -31,7 +31,6 @@ label chapter_one:
 
         "Your soft foxen ear twitches at the sound of bells jingling as the shop door swings open. You make a couple more adjustments as you call in the direction of the door."
 
-
         a neutral "\"Welcome in, feel free to browse.\""
 
 

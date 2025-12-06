@@ -1132,11 +1132,11 @@ screen options_character_sliders():
     hbox:
         vbox:
             label _("CHARACTER VOICE VOLUMES")
-            use character_options_bar(_("Narrator"), "narrator")
-            use character_options_bar(_("Aya"), "aya")
-            use character_options_bar(_("Erin"), "erin")
+            use character_options_bar(_("Aya"), "a")
+            use character_options_bar(_("Erin"), "e")
+            use character_options_bar(_("Oni"), "Oni")
         vbox:
-            use character_options_bar(_("Lydia"), "lydia")
+            use character_options_bar(_("Lydia"), "lyd")
             use character_options_bar(_("Joy"), "joy")
             use character_options_bar(_("Jeff"), "jeff")
             use character_options_bar(_("Timothy"), "timothy")
