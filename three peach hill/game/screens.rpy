@@ -1170,7 +1170,7 @@ screen character_options_bar(display_text, character_mixer):
     vbox:
         text _(display_text)
         bar:
-            value MixerValue(character_mixer)
+            value SetCharacterVolume(character_mixer)
             range 100
             left_bar "gui/menu/options_bar_fill.png"
             right_bar "gui/menu/options_bar_empty.png"
@@ -1184,7 +1184,7 @@ screen character_options_bar(display_text, character_mixer):
             yalign 0.5
             xoffset -48
             thumb_align 0.5
-        $ pref_wrapper = MixerValue(character_mixer)
+        $ pref_wrapper = SetCharacterVolume(character_mixer)
         $ pref_value = f"{int(pref_wrapper.get_volume() * 100)}%"
         text "[pref_value]" xalign 0.45
 
